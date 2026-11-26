@@ -1,0 +1,99 @@
+{
+  "status": "fitted",
+  "plan": "primary",
+  "threshold_minutes": 60,
+  "chosen_C": {
+    "conditional_tree": 0.1,
+    "direct_joint": 0.1
+  },
+  "training_end": "2024-03-31",
+  "fit_end": "2023-12-31",
+  "tuning_start": "2024-01-01",
+  "calibration_start": "2024-04-01",
+  "calibration_end": "2024-06-30",
+  "holdout_months": [
+    {
+      "period": "2024-10",
+      "n": 178852,
+      "row_hash": "bbfc55613e946fc9566bb952826a861dbea3d15bbe05d565798dd05bfd32ad13"
+    },
+    {
+      "period": "2025-01",
+      "n": 157372,
+      "row_hash": "ccd7f853d26a35ceb764bd764a3b45e9e1e74de552bc894ea6f527d50eb6045b"
+    }
+  ],
+  "features": [
+    "Origin",
+    "Dest",
+    "Reporting_Airline",
+    "month",
+    "weekday",
+    "time_bin",
+    "dep_minutes",
+    "arr_minutes",
+    "Distance",
+    "CRSElapsedTime"
+  ],
+  "coverage_basis": "Caller must supply complete audited monthly artifacts; internal eligibility checks month presence. run.py verifies monthly hashes/row counts.",
+  "fit_cap_per_binary": 50000,
+  "seed": 2701,
+  "tree_training": [
+    {
+      "available": 2475534,
+      "fitted": 50000,
+      "events": 767
+    },
+    {
+      "available": 2438302,
+      "fitted": 50000,
+      "events": 114
+    },
+    {
+      "available": 2432178,
+      "fitted": 50000,
+      "events": 3726
+    }
+  ],
+  "tree_calibration": [
+    {
+      "n": 523735,
+      "events": 7117,
+      "applied": true
+    },
+    {
+      "n": 516618,
+      "events": 1500,
+      "applied": true
+    },
+    {
+      "n": 515118,
+      "events": 49774,
+      "applied": true
+    }
+  ],
+  "tree_warnings": [
+    [],
+    [],
+    []
+  ],
+  "direct_training": {
+    "available": 2475534,
+    "fitted": 50000,
+    "events": 4473
+  },
+  "direct_calibration": {
+    "n": 523735,
+    "events": 58391,
+    "applied": true
+  },
+  "direct_warnings": [],
+  "baseline_strength": 20,
+  "limitations": [
+    "Experimental defaults and sampling cap not justified for final use",
+    "Conditional branch fitting does not make categories independent",
+    "Same raw features/time windows, but tree has three fits and is not matched for parameter budget",
+    "Unknown excluded; historical schedules are not verified booking-time snapshots",
+    "2023 development plan cannot establish 2025 generalization; monthly test results not used for model choice"
+  ]
+}

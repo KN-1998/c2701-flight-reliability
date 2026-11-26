@@ -1,0 +1,118 @@
+[
+  {
+    "id": "BTS_FIELDS",
+    "url": "https://www.transtats.bts.gov/Fields.asp?gnoyr_VQ=FGJ",
+    "final_url": "https://www.transtats.bts.gov/Fields.asp?gnoyr_VQ=FGJ",
+    "status": 200,
+    "file": "BTS_FIELDS.html",
+    "bytes": 149783,
+    "sha256": "412ea616430b8738d85755de3b781ac7a50824a2e591c1583a1bfc4e2d29e24b",
+    "content_type": "text/html",
+    "verified_read": false
+  },
+  {
+    "id": "BTS31",
+    "url": "https://www.bts.gov/topics/airlines-and-airports/number-31-technical-directive-time-reporting-effective-jan-1-2019",
+    "final_url": "https://www.bts.gov/topics/airlines-and-airports/number-31-technical-directive-time-reporting-effective-jan-1-2019",
+    "status": 403,
+    "file": "BTS31.html",
+    "bytes": 511,
+    "sha256": "91cd97f09b0bfb3e2c3a09abc78a906e7c1937ce0b0b90b332c147c253dc827e",
+    "content_type": "text/html",
+    "verified_read": false
+  },
+  {
+    "id": "BTS39",
+    "url": "https://www.bts.gov/explore-topics-and-geography/modes/aviation/number-39-technical-directive-reporting-time",
+    "final_url": "https://www.bts.gov/explore-topics-and-geography/modes/aviation/number-39-technical-directive-reporting-time",
+    "status": 403,
+    "file": "BTS39.html",
+    "bytes": 497,
+    "sha256": "a5cdc38dffd0bbaaf0b6fac0da04f459deb109656c561abfe21cf3994ed52588",
+    "content_type": "text/html",
+    "verified_read": false
+  },
+  {
+    "id": "DELTA20240724",
+    "url": "https://news.delta.com/update-delta-customers-ceo-ed-bastian-july-24",
+    "final_url": "https://news.delta.com/update-delta-customers-ceo-ed-bastian-july-24",
+    "status": 404,
+    "file": "DELTA20240724.html",
+    "bytes": 22189,
+    "sha256": "b2426b833be3c12da79c7f7d20c3bfe5352c53cd22f1dc57002b820a13b0b88f",
+    "content_type": "text/html; charset=utf-8",
+    "verified_read": false
+  },
+  {
+    "id": "AA_MILTON",
+    "url": "https://news.aa.com/news/news-details/2024/American-provides-extra-seats-customer-flexibility-in-Florida-ahead-of-Hurricane-Milton-OPS-DIS-10/",
+    "final_url": "https://news.aa.com/news/news-details/2024/American-provides-extra-seats-customer-flexibility-in-Florida-ahead-of-Hurricane-Milton-OPS-DIS-10/",
+    "status": 403,
+    "file": "AA_MILTON.html",
+    "bytes": 5949,
+    "sha256": "05f393939e071f9a4b699b8b5a1bd05805a0a5f5fdcf6664c7e39f1027068a09",
+    "content_type": "text/html; charset=UTF-8",
+    "verified_read": false
+  },
+  {
+    "id": "NHC_MILTON",
+    "url": "https://www.nhc.noaa.gov/data/tcr/AL142024_Milton.pdf",
+    "final_url": "https://www.nhc.noaa.gov/data/tcr/AL142024_Milton.pdf",
+    "status": 200,
+    "file": "NHC_MILTON.pdf",
+    "bytes": 11046930,
+    "sha256": "565196bca8a665250cab912c9d9b4529bfed620e211aa7b7b18a450ddccefa7b",
+    "content_type": "application/pdf",
+    "verified_read": false
+  },
+  {
+    "id": "MCO_BOARD",
+    "url": "https://assets.ctfassets.net/qiecpoxp4bka/3KlxxZzNIFQwKvy7Y8VWy1/44aae374fa57a3b37ad94c99a2a1041f/Board-Agenda-Final-20241211.pdf",
+    "final_url": "https://assets.ctfassets.net/qiecpoxp4bka/3KlxxZzNIFQwKvy7Y8VWy1/44aae374fa57a3b37ad94c99a2a1041f/Board-Agenda-Final-20241211.pdf",
+    "status": 200,
+    "file": "MCO_BOARD.pdf",
+    "bytes": 5765900,
+    "sha256": "eb67e25f1211b914550a76b12b8926a27636dcd19a253f59d5ada23bfc04dfa6",
+    "content_type": "application/pdf",
+    "verified_read": false
+  },
+  {
+    "id": "KUNSCH_ETH",
+    "url": "https://stat.ethz.ch/~kuensch/",
+    "final_url": "https://people.math.ethz.ch/~kuensch/",
+    "status": 200,
+    "file": "KUNSCH_ETH.html",
+    "bytes": 5162,
+    "sha256": "895fd4630d12f226dbeb978b77828e8db66a33c7be34b0fe964461931c52d0b4",
+    "content_type": "text/html; charset=UTF-8",
+    "verified_read": false
+  },
+  {
+    "id": "KUNSCH_CROSSREF",
+    "url": "https://api.crossref.org/works/10.1214/aos/1176347265",
+    "final_url": "https://api.crossref.org/works/10.1214/aos/1176347265",
+    "status": 200,
+    "file": "KUNSCH_CROSSREF.json",
+    "bytes": 2893,
+    "sha256": "99cef79336308710c1feded55ee2404ee7d9bcd286bcca4d6a2f6cab8fa217b1",
+    "content_type": "application/json",
+    "verified_read": false
+  },
+  {
+    "id": "BTS_RELEASE",
+    "url": "https://www.transtats.bts.gov/ReleaseInfo.asp",
+    "error": "ConnectionError(ProtocolError('Connection aborted.', RemoteDisconnected('Remote end closed connection without response')))",
+    "verified_read": false
+  },
+  {
+    "id": "FR_DELAY",
+    "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-15/html/2026-21058.htm",
+    "final_url": "https://www.govinfo.gov/content/pkg/FR-2026-10-15/html/2026-21058.htm",
+    "status": 200,
+    "file": "FR_DELAY.html",
+    "bytes": 7455,
+    "sha256": "d8dc4a694f7fe1ce5a8d343e272bc8e06d9b57aaef00a49be37599c0de19ff1f",
+    "content_type": "text/html",
+    "verified_read": false
+  }
+]

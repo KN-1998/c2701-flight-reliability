@@ -1,0 +1,90 @@
+--- PAGE 1 ---
+2027 MCM/ICM TRAINING | C2701 DATA INSIGHTS
+2027 MATHEMATICAL CONTEST IN MODELING — PRACTICE
+Problem C: On Time, On Paper
+Which Airports Are Reliable When Some Flights Never Arrive?
+Background
+A flight arriving 12 minutes late may count as on time, while one arriving 16 minutes late may not. A
+flight canceled before departure has no arrival delay at all; a diverted flight may reach somewhere other
+than its intended destination. Yet travelers experience all of these events as different forms of disruption.
+An airport may look punctual when measured by the average delay of flights that arrived, even if many
+scheduled flights never reached their destination as planned.
+In the United States, the Bureau of Transportation Statistics (BTS) publishes detailed records for
+reportable domestic flights, including scheduled and actual times, cancellations, diversions, and reported
+categories of delay. The National Oceanic and Atmospheric Administration (NOAA) maintains
+historical weather observations that can help describe operating conditions. These datasets make large-
+scale comparisons possible, but their definitions and coverage matter: reported flights are not every
+flight in the country, weather observed at a station is not every condition affecting a flight, and reported
+delay categories do not necessarily identify an independently verified root cause.
+Simple comparisons can also be deceptive. Airports serve different combinations of destinations, airlines,
+seasons, and departure times. One may handle many short routes with frequent departures, while
+another serves longer flights with different schedule allowances. A comparison of raw on-time percentages
+may therefore reflect the mix of flights as much as underlying reliability. Results can even change when
+the same data are grouped differently.
+Suppose a hypothetical Air Travel Reliability Council wants a public scorecard for domestic U.S.
+air travel in 2027. Rather than naming the airport with the highest published on-time percentage,
+the council wants to understand how dependable a planned flight is, how that dependability changes
+across situations, and how confidently the evidence supports its conclusions. You should use 2023–2025
+as a historical core and may use available 2026 records for later-period testing. The council has not
+provided passenger itineraries, individual ticket prices, or a complete record of missed connections; any
+such impacts would require estimates or additional evidence.
+The council asks your team:
+When the data say a flight is “on time,” how much reliability can a traveler actually
+count on?
+Your Challenge
+Develop a data-driven framework for evaluating, explaining, and predicting flight reliability.
+Choose at least eight U.S. airports with meaningfully different operating environments, and justify
+your selection. Use publicly available flight records and any suitable supplementary evidence. Clearly
+identify the observation unit, the population to which your findings apply, and the information that
+would have been available when each prediction or decision was made. Do not treat missing arrival
+times as ordinary numerical missing values without investigating their causes.
+1
+
+--- PAGE 2 ---
+2027 MCM/ICM TRAINING | C2701 DATA INSIGHTS
+1. Make the flights that disappear count. Prepare and audit your flight-level data. Distinguish on-
+time arrivals, late arrivals, cancellations, diversions, and records with incomplete or inconsistent fields.
+Develop a defensible measure, or set of measures, of reliability from a traveler’s perspective. Explain the
+role of thresholds, denominators, and the treatment of flights without a normal arrival time. Show how
+alternative reasonable definitions affect the apparent performance of your selected airports. Identify
+data limitations that cannot be solved by cleaning alone.
+2. Look behind the rankings. Compare the selected airports across seasons, times of day, airlines,
+and route characteristics. Separate changes associated with flight mix from differences that remain
+after appropriate adjustment. Investigate whether airport rankings reverse, or become statistically
+indistinguishable, under different comparisons. Quantify variation and uncertainty rather than reporting
+a single league table. Explain at least one non-obvious pattern and show how you checked that it is not
+merely a consequence of aggregation or reporting practices.
+3. Predict disruption before it happens. Build a model that estimates the risk of an unsatisfactory
+journey outcome for a scheduled flight, such as cancellation, diversion, or a substantial arrival delay.
+Decide which outcomes should be predicted jointly and which require separate treatment. Evaluate
+the model on periods not used for fitting, including a later period if the data permit. Compare with
+a transparent baseline, assess probability calibration as well as discrimination or error, and investigate
+where the model fails. Explain how predictive performance changes if the available information is
+restricted to what a traveler could know before departure.
+4. Test the forecast on diﬀicult days. Examine how reliability changes during unusually disrup-
+tive periods. Use observed events where credible records are available, and construct clearly labeled
+scenarios for 2027 if needed. Consider the effects of adverse weather, intense travel demand, or unusual
+concentrations of cancellations. Determine whether the model systematically underestimates rare but se-
+rious disruptions. Provide uncertainty ranges and sensitivity tests for your conclusions. Explain which
+scenario results represent interpolation from historical experience and which depend on assumptions
+outside the observed data.
+5. Tell travelers something the averages cannot. Design a concise 2027 reliability scorecard
+that communicates your findings without giving a false impression of precision. Show how advice might
+differ for two travelers with contrasting priorities, such as minimizing the chance of cancellation versus
+avoiding long delays. Identify an additional original insight revealed by your analysis and explain how an
+airline, airport, or traveler could use it. Recommend what new data would most improve the scorecard,
+and describe a plan for checking whether its guidance remains reliable over time.
+What to Submit
+Submit an English mathematical modeling report of no more than 25 pages for this practice con-
+test. Include a one-page summary, data sources and cleaning decisions, outcome definitions, exploratory
+findings, model development, out-of-sample validation, uncertainty analysis, and an interpretable score-
+card. Include a one-page advisory brief to the hypothetical Air Travel Reliability Council
+explaining which comparisons are trustworthy, what your model predicts, and how readers should use
+the results.
+Important distinctions: On-time performance is not the same as successful completion of a planned
+trip; a canceled or diverted flight is not simply a flight with zero delay; an average over completed flights
+can hide selection effects; delay categories are not a complete causal explanation; flight-level reliability is
+not passenger-level experience; and correlation or prediction does not establish that changing an airport’s
+operations would cause a predicted improvement. Separate observed records, inferred quantities, and
+hypothetical 2027 scenarios.
+2

@@ -1,0 +1,5 @@
+{
+  "status": "REPRODUCED_FAILURE",
+  "error": "ValueError('Bootstrap common-support cell empty; coarsen strata or expand sample.')",
+  "scope": "2023 complete year; old compare uses blocks 1/7/14, seed2701, reps500"
+}

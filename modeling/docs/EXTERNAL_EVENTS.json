@@ -1,0 +1,18 @@
+{
+  "created_local_date": "2026-11-26",
+  "selection_history": "Chosen after reviewer feedback and previous outcome analysis, not preregistered. Dates and airport scope anchored to the external administrative record, not optimized using outcomes.",
+  "events": [{
+    "id": "MCO_Milton_EOC_Level_I_20241009_10",
+    "origin": "MCO",
+    "start": "2024-10-09",
+    "end": "2024-10-10",
+    "source_id": "MCO_BOARD",
+    "source_location": "PDF page 93 (of 219), Consent Agenda Item P memorandum; continuation p94",
+    "definition": "GOAA Emergency Operations Center Level I full activation; NOT a proven full airport closure window.",
+    "calendar_control_dates": ["2024-10-02", "2024-10-03", "2024-10-16", "2024-10-17"],
+    "controls_status": "Analyst-selected adjacent same-weekday dates, not externally verified calm-weather days; no causal interpretation",
+    "source_internal_conflict": "Source calls October 7, 2024 Tuesday; this is a weekday/date inconsistency. Window uses its unambiguous Wednesday Oct 9 to Thursday Oct 10 activation dates instead.",
+    "timezone": "Airport local calendar dates, matching FlightDate; NHC UTC landfall is supporting context only"
+  }],
+  "excluded_candidates": [{"window": "2024-07-19 to 2024-07-25", "status": "Official Delta candidate URLs returned 404; calendar-only, excluded from externally verified event claims"}]
+}

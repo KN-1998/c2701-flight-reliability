@@ -1,0 +1,55 @@
+﻿id,type,statement,source_ids,exact_location,reason,status,required_evidence_or_test,release_rule
+A01,题面约束,航段而非完整旅客行程作为单位,PROBLEM,英文题面p2 Important distinctions；数据月文件字段,只有航段记录，不能拼出旅客全行程,SUPPORTED_SCOPE,核对报告总体和计数单位,不得外推完整行程成功率
+A02,总体限制,仅代表所选机场及报送覆盖内记录,BTS_FILES,data/bts_*.json；英文题面p1 population,抽取和报送不是全国旅客概率样本,COVERAGE_AUDIT_PENDING,补月/航司覆盖审计,不声称全国代表性
+A03,审计约定,取消改航互斥；冲突归U而非强设优先级,PROBLEM;D1,题面p2任务1；FORMULA_PROVENANCE§3,保持树叶分区逻辑,SUPPORTED_DEFINITION,保留冲突清单；核验字段词典,同时标志不可默默择一
+A04,数学恒等式,四叶路径相乘，不假设事件独立,P2,PDF p5 Definition 2后未编号乘积式,嵌套条件概率相乘,PRIMARY_TEXT_VERIFIED,风险集正确；概率闭合,不得改成三个无条件概率相乘
+A05,统计函数形式,分支logistic线性预测器足够表达条件概率,P1;P2,P1 PDF pp4-5；P2 p5,可解释的候选，不是经验事实,CANDIDATE_NOT_ESTABLISHED,留出残差/非线性对照/校准,不得声称形式已获本题证实
+A06,统计设计,不同分支允许不同系数或特征,P1;P2,P1 p5 complete design；P2 p5 Definition 2；P2 pp7-8对数似然分解和子集拟合；P1 pp21-22结构非全置换不变,不同结局可关联不同因素,METHOD_SUPPORTED_PERFORMANCE_PENDING,共享系数及基线对照；替代树结构及参数预算对照,不称原创也不称一定更优
+A07,不采用的假设,不假设U随机缺失或与风险独立,PROBLEM;D4-D5,题面p2任务1；FORMULA_PROVENANCE§5,未知机制没有证据,NOT_ASSUMED,给识别界及U分布,已知案例模型不得直接外推总体
+A08,数学恒等式,未知成功比例介于0与1得到上下界,D4-D5,FORMULA_PROVENANCE§5逐步代数,比例的定义域给出无插补界,DERIVED_IDENTITY,组内计数闭合；界宽=u,不得称95%置信区间
+A09,字段阈值,ArrDelay<15准点且等于15为晚点,BTS_FIELDS;BTS_FILES,官方字段表ArrDel15行；数据arrdel15_disagreement=0,样本与ArrDel15字段一致,OFFICIAL_DEFINITION_AND_DATA_CORROBORATED,维持恰好15分钟边界测试与逐月字段对账,仅适用于正常完成到达延误；不能混作全部计划分母
+A10,旅客目标选择,长延误默认60分钟,PROBLEM,题面只说substantial delay，未给60,旧工程目标，非已有论文证明,UNJUSTIFIED_DEFAULT_NOT_FINAL,用政策/旅客阈值证据或报告完整阈值曲线,不能称普遍旅客容忍度
+A11,工程候选,阈值扫描0/15/30/60/120,PROBLEM,题面任务1要求阈值敏感性；未给具体网格,展示定义依赖，切点是候选,CANDIDATE_GRID,补目标人群依据或更细单调曲线,敏感性不能代替切点来源
+A12,时间编码,2400转午夜分钟即可用于派生时段,BTS_FIELDS,CRSDepTime/CRSArrTime官方local hhmm；audit保留scheduled_*_2400标志,旧实现便利处理,LOCAL_TIME_VERIFIED_2400_DATE_SEMANTICS_PENDING,技术指令原文仍403；不可擅改FlightDate,标志表示源字段为2400；不声称已确定跨日真实日期
+A13,抽取设计,十机场足够形成有意义的异质样本,PROBLEM,results/review_v3/descriptive/airport_selection_*_2023.csv；继承原手册机场清单,需地理/规模/运行构成证据,DATA_DIVERSITY_DESCRIBED_NOT_REPRESENTATIVE,报告规模/航司/目的地/时段/季节构成；缺全国外部有效性,不是全国概率样本；不声称按外生结果预注册选点
+A14,分层选择,季节×6小时时段×距离四档足以调整,PROBLEM;D6,题面任务2；D6只支持指定构成加权,平衡可解释性与稀疏性,UNVERIFIED_COARSENING,细分层及航司/航线敏感性,不称消除全部混杂
+A15,样本门槛,共同支持每格已知数至少30,NONE,comparison.py support>=30；无原文支持具体30,旧稳定性门槛,UNJUSTIFIED_DEFAULT_NOT_FINAL,20/30/50/100覆盖与估计稳定性；精度需求,30不是分布近似保证
+A16,目标总体选择,采用机场等权平均构成w,D6,FORMULA_PROVENANCE§6；无论文替本题指定等权,避免规模大的机场完全主导参照,DECLARED_TARGET_NOT_NATURAL_TRUTH,等机场/等航班/旅客构成对照,必须说是选定目标总体
+A17,数学恒等式,区分构成项和支持集限制项,D7,FORMULA_PROVENANCE§6加减恒等式,修复旧mix命名含义错误,DERIVED_IDENTITY,三项对账残差为0,不冒充已核读Kitagawa原式
+A18,统计依赖,航班给定协变量后相互独立,P1,P1 PDF p4假设；本题可能有共同冲击,论文前提不能无条件照搬,NOT_ASSUMED_AS_FACT,以工作损失估计；检查共同日期冲击,不得用独立SE论证显著性
+A19,统计推断,日期区块重采样能近似不确定性,NONE,comparison.calendar_episodes/block_weights；K_AUTHOR仅作者书目,考虑同日共同冲击的候选机制,EXPERIMENTAL_METHOD_PROVENANCE_AND_CONDITIONS_PENDING,补原始区块重采样全文和局部平稳/弱依赖条件；回归测试只验证实现,实验性条件区间；不声称95%覆盖或机场显著性全序
+A20,区块长度,7天足够捕捉依赖，1/14作为敏感性,NONE,代码默认；无本数据依赖长度证据,周周期直觉不是证据,UNJUSTIFIED_DEFAULT_NOT_FINAL,ACF/事件持续期/更长区块与年际对照,不得把7天写成文献结论
+A21,数值精度,重抽样次数500/1000/2000足以稳定分位数,NONE,v3主比较1000次；多seed/2000次另表,计算成本候选,MONTE_CARLO_STABILITY_CHECK_NOT_COVERAGE_PROOF,1000/2000及多seed看分位数稳定性,不可把重复次数当样本量
+A22,迁移假设,过去条件关系可迁移到2025/2026,PROBLEM,题面任务3要求时间外评估，不保证迁移,预测必须接受的可失效候选,EMPIRICAL_VALIDATION_PENDING,按期校准/残差/覆盖漂移,不得仅靠随机切分证明
+A23,时间设计,2023拟合2024Q1选择Q2校准H2与2025测试,PROBLEM,题面时间范围；具体季度为项目选择,避免使用未来标签,DECLARED_DESIGN_NOT_PREREGISTRATION,覆盖齐全并记录每次改动,不能事后谎称已预注册
+A24,晚期选择,2026-09作为晚期单月,PROBLEM,固定旧默认，不是已核验最新,仅在真实可得时检验漂移,AVAILABILITY_PENDING,实际下载并报告覆盖,不称最新月份或全年
+A25,正则化选择,C取0.1/1/10足够,NONE,SequentialModel与run_prediction代码,工程候选搜索网格,NUMERICAL_DEFAULT,扩网格及收敛/基线对照,不称理论最优
+A26,训练抽样,每分支均匀抽样至多20万不改变结论,NONE,FIT_CAP=200000；无样本充分性证据,降低内存/耗时,EMPIRICAL_VALIDATION_PENDING,多seed/更大样本/全量及稀有分支比较,不把一次拟合当全量MLE
+A27,基线收缩,(k+20p)/(n+20)及20的强度,D8,ASSUMPTION_POLICY末节D8代数；20无外部数值来源,可由Beta先验均值推导形式,FORM_DERIVED_STRENGTH_UNJUSTIFIED,注明经验先验及5/20/100敏感性,不能称20由原论文给出
+A28,校准形式,分期sigmoid足以校准联合风险,CAL2005;P1;P2,CAL2005 PDF p2 §2.1式(1)-(3)；AUXILIARY_METHODS映射差异；仅选页已读，依项目规范不得充当已全文读正式来源,独立校准与sigmoid函数族有已读研究依据；本题效果未知,FULL_READING_GATE_PENDING,Platt1999首源未读；检验分支与联合校准、具体期段及clip/C选择,分支闭合不等于联合校准；全文读完前仅作候选来源/透明设计
+A29,评价选择,Brier为主；10概率箱ECE/校准图,SCORE2007;PROBLEM,SCORE2007 PDF p4 §2.3及p5 Example1/3；AUXILIARY_METHODS；仅选页已读，依项目规范不得充当已全文读正式来源,严格适当评分有理论及代数理由；10箱选择未获依据,FULL_READING_GATE_PENDING,披露二分类缩放/clip；换箱与连续校准；不冒称已读Brier1950,不拿单一ECE证明校准；全文读完前仅作候选来源/透明设计
+A30,多重比较,45对未经修正即可解释严格全排序,NONE,十机场45对；现实现未校正,这种推断不成立,REJECTED_CLAIM,多重比较或改成探索性/偏序,不得发布全序显著性
+A31,困难日定义,训练日失败率95%分位标尾日,PROBLEM,题面任务4；95%是旧工作切点,事后诊断可复现，不是事件真值,RETROSPECTIVE_OUTCOME_SELECTION_NOT_INDEPENDENT_TEST,90/95/97.5/99阈值及事件证据,测试日按实际Y筛选：不能证明独立困难日系统性低估
+A32,事件归因,两个日历窗口由IT/Milton造成,MCO_BOARD;NHC_MILTON;EXTERNAL_EVENTS,MCO PDF p93-94；NHC p4；EXTERNAL_EVENTS.json,日期重合不足以归因,EXTERNAL_OPERATIONAL_WINDOW_VERIFIED_CAUSAL_ATTRIBUTION_NOT_ESTABLISHED,源外窗口MCO 2024-10-09至10；与留出预测匹配；IT候选404不作核实,应急激活不等于全机场关闭；日期一致不证明天气因果
+A33,情景强度,赔率乘数1/1.5/2/3代表2027冲击,NONE,无历史估计或外生机制支持,旧任意强度扫描,WITHDRAWN_FROM_DEFAULT_OUTPUT,先有历史外生量和效应估计/区间,默认停用；opt-in仅数学联调
+A34,物理映射,天气/需求分别改变指定分支,NONE,原情景代码指定；不是物理机制,没有可核验量化映射,WITHDRAWN_FROM_DEFAULT_OUTPUT,带时间戳外生变量及条件模型,不能声称需求+20%等于赔率×2
+A35,未来构成,2025航班构成代表2027,NONE,情景旧参考样本,缺未来排班/需求证据,NOT_ASSUMED_AS_FACT,真实未来排班或明确条件参考总体,不称实际2027预测
+A36,可得信息,计划变量在旅客决策时可用,PROBLEM,题面任务3信息集；数据未存历史排班快照,计划最终版可能不同于当时版,INFORMATION_TIMESTAMP_PENDING,补计划发布版本和决策时间,当前只能称计划字段代理
+A37,旅客偏好,两类旅客以取消/长延误为优先目标,PROBLEM,题面任务5举例；未有调查效用,展示不同优先级，不强加统一权重,HYPOTHETICAL_PREFERENCE,标明示例；风险约束由旅客给定,不编造真实旅客效用权重
+A38,监测周期,新月表发布后重新审计；再训练周期及风险报警阈值尚待确定,BTS_FILES;PROBLEM;NONE,月度源文件metadata；题面任务5监测要求；TRAVELER_SCORECARD_V3监测表,原每季度足够的说法无漂移速度依据；改为与可得月批一致的工程流程，不声称统计最优,OPERATIONAL_CHOICE_PENDING,按实际发布延迟、漂移和输入快照可得性评价；数据完整性/时间泄漏检查随每次运行,无已验证数值阈值不自动红黄绿评级；哈希不符/泄漏/无共同支持则停对应输出，不等于所有风险高
+A39,缺失协变量处理,数值协变量中位数补值与分类MISSING足以避免预测偏差,NONE,prediction.py features及SimpleImputer；仅训练期估计,保持算法可运行不代表缺失机制可忽略,UNVERIFIED_PREPROCESSING,报告各字段缺失率；缺失指示/完整案例对照；审计机制,不得把插补后的字段称原始真实观测
+A40,稀有类别归并,OneHotEncoder min_frequency=100能保留小航司/航线信息,NONE,prediction.py fit，阈值100为工程默认,控制维度；无统计最优性证据,NUMERICAL_DEFAULT,多归并阈值及少数群体校准；只在训练期决定,不得称100由核心论文规定
+A41,分组设计,500/1000/1500英里及四季映射足以刻画构成,NONE,audit.py distance_bin和season；与A14共同登记,这是明确分组定义，不等于充分调整,UNVERIFIED_COARSENING,解释单位与边界；连续距离/不同切点/月份对照,不可解释为运行机制断点或完全公平
+A42,数值实现,clip=1e-6/1e-8、校准C=1e6及求解容差/迭代上限不影响结论,NONE,v3 prediction.fit_sigmoid/evaluate；相较旧C=1e5改为弱惩罚1e6，未证明等价,防止数值异常；无误差上界或收敛实证,NUMERICAL_ADEQUACY_PENDING,记录收敛警告与边界概率；更严容差/更多迭代/clip敏感性,不得声称等同无惩罚极大似然或精确边界log分数
+A43,审计约定,完全相同行合并；身份键冲突及取消带到达信息归U,PROBLEM;BTS_FILES,英文题面p2任务1；audit.py KEY/bad；audit_by_month.csv,保守不强行猜测真实结局；官方语义仍待补核,CONSERVATIVE_RULE_DICTIONARY_PENDING,列去重/冲突/缺失原因与字段字典；必要时改变规则重算,不得声称所有冲突必为源数据错误或U随机
+A44,可复现设计,seed=2701保证推断对抽样与随机性稳健,NONE,prediction.py fit和重采样固定seed；值来自项目编号,固定seed只支持可复现而不支持稳健性,REPRODUCIBLE_NOT_ROBUSTNESS_EVIDENCE,比较多个seed及蒙特卡洛误差；记录依赖版本,测试复现不可写成统计稳定性证明
+A45,重采样适配,连续年份—季节段内非循环移动块可用于本数据区间,A19;A20;K_AUTHOR,comparison.py calendar_episodes/block_weights；review_v3回归测试,防止遗漏整个季节、断裂月份拼接或跨年环接,IMPLEMENTATION_FIXED_STATISTICAL_VALIDITY_PENDING,检查日期段计数、罕见格空分母、ACF与模拟覆盖；多区块,不能由程序通过推断局部平稳或95%覆盖
+A46,失败策略,出现任一空共同格时抑制该长度全部标准化区间,A45,comparison.py bootstrap_diagnostics/empty_cell_frequencies,不做隐蔽条件重抽或删失败重复,CONSERVATIVE_RELEASE_RULE,保留点估计和失败次数；粗分层另算并明确换了目标,不能抑制失败后仍对外宣称所有区间可用
+A47,外部窗口,MCO 2024-10-09至10是外部运行应急窗,MCO_BOARD,PDF p93 Consent Agenda Item P，延续p94,用独立行政记录而非航班结果划窗,OFFICIAL_OPERATIONAL_WINDOW_VERIFIED,只限MCO源机场；核对留出期、地方日期；记录源内10月7日星期冲突,应急窗不是关闭窗；不作因果解释或假称事前注册
+A48,对照选择,相邻同星期日期足以作为普通日对照,NONE;EXTERNAL_EVENTS,Oct2/3及16/17；EXTERNAL_EVENTS.json,方便日历匹配的分析者选择,CALENDAR_CONTROLS_NOT_VERIFIED_CALM_OR_EXCHANGEABLE,匹配航司/目的地/时段/星期并报告覆盖；补独立天气,仅称日历对照，不能称已验证正常天气或因果反事实
+A49,开发期选择,2023年内时间隔离可证明2025外推,PROBLEM;A22,development2023: JanAug拟合，Sep调参，Oct校准，NovDec测试,缺2024Q2时先做真数据开发实验；按可用性而非分数选择,REJECTED_GENERALIZATION_CLAIM_DEVELOPMENT_ONLY,补primary计划：2023拟合，2024Q1调参，Q2校准，之后独立测试,开发实验不能替代2025验证；不能挑最佳测试月
+A50,算法比较,同特征同测试行意味着模型复杂度和信息处理完全公平,P1;P2;SCORE2007,prediction.py DirectJointModel与SequentialModel；test_row_hash；仅选页已读，依项目规范不得充当已全文读正式来源,隔离任务与样本不一致引入的假差异,FULL_READING_GATE_PENDING,记录3分支vs1联合拟合、相同抽样规则、各自调参、校准和警告,只能比较此具体配置；不能推出树普遍更优；全文读完前仅作候选来源/透明设计
+A51,实验算力,每二分类训练上限50000足以用于最终部署,NONE,v3真数据实验显式fit_cap=50000，默认上限仍200000,有限时间内先得到可审核时间外对照,EXPLORATORY_CAP_NOT_FINAL,更高上限、分支稀有事件数、多seed及少数群体校准,不能隐去抽样或声称最优/无损；计数写入status
+A52,字段事实,改航后仍可能最终到达原定目的地,BTS_FIELDS;BTS_FILES,DivReachedDest/DivArrDelay定义行；原16个月计数,区分正常完成、最终抵达和旅客不满意,OFFICIAL_FIELD_DEFINITION_DATA_COUNTS_VERIFIED,单列DivReachedDest无效/缺失；只在reached=1解释DivArrDelay,不能把DivArrDelay填回正常ArrDelay或把改航当取消
+A53,反例设计,EWR/LGA往DEN在共同航司季节时段下可直接作因果机场选择,PROBLEM;A16;A45,case_study.py；results/review_v3/descriptive/EWR_LGA_to_DEN_2023,审查建议的可复核航段例子；保留全部结果不择优,DESCRIPTIVE_MATCHED_CASE_NOT_CAUSAL,原始与匹配取消/长延误/联合率、覆盖、配对差值与后续期,不假造效用/票价/地面交通；不由一条路线推广全国
+A54,迁移与稀疏支持,训练中未见季度的历史基线仍充分代表强基线,A22;A26,development2023训练仅Q1-Q3；留出Q4全退回训练总率,披露弱基线季节外推失效，避免夸大树收益,UNSEEN_QUARTER_BASELINE_LIMITATION,主计划全年训练；记录未见组比例；校准/近期基线为后续候选,不能把开发基线差距写成普遍性能提升

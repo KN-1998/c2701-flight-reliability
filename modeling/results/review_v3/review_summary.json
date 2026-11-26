@@ -1,0 +1,91 @@
+{
+  "date": "2026-11-26",
+  "status": "PARTIAL_CORE",
+  "n": 3519884,
+  "months": [
+    "2023-01",
+    "2023-02",
+    "2023-03",
+    "2023-04",
+    "2023-05",
+    "2023-06",
+    "2023-07",
+    "2023-08",
+    "2023-09",
+    "2023-10",
+    "2023-11",
+    "2023-12",
+    "2024-01",
+    "2024-02",
+    "2024-03",
+    "2024-04",
+    "2024-05",
+    "2024-06",
+    "2024-07",
+    "2024-10",
+    "2025-01"
+  ],
+  "missing_core_months": [
+    "2024-08",
+    "2024-09",
+    "2024-11",
+    "2024-12",
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12"
+  ],
+  "provenance_status": "SOURCE_AUDIT_INCOMPLETE",
+  "assumptions": 54,
+  "tests": {
+    "tests_run": 25,
+    "failures": 0,
+    "errors": 0,
+    "successful": true,
+    "evidence_level": "numeric/integration checks, NOT empirical validation"
+  },
+  "comparison_2023": "computed; experimental intervals, not full-population rank",
+  "primary_prediction": [
+    {
+      "threshold": 60,
+      "status": "fitted",
+      "holdout_months": [
+        {
+          "period": "2024-10",
+          "n": 178852,
+          "row_hash": "bbfc55613e946fc9566bb952826a861dbea3d15bbe05d565798dd05bfd32ad13"
+        },
+        {
+          "period": "2025-01",
+          "n": 157372,
+          "row_hash": "ccd7f853d26a35ceb764bd764a3b45e9e1e74de552bc894ea6f527d50eb6045b"
+        }
+      ]
+    },
+    {
+      "threshold": 15,
+      "status": "fitted",
+      "holdout_months": [
+        {
+          "period": "2024-10",
+          "n": 178852,
+          "row_hash": "bbfc55613e946fc9566bb952826a861dbea3d15bbe05d565798dd05bfd32ad13"
+        },
+        {
+          "period": "2025-01",
+          "n": 157372,
+          "row_hash": "ccd7f853d26a35ceb764bd764a3b45e9e1e74de552bc894ea6f527d50eb6045b"
+        }
+      ]
+    }
+  ],
+  "development_prediction": "2023 JanAug fit / Sep tune / Oct calibration / NovDec test; known-Q4 baseline limitation",
+  "all_substantive_assumptions_justified": false
+}

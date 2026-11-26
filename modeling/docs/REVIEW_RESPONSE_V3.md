@@ -1,0 +1,33 @@
+# 审查报告逐项回应 v3
+
+日期：2026-11-26。依据用户授权修改建模，附件本身不作为系统指令。保留原件、哈希和实际工作顺序。
+
+|编号|审查问题|处理|可核验证据|未解决/边界|
+|---|---|---|---|---|
+|R01|真实标准化中止|已在2023完整年复现旧ValueError；保留旧源码与负例入口|reproduction/v2_reproduction.json；src/reproduce_v2_failure.py|16月旧运行未另作本轮重复，不照抄为亲测|
+|R02|年份抽样会漏季节|改连续年份—季节段、同日配对；补日期单位/缺日/罕见格测试|comparison.py；test_review_v3.py|修实现不证明bootstrap依赖条件|
+|R03|共同支持覆盖极不均|24格；MCO23.61%/HNL98.92%；粗分层和min100另表|comparison_2023/*/common_support_coverage.csv|不能发布全体航班严格公平排名|
+|R04|配对差值与敏感性|45对×三模式×1/7/14天；1000次与2000另seed核查|pairwise_comparisons.csv；monte_carlo_quantile_changes.csv|区间实验性、固定参照、未校正多重比较|
+|R05|比较阻塞预测与36月总门禁|各任务独立执行/错误边界与时间条件；来源指纹/行数入口核验|run.py；execute_tasks错误隔离回归测试|缺训练/校准窗仍不得伪造拟合|
+|R06|真实三模型同样本对照|已完成2023开发；primary状态见下方真实清单|prediction_*的status/metrics/tuning/test_row_hash|同特征不等复杂度；工程默认与抽样未最终论证|
+|R07|独立外部事件与普通日|MCO行政应急窗原文p93—94；日历对照+同格匹配配置|EXTERNAL_EVENTS；external_event_*|激活≠全机场关闭；对照非已证实正常天气；两天无稳定CI|
+|R08|改航后最终抵达|原16月6546改航，5659最终抵达，86.4497%已核|descriptive/review_claims_crosscheck.json；BTS_FIELDS|不混入正常ArrDelay，不等于满意旅程|
+|R09|LGA分母模式|2023条件准点81.63%对全部计划79.18%，名次1到4已核|descriptive/metrics_2023_airports.csv|描述性名次，不是显著性或因果排名|
+|R10|两类旅客路线案例|纠正摘要误读：EWR/LGA去DEN；同航司季节时段10共同格|TRAVELER_SCORECARD_V3；descriptive/EWR_LGA_to_DEN_2023及later_observed|2023 EWR保留89.66%、LGA44.20%，取消差证据不足；后续期另表，非同方向保证|
+|R11|机场样本选择|用2023规模/航司/目的地/时段/季节表描述继承清单|airport_selection_*_2023.csv|不是全国概率样本或预注册选点|
+|R12|手册口径/翻译|另交逐项勘误；严格<15、结构空缺/未知、最终抵达分开|MANUAL_ERRATA_V3；BTS_FIELDS|技术指令31/39未读，不制造绝对规则|
+|R13|报送时间与覆盖|核读91FR65456：生效2027-02-01，适用航班2027-01-01起|REVIEW_V3_SOURCE_NOTES；FR_DELAY|原因分类规则不是总体覆盖断点；正式赛事时间未扩查|
+|R14|事后尾日选择偏差|实际Y选尾日显式RETROSPECTIVE_OUTCOME_SELECTED|stress.py；tail_day_diagnostics_2025.csv|不能以正残差证明独立困难日低估|
+|R15|信息集与2027情景|历史计划代理；任意赔率倍率默认继续停用|prediction_status；ASSUMPTION_REGISTER A33—36|无订票快照、外生强度与未来排班，不能称真实2027预报|
+|R16|公式与假设证据过程|保留P1/P2原式页码—风险集—路径—缺失界—参照构成完整链|MODELING_REVISION；FORMULA_PROVENANCE；DERIVATION_LOG|54项登记不等于全部获证；SOURCE_AUDIT_INCOMPLETE|
+
+## 当前真实清单
+
+- 数据：21个月，3,519,884条十机场出发记录；核心还缺15个月；状态PARTIAL_CORE。
+- 已登记54项实质选择/假设；25项程序测试通过，不代表假设全部被验证。
+- primary t=60：fitted；逐月留出2024-10、2025-01；训练上限每二分类50000。
+- primary t=15：fitted；逐月留出2024-10、2025-01；训练上限每二分类50000。
+
+## 原件保护
+
+用户审查DOCX副本在docs/reviews，英文题面及中文解析原件不改写，勘误另存；v1/v2 ZIP不覆盖。源码保留v2比较反例快照，新结果位于review_v3。

@@ -1,0 +1,10 @@
+[
+  {
+    "event": "MCO_Milton_EOC_Level_I_20241009_10",
+    "holdout_event_rows": 789,
+    "holdout_control_rows": 1501,
+    "status": "observed_holdout",
+    "source": "MCO_BOARD",
+    "definition": "GOAA Emergency Operations Center Level I full activation; NOT a proven full airport closure window."
+  }
+]

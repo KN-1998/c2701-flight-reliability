@@ -1,0 +1,31 @@
+{
+  "status": "SOURCE_AUDIT_INCOMPLETE",
+  "all_substantive_assumptions_justified": false,
+  "assumptions_registered": 54,
+  "core_formulas_primary_text_verified": [
+    "P1 PDF p4",
+    "P2 PDF p5"
+  ],
+  "paper_performance_improvement_established": false,
+  "full_empirical_validation_complete": false,
+  "default_2027_multiplier_scenarios_allowed": false,
+  "required_before_final_claims": [
+    "Resolve pending assumptions or narrow claims",
+    "Complete core monthly coverage",
+    "Expand time-out validation beyond two observed holdout months; completed experiments do not establish universal validity",
+    "Verify uncertainty method/conditions",
+    "Verify event attribution and timestamped inputs"
+  ],
+  "review_revision": "v3: actual comparison, 2024-10/2025-01 primary holdout, development holdout and externally source-defined event completed; evidence gate remains incomplete.",
+  "core_full_reading": {
+    "P1": "PDF pp1-32, including references and appendix",
+    "P2": "PDF pp1-25, including references",
+    "audit_note": "Full sequential reading completed after focused formula extraction, on 2026-11-26. This is not preregistration or independent proof of every theorem."
+  },
+  "auxiliary_full_reading_gate_pending": [
+    "CAL2005",
+    "SCORE2007",
+    "T0"
+  ],
+  "auxiliary_gate_note": "Selected pages were inspected but full texts were not read; under AGENTS.md these are bibliography-verified only, not admissible full-reading formula authority. Calibration is experimental, not source-certified for this task."
+}

@@ -1,0 +1,98 @@
+{
+  "status": "fitted",
+  "plan": "development2023",
+  "threshold_minutes": 15,
+  "chosen_C": {
+    "conditional_tree": 0.1,
+    "direct_joint": 0.1
+  },
+  "training_end": "2023-09-30",
+  "fit_end": "2023-08-31",
+  "tuning_start": "2023-09-01",
+  "calibration_start": "2023-10-01",
+  "calibration_end": "2023-10-31",
+  "holdout_months": [
+    {
+      "period": "2023-11",
+      "n": 163601,
+      "row_hash": "2661d3894c36b8ba6430b6ee36bc264e3e2da229fc78d69da51f532289266516"
+    },
+    {
+      "period": "2023-12",
+      "n": 164609,
+      "row_hash": "c69955aa1fc452592bbe03e9dec3cc3081c8322b4cfca7b7e16225654ed0dd94"
+    }
+  ],
+  "features": [
+    "Origin",
+    "Dest",
+    "Reporting_Airline",
+    "month",
+    "weekday",
+    "time_bin",
+    "dep_minutes",
+    "arr_minutes",
+    "Distance",
+    "CRSElapsedTime"
+  ],
+  "fit_cap_per_binary": 50000,
+  "seed": 2701,
+  "tree_training": [
+    {
+      "available": 1494950,
+      "fitted": 50000,
+      "events": 852
+    },
+    {
+      "available": 1468558,
+      "fitted": 50000,
+      "events": 119
+    },
+    {
+      "available": 1464485,
+      "fitted": 50000,
+      "events": 12219
+    }
+  ],
+  "tree_calibration": [
+    {
+      "n": 174356,
+      "events": 795,
+      "applied": true
+    },
+    {
+      "n": 173561,
+      "events": 256,
+      "applied": true
+    },
+    {
+      "n": 173305,
+      "events": 27294,
+      "applied": true
+    }
+  ],
+  "tree_warnings": [
+    [],
+    [],
+    []
+  ],
+  "direct_training": {
+    "available": 1494950,
+    "fitted": 50000,
+    "events": 12997
+  },
+  "direct_calibration": {
+    "n": 174356,
+    "events": 28345,
+    "applied": true
+  },
+  "direct_warnings": [],
+  "baseline_strength": 20,
+  "limitations": [
+    "Experimental defaults and sampling cap not justified for final use",
+    "Conditional branch fitting does not make categories independent",
+    "Same raw features/time windows, but tree has three fits and is not matched for parameter budget",
+    "Unknown excluded; historical schedules are not verified booking-time snapshots",
+    "2023 development plan cannot establish 2025 generalization; monthly test results not used for model choice"
+  ]
+}

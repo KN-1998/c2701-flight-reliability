@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-26",
+  "periods_packaged": [
+    "2023-01",
+    "2023-02",
+    "2023-03",
+    "2023-04",
+    "2023-05",
+    "2023-06",
+    "2023-07",
+    "2023-08",
+    "2023-09",
+    "2023-10",
+    "2023-11",
+    "2023-12",
+    "2024-01",
+    "2024-02",
+    "2024-03",
+    "2024-04",
+    "2024-05",
+    "2024-06",
+    "2024-07",
+    "2024-10",
+    "2025-01"
+  ],
+  "comparison": {
+    "scope": "2023",
+    "threshold": 15,
+    "strata": [
+      "season",
+      "time_bin",
+      "distance_bin"
+    ],
+    "min_known": [
+      30,
+      100
+    ],
+    "blocks": [
+      1,
+      7,
+      14
+    ],
+    "main_reps": 1000,
+    "main_seed": 2701,
+    "mc_check_reps": 2000,
+    "mc_check_seed": 2702
+  },
+  "prediction": {
+    "thresholds": [
+      15,
+      60
+    ],
+    "plans": [
+      "development2023",
+      "primary"
+    ],
+    "cap_per_binary": 50000,
+    "C_grid": [
+      0.1,
+      1,
+      10
+    ],
+    "seed": 2701,
+    "baseline_strength": 20,
+    "calibration_C": 1000000.0
+  },
+  "selection_history": "All v3 design choices made after review, not preregistered. Months selected based on availability, not test scores. No final statistical validity claimed."
+}

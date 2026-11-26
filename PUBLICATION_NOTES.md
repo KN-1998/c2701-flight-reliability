@@ -1,0 +1,12 @@
+# GitHub公开快照记录
+
+日期：2026-11-26（Asia/Shanghai）。仓库：KN-1998/c2701-flight-reliability。
+
+- 来源：本地已验证v3交接ZIP；原ZIP SHA-256为 `1419a057837b73c47782fa37c921b80b1e393bb1299b3bfe61f512ac9c4a3490`。
+- 新仓库从该快照初始化；不带入旧项目Git历史、大量删除状态或其他题目材料。
+- 唯一原有载荷内容修改：`modeling/docs/reviews/review_extracted.json` 的 `source` 字段从个人本机聊天文件路径改为包内审查DOCX相对路径。审查原文、原DOCX、来源元数据、研究PDF、模型代码、月表、结果均不变。
+- 新增本仓库README、忽略规则和本公开记录；HANDOFF_CONTENTS补充公开来源说明；重新生成公开版指纹。
+- 未上传原ZIP（可从本仓库下载代码快照）、旧ZIP、缓存、环境、全国原始ZIP、部分下载、pickle或登录凭据。
+- 公开仓库只是协作与证据快照，不表示统计来源门禁全部通过，也不授予第三方材料新权利。
+
+协作者账号由旧项目现有write成员核对为shaoshuiyu0222和EveyGA；邀请为write权限，接受前不声称已经加入。访问管理记录不包含令牌。

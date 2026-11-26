@@ -1,0 +1,37 @@
+{
+  "status": "computed",
+  "n": 1997517,
+  "months": [
+    "2023-01",
+    "2023-02",
+    "2023-03",
+    "2023-04",
+    "2023-05",
+    "2023-06",
+    "2023-07",
+    "2023-08",
+    "2023-09",
+    "2023-10",
+    "2023-11",
+    "2023-12"
+  ],
+  "threshold_minutes": 15,
+  "strata": [
+    "season",
+    "time_bin"
+  ],
+  "min_known": 30,
+  "common_strata": 16,
+  "bootstrap_reps": 1000,
+  "block_days": [
+    1,
+    7,
+    14
+  ],
+  "resampling": "paired noncircular moving blocks within contiguous year-season observed-date episodes",
+  "coverage_min": 1.0,
+  "coverage_max": 1.0,
+  "uncertainty": "EXPERIMENTAL; source and stationarity/local-exchangeability conditions not established for flights; fixed reference weights; no parameter uncertainty",
+  "point_reversals": 2,
+  "strict_full_population_rank_allowed": false
+}

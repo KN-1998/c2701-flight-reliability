@@ -1,0 +1,151 @@
+{
+  "checked_at_utc": "2026-11-26T02:08:28.566277+00:00",
+  "sources": [
+    {
+      "id": "P1",
+      "file": "PEYHARDI2014_SPEC.pdf",
+      "title": "A new specification of generalized linear models for categorical data",
+      "verified_location": "PDF pp4-7; Eq(1), unnumbered r(pi)=F(Z beta), sequential ratio",
+      "status": "PRIMARY_RESEARCH_PREPRINT_READ",
+      "sha256": "d4b5eff1a6d44ada69897b13a1a5ba14a455eb7b9e5075f8f93d5c9762358d29",
+      "bytes": 1043546,
+      "authors": [
+        "Jean Peyhardi",
+        "Catherine Trottier",
+        "Yann Guédon"
+      ],
+      "version": "arXiv:1404.7331v2",
+      "url": "https://arxiv.org/pdf/1404.7331v2",
+      "full_text_read_date_local": "2026-11-26",
+      "full_text_read_scope": "PDF pp1-32, including references and appendix",
+      "full_text_read_note": "Full sequential text read during v3 final source audit, after earlier focused formula reading; not a claim that every theorem has been independently re-proved."
+    },
+    {
+      "id": "P2",
+      "file": "PEYHARDI2014_TREE.pdf",
+      "title": "Partitioned conditional generalized linear models for categorical data",
+      "verified_location": "PDF pp5-6; Definition 2; unnumbered path-product formula; Proposition 1",
+      "status": "PRIMARY_RESEARCH_PREPRINT_READ",
+      "sha256": "9d6ae3e39e4db6fe3378b632408081a359b99f12ed2c0f1ce35addb67952fca9",
+      "bytes": 1060586,
+      "authors": [
+        "Jean Peyhardi",
+        "Catherine Trottier",
+        "Yann Guédon"
+      ],
+      "version": "arXiv:1405.5802v1",
+      "url": "https://arxiv.org/pdf/1405.5802v1",
+      "full_text_read_date_local": "2026-11-26",
+      "full_text_read_scope": "PDF pp1-25, including references",
+      "full_text_read_note": "Full sequential text read during v3 final source audit, after earlier focused formula reading; not a claim that every theorem has been independently re-proved."
+    },
+    {
+      "id": "T0",
+      "file": "TUTZ2020.pdf",
+      "title": "A Taxonomy of Polytomous Item Response Models",
+      "verified_location": "PDF pp6-8 candidate review; not used as earliest original source",
+      "status": "BIBLIOGRAPHY_VERIFIED_FULL_READING_GATE_PENDING",
+      "sha256": "2549c367d1754e6d0ddab4de7c569594b2b2d3112a3eb8e46092985f2c898c3e",
+      "bytes": 428560,
+      "previous_status": "AUTHOR_PAPER_SCREENED_NOT_CORE",
+      "reading_gate": "Only selected pages were read. Under project AGENTS.md, NOT eligible as a fully read formal formula source. Exact selected-page notes are preserved, not erased."
+    },
+    {
+      "id": "K_META",
+      "file": "KITAGAWA1955_CROSSREF.json",
+      "title": "Components of a Difference Between Two Rates",
+      "verified_location": "Crossref metadata only; publisher403/JSTOR429; no original formula verified",
+      "status": "METADATA_ONLY_NOT_FULLTEXT",
+      "sha256": "d3bd90ccdcd06b797c95b3586c825f53e98092280fb083fce4820ddd7780a21f",
+      "bytes": 1905
+    },
+    {
+      "id": "CAL2005",
+      "file": "NICULESCU2005.pdf",
+      "title": "Predicting Good Probabilities With Supervised Learning",
+      "authors": [
+        "Alexandru Niculescu-Mizil",
+        "Rich Caruana"
+      ],
+      "url": "https://www.cs.cornell.edu/~alexn/papers/calibration.icml05.crc.rev3.pdf",
+      "verified_location": "PDF p2 section 2.1 Eqs(1)-(3), disjoint calibration discussion; p1/p8 authors and references; Platt1999 first source not read",
+      "status": "BIBLIOGRAPHY_VERIFIED_FULL_READING_GATE_PENDING",
+      "sha256": "29a5bff2ea76c00bd106441df28325474150972ae477f62b3914a074302d26c9",
+      "bytes": 409128,
+      "previous_status": "AUTHOR_RESEARCH_PAPER_SELECTED_SECTIONS_READ",
+      "reading_gate": "Only selected pages were read. Under project AGENTS.md, NOT eligible as a fully read formal formula source. Exact selected-page notes are preserved, not erased."
+    },
+    {
+      "id": "SCORE2007",
+      "file": "GNEITING2007.pdf",
+      "title": "Strictly Proper Scoring Rules, Prediction, and Estimation",
+      "authors": [
+        "Tilmann Gneiting",
+        "Adrian E. Raftery"
+      ],
+      "url": "https://sites.stat.washington.edu/raftery/Research/PDF/Gneiting2007jasa.pdf",
+      "verified_location": "PDF p4 (journal p362) section 2.3 and section 3.1; PDF p5 (journal p363) Example1 quadratic/Brier and Example3 logarithmic score; Brier1950 first source not read",
+      "status": "BIBLIOGRAPHY_VERIFIED_FULL_READING_GATE_PENDING",
+      "sha256": "d31a0c5f0ae8fec1a0a6544db5d056645b2d7296d71b44a2e8efb293c7d87ba2",
+      "bytes": 556804,
+      "previous_status": "AUTHOR_RESEARCH_PAPER_SELECTED_SECTIONS_READ",
+      "reading_gate": "Only selected pages were read. Under project AGENTS.md, NOT eligible as a fully read formal formula source. Exact selected-page notes are preserved, not erased."
+    },
+    {
+      "id": "BTS_FIELDS",
+      "file": "review_v3/BTS_FIELDS.html",
+      "title": "BTS Reporting Carrier field dictionary",
+      "verified_location": "Official field table, ArrDel15; CRSDepTime/CRSArrTime; DivReachedDest/DivActualElapsedTime/DivArrDelay",
+      "status": "OFFICIAL_PRIMARY_DOCUMENT_SELECTED_FIELDS_READ",
+      "url": "https://www.transtats.bts.gov/Fields.asp?gnoyr_VQ=FGJ",
+      "sha256": "412ea616430b8738d85755de3b781ac7a50824a2e591c1583a1bfc4e2d29e24b",
+      "bytes": 149783,
+      "read_date_local": "2026-11-26"
+    },
+    {
+      "id": "FR_DELAY",
+      "file": "review_v3/FR_DELAY.html",
+      "title": "91 FR 65456; document 2026-21058",
+      "verified_location": "DATES and Delay of Effective Date paragraphs; official HTML, 2026-10-15",
+      "status": "OFFICIAL_PRIMARY_DOCUMENT_READ",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2026-10-15/html/2026-21058.htm",
+      "sha256": "d8dc4a694f7fe1ce5a8d343e272bc8e06d9b57aaef00a49be37599c0de19ff1f",
+      "bytes": 7455,
+      "read_date_local": "2026-11-26"
+    },
+    {
+      "id": "MCO_BOARD",
+      "file": "review_v3/MCO_BOARD.pdf",
+      "title": "GOAA Board Agenda 2024-12-11",
+      "verified_location": "PDF pp93-94 Consent Agenda Item P; 219-page document, selected pages read only",
+      "status": "OFFICIAL_PRIMARY_DOCUMENT_SELECTED_PAGES_READ",
+      "url": "https://assets.ctfassets.net/qiecpoxp4bka/3KlxxZzNIFQwKvy7Y8VWy1/44aae374fa57a3b37ad94c99a2a1041f/Board-Agenda-Final-20241211.pdf",
+      "sha256": "eb67e25f1211b914550a76b12b8926a27636dcd19a253f59d5ada23bfc04dfa6",
+      "bytes": 5765900,
+      "read_date_local": "2026-11-26"
+    },
+    {
+      "id": "NHC_MILTON",
+      "file": "review_v3/NHC_MILTON.pdf",
+      "title": "NHC Tropical Cyclone Report: Hurricane Milton (AL142024)",
+      "verified_location": "PDF pp1-5 read; p4 landfall at 0030 UTC 2024-10-10; NOT airport closure evidence",
+      "status": "OFFICIAL_PRIMARY_DOCUMENT_SELECTED_PAGES_READ",
+      "url": "https://www.nhc.noaa.gov/data/tcr/AL142024_Milton.pdf",
+      "sha256": "565196bca8a665250cab912c9d9b4529bfed620e211aa7b7b18a450ddccefa7b",
+      "bytes": 11046930,
+      "read_date_local": "2026-11-26"
+    },
+    {
+      "id": "K_AUTHOR",
+      "file": "review_v3/KUNSCH_PAPERS.html",
+      "title": "Hans R. Künsch author publication list",
+      "verified_location": "1989 entry only; no original 1989 full text linked at entry",
+      "status": "AUTHOR_BIBLIOGRAPHY_NOT_ORIGINAL_PAPER",
+      "url": "https://people.math.ethz.ch/~kuensch/papers/",
+      "sha256": "6ce69c0f474e62134ae269504b9fcd99575291f1948b2d3cd5590fea4d8c4352",
+      "bytes": 36023,
+      "read_date_local": "2026-11-26"
+    }
+  ],
+  "v3_note": "Added official field/event/reporting evidence after reviewer feedback; primary research reading scope unchanged. Logs retain 403/404 and metadata-only failures."
+}

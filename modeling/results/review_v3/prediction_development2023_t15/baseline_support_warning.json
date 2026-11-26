@@ -1,0 +1,13 @@
+{
+  "development_training_quarters": [
+    1,
+    2,
+    3
+  ],
+  "holdout_quarters": [
+    4
+  ],
+  "unseen_quarter_cell_fraction": 1.0,
+  "fallback": "all branch predictions use training-wide marginal rate",
+  "implication": "Baseline comparison is a seasonal extrapolation stress diagnostic; not a fair universal performance superiority claim"
+}

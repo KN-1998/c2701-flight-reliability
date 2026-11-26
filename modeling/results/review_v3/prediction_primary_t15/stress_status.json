@@ -1,0 +1,7 @@
+{
+  "status": "historical_diagnostics_only",
+  "tail_day_threshold": 0.41562165374791116,
+  "difficult_days_2025": 4,
+  "scenario_status": "DISABLED: A33/A34 require externally supported scenario intensity",
+  "assumption_audit": "SOURCE_AUDIT_INCOMPLETE; calendar windows are not verified event attribution"
+}

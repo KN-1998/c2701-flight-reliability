@@ -1,0 +1,52 @@
+[
+  {
+    "id": "TUTZ2020",
+    "url": "https://arxiv.org/pdf/2010.01382v1",
+    "final_url": "https://arxiv.org/pdf/2010.01382v1",
+    "http_status": 200,
+    "bytes": 428560,
+    "file": "TUTZ2020.pdf",
+    "sha256": "2549c367d1754e6d0ddab4de7c569594b2b2d3112a3eb8e46092985f2c898c3e",
+    "is_pdf": true
+  },
+  {
+    "id": "KITAGAWA1955_CROSSREF",
+    "url": "https://api.crossref.org/works/10.1080/01621459.1955.10501299",
+    "final_url": "https://api.crossref.org/works/10.1080/01621459.1955.10501299",
+    "http_status": 200,
+    "bytes": 1905,
+    "file": "KITAGAWA1955_CROSSREF.json",
+    "sha256": "d3bd90ccdcd06b797c95b3586c825f53e98092280fb083fce4820ddd7780a21f",
+    "is_pdf": false
+  },
+  {
+    "id": "KITAGAWA1955_PUBLISHER",
+    "url": "https://www.tandfonline.com/doi/pdf/10.1080/01621459.1955.10501299",
+    "final_url": "https://www.tandfonline.com/doi/pdf/10.1080/01621459.1955.10501299",
+    "http_status": 403,
+    "bytes": 5620,
+    "file": "KITAGAWA1955_PUBLISHER.html",
+    "sha256": "7b957a0f01770e3b72e4dbf749822b882cdfaa6a62829a99ee077bc3f803237e",
+    "is_pdf": false
+  },
+  {
+    "id": "KITAGAWA1955_JSTOR",
+    "url": "https://www.jstor.org/stable/pdf/2281213.pdf",
+    "final_url": "https://www.jstor.org/stable/pdf/2281213.pdf",
+    "http_status": 429,
+    "bytes": 42137,
+    "file": "KITAGAWA1955_JSTOR.html",
+    "sha256": "663f2f64c738e986049db4ca8c9b3cd86ad76592d921e24a1e6ecf236bdba7bd",
+    "is_pdf": false
+  },
+  {
+    "id": "BTS_DEFINITION",
+    "url": "https://www.bts.gov/topics/airlines-and-airports/airline-time-statistics",
+    "final_url": "https://www.bts.gov/topics/airlines-and-airports/airline-time-statistics",
+    "http_status": 403,
+    "bytes": 441,
+    "file": "BTS_DEFINITION.html",
+    "sha256": "79a42ab5df777cbe184c5006370940baf87783bdc71f214fbcbc3d4e3c01956b",
+    "is_pdf": false
+  }
+]

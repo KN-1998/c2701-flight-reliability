@@ -1,0 +1,31 @@
+[
+  {
+    "id": "KUNSCH1989",
+    "url": "https://projecteuclid.org/journals/annals-of-statistics/volume-17/issue-3/The-jackknife-and-the-bootstrap-for-general-stationary-observations/10.1214/aos/1176347265.pdf",
+    "http_status": 200,
+    "file": "KUNSCH1989.html",
+    "bytes": 1157,
+    "sha256": "a376998f927bfe6811728c331835baed3608558a73b772bc1aefc87388048710",
+    "is_pdf": false
+  },
+  {
+    "id": "NICULESCU2005",
+    "url": "https://www.cs.cornell.edu/~alexn/papers/calibration.icml05.crc.rev3.pdf",
+    "http_status": 200,
+    "file": "NICULESCU2005.pdf",
+    "bytes": 409128,
+    "sha256": "29a5bff2ea76c00bd106441df28325474150972ae477f62b3914a074302d26c9",
+    "is_pdf": true,
+    "pdf_pages": 8
+  },
+  {
+    "id": "GNEITING2007",
+    "url": "https://sites.stat.washington.edu/raftery/Research/PDF/Gneiting2007jasa.pdf",
+    "http_status": 200,
+    "file": "GNEITING2007.pdf",
+    "bytes": 556804,
+    "sha256": "d31a0c5f0ae8fec1a0a6544db5d056645b2d7296d71b44a2e8efb293c7d87ba2",
+    "is_pdf": true,
+    "pdf_pages": 20
+  }
+]

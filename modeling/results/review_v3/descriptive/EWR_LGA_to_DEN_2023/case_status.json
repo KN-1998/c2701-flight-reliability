@@ -1,0 +1,32 @@
+{
+  "status": "computed",
+  "periods": [
+    "2023-01",
+    "2023-02",
+    "2023-03",
+    "2023-04",
+    "2023-05",
+    "2023-06",
+    "2023-07",
+    "2023-08",
+    "2023-09",
+    "2023-10",
+    "2023-11",
+    "2023-12"
+  ],
+  "n": 8523,
+  "shared_cells": 10,
+  "coverage": {
+    "EWR": 0.8966471854813903,
+    "LGA": 0.44195751138088013
+  },
+  "strata": [
+    "Reporting_Airline",
+    "season",
+    "time_bin"
+  ],
+  "min_known": 30,
+  "reference": "equal departure-airport average mix restricted to shared cells",
+  "preferences": "No observed utility weights; report cancellation and long-delay tradeoff separately",
+  "limitation": "Same destination DEN, alternative departure airports EWR/LGA; no causal claim, ground transport or fare data not present"
+}

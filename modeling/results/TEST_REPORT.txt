@@ -1,0 +1,30 @@
+test_boundary_and_partition (test_contract.ContractTests.test_boundary_and_partition) ... ok
+test_duplicates (test_contract.ContractTests.test_duplicates) ... ok
+test_hhmm (test_contract.ContractTests.test_hhmm) ... ok
+test_no_completed (test_contract.ContractTests.test_no_completed) ... ok
+test_probability_chain (test_contract.ContractTests.test_probability_chain) ... ok
+test_block_resampling (test_integration.IntegrationTests.test_block_resampling) ... ok
+test_comparison_smoke (test_integration.IntegrationTests.test_comparison_smoke) ... ok
+test_prediction_smoke (test_integration.IntegrationTests.test_prediction_smoke) ... ok
+test_stress_smoke (test_integration.IntegrationTests.test_stress_smoke) ... ok
+test_threshold_monotonicity (test_integration.IntegrationTests.test_threshold_monotonicity) ... ok
+test_original_sources_and_exact_versions (test_provenance.ProvenanceTests.test_original_sources_and_exact_versions) ... ok
+test_registry_keeps_evidence_gaps_visible (test_provenance.ProvenanceTests.test_registry_keeps_evidence_gaps_visible) ... ok
+test_support_and_mix_are_not_the_same_component (test_provenance.ProvenanceTests.test_support_and_mix_are_not_the_same_component) ... ok
+test_unknown_bounds_and_reference_mixture (test_provenance.ProvenanceTests.test_unknown_bounds_and_reference_mixture) ... ok
+test_2400_source_token_preserved_without_date_shift (test_review_v3.ReviewRegressionTests.test_2400_source_token_preserved_without_date_shift) ... ok
+test_comparison_failure_does_not_block_prediction (test_review_v3.ReviewRegressionTests.test_comparison_failure_does_not_block_prediction) ... ok
+test_direct_joint_and_empty_metrics (test_review_v3.ReviewRegressionTests.test_direct_joint_and_empty_metrics) ... ok
+test_diversion_fields_not_normal_arrival (test_review_v3.ReviewRegressionTests.test_diversion_fields_not_normal_arrival) ... ok
+test_empty_rare_cell_is_diagnosed_not_redrawn (test_review_v3.ReviewRegressionTests.test_empty_rare_cell_is_diagnosed_not_redrawn) ... ok
+test_full_calendar_preserves_each_year_season_episode (test_review_v3.ReviewRegressionTests.test_full_calendar_preserves_each_year_season_episode) ... ok
+test_invalid_date_order_rejected (test_review_v3.ReviewRegressionTests.test_invalid_date_order_rejected) ... ok
+test_missing_dates_never_joined (test_review_v3.ReviewRegressionTests.test_missing_dates_never_joined) ... ok
+test_prediction_requires_own_windows_not_all_36_months (test_review_v3.ReviewRegressionTests.test_prediction_requires_own_windows_not_all_36_months) ... ok
+test_selection_counts_exclude_unused_categories (test_review_v3.ReviewRegressionTests.test_selection_counts_exclude_unused_categories) ... ok
+test_threshold_is_parameterized (test_review_v3.ReviewRegressionTests.test_threshold_is_parameterized) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 3.121s
+
+OK

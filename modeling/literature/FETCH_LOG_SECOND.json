@@ -1,0 +1,42 @@
+[
+  {
+    "id": "PEYHARDI2014_SPEC",
+    "url": "https://arxiv.org/pdf/1404.7331v2",
+    "final_url": "https://arxiv.org/pdf/1404.7331v2",
+    "http_status": 200,
+    "bytes": 1043546,
+    "file": "PEYHARDI2014_SPEC.pdf",
+    "sha256": "d4b5eff1a6d44ada69897b13a1a5ba14a455eb7b9e5075f8f93d5c9762358d29",
+    "is_pdf": true
+  },
+  {
+    "id": "PEYHARDI2014_TREE",
+    "url": "https://arxiv.org/pdf/1405.5802v1",
+    "final_url": "https://arxiv.org/pdf/1405.5802v1",
+    "http_status": 200,
+    "bytes": 1060586,
+    "file": "PEYHARDI2014_TREE.pdf",
+    "sha256": "9d6ae3e39e4db6fe3378b632408081a359b99f12ed2c0f1ce35addb67952fca9",
+    "is_pdf": true
+  },
+  {
+    "id": "KITAGAWA1955_BERKELEY",
+    "url": "https://u.demog.berkeley.edu/~jrw/Biblio/Eprints/%20J-L/kitagawa.1955.pdf",
+    "error": "HTTPSConnectionPool(host='u.demog.berkeley.edu', port=443): Max retries exceeded with url: /~jrw/Biblio/Eprints/%20J-L/kitagawa.1955.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='u.demog.berkeley.edu', port=443) at 0x22f3880a3c0>, 'Connection to u.demog.berkeley.edu timed out. (connect timeout=40)'))"
+  },
+  {
+    "id": "SNOWDEN2011",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3105284/",
+    "final_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3105284/",
+    "http_status": 403,
+    "bytes": 134,
+    "file": "SNOWDEN2011.html",
+    "sha256": "c996c0469ef05ff6fdd1f7cefbc3f7e109bb21969de42fcf591498a828a7ad5f",
+    "is_pdf": false
+  },
+  {
+    "id": "KITAGAWA1955_BERKELEY_ALT",
+    "url": "https://u.demog.berkeley.edu/~jrw/Biblio/Eprints/J-L/kitagawa.1955.pdf",
+    "error": "HTTPSConnectionPool(host='u.demog.berkeley.edu', port=443): Max retries exceeded with url: /~jrw/Biblio/Eprints/J-L/kitagawa.1955.pdf (Caused by ConnectTimeoutError(<HTTPSConnection(host='u.demog.berkeley.edu', port=443) at 0x22f3880ac90>, 'Connection to u.demog.berkeley.edu timed out. (connect timeout=40)'))"
+  }
+]

@@ -1,0 +1,21 @@
+# Local runtime and unpublished work
+.venv/
+.uv-cache/
+__pycache__/
+*.py[cod]
+.cache/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pkl
+*.pickle
+*.part
+*.tmp
+*.zip
+# Generate new experiments locally; explicitly review before publishing them.
+modeling/results/recomputed*/
+modeling/results/new_*/
+modeling/results/unpacked_*/
+modeling/data/*.zip

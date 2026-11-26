@@ -1,0 +1,5 @@
+period,contrast,n,brier_difference,daily_difference_min,daily_difference_max,uncertainty
+2024-10,conditional_tree_minus_historical_baseline,178852,0.00035699729454420604,-0.006716792835363656,0.002377999135064592,descriptive paired loss; no CI/coverage guarantee
+2024-10,conditional_tree_minus_direct_joint,178852,0.0004676595701758523,-0.0019705039869184126,0.001010319141330653,descriptive paired loss; no CI/coverage guarantee
+2025-01,conditional_tree_minus_historical_baseline,157372,0.0008062184356609794,-0.017250866036437086,0.006556388643083636,descriptive paired loss; no CI/coverage guarantee
+2025-01,conditional_tree_minus_direct_joint,157372,0.0003562450474594972,-0.0019309038002055692,0.002319606212970876,descriptive paired loss; no CI/coverage guarantee

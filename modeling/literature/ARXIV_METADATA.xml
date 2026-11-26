@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/433HkM6cgLfbDMH3gUP+TZYdLi0</id>
+  <title>arXiv Query: search_query=&amp;id_list=1404.7331v2,1405.5802v1&amp;start=0&amp;max_results=2</title>
+  <updated>2026-11-26T01:54:14Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=2&amp;id_list=1404.7331v2,1405.5802v1" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>2</opensearch:itemsPerPage>
+  <opensearch:totalResults>2</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1405.5802v1</id>
+    <title>Partitioned conditional generalized linear models for categorical data</title>
+    <updated>2014-05-22T15:45:33Z</updated>
+    <link href="https://arxiv.org/abs/1405.5802v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1405.5802v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In categorical data analysis, several regression models have been proposed for hierarchically-structured response variables, e.g. the nested logit model. But they have been formally defined for only two or three levels in the hierarchy. Here, we introduce the class of partitioned conditional generalized linear models (PCGLMs) defined for any numbers of levels. The hierarchical structure of these models is fully specified by a partition tree of categories. Using the genericity of the (r,F,Z) specification, the PCGLM can handle nominal, ordinal but also partially-ordered response variables.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-05-22T15:45:33Z</published>
+    <arxiv:comment>25 pages, 13 figures</arxiv:comment>
+    <arxiv:primary_category term="stat.ME"/>
+    <author>
+      <name>Jean Peyhardi</name>
+    </author>
+    <author>
+      <name>Catherine Trottier</name>
+    </author>
+    <author>
+      <name>Yann Guédon</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1404.7331v2</id>
+    <title>A new specification of generalized linear models for categorical data</title>
+    <updated>2014-05-12T08:32:01Z</updated>
+    <link href="https://arxiv.org/abs/1404.7331v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1404.7331v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Regression models for categorical data are specified in heterogeneous ways. We propose to unify the specification of such models. This allows us to define the family of reference models for nominal data. We introduce the notion of reversible models for ordinal data that distinguishes adjacent and cumulative models from sequential ones. The combination of the proposed specification with the definition of reference and reversible models and various invariance properties leads to a new view of regression models for categorical data.</summary>
+    <category term="stat.ME" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-04-29T12:21:55Z</published>
+    <arxiv:comment>31 pages, 13 figures</arxiv:comment>
+    <arxiv:primary_category term="stat.ME"/>
+    <author>
+      <name>Jean Peyhardi</name>
+    </author>
+    <author>
+      <name>Catherine Trottier</name>
+    </author>
+    <author>
+      <name>Yann Guédon</name>
+    </author>
+  </entry>
+</feed>
