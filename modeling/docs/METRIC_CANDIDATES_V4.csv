@@ -1,0 +1,21 @@
+﻿id,class,indicator,definition_denominator,source_ids,exact_locator,decision,reason,boundary
+M01,结局,取消率,取消数/全部保留计划记录,BTS_FIELDS,Cancelled row,保留,取消不是零到达延误,所有计划记录/unknown另给范围
+M02,结局,改航率,改航数/全部保留计划记录,BTS_FIELDS,Diverted row,保留,保留非正常目的地结局,DivReachedDest为补充不并入正常完成
+M03,结局,完成条件15分钟延误率,正常完成且ArrDelay>=15/正常完成,BTS_FIELDS,ArrDel15; ArrDelay rows,保留为条件诊断,官方15分钟边界，但分母会排除取消改航,不可称全部计划可靠性
+M04,结局,全部计划内准时正常完成率,正常完成且ArrDelay<15/全部保留计划记录,PROBLEM;BTS_FIELDS,题面p2任务1; ArrDel15,保留,让取消改航进入分母,unknown给上下界
+M05,结局,联合不满意风险60,P(C或V或正常完成且ArrDelay>=60),PROBLEM;P1;P2,题面p2任务3; 原文PDF p4/p5,保留并声明60为分析阈值,同两公式四叶导出，无偏好权重,60非已核实统一官方严重阈值
+M06,结局,完成条件长延误率,P(ArrDelay>=t|正常完成),PROBLEM;P2,题面p2任务1/3; PDF p5,保留15/60对照,区分条件与联合,不能和取消率直接当同分母相加
+M07,结局,完成航班平均延误/正延误,"ArrDelay或max(ArrDelay,0)的完成内均值",BTS_FIELDS;PROBLEM,ArrDelay/ArrDelayMinutes; 题面p2重要区别,只作辅助,均值掩盖消失航班和尾部,不作为唯一机场排名
+M08,结局,改航最终到原定目的地及额外延误,DivReachedDest; DivArrDelay,BTS_FIELDS,Diverted Airport Information section,辅助/需完整性审计,最终到达不等于正常到达,字段缺失不得默认到达
+M09,可比性,未知占比及识别范围,unknown数/计划记录; 成功数/N至(成功+unknown)/N,PROBLEM;MATH_IDENTITY,题面p2任务1; 四结局+未知计数恒等式,保留,不对未知强加随机机制,边界宽度不能被清洗掩盖
+M10,可比性,共同支持保留率,共同支持记录/该机场全部记录,PROBLEM;LOCAL_DESIGN,题面p2任务2; comparison.py,保留限制项,判断比较是否覆盖目标,30/100等最小格数是工程敏感性非文献常数
+M11,可比性,原始/共同支持/标准化差,同一成功率在三种目标总体的差,PROBLEM;MATH_IDENTITY,题面p2任务2; mix_decomposition.csv,保留描述,分离构成与支持限制,不是机场因果效应
+M12,预测质量,Brier与log loss,二元事件概率评分,CORP2020,PDF p9 Table1 Eq(1),保留,严格适当评分用于概率验证,不等于校准或罕见事件单独质量
+M13,预测质量,校准图/事件计数/PAV分解,预测概率与观察频率; MCB/DSC/UNC,CORP2020,PDF pp2/5/8/9/13,保留描述,检测低风险稀有事件误差并显示箱选择影响,PAV非新预报;不发独立样本CI
+M14,预测质量,ROC AUC与average precision,排序判别摘要,PROBLEM;IMPLEMENTATION,题面p2任务3; prediction.py evaluate,辅助,判别与概率准确性不相同,AP按实现定义不误写连续PR曲线面积;依赖流行率
+M15,预测质量,逐月/冲击窗口误差,同留出样本Brier和观测减预测,PROBLEM;DELTA_IR,题面p2任务3/4; 公司财报仅事件背景,保留但准确事件边界待补证,常规平均误差会掩盖极端失效,结果选尾日和独立事件分开
+M16,上下文,季节/时段/航司/路线距离,报送计划特征,PROBLEM;BTS_FIELDS,题面p1—2;字段字典,用于分层/特征非评分,解释构成差异,不预设它们全能消除混杂
+M17,上下文,WeatherDelay及其他原因分钟,报送Weather/NAS/Carrier/LateAircraftDelay,BTS_FIELDS;PROBLEM,Cause of Delay rows;题面p1,事后描述/归因待核,不是完整独立根因,禁止作事前特征或气象因果证明
+M18,上下文,站点历史天气/实时预报,站点观测或有版本时间的预报,PROBLEM;NOAA_GHCNH,题面p1;产品页未接入,暂缓预测接入,空间和时间信息集需验证,实际天气不代替购票时可知预报
+M19,旅客影响,错过衔接/完整行程成功率,需旅客行程链接和最短衔接时限,PROBLEM,题面p1缺少旅客行程声明,暂缓,重要但当前不能由航段恢复,不把目的地聚合作为个人转机
+M20,旅客影响,重订成本/时间价值/统一损失,需票价重订和偏好数据,PROBLEM,题面p1缺价格; p2任务5,暂缓统一数值效用,两偏好只做非加权多维建议,不凭空设取消相当多少分钟/多少美元

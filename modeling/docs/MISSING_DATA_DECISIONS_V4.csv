@@ -1,0 +1,11 @@
+﻿id,missing_item,importance_mechanism,proxy_assessment,decision,source_locator,boundary,failure_action
+MD01,取消航班无正常到达时间,高/结构性非数值缺失,无,不填0或中位数,BTS_FIELDS Cancelled; PROBLEM p2,计入取消叶;保留计划分母,矛盾到达归unknown并审计
+MD02,改航无正常到达/最终到达字段缺失,高/事件语义,仅可报告DivReachedDest/DivArrDelay且先审计,不替换为正常到达,BTS_FIELDS Diverted/Div*,改航单列,最终状态未知则给缺失率不假定成功
+MD03,缺15个核心月,高/整群时间缺口,不存在可认证替代,重取官方月数据;不复制其他年/季节,data monthly manifest; PROBLEM p1,保持PARTIAL_CORE,采集失败记录并限制年度外推
+MD04,2026-09未取得,高/后期测试,不以旧月替代未来时点,另取官方原始记录,PROBLEM p1 later-period testing,只报告已有测试月,不声称通过2026泛化
+MD05,购票时刻航班表版本,高/信息时点缺口,历史报送计划并非严格代理,至多标schedule-conditioned回测,PROBLEM p1 decision information,不认证booking-time预测,需带发布时间的历史计划快照
+MD06,购票时天气预报,高/信息泄漏,事后观测不能替代,历史天气只作事后解释;接入forecast vintage,PROBLEM p1 NOAA scope; p2 task3,目前不作模型输入,无版本则撤回天气提升主张
+MD07,旅客行程/票价/重订及偏好,高/目标层级不同,航段聚合不足以替代,多维展示不加权效用,PROBLEM p1 explicit not provided,提出新增采集,禁止编造取消与延误等价成本
+MD08,样本unknown结局1条,高/机制未证,不强加missing-at-random,识别范围+排除预测且披露,audit results; PROBLEM p2,监测缺失比例/原因,unknown增多则降低结论范围
+MD09,拟合数值特征缺失,依字段而定,训练集median仅工程默认非机制证据,记录字段缺失率和拟合内插补,prediction.py estimator; A-register,不得在全数据拟合插补器,高缺失或新分布需禁用/比较
+MD10,报送总体与原ZIP留存不足,高/来源审计,过滤文件哈希不能替代全ZIP,补原ZIP哈希和航司报送覆盖,data/bts_*.json,保持SOURCE_AUDIT_INCOMPLETE,不声称全国所有航班代表性

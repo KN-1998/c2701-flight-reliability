@@ -1,0 +1,424 @@
+[
+  {
+    "log_file": "fetch_initial.json",
+    "attempts": [
+      {
+        "id": "BTS_CAUSES",
+        "url": "https://www.bts.gov/topics/airlines-and-airports/understanding-reporting-causes-flight-delays-and-cancellations",
+        "started_utc": "2026-11-26T16:53:25.549819+00:00",
+        "result": "FAILED",
+        "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>",
+        "ended_utc": "2026-11-26T16:53:37.313372+00:00"
+      },
+      {
+        "id": "BTS_ONTIME",
+        "url": "https://www.bts.gov/topics/airlines-and-airports/airline-on-time-performance-data",
+        "started_utc": "2026-11-26T16:53:25.550322+00:00",
+        "result": "FAILED",
+        "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>",
+        "ended_utc": "2026-11-26T16:53:38.842875+00:00"
+      },
+      {
+        "id": "DOT_ACR",
+        "url": "https://www.transportation.gov/individuals/aviation-consumer-protection/air-travel-consumer-reports",
+        "started_utc": "2026-11-26T16:53:25.551322+00:00",
+        "result": "FAILED",
+        "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>",
+        "ended_utc": "2026-11-26T16:53:34.829538+00:00"
+      },
+      {
+        "id": "NOAA_ISD",
+        "url": "https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database",
+        "started_utc": "2026-11-26T16:53:25.551322+00:00",
+        "result": "FAILED",
+        "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>",
+        "ended_utc": "2026-11-26T16:53:35.429761+00:00"
+      },
+      {
+        "id": "COMAP_2024",
+        "url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+        "started_utc": "2026-11-26T16:53:25.552318+00:00",
+        "status": 200,
+        "final_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2024/results/",
+        "content_type": "text/html",
+        "file": "COMAP_2024.html",
+        "bytes": 18298,
+        "sha256": "75908b3ba9fc742fb5c7bafc810b030e34f3c0a48eda26578242349c50702df4",
+        "result": "FETCHED_NOT_YET_READ",
+        "ended_utc": "2026-11-26T16:53:27.411252+00:00"
+      },
+      {
+        "id": "COMAP_2025",
+        "url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+        "started_utc": "2026-11-26T16:53:27.411252+00:00",
+        "status": 200,
+        "final_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2025/results/",
+        "content_type": "text/html",
+        "file": "COMAP_2025.html",
+        "bytes": 18885,
+        "sha256": "a49f397f2566d5e455ae4c6beabfe063b65bd7b4407a2988563ef6776d9ef45a",
+        "result": "FETCHED_NOT_YET_READ",
+        "ended_utc": "2026-11-26T16:53:29.140890+00:00"
+      },
+      {
+        "id": "CORP_2021",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7923594/",
+        "started_utc": "2026-11-26T16:53:29.140890+00:00",
+        "result": "FAILED",
+        "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>",
+        "ended_utc": "2026-11-26T16:53:39.441595+00:00"
+      },
+      {
+        "id": "DELTA_8K",
+        "url": "https://www.sec.gov/Archives/edgar/data/27904/000168316824005369/delta_8k.htm",
+        "started_utc": "2026-11-26T16:53:34.829538+00:00",
+        "result": "FAILED",
+        "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>",
+        "ended_utc": "2026-11-26T16:53:43.562521+00:00"
+      },
+      {
+        "id": "DELTA_10K",
+        "url": "https://www.sec.gov/Archives/edgar/data/27904/000002790425000004/dal-20241231.htm",
+        "started_utc": "2026-11-26T16:53:35.429761+00:00",
+        "result": "FAILED",
+        "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>",
+        "ended_utc": "2026-11-26T16:53:44.182367+00:00"
+      },
+      {
+        "id": "COMAP_AI",
+        "url": "https://www.contest.comap.com/undergraduate/contests/mcm/flyer/Use_of_AI_in_COMAP_Contests.pdf",
+        "started_utc": "2026-11-26T16:53:37.313372+00:00",
+        "result": "FAILED",
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "ended_utc": "2026-11-26T16:53:48.905805+00:00"
+      }
+    ]
+  },
+  {
+    "log_file": "fetch_proxy.json",
+    "attempts": [
+      {
+        "id": "BTS_CAUSES",
+        "url": "https://www.bts.gov/topics/airlines-and-airports/understanding-reporting-causes-flight-delays-and-cancellations",
+        "started_utc": "2026-11-26T16:54:51.004729+00:00",
+        "route": "configured local HTTPS proxy; TLS verification enabled",
+        "result": "FAILED",
+        "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>",
+        "ended_utc": "2026-11-26T16:55:06.516451+00:00"
+      },
+      {
+        "id": "BTS_ONTIME",
+        "url": "https://www.bts.gov/topics/airlines-and-airports/airline-on-time-performance-data",
+        "started_utc": "2026-11-26T16:54:51.044068+00:00",
+        "route": "configured local HTTPS proxy; TLS verification enabled",
+        "result": "FAILED",
+        "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>",
+        "ended_utc": "2026-11-26T16:55:05.491936+00:00"
+      },
+      {
+        "id": "DOT_ACR",
+        "url": "https://www.transportation.gov/individuals/aviation-consumer-protection/air-travel-consumer-reports",
+        "started_utc": "2026-11-26T16:54:51.044068+00:00",
+        "route": "configured local HTTPS proxy; TLS verification enabled",
+        "result": "FAILED",
+        "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>",
+        "ended_utc": "2026-11-26T16:55:11.526248+00:00"
+      },
+      {
+        "id": "NOAA_ISD",
+        "url": "https://www.ncei.noaa.gov/products/land-based-station/integrated-surface-database",
+        "started_utc": "2026-11-26T16:54:51.075628+00:00",
+        "route": "configured local HTTPS proxy; TLS verification enabled",
+        "result": "FAILED",
+        "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>",
+        "ended_utc": "2026-11-26T16:55:11.648630+00:00"
+      },
+      {
+        "id": "CORP_2021",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7923594/",
+        "started_utc": "2026-11-26T16:54:51.077620+00:00",
+        "route": "configured local HTTPS proxy; TLS verification enabled",
+        "result": "FAILED",
+        "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>",
+        "ended_utc": "2026-11-26T16:55:11.977636+00:00"
+      },
+      {
+        "id": "DELTA_8K",
+        "url": "https://www.sec.gov/Archives/edgar/data/27904/000168316824005369/delta_8k.htm",
+        "started_utc": "2026-11-26T16:54:51.044068+00:00",
+        "route": "configured local HTTPS proxy; TLS verification enabled",
+        "result": "FAILED",
+        "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>",
+        "ended_utc": "2026-11-26T16:55:11.648630+00:00"
+      },
+      {
+        "id": "DELTA_10K",
+        "url": "https://www.sec.gov/Archives/edgar/data/27904/000002790425000004/dal-20241231.htm",
+        "started_utc": "2026-11-26T16:55:05.630569+00:00",
+        "route": "configured local HTTPS proxy; TLS verification enabled",
+        "result": "FAILED",
+        "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>",
+        "ended_utc": "2026-11-26T16:55:23.238325+00:00"
+      },
+      {
+        "id": "COMAP_AI",
+        "url": "https://www.contest.comap.com/undergraduate/contests/mcm/flyer/Use_of_AI_in_COMAP_Contests.pdf",
+        "started_utc": "2026-11-26T16:55:06.648875+00:00",
+        "route": "configured local HTTPS proxy; TLS verification enabled",
+        "result": "FAILED",
+        "error": "HTTPError: HTTP Error 404: Not Found",
+        "ended_utc": "2026-11-26T16:55:30.369139+00:00"
+      },
+      {
+        "id": "COMAP_OUTSTANDING",
+        "url": "https://www.comap.org/?view=article&id=67",
+        "started_utc": "2026-11-26T16:55:11.976464+00:00",
+        "route": "configured local HTTPS proxy; TLS verification enabled",
+        "status": 200,
+        "final_url": "https://www.comap.org/?view=article&id=67",
+        "content_type": "text/html; charset=utf-8",
+        "result": "FETCHED_NOT_YET_READ",
+        "file": "COMAP_OUTSTANDING.html",
+        "bytes": 126463,
+        "sha256": "889c5cbb0c9d202b8680f7506df3f83c919ae8ef2e5a41053ef9faa0ad8dbda4",
+        "ended_utc": "2026-11-26T16:55:16.097083+00:00"
+      },
+      {
+        "id": "COMAP_MAIN",
+        "url": "https://www.contest.comap.com/undergraduate/contests/mcm/",
+        "started_utc": "2026-11-26T16:55:12.161966+00:00",
+        "route": "configured local HTTPS proxy; TLS verification enabled",
+        "status": 200,
+        "final_url": "https://www.contest.comap.com/undergraduate/contests/mcm/",
+        "content_type": "text/html; charset=UTF-8",
+        "result": "FETCHED_NOT_YET_READ",
+        "file": "COMAP_MAIN.html",
+        "bytes": 5714,
+        "sha256": "0118f1a7e9052d4716a855e49ec18d2e775c5591713c6a96245ccf44fa1e6daf",
+        "ended_utc": "2026-11-26T16:55:16.507825+00:00"
+      },
+      {
+        "id": "BTS_FIELD",
+        "url": "https://www.transtats.bts.gov/Fields.asp?gnoyr_VQ=FGJ",
+        "started_utc": "2026-11-26T16:55:12.074361+00:00",
+        "route": "configured local HTTPS proxy; TLS verification enabled",
+        "result": "FAILED",
+        "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>",
+        "ended_utc": "2026-11-26T16:55:23.580932+00:00"
+      },
+      {
+        "id": "CORP_ARXIV",
+        "url": "https://arxiv.org/pdf/2008.03033",
+        "started_utc": "2026-11-26T16:55:12.162970+00:00",
+        "route": "configured local HTTPS proxy; TLS verification enabled",
+        "status": 200,
+        "final_url": "https://arxiv.org/pdf/2008.03033",
+        "content_type": "application/pdf",
+        "result": "FETCHED_NOT_YET_READ",
+        "file": "CORP_ARXIV.pdf",
+        "bytes": 492403,
+        "sha256": "52e2651892a8969c9ccd8b3c99b0e6e1feddf10abb9769745472ee97c15cc071",
+        "ended_utc": "2026-11-26T16:55:15.027467+00:00"
+      },
+      {
+        "id": "DELTA_NEWS",
+        "url": "https://ir.delta.com/news/news-details/2024/Delta-Air-Lines-Announces-September-Quarter-2024-Financial-Results/default.aspx",
+        "started_utc": "2026-11-26T16:55:15.163688+00:00",
+        "route": "configured local HTTPS proxy; TLS verification enabled",
+        "result": "FETCHED_NOT_YET_READ",
+        "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>",
+        "status": 200,
+        "final_url": "https://ir.delta.com/news/news-details/2024/Delta-Air-Lines-Announces-September-Quarter-2024-Financial-Results/default.aspx",
+        "content_type": "text/html; charset=utf-8",
+        "file": "DELTA_NEWS.html",
+        "bytes": 389566,
+        "sha256": "0ea6827e742b457e0fcded560ef2dba9dff464aa67f688d2d2592554f74547d4",
+        "ended_utc": "2026-11-26T16:55:28.862692+00:00"
+      }
+    ]
+  },
+  {
+    "log_file": "fetch_round3.json",
+    "attempts": [
+      {
+        "id": "O2024_2401298",
+        "url": "https://reformship.github.io/pages/3competition/4mcm/MCM%20Outstanding/2024/C/2401298.pdf",
+        "started_utc": "2026-11-26T16:58:44.853398+00:00",
+        "result": "FAILED",
+        "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>"
+      },
+      {
+        "id": "O2024_2401445",
+        "url": "https://reformship.github.io/pages/3competition/4mcm/MCM%20Outstanding/2024/C/2401445.pdf",
+        "started_utc": "2026-11-26T16:58:44.853398+00:00",
+        "result": "FAILED",
+        "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>"
+      },
+      {
+        "id": "O2024_2401919",
+        "url": "https://reformship.github.io/pages/3competition/4mcm/MCM%20Outstanding/2024/C/2401919.pdf",
+        "started_utc": "2026-11-26T16:58:44.853398+00:00",
+        "result": "FAILED",
+        "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>"
+      },
+      {
+        "id": "COMAP_RULES",
+        "url": "https://www.contest.comap.org/undergraduate/contests/mcm/instructions.html",
+        "started_utc": "2026-11-26T16:58:44.854403+00:00",
+        "result": "FAILED",
+        "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>"
+      },
+      {
+        "id": "COMAP_RESULTS2024",
+        "url": "https://www.contest.comap.org/undergraduate/contests/mcm/contests/2024/results/index.html",
+        "started_utc": "2026-11-26T16:58:44.854403+00:00",
+        "result": "FAILED",
+        "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>"
+      }
+    ]
+  },
+  {
+    "log_file": "fetch_round4.json",
+    "attempts": [
+      {
+        "id": "O2024_2401298",
+        "url": "https://raw.githubusercontent.com/reformship/reformship.github.io/master/pages/3competition/4mcm/MCM%20Outstanding/2024/C/2401298.pdf",
+        "started_utc": "2026-11-26T16:59:16.388765+00:00",
+        "result": "FAILED",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "id": "O2024_2401445",
+        "url": "https://raw.githubusercontent.com/reformship/reformship.github.io/master/pages/3competition/4mcm/MCM%20Outstanding/2024/C/2401445.pdf",
+        "started_utc": "2026-11-26T16:59:16.388765+00:00",
+        "result": "FAILED",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "id": "O2024_2401919",
+        "url": "https://raw.githubusercontent.com/reformship/reformship.github.io/master/pages/3competition/4mcm/MCM%20Outstanding/2024/C/2401919.pdf",
+        "started_utc": "2026-11-26T16:59:16.389900+00:00",
+        "result": "FAILED",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "id": "O_INDEX",
+        "url": "https://www.comap.com/membership/member-resources/item/momentum-in-tennis",
+        "started_utc": "2026-11-26T16:59:16.389900+00:00",
+        "final_url": "https://comap.org/membership/member-resources/item/momentum-in-tennis",
+        "file": "O_INDEX.html",
+        "bytes": 49579,
+        "sha256": "8ff21a7ec9d6564330129d312b33adadf2d6b72e9ae3e04664e347182a918b11",
+        "result": "FETCHED"
+      }
+    ]
+  },
+  {
+    "log_file": "fetch_student.json",
+    "attempts": [
+      {
+        "id": "REF_STUDENT_1",
+        "url": "https://raw.githubusercontent.com/personqianduixue/Math_Model/master/1-1%E6%8C%89%E6%A8%A1%E5%9E%8B%E6%95%B4%E7%90%86%E7%9A%84%E7%BE%8E%E8%B5%9B%E8%AE%BA%E6%96%87/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%20dynamic%20programming/2002%20B%20O%20Models%20for%20Evaluating%20Airline%20Overbooking.pdf",
+        "mirror_path": "1-1按模型整理的美赛论文/动态规划 dynamic programming/2002 B O Models for Evaluating Airline Overbooking.pdf",
+        "started_utc": "2026-11-26T17:02:07.860807+00:00",
+        "result": "FAILED",
+        "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>"
+      },
+      {
+        "id": "REF_STUDENT_2",
+        "url": "https://raw.githubusercontent.com/personqianduixue/Math_Model/master/1-1%E6%8C%89%E6%A8%A1%E5%9E%8B%E6%95%B4%E7%90%86%E7%9A%84%E7%BE%8E%E8%B5%9B%E8%AE%BA%E6%96%87/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%20dynamic%20programming/2002%20B%20O%20The%20Airline%20Overbooking%20Problem.pdf",
+        "mirror_path": "1-1按模型整理的美赛论文/动态规划 dynamic programming/2002 B O The Airline Overbooking Problem.pdf",
+        "started_utc": "2026-11-26T17:02:07.861873+00:00",
+        "result": "FAILED",
+        "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>"
+      },
+      {
+        "id": "REF_STUDENT_3",
+        "url": "https://raw.githubusercontent.com/personqianduixue/Math_Model/master/1-1%E6%8C%89%E6%A8%A1%E5%9E%8B%E6%95%B4%E7%90%86%E7%9A%84%E7%BE%8E%E8%B5%9B%E8%AE%BA%E6%96%87/%E5%85%83%E8%83%9E%E8%87%AA%E5%8A%A8%E6%9C%BA%20cellular%20automata/2007%20B%20O%20Boarding%20at%20the%20Speed%20of%20Flight.pdf",
+        "mirror_path": "1-1按模型整理的美赛论文/元胞自动机 cellular automata/2007 B O Boarding at the Speed of Flight.pdf",
+        "started_utc": "2026-11-26T17:02:07.861873+00:00",
+        "result": "FAILED",
+        "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>"
+      }
+    ]
+  },
+  {
+    "log_file": "fetch_student_api.json",
+    "attempts": [
+      {
+        "id": "REF_STUDENT_1",
+        "started_utc": "2026-11-26T17:03:04.450038+00:00",
+        "url": "https://api.github.com/repos/personqianduixue/Math_Model/git/blobs/95527985d6311218bf33de8d976c21eb820245ca",
+        "mirror_path": "1-1按模型整理的美赛论文/动态规划 dynamic programming/2002 B O Models for Evaluating Airline Overbooking.pdf",
+        "result": "FETCHED_NOT_YET_READ",
+        "file": "REF_STUDENT_1.pdf",
+        "sha256": "acbe91ec896a334c8dd415291e9a4d9c4aa4b2dac2d87a094af94428e8247218",
+        "pages": 16,
+        "route": "direct"
+      },
+      {
+        "id": "REF_STUDENT_2",
+        "started_utc": "2026-11-26T17:03:04.450038+00:00",
+        "url": "https://api.github.com/repos/personqianduixue/Math_Model/git/blobs/bc92b9140970db4e7e9e51122651d5770325bfb3",
+        "mirror_path": "1-1按模型整理的美赛论文/动态规划 dynamic programming/2002 B O The Airline Overbooking Problem.pdf",
+        "result": "FETCHED_NOT_YET_READ",
+        "file": "REF_STUDENT_2.pdf",
+        "sha256": "0dd87671ffdf27b4e60dd5b7dfc3c117c45c1e23520edb22ffdc151a3a892d7e",
+        "pages": 16,
+        "route": "direct"
+      },
+      {
+        "id": "REF_STUDENT_3",
+        "started_utc": "2026-11-26T17:03:04.450038+00:00",
+        "url": "https://api.github.com/repos/personqianduixue/Math_Model/git/blobs/4496db2095de4cd4b523583167d16d85a3c68df1",
+        "mirror_path": "1-1按模型整理的美赛论文/元胞自动机 cellular automata/2007 B O Boarding at the Speed of Flight.pdf",
+        "failures": [
+          {
+            "route": "direct",
+            "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>"
+          }
+        ],
+        "result": "FETCHED_NOT_YET_READ",
+        "file": "REF_STUDENT_3.pdf",
+        "sha256": "eb6bbf5490670a91b844734ccb8f9d21201db4a420fd05f6caae253d37d1c1f8",
+        "pages": 30,
+        "route": "proxy"
+      }
+    ]
+  },
+  {
+    "log_file": "fetch_round_final.json",
+    "attempts": [
+      {
+        "id": "BTS_MISSING_202408_PROBE",
+        "url": "https://transtats.bts.gov/PREZIP/On_Time_Reporting_Carrier_On_Time_Performance_1987_present_2024_8.zip",
+        "started_utc": "2026-11-26T17:08:10.878949+00:00",
+        "kind": "range_probe_only_not_dataset",
+        "result": "FAILED",
+        "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>"
+      },
+      {
+        "id": "COMAP2002",
+        "url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2002/results/",
+        "started_utc": "2026-11-26T17:08:10.878949+00:00",
+        "kind": "award_verification_attempt",
+        "http_status": 200,
+        "final_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2002/results/",
+        "result": "FETCHED_NOT_YET_READ",
+        "file": "COMAP2002.html",
+        "bytes": 4836
+      },
+      {
+        "id": "COMAP2007",
+        "url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2007/results/",
+        "started_utc": "2026-11-26T17:08:10.878949+00:00",
+        "kind": "award_verification_attempt",
+        "http_status": 200,
+        "final_url": "https://www.contest.comap.com/undergraduate/contests/mcm/contests/2007/results/",
+        "result": "FETCHED_NOT_YET_READ",
+        "file": "COMAP2007.html",
+        "bytes": 17883
+      }
+    ]
+  }
+]

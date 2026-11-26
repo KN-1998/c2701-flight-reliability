@@ -1,0 +1,25 @@
+{
+  "predictions": [
+    {
+      "file": "modeling/results/review_v3/prediction_primary_t15/predictions.pkl",
+      "sha256": "f1d147bbaddcfdc293a82b0cb24697a01715ab361071663a8e456c87d6de3bb0",
+      "status": "trusted_local_v3_predictions_NOT_redistributed",
+      "output": "prediction_primary_t15",
+      "retraining": false
+    },
+    {
+      "file": "modeling/results/review_v3/prediction_primary_t60/predictions.pkl",
+      "sha256": "3dd9116b69923ede9175cd6dd8768af811c22ee61f2fef928c60870d679cf6c2",
+      "status": "trusted_local_v3_predictions_NOT_redistributed",
+      "output": "prediction_primary_t60",
+      "retraining": false
+    }
+  ],
+  "mc": {
+    "rows": 405,
+    "classification_changes": 6,
+    "interpretation": "Monte Carlo and seed sensitivity only; not interval validity or model improvement"
+  },
+  "v3_outputs_unchanged": true,
+  "kind": "new_diagnostics_of_previously_seen_results_NOT_new_holdout_validation"
+}

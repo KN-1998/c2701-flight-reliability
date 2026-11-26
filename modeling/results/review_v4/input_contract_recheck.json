@@ -1,0 +1,16 @@
+{
+  "validated_saved_predictions": [
+    {
+      "threshold_minutes": 15,
+      "all_regenerated_csv_bytes_match": true,
+      "groups": 14
+    },
+    {
+      "threshold_minutes": 60,
+      "all_regenerated_csv_bytes_match": true,
+      "groups": 14
+    }
+  ],
+  "new_training": false,
+  "new_holdout": false
+}

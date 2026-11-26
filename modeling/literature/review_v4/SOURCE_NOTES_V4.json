@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-27",
+  "sources": [
+    {
+      "local_research_file": "CORP_ARXIV.pdf",
+      "sha256": "52e2651892a8969c9ccd8b3c99b0e6e1feddf10abb9769745472ee97c15cc071",
+      "bytes": 492403,
+      "status": "PRIMARY_PREPRINT_READ_AFTER_V3",
+      "reading_scope": "PDF pp1-16 including appendix and references; focused extraction then completion; not every cited original read",
+      "redistribution": "Not redistributed; official source URLs and reading notes only"
+    },
+    {
+      "local_research_file": "DELTA_NEWS.html",
+      "sha256": "0ea6827e742b457e0fcded560ef2dba9dff464aa67f688d2d2592554f74547d4",
+      "bytes": 389566,
+      "status": "OFFICIAL_SELECTED_SECTION_READ",
+      "reading_scope": "Financial Impact Of The CrowdStrike-Caused Outage",
+      "redistribution": "Not redistributed; official source URLs and reading notes only"
+    },
+    {
+      "local_research_file": "COMAP_2024.html",
+      "sha256": "75908b3ba9fc742fb5c7bafc810b030e34f3c0a48eda26578242349c50702df4",
+      "bytes": 18298,
+      "status": "OFFICIAL_AWARD_SECTION_READ",
+      "reading_scope": "Outstanding C winners",
+      "redistribution": "Not redistributed; official source URLs and reading notes only"
+    },
+    {
+      "local_research_file": "COMAP_2025.html",
+      "sha256": "a49f397f2566d5e455ae4c6beabfe063b65bd7b4407a2988563ef6776d9ef45a",
+      "bytes": 18885,
+      "status": "OFFICIAL_RESULTS_PAGE_READ",
+      "reading_scope": "results and resource navigation",
+      "redistribution": "Not redistributed; official source URLs and reading notes only"
+    },
+    {
+      "local_research_file": "COMAP2007.html",
+      "sha256": "a9fad0b907803a41839ddaf47a5bb42bb4ddbaf4cab4400b7ba70e61a8d3e5bc",
+      "bytes": 17883,
+      "status": "OFFICIAL_RESULTS_SECTION_READ",
+      "reading_scope": "B schools only; no Team2053 linkage on read page",
+      "redistribution": "Not redistributed; official source URLs and reading notes only"
+    },
+    {
+      "local_research_file": "COMAP2002.html",
+      "sha256": "f057b78bc722bf2ebb4a5b9255537281e4c29f2e8faa2fda174a06d531e4a637",
+      "bytes": 4836,
+      "status": "WRONG_CONTENT_NOT_AWARD_PROOF",
+      "reading_scope": "HTTP200 not enough",
+      "redistribution": "Not redistributed; official source URLs and reading notes only"
+    },
+    {
+      "local_research_file": "REF_STUDENT_1.pdf",
+      "sha256": "acbe91ec896a334c8dd415291e9a4d9c4aa4b2dac2d87a094af94428e8247218",
+      "bytes": 228436,
+      "status": "SELECTED_PAGES_READ_O_STATUS_PENDING",
+      "reading_scope": "PDF1-3,15",
+      "redistribution": "Not redistributed; official source URLs and reading notes only"
+    },
+    {
+      "local_research_file": "REF_STUDENT_2.pdf",
+      "sha256": "0dd87671ffdf27b4e60dd5b7dfc3c117c45c1e23520edb22ffdc151a3a892d7e",
+      "bytes": 595430,
+      "status": "SELECTED_PAGES_READ_O_STATUS_PENDING",
+      "reading_scope": "PDF1-2",
+      "redistribution": "Not redistributed; official source URLs and reading notes only"
+    },
+    {
+      "local_research_file": "REF_STUDENT_3.pdf",
+      "sha256": "eb6bbf5490670a91b844734ccb8f9d21201db4a420fd05f6caae253d37d1c1f8",
+      "bytes": 1648175,
+      "status": "SELECTED_PAGES_READ_O_STATUS_PENDING",
+      "reading_scope": "PDF1-4,14,28",
+      "redistribution": "Not redistributed; official source URLs and reading notes only"
+    }
+  ],
+  "source_urls": "FETCH_ATTEMPTS.json",
+  "third_party_fulltexts_in_this_folder": false
+}

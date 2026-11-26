@@ -1,3 +1,5 @@
+> 2026-11-27新增：先读 TEAM_REQUIREMENTS_V4.md 及对应角色要求；本文件保留既有契约，v4增量见 EVALUATION_FRAMEWORK_V4.md 与 VALIDATION_PLAN_V4.md。
+
 # C2701 v3当前建模规范
 
 完整论证以MODELING_REVISION_V3.md和FORMULA_PROVENANCE.md为准；原始工作顺序见DERIVATION_LOG.md。这里是实现摘要，不取代来源与54项假设台账。

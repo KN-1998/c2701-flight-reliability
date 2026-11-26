@@ -1,0 +1,7 @@
+﻿id,type,statement,source_locator,reason,status,check,failure_action
+V4D01,工程展示,细箱0/.001/.0025/.005/.01/.02/.05/.1/.2/.4/.6/.8/1,CORP2020 PDF p2/4提示箱不稳定但不规定这些边界,突出低概率事件并保留粗箱对照,ENGINEERING_NOT_SOURCE_CONSTANT,每箱计数/边界测试/比较不同箱,不得把细箱当已证真实校准函数
+V4D02,工程展示,分位箱10且不拆同值,CORP2020 AppendixB PDF p12讨论分位箱; 10为展示选择,计数与覆盖比固定箱互补,ENGINEERING_NOT_SOURCE_CONSTANT,同值/0/1测试,少于10个有效箱必须诚实保留
+V4D03,诊断正则前提,PAV单调CEP诊断,CORP2020 PDF p5; p11 AppendixB,已有单调方法应用而非新预测器,POPULATION_MONOTONICITY_NOT_VERIFIED,与原始分箱同时展示;理论适用边界,不宣称样本外改善或真正曲线必单调
+V4D04,推断限制,不发独立航班校准置信带,CORP2020 PDF p8 independence/exchangeability caveat,航班按天网络相关性未证解决,DEPENDENCE_UNRESOLVED,保留事件数与描述限定,不能用i.i.d.二项CI伪造确定性
+V4D05,过程约束,研究净工时目标>50%,老师本轮明确指导,先指标机制再数据和实现,PROSPECTIVE_RULE,分别记录净时长且并发去重,本轮只有阶段墙钟不认证工时达标
+V4D06,数值诊断,MC1000seed2701对2000seed2702,v3已运行实验文件和审查建议;非论文常数,识别模拟误差敏感性,DESCRIPTIVE_SENSITIVITY,一对一键/抑制区间/分位变动,不是区间覆盖或稳定性的证明

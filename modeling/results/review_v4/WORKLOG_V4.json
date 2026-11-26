@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-27",
+  "timezone": "Asia/Shanghai",
+  "created_at_utc": "2026-11-26T17:18:03.228670+00:00",
+  "sequence": [
+    "Existing v3 data and experiments were already available and inspected",
+    "Research and official/primary-source retrieval attempts logged (including failures)",
+    "Partial source review preceded initial new diagnostic implementation",
+    "Further full-text/selected-page reading continued during and after implementation",
+    "Added strict prediction input contracts and integration tests",
+    "Recomputed diagnostics from frozen v3 predictions and checked byte equality",
+    "Prepared findings, provenance gate and release manifest; publication verified separately after commit"
+  ],
+  "new_blind_holdout": false,
+  "new_training": false,
+  "research_ratio_verified": false,
+  "reason": "Phase timestamps and fetch logs exist, not per-person focused activity timing; no invented time allocation.",
+  "work_clock.json": {
+    "start_utc": "2026-11-26T16:53:25.388362+00:00",
+    "phase": "source_research",
+    "note": "Prospective clock begins now; earlier inspection not timed. Wall time is not human effort. No reconstructed prior times."
+  },
+  "implementation_started.json": {
+    "utc": "2026-11-26T17:04:33.362768+00:00",
+    "note": "research-first phase ended; implementation and further reading now interleaved; wall time is not labor effort"
+  }
+}

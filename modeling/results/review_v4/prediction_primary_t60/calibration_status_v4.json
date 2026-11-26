@@ -1,0 +1,7 @@
+{
+  "status": "DESCRIPTIVE_ONLY",
+  "groups": 14,
+  "pav_used_for_forecasts": false,
+  "uncertainty_bands_issued": false,
+  "missing_saved_outputs": "v3 saved file has no baseline conditional branch predictions"
+}

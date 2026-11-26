@@ -16,7 +16,7 @@
     "Verify uncertainty method/conditions",
     "Verify event attribution and timestamped inputs"
   ],
-  "review_revision": "v3: actual comparison, 2024-10/2025-01 primary holdout, development holdout and externally source-defined event completed; evidence gate remains incomplete.",
+  "review_revision": "v4: team requirements, retrospective metric audit and descriptive diagnostics of frozen v3 predictions; not new holdout validation.",
   "core_full_reading": {
     "P1": "PDF pp1-32, including references and appendix",
     "P2": "PDF pp1-25, including references",
@@ -27,5 +27,22 @@
     "SCORE2007",
     "T0"
   ],
-  "auxiliary_gate_note": "Selected pages were inspected but full texts were not read; under AGENTS.md these are bibliography-verified only, not admissible full-reading formula authority. Calibration is experimental, not source-certified for this task."
+  "auxiliary_gate_note": "CAL2005/SCORE2007/T0 remain bibliography-verified only under full-reading rule. CORP2020 is separately read; it does NOT clear flight dependence, exchangeability, population isotonicity or forecasting performance gates.",
+  "auxiliary_full_reading_verified": {
+    "CORP2020": {
+      "version": "arXiv:2008.03033v1",
+      "pages": "PDF pp1-16, including appendices/references; final targeted recheck pp6 and10",
+      "authority_scope": "Auxiliary PAV/Brier descriptive diagnostic only; not a third core prediction formula",
+      "chronology": "Read after v3; parts reviewed after first diagnostic implementation; not preregistered"
+    }
+  },
+  "v4_decision_register": {
+    "file": "V4_DECISION_REGISTER.csv",
+    "items": 6,
+    "included_in_54_main_assumptions": false,
+    "all_justified": false
+  },
+  "new_holdout_validation": false,
+  "new_model_training": false,
+  "research_net_time_over_50pct_verified": false
 }

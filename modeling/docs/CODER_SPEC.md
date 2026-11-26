@@ -1,3 +1,5 @@
+> 2026-11-27新增：先读 TEAM_REQUIREMENTS_V4.md 及对应角色要求；本文件保留既有契约，v4增量见 EVALUATION_FRAMEWORK_V4.md 与 VALIDATION_PLAN_V4.md。
+
 # 编程手实现与验收合同 v3
 
 ## 输入与接口

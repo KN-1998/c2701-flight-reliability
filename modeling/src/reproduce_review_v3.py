@@ -5,11 +5,14 @@ import pandas as pd
 from audit import audit,metrics
 from comparison import compare
 from prediction import run_prediction
+from mc_diagnostics import write_changes
+from calibration_diagnostics import analyze_saved
 from stress import stress_tests
 from case_study import airport_rationale,traveler_case
 ROOT=Path(__file__).resolve().parents[1]
 def main():
     p=argparse.ArgumentParser();p.add_argument('--out',type=Path,required=True);p.add_argument('--predict',action='store_true');p.add_argument('--development',action='store_true');p.add_argument('--cap',type=int,default=50000);p.add_argument('--reps',type=int,default=1000);p.add_argument('--mc-check',action='store_true');p.add_argument('--snapshot',type=Path);a=p.parse_args()
+    if a.mc_check and a.reps!=1000:raise ValueError('--mc-check requires --reps 1000 (run labels are literal)')
     if a.out.exists() and any(a.out.iterdir()):raise SystemExit('Fresh output folder required')
     a.out.mkdir(parents=True,exist_ok=True);frames=[];records=[];counts=[]
     keep=['date','year','month','quarter','weekday','season','Origin','Dest','Reporting_Airline','Flight_Number_Reporting_Airline','state','completed','bad','ArrDelay','dep_minutes','arr_minutes','time_bin','distance_bin','Distance','CRSElapsedTime','DivReachedDest','DivArrDelay','scheduled_dep_2400','scheduled_arr_2400']
@@ -36,11 +39,14 @@ def main():
     status={}
     for name,strata,min_n in [('base',('season','time_bin','distance_bin'),30),('season_time',('season','time_bin'),30),('season_distance',('season','distance_bin'),30),('support_min100',('season','time_bin','distance_bin'),100)]:
         status[name]=compare(y,a.out/'comparison_2023'/name,reps=a.reps,strata=strata,min_known=min_n)
-    if a.mc_check:status['mc_2000_seed2702']=compare(y,a.out/'comparison_2023/mc_2000_seed2702',reps=2000,seed=2702)
+    if a.mc_check:
+        status['mc_2000_seed2702']=compare(y,a.out/'comparison_2023/mc_2000_seed2702',reps=2000,seed=2702)
+        status['monte_carlo_quantile_changes']=write_changes(a.out/'comparison_2023/base/pairwise_comparisons.csv',a.out/'comparison_2023/mc_2000_seed2702/pairwise_comparisons.csv',a.out/'comparison_2023/monte_carlo_quantile_changes.csv')
     if a.predict:
         for plan in (['development2023','primary'] if a.development else ['primary']):
             for t in [15,60]:
                 o=a.out/f'prediction_{plan}_t{t}';status[f'{plan}_t{t}']=run_prediction(df,o,threshold=t,fit_cap=a.cap,plan=plan)
                 status[f'events_{plan}_t{t}']=stress_tests(df,o)
+                if (o/'predictions.pkl').exists():status[f'calibration_v4_{plan}_t{t}']=analyze_saved(pd.read_pickle(o/'predictions.pkl'),o/'calibration_v4')
     (a.out/'review_reproduction_status.json').write_text(json.dumps(status,indent=2),encoding='utf-8')
 if __name__=='__main__':main()

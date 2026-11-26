@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-26 Asia/Shanghai",
-  "packaged_at_utc": "2026-11-26T14:13:45.763119+00:00",
+  "date": "2026-11-27 Asia/Shanghai",
+  "packaged_at_utc": "2026-11-26T17:20:35.377166+00:00",
   "role": "modeler_to_coder",
   "entrypoint": "00_编程手先读.md",
   "status": "PARTIAL_CORE",
@@ -90,7 +90,7 @@
     "2024-07"
   ],
   "tests": {
-    "tests_run": 25,
+    "tests_run": 38,
     "failures": 0,
     "errors": 0,
     "successful": true,
@@ -110,7 +110,10 @@
     "Auxiliary full-reading gate and parameter applicability",
     "Real booking/preflight availability timestamps",
     "Weather matching and wider external-event validation",
-    "2027 actual schedules and defensible scenario strengths"
+    "2027 actual schedules and defensible scenario strengths",
+    "Delta ten-airport event independent recount and exact window verification",
+    "Three award-certified O papers read in full",
+    "Research net-time ratio not certified; phase wall-clock only"
   ],
   "files_before_this_manifest_and_checksums": [
     {
@@ -119,11 +122,35 @@
     },
     {
       "path": "00_编程手先读.md",
-      "bytes": 2388
+      "bytes": 2818
     },
     {
       "path": "AGENTS.md",
       "bytes": 1260
+    },
+    {
+      "path": "PUBLICATION_NOTES.md",
+      "bytes": 1851
+    },
+    {
+      "path": "README.md",
+      "bytes": 5034
+    },
+    {
+      "path": "modeling/README_编程手先读.md",
+      "bytes": 3987
+    },
+    {
+      "path": "modeling/data/REVIEW_V3_ACQUISITION_RANGES.json",
+      "bytes": 6668
+    },
+    {
+      "path": "modeling/data/REVIEW_V3_ACQUISITION_SNAPSHOT.json",
+      "bytes": 3198
+    },
+    {
+      "path": "modeling/data/REVIEW_V3_PRIORITY_HOLDOUTS.json",
+      "bytes": 3336
     },
     {
       "path": "modeling/data/bts_2023_01.csv.gz",
@@ -298,18 +325,6 @@
       "bytes": 30901
     },
     {
-      "path": "modeling/data/REVIEW_V3_ACQUISITION_RANGES.json",
-      "bytes": 6668
-    },
-    {
-      "path": "modeling/data/REVIEW_V3_ACQUISITION_SNAPSHOT.json",
-      "bytes": 3198
-    },
-    {
-      "path": "modeling/data/REVIEW_V3_PRIORITY_HOLDOUTS.json",
-      "bytes": 3336
-    },
-    {
       "path": "modeling/docs/ASSUMPTION_POLICY.md",
       "bytes": 3347
     },
@@ -323,7 +338,7 @@
     },
     {
       "path": "modeling/docs/CODER_SPEC.md",
-      "bytes": 3367
+      "bytes": 3544
     },
     {
       "path": "modeling/docs/CORRECTIONS.md",
@@ -332,6 +347,10 @@
     {
       "path": "modeling/docs/DERIVATION_LOG.md",
       "bytes": 9031
+    },
+    {
+      "path": "modeling/docs/EVALUATION_FRAMEWORK_V4.md",
+      "bytes": 3675
     },
     {
       "path": "modeling/docs/EXPERIMENT_V3.json",
@@ -354,20 +373,40 @@
       "bytes": 2399
     },
     {
-      "path": "modeling/docs/MODEL_SPEC.md",
-      "bytes": 2307
+      "path": "modeling/docs/METRIC_CANDIDATES_V4.csv",
+      "bytes": 4431
+    },
+    {
+      "path": "modeling/docs/MISSING_DATA_DECISIONS_V4.csv",
+      "bytes": 2236
+    },
+    {
+      "path": "modeling/docs/MODELER_REQUIREMENTS_V4.md",
+      "bytes": 2729
     },
     {
       "path": "modeling/docs/MODELING_REVISION_V3.md",
       "bytes": 9057
     },
     {
+      "path": "modeling/docs/MODEL_SPEC.md",
+      "bytes": 2484
+    },
+    {
+      "path": "modeling/docs/O_PAPER_READING_V4.md",
+      "bytes": 3945
+    },
+    {
       "path": "modeling/docs/PRIMARY_FULL_READING_NOTES_V3.md",
       "bytes": 3670
     },
     {
+      "path": "modeling/docs/PROGRAMMER_REQUIREMENTS_V4.md",
+      "bytes": 3285
+    },
+    {
       "path": "modeling/docs/PROVENANCE_GATE.json",
-      "bytes": 1577
+      "bytes": 2266
     },
     {
       "path": "modeling/docs/REVIEW_RESPONSE_V3.csv",
@@ -382,12 +421,36 @@
       "bytes": 2328
     },
     {
-      "path": "modeling/docs/reviews/C2701_审查报告_原件.docx",
-      "bytes": 46045
+      "path": "modeling/docs/SOURCE_LEDGER.csv",
+      "bytes": 6471
     },
     {
-      "path": "modeling/docs/reviews/review_extracted.json",
-      "bytes": 17734
+      "path": "modeling/docs/SOURCE_NOTES_V4.md",
+      "bytes": 3695
+    },
+    {
+      "path": "modeling/docs/TEAM_REQUIREMENTS_V4.md",
+      "bytes": 2898
+    },
+    {
+      "path": "modeling/docs/TRAVELER_SCORECARD_V3.md",
+      "bytes": 5941
+    },
+    {
+      "path": "modeling/docs/V4_DECISION_REGISTER.csv",
+      "bytes": 1526
+    },
+    {
+      "path": "modeling/docs/VALIDATION_PLAN_V4.md",
+      "bytes": 2172
+    },
+    {
+      "path": "modeling/docs/WRITER_REQUIREMENTS_V4.md",
+      "bytes": 2714
+    },
+    {
+      "path": "modeling/docs/reviews/C2701_审查报告_原件.docx",
+      "bytes": 46045
     },
     {
       "path": "modeling/docs/reviews/V2_DATA_MANIFEST.json",
@@ -398,12 +461,8 @@
       "bytes": 698
     },
     {
-      "path": "modeling/docs/SOURCE_LEDGER.csv",
-      "bytes": 5436
-    },
-    {
-      "path": "modeling/docs/TRAVELER_SCORECARD_V3.md",
-      "bytes": 5941
+      "path": "modeling/docs/reviews/review_extracted.json",
+      "bytes": 17734
     },
     {
       "path": "modeling/literature/ARXIV_METADATA.xml",
@@ -446,6 +505,14 @@
       "bytes": 3018
     },
     {
+      "path": "modeling/literature/SOURCE_MANIFEST.json",
+      "bytes": 7836
+    },
+    {
+      "path": "modeling/literature/TUTZ2020.pdf",
+      "bytes": 428560
+    },
+    {
       "path": "modeling/literature/review_v3/BTS_FIELDS.html",
       "bytes": 149783
     },
@@ -478,16 +545,12 @@
       "bytes": 11046930
     },
     {
-      "path": "modeling/literature/SOURCE_MANIFEST.json",
-      "bytes": 7836
+      "path": "modeling/literature/review_v4/FETCH_ATTEMPTS.json",
+      "bytes": 21397
     },
     {
-      "path": "modeling/literature/TUTZ2020.pdf",
-      "bytes": 428560
-    },
-    {
-      "path": "modeling/README_编程手先读.md",
-      "bytes": 3555
+      "path": "modeling/literature/review_v4/SOURCE_NOTES_V4.json",
+      "bytes": 3531
     },
     {
       "path": "modeling/requirements.lock.txt",
@@ -496,6 +559,18 @@
     {
       "path": "modeling/requirements.txt",
       "bytes": 62
+    },
+    {
+      "path": "modeling/results/TEST_REPORT.txt",
+      "bytes": 4386
+    },
+    {
+      "path": "modeling/results/TEST_STATUS.json",
+      "bytes": 157
+    },
+    {
+      "path": "modeling/results/review_v3/CURRENT_FINDINGS_V3.md",
+      "bytes": 8496
     },
     {
       "path": "modeling/results/review_v3/common_support_coverage_2023.png",
@@ -730,26 +805,6 @@
       "bytes": 64199
     },
     {
-      "path": "modeling/results/review_v3/CURRENT_FINDINGS_V3.md",
-      "bytes": 8496
-    },
-    {
-      "path": "modeling/results/review_v3/descriptive/airport_selection_distance_bin_2023.csv",
-      "bytes": 1475
-    },
-    {
-      "path": "modeling/results/review_v3/descriptive/airport_selection_evidence_2023.csv",
-      "bytes": 1357
-    },
-    {
-      "path": "modeling/results/review_v3/descriptive/airport_selection_season_2023.csv",
-      "bytes": 1544
-    },
-    {
-      "path": "modeling/results/review_v3/descriptive/airport_selection_time_bin_2023.csv",
-      "bytes": 1339
-    },
-    {
       "path": "modeling/results/review_v3/descriptive/EWR_LGA_to_DEN_2023/case_status.json",
       "bytes": 791
     },
@@ -788,6 +843,22 @@
     {
       "path": "modeling/results/review_v3/descriptive/EWR_LGA_to_DEN_later_observed/support_coverage.csv",
       "bytes": 100
+    },
+    {
+      "path": "modeling/results/review_v3/descriptive/airport_selection_distance_bin_2023.csv",
+      "bytes": 1475
+    },
+    {
+      "path": "modeling/results/review_v3/descriptive/airport_selection_evidence_2023.csv",
+      "bytes": 1357
+    },
+    {
+      "path": "modeling/results/review_v3/descriptive/airport_selection_season_2023.csv",
+      "bytes": 1544
+    },
+    {
+      "path": "modeling/results/review_v3/descriptive/airport_selection_time_bin_2023.csv",
+      "bytes": 1339
     },
     {
       "path": "modeling/results/review_v3/descriptive/metrics_2023_airports.csv",
@@ -1106,16 +1177,64 @@
       "bytes": 2125
     },
     {
-      "path": "modeling/results/TEST_REPORT.txt",
-      "bytes": 2917
+      "path": "modeling/results/review_v4/FINDINGS_V4.md",
+      "bytes": 5283
     },
     {
-      "path": "modeling/results/TEST_STATUS.json",
-      "bytes": 157
+      "path": "modeling/results/review_v4/WORKLOG_V4.json",
+      "bytes": 1428
+    },
+    {
+      "path": "modeling/results/review_v4/diagnostic_inputs.json",
+      "bytes": 963
+    },
+    {
+      "path": "modeling/results/review_v4/input_contract_recheck.json",
+      "bytes": 325
+    },
+    {
+      "path": "modeling/results/review_v4/monte_carlo_quantile_changes.csv",
+      "bytes": 76346
+    },
+    {
+      "path": "modeling/results/review_v4/prediction_primary_t15/calibration_bins_v4.csv",
+      "bytes": 70172
+    },
+    {
+      "path": "modeling/results/review_v4/prediction_primary_t15/calibration_pav_plateaus_v4.csv",
+      "bytes": 44177
+    },
+    {
+      "path": "modeling/results/review_v4/prediction_primary_t15/calibration_status_v4.json",
+      "bytes": 219
+    },
+    {
+      "path": "modeling/results/review_v4/prediction_primary_t15/calibration_summary_v4.csv",
+      "bytes": 4711
+    },
+    {
+      "path": "modeling/results/review_v4/prediction_primary_t60/calibration_bins_v4.csv",
+      "bytes": 69320
+    },
+    {
+      "path": "modeling/results/review_v4/prediction_primary_t60/calibration_pav_plateaus_v4.csv",
+      "bytes": 35816
+    },
+    {
+      "path": "modeling/results/review_v4/prediction_primary_t60/calibration_status_v4.json",
+      "bytes": 219
+    },
+    {
+      "path": "modeling/results/review_v4/prediction_primary_t60/calibration_summary_v4.csv",
+      "bytes": 4719
     },
     {
       "path": "modeling/src/audit.py",
       "bytes": 7140
+    },
+    {
+      "path": "modeling/src/calibration_diagnostics.py",
+      "bytes": 9117
     },
     {
       "path": "modeling/src/case_study.py",
@@ -1142,6 +1261,10 @@
       "bytes": 6020
     },
     {
+      "path": "modeling/src/mc_diagnostics.py",
+      "bytes": 2588
+    },
+    {
       "path": "modeling/src/prediction.py",
       "bytes": 14141
     },
@@ -1155,7 +1278,7 @@
     },
     {
       "path": "modeling/src/reproduce_review_v3.py",
-      "bytes": 3831
+      "bytes": 4446
     },
     {
       "path": "modeling/src/reproduce_v2_failure.py",
@@ -1190,6 +1313,10 @@
       "bytes": 5459
     },
     {
+      "path": "modeling/tests/test_review_v4.py",
+      "bytes": 6435
+    },
+    {
       "path": "problem/2027_MCM_C_Mock_On_Time_On_Paper(1).pdf",
       "bytes": 34876
     },
@@ -1204,17 +1331,28 @@
     {
       "path": "problem/requirements_extracted.txt",
       "bytes": 53672
-    },
-    {
-      "path": "PUBLICATION_NOTES.md",
-      "bytes": 1207
-    },
-    {
-      "path": "README.md",
-      "bytes": 4226
     }
   ],
   "public_repository": "KN-1998/c2701-flight-reliability",
   "public_snapshot_source_zip_sha256": "1419a057837b73c47782fa37c921b80b1e393bb1299b3bfe61f512ac9c4a3490",
-  "privacy_change": "Only review_extracted.json source path replaced by package-relative source path; original review text and original DOCX unchanged."
+  "privacy_change": "Only review_extracted.json source path replaced by package-relative source path; original review text and original DOCX unchanged.",
+  "release_version": "v4_requirements_and_diagnostics",
+  "auxiliary_primary_text_verified": [
+    "CORP2020 arXiv:2008.03033v1 PDF pp1-16; auxiliary descriptive diagnostic only"
+  ],
+  "v4_increment": {
+    "metric_candidates": 20,
+    "missing_data_decisions": 10,
+    "separate_diagnostic_decisions": 6,
+    "new_tests": 13,
+    "mc_paired_rows": 405,
+    "mc_classification_changes": 6,
+    "new_training": false,
+    "new_holdout_validation": false,
+    "v3_experimental_outputs_unchanged": true,
+    "research_ratio_verified": false
+  },
+  "previous_public_commit": "aa56b21714463809faa49d907abb3ef4aff9a588",
+  "expected_total_files": 306,
+  "expected_checksum_entries": 305
 }
