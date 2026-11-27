@@ -1,0 +1,24 @@
+[
+  {
+    "event": "MCO_Milton_EOC_Level_I_20241009_10",
+    "holdout_event_rows": 789,
+    "holdout_control_rows": 1501,
+    "status": "observed_holdout",
+    "source": "MCO_BOARD",
+    "definition": "GOAA Emergency Operations Center Level I full activation; NOT a proven full airport closure window.",
+    "event_days": 2,
+    "control_days": 4,
+    "cancelled": 773
+  },
+  {
+    "event": "DL_CrowdStrike_20240719_23",
+    "holdout_event_rows": 5458,
+    "holdout_control_rows": 10918,
+    "status": "observed_holdout",
+    "source": "DELTA_SEC_8K_20240808",
+    "definition": "First five local FlightDate values starting on the outage date; ten selected US origins and BTS operating carrier DL.",
+    "event_days": 5,
+    "control_days": 10,
+    "cancelled": 2139
+  }
+]

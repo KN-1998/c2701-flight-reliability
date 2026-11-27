@@ -1,0 +1,22 @@
+{
+  "label": "C2701_V5_FROZEN_ORIGIN",
+  "client_date": "2026-11-27",
+  "parent_snapshot": "b16a0e0dfa2aca8901984d86b86ceb0e584d052f",
+  "fit_end": "2023-12-31",
+  "tune_months": ["2024-01", "2024-02", "2024-03"],
+  "refit_end": "2024-03-31",
+  "calibration_months": ["2024-04", "2024-05", "2024-06"],
+  "previously_scored_months": ["2024-07", "2024-10", "2025-01"],
+  "new_core_months": ["2024-08", "2024-09", "2024-11", "2024-12", "2025-02", "2025-03", "2025-04", "2025-05", "2025-06", "2025-07", "2025-08", "2025-09", "2025-10", "2025-11", "2025-12"],
+  "late_months": ["2026-09"],
+  "thresholds_minutes": [15, 60],
+  "fit_cap": 50000,
+  "seed": 2701,
+  "C_grid": [0.1, 1, 10],
+  "baseline_strength": 20,
+  "primary_loss": "Brier",
+  "summary_weighting": "Flight-weighted pooled loss; also publish equal-month Brier and monthly paired differences.",
+  "decision_rule": "Treat the transparent baseline as the default. A candidate merits promotion for a target only if it improves the flight-weighted Brier and wins a strict majority of newly acquired core months; use the late September 2026 result as a separate drift check and do not use it to tune.",
+  "uncertainty": "Paired descriptive comparisons; date dependence, partial selection and external-event uncertainty reported explicitly.",
+  "protocol_scope": "Forecast origin fixed before each tested month. V4 plan and official file availability were visible; outcome scores in the listed new core and late months were not consulted when freezing. Do not relabel July, October, or January as unseen. Schedules remain reported schedule-field proxies."
+}

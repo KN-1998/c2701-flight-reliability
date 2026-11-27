@@ -1,0 +1,184 @@
+{
+  "status": "fitted",
+  "plan": "primary",
+  "threshold_minutes": 60,
+  "chosen_C": {
+    "conditional_tree": 0.1,
+    "direct_joint": 0.1
+  },
+  "training_end": "2024-03-31",
+  "fit_end": "2023-12-31",
+  "tuning_start": "2024-01-01",
+  "calibration_start": "2024-04-01",
+  "calibration_end": "2024-06-30",
+  "holdout_months": [
+    {
+      "period": "2024-07",
+      "n": 184390,
+      "row_hash": "d45613913ab77669b9f70cded33320d6475e56d570d19d275a3191ff4959c61b"
+    },
+    {
+      "period": "2024-08",
+      "n": 180674,
+      "row_hash": "c85a3004d412acb3b3d6ba20c9817e666c8726f665b3f3687d5fd27b6eb6fb9b"
+    },
+    {
+      "period": "2024-09",
+      "n": 171740,
+      "row_hash": "66716f4bda718c54390667a3180299f192b3441509199d37350f76d947f3a811"
+    },
+    {
+      "period": "2024-10",
+      "n": 178852,
+      "row_hash": "aea938b21c5e66d7cdf16fbc66781070034c5fecef9cf408ddcf6b613185bfe2"
+    },
+    {
+      "period": "2024-11",
+      "n": 167133,
+      "row_hash": "02f41900592dc932f944f17c581d4239d25340539c71062a96785f3aceb9eda1"
+    },
+    {
+      "period": "2024-12",
+      "n": 170861,
+      "row_hash": "658badf25850f4de79aa1668ae6a8ad7452aa983f94a83fa6e06c7424d1ea1d8"
+    },
+    {
+      "period": "2025-01",
+      "n": 157372,
+      "row_hash": "6fdf601f94b16694fbe7a10c91e29eaee80addfade83225251f6fa060ca78618"
+    },
+    {
+      "period": "2025-02",
+      "n": 145657,
+      "row_hash": "0a03ab282d742c130b798312d62723c51d31db234843d93d77de64ccdbe36a0c"
+    },
+    {
+      "period": "2025-03",
+      "n": 171586,
+      "row_hash": "a2c35d9856760d945887d757857ae816be3ed3b2b33c3368ccd2d237923a11b3"
+    },
+    {
+      "period": "2025-04",
+      "n": 167375,
+      "row_hash": "260d18de2a37df8e43c1e3e2b11909faa1daba1e4c0e8cfcda3fdc9a6e944046"
+    },
+    {
+      "period": "2025-05",
+      "n": 175793,
+      "row_hash": "4fe98b4d4f06f74bcf8b11c30cd5a73095280ed35e4f193e824d0b05b2c34c5a"
+    },
+    {
+      "period": "2025-06",
+      "n": 180594,
+      "row_hash": "220d6a484950441704361361bda4045bd2a75720eda4cbe89510e5810d7c4b90"
+    },
+    {
+      "period": "2025-07",
+      "n": 187910,
+      "row_hash": "df1d9958f141b0cf8c5f77da39da154f5e173bb80f3cca6a4ae5317a57132bcf"
+    },
+    {
+      "period": "2025-08",
+      "n": 180841,
+      "row_hash": "5f4ff66973e0dc896f414484f4aa821847688e947c4fdf9534abd5b693fee5c8"
+    },
+    {
+      "period": "2025-09",
+      "n": 170346,
+      "row_hash": "ffe7aead6921f0c55f10a771d2f505fa3b50bc64e72f6a22397b6ecb9fc496f7"
+    },
+    {
+      "period": "2025-10",
+      "n": 180737,
+      "row_hash": "37473ef539a7457e05efc31508553d9b0fe7fa01db32ed687b334a37616f1b63"
+    },
+    {
+      "period": "2025-11",
+      "n": 169350,
+      "row_hash": "8689af656b9766e41a8ec2358cbb634077ab81a7e4447a20930f3350415e54a9"
+    },
+    {
+      "period": "2025-12",
+      "n": 171702,
+      "row_hash": "133493e97e5db305bd5b4c23f39d6f0658ae7d55f6f16de3ca13f0f75c2cbfd0"
+    },
+    {
+      "period": "2026-09",
+      "n": 174524,
+      "row_hash": "661053ae8046143db61964f713d394ae9430e5a4af6c4d1fb44812ee7796c0bf"
+    }
+  ],
+  "features": [
+    "Origin",
+    "Dest",
+    "Reporting_Airline",
+    "month",
+    "weekday",
+    "time_bin",
+    "dep_minutes",
+    "arr_minutes",
+    "Distance",
+    "CRSElapsedTime"
+  ],
+  "coverage_basis": "Caller must supply complete audited monthly artifacts; internal eligibility checks month presence. run.py verifies monthly hashes/row counts.",
+  "fit_cap_per_binary": 50000,
+  "seed": 2701,
+  "tree_training": [
+    {
+      "available": 2475534,
+      "fitted": 50000,
+      "events": 767
+    },
+    {
+      "available": 2438302,
+      "fitted": 50000,
+      "events": 114
+    },
+    {
+      "available": 2432178,
+      "fitted": 50000,
+      "events": 3726
+    }
+  ],
+  "tree_calibration": [
+    {
+      "n": 523735,
+      "events": 7117,
+      "applied": true
+    },
+    {
+      "n": 516618,
+      "events": 1500,
+      "applied": true
+    },
+    {
+      "n": 515118,
+      "events": 49774,
+      "applied": true
+    }
+  ],
+  "tree_warnings": [
+    [],
+    [],
+    []
+  ],
+  "direct_training": {
+    "available": 2475534,
+    "fitted": 50000,
+    "events": 4473
+  },
+  "direct_calibration": {
+    "n": 523735,
+    "events": 58391,
+    "applied": true
+  },
+  "direct_warnings": [],
+  "baseline_strength": 20,
+  "limitations": [
+    "Experimental defaults and sampling cap not justified for final use",
+    "Conditional branch fitting does not make categories independent",
+    "Same raw features/time windows, but tree has three fits and is not matched for parameter budget",
+    "Unknown excluded; historical schedules are not verified booking-time snapshots",
+    "2023 development plan cannot establish 2025 generalization; monthly test results not used for model choice"
+  ]
+}

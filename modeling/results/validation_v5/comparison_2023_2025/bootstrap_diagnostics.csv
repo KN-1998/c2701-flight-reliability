@@ -1,0 +1,4 @@
+block_days,requested_reps,valid_common_support_reps,invalid_reps,empty_cell_draws,redraws,dropped_reps,policy
+1,1000,1000,0,0,0,0,"If ANY common-support replicate is invalid, suppress standardized intervals; retain all point estimates and diagnostics."
+7,1000,1000,0,0,0,0,"If ANY common-support replicate is invalid, suppress standardized intervals; retain all point estimates and diagnostics."
+14,1000,1000,0,0,0,0,"If ANY common-support replicate is invalid, suppress standardized intervals; retain all point estimates and diagnostics."

@@ -8,25 +8,49 @@ from comparison import block_weights
 from prediction import evaluate,joint_target
 ROOT=Path(__file__).resolve().parents[1]
 
-def stress_tests(df,outdir,*,allow_unverified_scenarios=False):
+def stress_tests(df,outdir,*,allow_unverified_scenarios=False,events_config=None, fitted_dates=None):
     outdir=Path(outdir);path=outdir/'predictions.pkl'
     if not path.exists():return {'status':'no_predictions'}
     pred=pd.read_pickle(path)
     methods=[('conditional_tree','model_p'),('historical_baseline','baseline_p')]
     if 'direct_p' in pred:methods.append(('direct_joint','direct_p'))
-    config=json.loads((ROOT/'docs/EXTERNAL_EVENTS.json').read_text(encoding='utf-8'))
+    config=json.loads(Path(events_config or ROOT/'docs/EXTERNAL_EVENTS.json').read_text(encoding='utf-8-sig'))
     scores=[];matched=[];event_status=[]
     for e in config['events']:
-        event=pred[pred.Origin.eq(e['origin']) & pred.date.between(e['start'],e['end'])]
-        controls=pred[pred.Origin.eq(e['origin']) & pred.date.dt.strftime('%Y-%m-%d').isin(e['calendar_control_dates'])]
-        event_status.append({'event':e['id'],'holdout_event_rows':len(event),'holdout_control_rows':len(controls),'status':'observed_holdout' if len(event) else 'NO_HELDOUT_EVENT_ROWS','source':e['source_id'],'definition':e['definition']})
+        if 'origin' not in e and 'reporting_airline' not in e:
+            raise ValueError(f"Event {e['id']} needs an origin or reporting carrier")
+        scope = pred
+        if 'origin' in e:
+            scope = scope[scope.Origin.eq(e['origin'])]
+        if 'reporting_airline' in e:
+            scope = scope[scope.Reporting_Airline.eq(e['reporting_airline'])]
+        event = scope[scope.date.between(e['start'], e['end'])]
+        controls = scope[scope.date.isin(pd.to_datetime(e['calendar_control_dates']))]
+        status = 'observed_holdout' if len(event) else 'NO_HELDOUT_EVENT_ROWS'
+        if len(event) and event.date.nunique() < len(pd.date_range(e['start'], e['end'])):
+            status = 'PARTIAL_EVENT_DAYS'
+        entry = {'event':e['id'],'holdout_event_rows':len(event),'holdout_control_rows':len(controls),
+                 'status':status,'source':e['source_id'],'definition':e['definition']}
+        if events_config is not None:
+            entry.update(event_days=event.date.nunique(), control_days=controls.date.nunique(),
+                         cancelled=int(event.state.eq('cancelled').sum()))
+        event_status.append(entry)
         if event.empty:continue
         for label,sub in [('external_event',event),('calendar_controls_not_verified_calm',controls)]:
             if sub.empty:continue
             for method,col in methods:
-                scores.append({'event':e['id'],'window':label,'origin':e['origin'],'method':method,'days':sub.date.nunique(),'source_id':e['source_id'],'source_location':e['source_location'],'selection':'external administrative window, not chosen using flight outcomes','uncertainty':'DESCRIPTIVE_ONLY; too few event days; no causal attribution',**evaluate(sub.bad,sub[col])})
+                row = {'event':e['id'],'window':label,'origin':e.get('origin','ALL_SELECTED'),
+                       'method':method,'days':sub.date.nunique(),'source_id':e['source_id'],
+                       'source_location':e['source_location'],
+                       'selection':e.get('selection','external administrative window, not chosen using flight outcomes'),
+                       'uncertainty':'DESCRIPTIVE_ONLY; too few event days; no causal attribution',
+                       **evaluate(sub.bad,sub[col])}
+                if events_config is not None:
+                    row.update(reporting_airline=e.get('reporting_airline','ALL_REPORTED'),
+                               cancelled=int(sub.state.eq('cancelled').sum()))
+                scores.append(row)
         if controls.empty:continue
-        strata=['Dest','Reporting_Airline','time_bin','weekday']
+        strata=e.get('matching_fields',['Dest','Reporting_Airline','time_bin','weekday'])
         def cells(sub):
             temp=sub[strata].astype('string').fillna('MISSING');keys=temp.iloc[:,0]
             for col in temp.columns[1:]:keys=keys+'|'+temp[col]
@@ -38,12 +62,13 @@ def stress_tests(df,outdir,*,allow_unverified_scenarios=False):
         for method,col in methods:
             for label,sub,total in [('external_event',es,len(ev)),('calendar_controls_not_verified_calm',cs,len(ct))]:
                 g=sub.groupby('cell').agg(n=('bad','size'),observed=('bad','mean'),predicted=(col,'mean')).reindex(w.index)
-                matched.append({'event':e['id'],'window':label,'method':method,'common_cells':len(common),'n':len(sub),'coverage':len(sub)/total,'observed':float(w@g.observed),'predicted':float(w@g.predicted),'residual':float(w@(g.observed-g.predicted)),'target_mix':'event flights restricted to shared destination/carrier/time/weekday cells','causal_claim':False,'uncertainty':'DESCRIPTIVE_ONLY; calendar controls not proven exchangeable'})
+                matched.append({'event':e['id'],'window':label,'method':method,'common_cells':len(common),'n':len(sub),'coverage':len(sub)/total,'observed':float(w@g.observed),'predicted':float(w@g.predicted),'residual':float(w@(g.observed-g.predicted)),'target_mix':('event flights restricted to shared '+'/'.join(strata)+' cells' if events_config is not None else 'event flights restricted to shared destination/carrier/time/weekday cells'),'causal_claim':False,'uncertainty':'DESCRIPTIVE_ONLY; calendar controls not proven exchangeable'})
     pd.DataFrame(scores,columns=list(scores[0]) if scores else ['event','window','method','n']).to_csv(outdir/'external_event_scores.csv',index=False)
     pd.DataFrame(matched,columns=list(matched[0]) if matched else ['event','window','method','n']).to_csv(outdir/'external_event_matched.csv',index=False)
     (outdir/'external_event_status.json').write_text(json.dumps(event_status,indent=2),encoding='utf-8')
     target=int(pred.target_threshold_minutes.iloc[0]) if 'target_threshold_minutes' in pred else 60
-    train=df[df.date.le('2024-03-31') & df.state.ne('unknown')].copy()
+    fitting_days = df.date.le('2024-03-31') if fitted_dates is None else df.date.between(*fitted_dates)
+    train=df[fitting_days & df.state.ne('unknown')].copy()
     train['bad_target']=joint_target(train,target)
     threshold=float(train.groupby('date',observed=True).bad_target.mean().quantile(.95))
     test=pred[pred.date.dt.year.eq(2025)].copy();daily_rate=test.groupby('date',observed=True).bad.mean()

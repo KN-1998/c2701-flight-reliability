@@ -11,12 +11,11 @@
   "default_2027_multiplier_scenarios_allowed": false,
   "required_before_final_claims": [
     "Resolve pending assumptions or narrow claims",
-    "Complete core monthly coverage",
-    "Expand time-out validation beyond two observed holdout months; completed experiments do not establish universal validity",
-    "Verify uncertainty method/conditions",
-    "Verify event attribution and timestamped inputs"
+    "Verify dependence assumptions and uncertainty intervals outside the observed comparisons",
+    "Verify booking-time schedule snapshots, timestamped inputs, and other event conditions",
+    "Verify transport to 2027 before making live forecasts"
   ],
-  "review_revision": "v4: team requirements, retrospective metric audit and descriptive diagnostics of frozen v3 predictions; not new holdout validation.",
+  "review_revision": "v5: complete core coverage, fixed-origin tests of newly obtained holdout months, and an official-source Delta stress window.",
   "core_full_reading": {
     "P1": "PDF pp1-32, including references and appendix",
     "P2": "PDF pp1-25, including references",
@@ -42,7 +41,21 @@
     "included_in_54_main_assumptions": false,
     "all_justified": false
   },
-  "new_holdout_validation": false,
+  "new_holdout_validation": true,
   "new_model_training": false,
-  "research_net_time_over_50pct_verified": false
+  "research_net_time_over_50pct_verified": false,
+  "model_refit_scope": "Frozen v3 data windows and fitting choices, with programmatic refits for reproducibility.",
+  "v5_validation_scope": {
+    "core_status": "FULL_CORE",
+    "core_period": "2023-01 through 2025-12",
+    "new_core_holdout_months": 15,
+    "late_holdout_months": [
+      "2026-09"
+    ],
+    "formal_events": [
+      "Delta 2024-07-19 through 2024-07-23",
+      "MCO 2024-10-09 through 2024-10-10"
+    ],
+    "validation_results": "../results/validation_v5/FINDINGS_V5.md"
+  }
 }

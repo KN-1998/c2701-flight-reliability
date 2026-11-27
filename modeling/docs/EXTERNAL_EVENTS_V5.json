@@ -1,0 +1,56 @@
+{
+  "parent": "EXTERNAL_EVENTS.json",
+  "selection_history": "Preserve the MCO window; add a separately scoped Delta event. Sources fix the administrative or event window. These events were previously inspected and precede no new prospective event selection claim.",
+  "events": [
+    {
+      "id": "MCO_Milton_EOC_Level_I_20241009_10",
+      "origin": "MCO",
+      "start": "2024-10-09",
+      "end": "2024-10-10",
+      "source_id": "MCO_BOARD",
+      "source_location": "PDF page 93 (of 219), Consent Agenda Item P memorandum; continuation p94",
+      "definition": "GOAA Emergency Operations Center Level I full activation; NOT a proven full airport closure window.",
+      "calendar_control_dates": [
+        "2024-10-02",
+        "2024-10-03",
+        "2024-10-16",
+        "2024-10-17"
+      ],
+      "controls_status": "Analyst-selected adjacent same-weekday dates, not externally verified calm-weather days; no causal interpretation",
+      "source_internal_conflict": "Source calls October 7, 2024 Tuesday; this is a weekday/date inconsistency. Window uses its unambiguous Wednesday Oct 9 to Thursday Oct 10 activation dates instead.",
+      "timezone": "Airport local calendar dates, matching FlightDate; NHC UTC landfall is supporting context only"
+    },
+    {
+      "id": "DL_CrowdStrike_20240719_23",
+      "reporting_airline": "DL",
+      "start": "2024-07-19",
+      "end": "2024-07-23",
+      "source_id": "DELTA_SEC_8K_20240808",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/27904/000168316824005369/delta_8k.htm",
+      "source_location": "Item 7.01, outage starting July 19 and disruption over five days",
+      "definition": "First five local FlightDate values starting on the outage date; ten selected US origins and BTS operating carrier DL.",
+      "calendar_control_dates": [
+        "2024-07-12",
+        "2024-07-13",
+        "2024-07-14",
+        "2024-07-15",
+        "2024-07-16",
+        "2024-07-26",
+        "2024-07-27",
+        "2024-07-28",
+        "2024-07-29",
+        "2024-07-30"
+      ],
+      "controls_status": "Adjacent same weekdays, one week before and after; weather and other shocks unverified.",
+      "matching_fields": [
+        "Origin",
+        "Dest",
+        "Reporting_Airline",
+        "time_bin",
+        "weekday"
+      ],
+      "selection": "SEC anchored scope, formal rerun of previously inspected July event; independent of fitting and calibration.",
+      "timezone": "Airport local FlightDate"
+    }
+  ]
+}

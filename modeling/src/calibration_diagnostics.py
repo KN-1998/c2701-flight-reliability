@@ -63,6 +63,16 @@ def saved_prediction_targets(sub):
         completed=sub.completed.to_numpy(dtype=bool);den=1-sub.cancel_p.to_numpy()-sub.diversion_p.to_numpy()
         if (den[completed]<=0).any():raise ValueError('Undefined conditional long-delay risk')
         t=int(sub.target_threshold_minutes.iloc[0]);yield 'conditional_tree','long_given_completed',sub.loc[completed,'ArrDelay'].ge(t).to_numpy(),sub.long_p.to_numpy()[completed]/den[completed]
+    threshold = int(sub.target_threshold_minutes.iloc[0])
+    branch_labels = [
+        ('cancel', np.ones(len(sub), dtype=bool), sub.state.eq('cancelled').to_numpy()),
+        ('divert_given_not_cancel', sub.state.ne('cancelled').to_numpy(), sub.state.eq('diverted').to_numpy()),
+        ('long_given_completed', sub.completed.to_numpy(dtype=bool), sub.ArrDelay.ge(threshold).to_numpy()),
+    ]
+    for target, mask, labels in branch_labels:
+        column = f'baseline_{target}_p'
+        if column in sub:
+            yield 'historical_baseline', target, labels[mask], sub[column].to_numpy()[mask]
 
 def validate_saved_predictions(pred):
     """Reject ambiguous risk sets before creating output or describing calibration."""
@@ -87,6 +97,9 @@ def validate_saved_predictions(pred):
     bad,_=validated(pred.bad,pred.model_p)
     if not np.array_equal(bad.astype(bool),expected):raise ValueError('bad disagrees with states/threshold')
     probability_columns=['model_p','baseline_p','direct_p','cancel_p','diversion_p','long_p']
+    probability_columns.extend(
+        f'baseline_{branch}_p' for branch in ('cancel','divert_given_not_cancel','long_given_completed')
+    )
     for col in probability_columns:
         if col in pred:validated(pred.bad,pred[col])
     if 'diversion_p' in pred and 'cancel_p' not in pred:raise ValueError('diversion_p needs cancel_p')
@@ -101,18 +114,28 @@ def analyze_saved(pred,out):
     validate_saved_predictions(pred)
     out=Path(out)
     if out.exists() and (not out.is_dir() or any(out.iterdir())):raise ValueError('Fresh output folder required')
-    out.mkdir(parents=True,exist_ok=True);bins=[];points=[];summaries=[]
-    for period,sub in pred.groupby(pd.to_datetime(pred.date).dt.strftime('%Y-%m'),sort=True):
-        for method,target,y,p in saved_prediction_targets(sub):
-            b,c,s=diagnostics(y,p,period=period,method=method,target=target);bins.extend(b);points.extend(c);summaries.append(s)
+    out.mkdir(parents=True, exist_ok=True)
+    bins, plateaus, summaries = [], [], []
+    keys = ['period','method','target','cep']
+    for period, sub in pred.groupby(pd.to_datetime(pred.date).dt.to_period('M'), sort=True):
+        for method, target, y, p in saved_prediction_targets(sub):
+            b, points, summary = diagnostics(y, p, period=str(period), method=method, target=target)
+            bins.extend(b)
+            summaries.append(summary)
+            if points:
+                plateaus.append(pd.DataFrame(points).groupby(keys).agg(
+                    p_min=('p','min'), p_max=('p','max'), n=('n','sum'),
+                    events=('events','sum'), unique_p=('p','size')
+                ).reset_index())
     pd.DataFrame(bins).to_csv(out/'calibration_bins_v4.csv',index=False)
-    # Exact forecast-value points can be large. Publish plateau spans instead, with counts and events.
-    points=pd.DataFrame(points)
-    if not points.empty:
-        plateaus=points.groupby(['period','method','target','cep'],sort=True).agg(p_min=('p','min'),p_max=('p','max'),n=('n','sum'),events=('events','sum'),unique_p=('p','size')).reset_index()
-        plateaus.to_csv(out/'calibration_pav_plateaus_v4.csv',index=False)
+    if plateaus:
+        table = pd.concat(plateaus, ignore_index=True).sort_values(keys)
+        table.to_csv(out/'calibration_pav_plateaus_v4.csv',index=False)
     pd.DataFrame(summaries).to_csv(out/'calibration_summary_v4.csv',index=False)
-    return {'status':'DESCRIPTIVE_ONLY','groups':len(summaries),'pav_used_for_forecasts':False,'uncertainty_bands_issued':False,'missing_saved_outputs':'v3 saved file has no baseline conditional branch predictions'}
+    missing = ('v3 saved file has no baseline conditional branch predictions'
+               if 'baseline_cancel_p' not in pred else '')
+    return {'status':'DESCRIPTIVE_ONLY','groups':len(summaries),'pav_used_for_forecasts':False,
+            'uncertainty_bands_issued':False,'missing_saved_outputs':missing}
 
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--trusted-local-predictions',type=Path,required=True);p.add_argument('--out',type=Path,required=True);a=p.parse_args()

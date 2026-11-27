@@ -31,8 +31,8 @@ def aligned_inputs(low, high, *, lower=15, upper=60, atol=1e-12):
             raise ValueError('Nonempty unique string flight keys required')
         if not df.target_threshold_minutes.eq(threshold).all():
             raise ValueError('Threshold metadata does not match the requested task')
-    a = low.set_index('flight_key', verify_integrity=True).copy()
-    b = high.set_index('flight_key', verify_integrity=True).copy()
+    a = low.set_index('flight_key').copy()
+    b = high.set_index('flight_key').copy()
     if set(a.index) != set(b.index):
         raise ValueError('Thresholds must have the identical flight key set; no inner-join deletion')
     b = b.loc[a.index].copy()
@@ -47,7 +47,7 @@ def aligned_inputs(low, high, *, lower=15, upper=60, atol=1e-12):
     return a, b
 
 
-def coherence_tables(low, high, *, lower=15, upper=60, atol=1e-12):
+def coherence_tables(low, high, *, lower=15, upper=60, atol=1e-12, example_limit=5):
     a, b = aligned_inputs(low, high, lower=lower, upper=upper, atol=atol)
     months = pd.to_datetime(a.date).dt.strftime('%Y-%m').to_numpy()
     groups = [('ALL', np.ones(len(a), dtype=bool))]
@@ -69,8 +69,8 @@ def coherence_tables(low, high, *, lower=15, upper=60, atol=1e-12):
                              mean_low_probability=float(lp[mask].mean()), mean_high_probability=float(hp[mask].mean()),
                              mean_implied_between_probability=float((lp[mask]-hp[mask]).mean()),
                              atol=atol, interpretation='DESCRIPTIVE_ONLY_NOT_NEW_HOLDOUT'))
-        # At most five examples per method, deterministic order, no replacement forecast.
-        for pos in np.flatnonzero(gap > atol)[:5]:
+        # An explicit None keeps all violations for the paired delivery audit.
+        for pos in np.flatnonzero(gap > atol)[:example_limit]:
             examples.append(dict(flight_key=a.index[pos], date=str(pd.Timestamp(a.date.iloc[pos]).date()),
                                  method=method, lower_probability=float(lp[pos]), upper_probability=float(hp[pos]),
                                  upper_minus_lower=float(gap[pos])))
@@ -80,6 +80,13 @@ def coherence_tables(low, high, *, lower=15, upper=60, atol=1e-12):
 def write_diagnostics(low, high, out, *, lower=15, upper=60, atol=1e-12):
     # Validate and calculate before creating output; never modify either input.
     summary, examples = coherence_tables(low, high, lower=lower, upper=upper, atol=atol)
+    return write_coherence_results(summary, examples, out, lower=lower, upper=upper, atol=atol)
+
+
+def write_coherence_results(summary, examples, out, *, lower=15, upper=60, atol=1e-12, refit=False):
+    overall = summary.loc[summary.period.eq("ALL")]
+    if len(overall) != len(METHODS) or overall.n.nunique() != 1 or set(overall.method) != set(METHODS):
+        raise ValueError("A common pooled denominator and all methods are required")
     out = Path(out)
     if out.exists() and (not out.is_dir() or any(out.iterdir())):
         raise ValueError('Fresh output directory required')
@@ -89,15 +96,15 @@ def write_diagnostics(low, high, out, *, lower=15, upper=60, atol=1e-12):
     # Necessary condition only: even a clean finite batch cannot certify a shared
     # outcome distribution, information timestamp, calibration, or card readiness.
     joint_display = {}
-    for row in summary.loc[summary.period.eq('ALL')].itertuples(index=False):
+    for row in overall.itertuples(index=False):
         inverted = row.violations > 0
         joint_display[row.method] = dict(
             violations=int(row.violations),
             nested_threshold_check='FAIL' if inverted else 'NO_VIOLATIONS_ABOVE_TOLERANCE',
             joint_display_authorized=False,
             reason='BLOCKED_THRESHOLD_INVERSION' if inverted else 'SHARED_DISTRIBUTION_AND_LATER_VALIDATION_NOT_CERTIFIED')
-    status = dict(status='DESCRIPTIVE_ONLY', paired_rows=len(low), lower_minutes=lower, upper_minutes=upper,
-                  forecasts_modified=False, v5_reproduced=False, new_training=False,
+    status = dict(status='DESCRIPTIVE_ONLY', paired_rows=int(overall.n.iloc[0]), lower_minutes=lower, upper_minutes=upper,
+                  forecasts_modified=False, frozen_protocol_refit=refit, v5_reproduced=False, new_training=False,
                   counterfactual_warning='Mixed-method check does not reselect or endorse a model',
                   unique_flight_keys_checked=True, probability_tolerance=atol,
                   joint_display_by_method=joint_display,

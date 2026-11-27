@@ -1,0 +1,5 @@
+branch,training_available,training_available_events,training_n,training_events,fit_warnings,calibration_n,calibration_events,calibration_applied
+cancel,2475534,37232,50000,767,[],523735,7117,True
+divert_given_not_cancel,2438302,6124,50000,114,[],516618,1500,True
+delay60_given_completed,2432178,180112,50000,3726,[],515118,49774,True
+delay15_given_completed_and_below60,2252066,358786,50000,8010,[],465344,83257,True
