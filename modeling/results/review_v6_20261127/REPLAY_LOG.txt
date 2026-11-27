@@ -1,0 +1,130 @@
+audited 2023-01: 155293 rows, unknown=0
+audited 2023-02: 145926 rows, unknown=0
+audited 2023-03: 167708 rows, unknown=0
+audited 2023-04: 162988 rows, unknown=0
+audited 2023-05: 170270 rows, unknown=1
+audited 2023-06: 169675 rows, unknown=0
+audited 2023-07: 176493 rows, unknown=0
+audited 2023-08: 177987 rows, unknown=0
+audited 2023-09: 168611 rows, unknown=0
+audited 2023-10: 174356 rows, unknown=0
+audited 2023-11: 163601 rows, unknown=0
+audited 2023-12: 164609 rows, unknown=0
+audited 2024-01: 157792 rows, unknown=0
+audited 2024-02: 150438 rows, unknown=0
+audited 2024-03: 169788 rows, unknown=0
+audited 2024-04: 168705 rows, unknown=0
+audited 2024-05: 178026 rows, unknown=0
+audited 2024-06: 177004 rows, unknown=0
+audited 2024-07: 184390 rows, unknown=0
+audited 2024-08: 180674 rows, unknown=0
+audited 2024-09: 171740 rows, unknown=0
+audited 2024-10: 178852 rows, unknown=0
+audited 2024-11: 167133 rows, unknown=0
+audited 2024-12: 170861 rows, unknown=0
+audited 2025-01: 157372 rows, unknown=0
+audited 2025-02: 145657 rows, unknown=0
+audited 2025-03: 171586 rows, unknown=0
+audited 2025-04: 167375 rows, unknown=0
+audited 2025-05: 175793 rows, unknown=0
+audited 2025-06: 180594 rows, unknown=0
+audited 2025-07: 187910 rows, unknown=0
+audited 2025-08: 180841 rows, unknown=0
+audited 2025-09: 170346 rows, unknown=0
+audited 2025-10: 180737 rows, unknown=0
+audited 2025-11: 169350 rows, unknown=0
+audited 2025-12: 171702 rows, unknown=0
+audited 2026-09: 174524 rows, unknown=0
+primary conditional_tree C=0.1 tuning Brier=0.174425
+primary conditional_tree C=1.0 tuning Brier=0.174601
+primary conditional_tree C=10.0 tuning Brier=0.174629
+primary direct_joint C=0.1 tuning Brier=0.174135
+primary direct_joint C=1.0 tuning Brier=0.174361
+primary direct_joint C=10.0 tuning Brier=0.174396
+primary predicting 2024-07 n=184390
+primary predicting 2024-08 n=180674
+primary predicting 2024-09 n=171740
+primary predicting 2024-10 n=178852
+primary predicting 2024-11 n=167133
+primary predicting 2024-12 n=170861
+primary predicting 2025-01 n=157372
+primary predicting 2025-02 n=145657
+primary predicting 2025-03 n=171586
+primary predicting 2025-04 n=167375
+primary predicting 2025-05 n=175793
+primary predicting 2025-06 n=180594
+primary predicting 2025-07 n=187910
+primary predicting 2025-08 n=180841
+primary predicting 2025-09 n=170346
+primary predicting 2025-10 n=180737
+primary predicting 2025-11 n=169350
+primary predicting 2025-12 n=171702
+primary predicting 2026-09 n=174524
+primary conditional_tree C=0.1 tuning Brier=0.083147
+primary conditional_tree C=1.0 tuning Brier=0.083296
+primary conditional_tree C=10.0 tuning Brier=0.083332
+primary direct_joint C=0.1 tuning Brier=0.083439
+primary direct_joint C=1.0 tuning Brier=0.083624
+primary direct_joint C=10.0 tuning Brier=0.083664
+primary predicting 2024-07 n=184390
+primary predicting 2024-08 n=180674
+primary predicting 2024-09 n=171740
+primary predicting 2024-10 n=178852
+primary predicting 2024-11 n=167133
+primary predicting 2024-12 n=170861
+primary predicting 2025-01 n=157372
+primary predicting 2025-02 n=145657
+primary predicting 2025-03 n=171586
+primary predicting 2025-04 n=167375
+primary predicting 2025-05 n=175793
+primary predicting 2025-06 n=180594
+primary predicting 2025-07 n=187910
+primary predicting 2025-08 n=180841
+primary predicting 2025-09 n=170346
+primary predicting 2025-10 n=180737
+primary predicting 2025-11 n=169350
+primary predicting 2025-12 n=171702
+primary predicting 2026-09 n=174524
+Checking diversion fit cap and seed on fixed months
+Verifying frozen thresholds on the same BTS flight identities
+Paired thresholds 2024-07 n=184390
+Paired thresholds 2024-08 n=180674
+Paired thresholds 2024-09 n=171740
+Paired thresholds 2024-10 n=178852
+Paired thresholds 2024-11 n=167133
+Paired thresholds 2024-12 n=170861
+Paired thresholds 2025-01 n=157372
+Paired thresholds 2025-02 n=145657
+Paired thresholds 2025-03 n=171586
+Paired thresholds 2025-04 n=167375
+Paired thresholds 2025-05 n=175793
+Paired thresholds 2025-06 n=180594
+Paired thresholds 2025-07 n=187910
+Paired thresholds 2025-08 n=180841
+Paired thresholds 2025-09 n=170346
+Paired thresholds 2025-10 n=180737
+Paired thresholds 2025-11 n=169350
+Paired thresholds 2025-12 n=171702
+Paired thresholds 2026-09 n=174524
+Building the 2023�C2025 historical traveler card
+Scoring the exploratory five-leaf candidate on observed holdouts
+Five-leaf candidate scoring 2024-07
+Five-leaf candidate scoring 2024-08
+Five-leaf candidate scoring 2024-09
+Five-leaf candidate scoring 2024-10
+Five-leaf candidate scoring 2024-11
+Five-leaf candidate scoring 2024-12
+Five-leaf candidate scoring 2025-01
+Five-leaf candidate scoring 2025-02
+Five-leaf candidate scoring 2025-03
+Five-leaf candidate scoring 2025-04
+Five-leaf candidate scoring 2025-05
+Five-leaf candidate scoring 2025-06
+Five-leaf candidate scoring 2025-07
+Five-leaf candidate scoring 2025-08
+Five-leaf candidate scoring 2025-09
+Five-leaf candidate scoring 2025-10
+Five-leaf candidate scoring 2025-11
+Five-leaf candidate scoring 2025-12
+Five-leaf candidate scoring 2026-09
+Delivery COMPLETE_HISTORICAL_AND_RETROSPECTIVE: D:\��ѧ��ģacm\v6_intake_20261127\local_replay

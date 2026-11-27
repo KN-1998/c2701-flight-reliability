@@ -1,0 +1,9 @@
+{
+  "raw_file": "REPLAY_CONSOLE_RAW_UTF16.log",
+  "raw_encoding": "PowerShell UTF-16LE capture; contains console-decoding damage",
+  "raw_sha256": "2031174dfd1eb3b406db1edad2002652a073dd2b816af471b6daa70ef7b1840c",
+  "text_file": "REPLAY_LOG.txt",
+  "text_sha256": "6e6741a0d80a152e47ca47dcabdbb3569521519a950cc50cfd52ecde646f73cf",
+  "replacement_characters_in_text": 5,
+  "note": "Console capture already contains replacement characters in two narrative lines. Neither log is silently repaired. Numerical CSV output and exit status were checked separately; log decoding is not a model validation claim."
+}

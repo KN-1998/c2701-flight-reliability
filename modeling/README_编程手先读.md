@@ -1,3 +1,5 @@
+> **当前v6复核增补（2026-11-27）**：请先读[最新要求](docs/TEAM_REQUIREMENTS_V6_20261127.md)、[五叶推导](docs/V6_MODELING_DERIVATION_20261127.md)及[复核结果](results/review_v6_20261127/FINDINGS.md)。已完整复跑37个月，旧“v5数据未取得”不是现状。
+
 # C2701 v6 复算入口
 
 从仓库根目录按[交接说明](../V6_复算与交接.md)运行。三年历史样卡和两个阈值的实测分别见[结果摘要](results/implementation_v6/DELIVERY_RESULTS.md)。

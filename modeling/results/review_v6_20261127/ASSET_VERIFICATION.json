@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-11-27T23:00:38.705892+08:00",
+  "asset": "C2701-v6-code-handoff-20261127.zip",
+  "bytes": 128128225,
+  "sha256": "a52e383f492dec41bb8b36697dbbac786dec610d9325b579add3f8c18cf4f10c",
+  "matches_github_asset_digest": true,
+  "files": 486,
+  "uncompressed_bytes": 137612964,
+  "zip_crc_ok": true,
+  "path_and_symlink_checks_ok": true
+}

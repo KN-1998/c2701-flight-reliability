@@ -1,0 +1,43 @@
+{
+  "status": "DESCRIPTIVE_ONLY",
+  "paired_rows": 3287437,
+  "lower_minutes": 15,
+  "upper_minutes": 60,
+  "forecasts_modified": false,
+  "frozen_protocol_refit": true,
+  "v5_reproduced": false,
+  "new_training": false,
+  "counterfactual_warning": "Mixed-method check does not reselect or endorse a model",
+  "unique_flight_keys_checked": true,
+  "probability_tolerance": 1e-12,
+  "joint_display_by_method": {
+    "conditional_tree": {
+      "violations": 1,
+      "nested_threshold_check": "FAIL",
+      "joint_display_authorized": false,
+      "reason": "BLOCKED_THRESHOLD_INVERSION"
+    },
+    "direct_joint": {
+      "violations": 2,
+      "nested_threshold_check": "FAIL",
+      "joint_display_authorized": false,
+      "reason": "BLOCKED_THRESHOLD_INVERSION"
+    },
+    "historical_baseline": {
+      "violations": 0,
+      "nested_threshold_check": "NO_VIOLATIONS_ABOVE_TOLERANCE",
+      "joint_display_authorized": false,
+      "reason": "SHARED_DISTRIBUTION_AND_LATER_VALIDATION_NOT_CERTIFIED"
+    },
+    "selected_direct_low_tree_high": {
+      "violations": 1,
+      "nested_threshold_check": "FAIL",
+      "joint_display_authorized": false,
+      "reason": "BLOCKED_THRESHOLD_INVERSION"
+    }
+  },
+  "historical_marginal_scoring_changed": false,
+  "gate": "Coherence alone does not establish calibration, skill, or future transportability",
+  "months": 19,
+  "inversions_are_exhaustive": true
+}

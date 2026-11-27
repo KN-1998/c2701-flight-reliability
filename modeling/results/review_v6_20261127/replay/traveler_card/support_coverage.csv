@@ -1,0 +1,9 @@
+period,reference_scope,airport,n_planned,n_supported,n_supported_known,n_supported_completed,coverage,shared_cells
+2023-2025,pooled_common_support,EWR,9572,9533,9533,9305,0.9959256163811115,12
+2023-2025,pooled_common_support,LGA,14451,6267,6267,6136,0.433672410213826,12
+2023,fixed_cross_year_common_support,EWR,3251,2784,2784,2719,0.8563518917256229,9
+2023,fixed_cross_year_common_support,LGA,5272,2255,2255,2194,0.42773141122913505,9
+2024,fixed_cross_year_common_support,EWR,3103,2617,2617,2537,0.8433773767321947,9
+2024,fixed_cross_year_common_support,LGA,4606,1741,1741,1708,0.3779852366478506,9
+2025,fixed_cross_year_common_support,EWR,3218,2721,2721,2685,0.8455562461155998,9
+2025,fixed_cross_year_common_support,LGA,4573,1758,1758,1734,0.38443035206647713,9

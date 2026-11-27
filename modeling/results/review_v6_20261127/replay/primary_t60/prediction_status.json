@@ -1,0 +1,271 @@
+{
+  "status": "fitted",
+  "plan": "primary",
+  "threshold_minutes": 60,
+  "chosen_C": {
+    "conditional_tree": 0.1,
+    "direct_joint": 0.1
+  },
+  "training_end": "2024-03-31",
+  "fit_end": "2023-12-31",
+  "tuning_start": "2024-01-01",
+  "calibration_start": "2024-04-01",
+  "calibration_end": "2024-06-30",
+  "holdout_months": [
+    {
+      "period": "2024-07",
+      "n": 184390,
+      "row_hash": "d45613913ab77669b9f70cded33320d6475e56d570d19d275a3191ff4959c61b",
+      "flight_identity_sha256": "2f01b3fcbd56b464ba4a6dab6d47cbeccc373545e049ad3eb9e2a54e090bff46"
+    },
+    {
+      "period": "2024-08",
+      "n": 180674,
+      "row_hash": "c85a3004d412acb3b3d6ba20c9817e666c8726f665b3f3687d5fd27b6eb6fb9b",
+      "flight_identity_sha256": "19a89dba67e3043b192a860894824814133ed03cdcc18c8b413ef75897b2760e"
+    },
+    {
+      "period": "2024-09",
+      "n": 171740,
+      "row_hash": "66716f4bda718c54390667a3180299f192b3441509199d37350f76d947f3a811",
+      "flight_identity_sha256": "04ca5ae57304a593e84b5d69eaed2011eb56e37d7cd6e542968c386f43c16027"
+    },
+    {
+      "period": "2024-10",
+      "n": 178852,
+      "row_hash": "aea938b21c5e66d7cdf16fbc66781070034c5fecef9cf408ddcf6b613185bfe2",
+      "flight_identity_sha256": "5b568af1f3d586a89ff86f4a52ada4d5f545534ef41fdcbc2d279c4ab83c7462"
+    },
+    {
+      "period": "2024-11",
+      "n": 167133,
+      "row_hash": "02f41900592dc932f944f17c581d4239d25340539c71062a96785f3aceb9eda1",
+      "flight_identity_sha256": "a1ff44aea43f456c0856f91e25e280aefbcb492f99620df1d3a57ac437587d07"
+    },
+    {
+      "period": "2024-12",
+      "n": 170861,
+      "row_hash": "658badf25850f4de79aa1668ae6a8ad7452aa983f94a83fa6e06c7424d1ea1d8",
+      "flight_identity_sha256": "6dd74d47b45faea4bfde21cd15c8a0d7b33d7d48c8292159a17bee0b7011312c"
+    },
+    {
+      "period": "2025-01",
+      "n": 157372,
+      "row_hash": "6fdf601f94b16694fbe7a10c91e29eaee80addfade83225251f6fa060ca78618",
+      "flight_identity_sha256": "fe39ed6a203359a5b01b64fec098376839dfcc255ba4bbc15e5aec53f2d6b2bf"
+    },
+    {
+      "period": "2025-02",
+      "n": 145657,
+      "row_hash": "0a03ab282d742c130b798312d62723c51d31db234843d93d77de64ccdbe36a0c",
+      "flight_identity_sha256": "89611467f7d2fc8aead95d71fb0dc91cc57c49c0e7c3683931199b309661c780"
+    },
+    {
+      "period": "2025-03",
+      "n": 171586,
+      "row_hash": "a2c35d9856760d945887d757857ae816be3ed3b2b33c3368ccd2d237923a11b3",
+      "flight_identity_sha256": "aa57ce2ad7d9fd2a896b59d8a68d873894603bdeb94b5fac9b96cecb15232f1f"
+    },
+    {
+      "period": "2025-04",
+      "n": 167375,
+      "row_hash": "260d18de2a37df8e43c1e3e2b11909faa1daba1e4c0e8cfcda3fdc9a6e944046",
+      "flight_identity_sha256": "d5a24cfcc2c07bdff79f4da698d1249ff1c4d862265c99a205b0a8a06ebdb2ca"
+    },
+    {
+      "period": "2025-05",
+      "n": 175793,
+      "row_hash": "4fe98b4d4f06f74bcf8b11c30cd5a73095280ed35e4f193e824d0b05b2c34c5a",
+      "flight_identity_sha256": "d55e66cdcdec2913d8fa24b6e754d13d1bb0784555857da6e3fd0bc379a61e7d"
+    },
+    {
+      "period": "2025-06",
+      "n": 180594,
+      "row_hash": "220d6a484950441704361361bda4045bd2a75720eda4cbe89510e5810d7c4b90",
+      "flight_identity_sha256": "779b4d456d212e6eca3db397c9709543b7ea6304fd730e90208cf81cec99072b"
+    },
+    {
+      "period": "2025-07",
+      "n": 187910,
+      "row_hash": "df1d9958f141b0cf8c5f77da39da154f5e173bb80f3cca6a4ae5317a57132bcf",
+      "flight_identity_sha256": "e0441851ad1c5ca6eb1a9f7327176ca58a7dc41d57761b1b51c498a2bc9e5970"
+    },
+    {
+      "period": "2025-08",
+      "n": 180841,
+      "row_hash": "5f4ff66973e0dc896f414484f4aa821847688e947c4fdf9534abd5b693fee5c8",
+      "flight_identity_sha256": "fc52f5bca45b0b6dc98a0dfeaa921ede116ef218b9230573b23a0cddc10ab46b"
+    },
+    {
+      "period": "2025-09",
+      "n": 170346,
+      "row_hash": "ffe7aead6921f0c55f10a771d2f505fa3b50bc64e72f6a22397b6ecb9fc496f7",
+      "flight_identity_sha256": "029b0ee650cf58252364a9e250023d49d5adcbd81fd1b0c17b9f055eb49e5d01"
+    },
+    {
+      "period": "2025-10",
+      "n": 180737,
+      "row_hash": "37473ef539a7457e05efc31508553d9b0fe7fa01db32ed687b334a37616f1b63",
+      "flight_identity_sha256": "705a81f74ef4f4d42bdc53335541a22ed4525c38cce1e67e359e4d1ad22f1f9d"
+    },
+    {
+      "period": "2025-11",
+      "n": 169350,
+      "row_hash": "8689af656b9766e41a8ec2358cbb634077ab81a7e4447a20930f3350415e54a9",
+      "flight_identity_sha256": "02a87ae537769f91dea461951bf2eb52a250aacb80f04651206c8c77eab1c87a"
+    },
+    {
+      "period": "2025-12",
+      "n": 171702,
+      "row_hash": "133493e97e5db305bd5b4c23f39d6f0658ae7d55f6f16de3ca13f0f75c2cbfd0",
+      "flight_identity_sha256": "5db11284148067687c8a208a55c3062332f405008e4d858787b2e44ae096ee67"
+    },
+    {
+      "period": "2026-09",
+      "n": 174524,
+      "row_hash": "661053ae8046143db61964f713d394ae9430e5a4af6c4d1fb44812ee7796c0bf",
+      "flight_identity_sha256": "280b61fc0fd2412224880e27a0c032baa8a8fd4602f8d34e78025d3af01fe420"
+    }
+  ],
+  "features": [
+    "Origin",
+    "Dest",
+    "Reporting_Airline",
+    "month",
+    "weekday",
+    "time_bin",
+    "dep_minutes",
+    "arr_minutes",
+    "Distance",
+    "CRSElapsedTime"
+  ],
+  "coverage_basis": "Caller must supply complete audited monthly artifacts; internal eligibility checks month presence. run.py verifies monthly hashes/row counts.",
+  "fit_cap_per_binary": 50000,
+  "seed": 2701,
+  "tree_training": [
+    {
+      "available": 2475534,
+      "fitted": 50000,
+      "events": 767
+    },
+    {
+      "available": 2438302,
+      "fitted": 50000,
+      "events": 114
+    },
+    {
+      "available": 2432178,
+      "fitted": 50000,
+      "events": 3726
+    }
+  ],
+  "tree_calibration": [
+    {
+      "n": 523735,
+      "events": 7117,
+      "applied": true
+    },
+    {
+      "n": 516618,
+      "events": 1500,
+      "applied": true
+    },
+    {
+      "n": 515118,
+      "events": 49774,
+      "applied": true
+    }
+  ],
+  "tree_warnings": [
+    [],
+    [],
+    []
+  ],
+  "direct_training": {
+    "available": 2475534,
+    "fitted": 50000,
+    "events": 4473
+  },
+  "direct_calibration": {
+    "n": 523735,
+    "events": 58391,
+    "applied": true
+  },
+  "direct_warnings": [],
+  "baseline_strength": 20.0,
+  "limitations": [
+    "Experimental defaults and sampling cap not justified for final use",
+    "Conditional branch fitting does not make categories independent",
+    "Same raw features/time windows, but tree has three fits and is not matched for parameter budget",
+    "Unknown excluded; historical schedules are not verified booking-time snapshots",
+    "2023 development plan cannot establish 2025 generalization; monthly test results not used to fit or tune each method"
+  ],
+  "protocol_label": "C2701_V5_FROZEN_ORIGIN",
+  "fit_start": "2023-01-01",
+  "tuning_end": "2024-03-31",
+  "tune_months": [
+    "2024-01",
+    "2024-02",
+    "2024-03"
+  ],
+  "calibration_months": [
+    "2024-04",
+    "2024-05",
+    "2024-06"
+  ],
+  "required_months": [
+    "2023-01",
+    "2023-02",
+    "2023-03",
+    "2023-04",
+    "2023-05",
+    "2023-06",
+    "2023-07",
+    "2023-08",
+    "2023-09",
+    "2023-10",
+    "2023-11",
+    "2023-12",
+    "2024-01",
+    "2024-02",
+    "2024-03",
+    "2024-04",
+    "2024-05",
+    "2024-06"
+  ],
+  "planned_holdout_months": [
+    "2024-07",
+    "2024-08",
+    "2024-09",
+    "2024-10",
+    "2024-11",
+    "2024-12",
+    "2025-01",
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-09"
+  ],
+  "C_grid": [
+    0.1,
+    1.0,
+    10.0
+  ],
+  "flight_identity_columns": [
+    "FlightDate",
+    "Reporting_Airline",
+    "Flight_Number_Reporting_Airline",
+    "Origin",
+    "Dest",
+    "CRSDepTime"
+  ],
+  "flight_identity_digest": "SHA-256 of sorted flight keys, each followed by LF"
+}

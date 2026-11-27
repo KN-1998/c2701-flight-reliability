@@ -1,4 +1,4 @@
-﻿id,type,statement,source_ids,exact_location,reason,status,required_evidence_or_test,release_rule
+id,type,statement,source_ids,exact_location,reason,status,required_evidence_or_test,release_rule
 A01,题面约束,航段而非完整旅客行程作为单位,PROBLEM,英文题面p2 Important distinctions；数据月文件字段,只有航段记录，不能拼出旅客全行程,SUPPORTED_SCOPE,核对报告总体和计数单位,不得外推完整行程成功率
 A02,总体限制,仅代表所选机场及报送覆盖内记录,BTS_FILES,data/bts_*.json；英文题面p1 population,抽取和报送不是全国旅客概率样本,COVERAGE_AUDIT_PENDING,补月/航司覆盖审计,不声称全国代表性
 A03,审计约定,取消改航互斥；冲突归U而非强设优先级,PROBLEM;D1,题面p2任务1；FORMULA_PROVENANCE§3,保持树叶分区逻辑,SUPPORTED_DEFINITION,保留冲突清单；核验字段词典,同时标志不可默默择一
@@ -26,7 +26,7 @@ A24,晚期选择,2026-09作为晚期单月,PROBLEM,固定旧默认，不是已�
 A25,正则化选择,C取0.1/1/10足够,NONE,SequentialModel与run_prediction代码,工程候选搜索网格,NUMERICAL_DEFAULT,扩网格及收敛/基线对照,不称理论最优
 A26,训练抽样,每分支均匀抽样至多20万不改变结论,NONE,FIT_CAP=200000；无样本充分性证据,降低内存/耗时,EMPIRICAL_VALIDATION_PENDING,多seed/更大样本/全量及稀有分支比较,不把一次拟合当全量MLE
 A27,基线收缩,(k+20p)/(n+20)及20的强度,D8,ASSUMPTION_POLICY末节D8代数；20无外部数值来源,可由Beta先验均值推导形式,FORM_DERIVED_STRENGTH_UNJUSTIFIED,注明经验先验及5/20/100敏感性,不能称20由原论文给出
-A28,校准形式,分期sigmoid足以校准联合风险,CAL2005;P1;P2,CAL2005 PDF p2 §2.1式(1)-(3)；AUXILIARY_METHODS映射差异；仅选页已读，依项目规范不得充当已全文读正式来源,独立校准与sigmoid函数族有已读研究依据；本题效果未知,FULL_READING_GATE_PENDING,Platt1999首源未读；检验分支与联合校准、具体期段及clip/C选择,分支闭合不等于联合校准；全文读完前仅作候选来源/透明设计
+A28,校准形式,分期sigmoid足以校准联合风险,CAL2005;P1;P2,CAL2005 PDF pp1-8全文已读；p2 §2.1式(1)-(3)；AUXILIARY_FULL_READING_V6_20261127记录实现差别,辅助原始实证论文支持分离拟合/校准数据和sigmoid候选；不保证航班联合校准,METHOD_SOURCE_READ_APPLICATION_NOT_ESTABLISHED,Platt1999首源未读；仍须检验分支及联合校准、时间漂移、clip与C设置,仅解除CAL2005全文阅读门禁；不宣称复刻Platt原实现、形式充分、依赖或2027迁移成立
 A29,评价选择,Brier为主；10概率箱ECE/校准图,SCORE2007;PROBLEM,SCORE2007 PDF p4 §2.3及p5 Example1/3；AUXILIARY_METHODS；仅选页已读，依项目规范不得充当已全文读正式来源,严格适当评分有理论及代数理由；10箱选择未获依据,FULL_READING_GATE_PENDING,披露二分类缩放/clip；换箱与连续校准；不冒称已读Brier1950,不拿单一ECE证明校准；全文读完前仅作候选来源/透明设计
 A30,多重比较,45对未经修正即可解释严格全排序,NONE,十机场45对；现实现未校正,这种推断不成立,REJECTED_CLAIM,多重比较或改成探索性/偏序,不得发布全序显著性
 A31,困难日定义,训练日失败率95%分位标尾日,PROBLEM,题面任务4；95%是旧工作切点,事后诊断可复现，不是事件真值,RETROSPECTIVE_OUTCOME_SELECTION_NOT_INDEPENDENT_TEST,90/95/97.5/99阈值及事件证据,测试日按实际Y筛选：不能证明独立困难日系统性低估
@@ -53,3 +53,17 @@ A51,实验算力,每二分类训练上限50000足以用于最终部署,NONE,v3�
 A52,字段事实,改航后仍可能最终到达原定目的地,BTS_FIELDS;BTS_FILES,DivReachedDest/DivArrDelay定义行；原16个月计数,区分正常完成、最终抵达和旅客不满意,OFFICIAL_FIELD_DEFINITION_DATA_COUNTS_VERIFIED,单列DivReachedDest无效/缺失；只在reached=1解释DivArrDelay,不能把DivArrDelay填回正常ArrDelay或把改航当取消
 A53,反例设计,EWR/LGA往DEN在共同航司季节时段下可直接作因果机场选择,PROBLEM;A16;A45,case_study.py；results/review_v3/descriptive/EWR_LGA_to_DEN_2023,审查建议的可复核航段例子；保留全部结果不择优,DESCRIPTIVE_MATCHED_CASE_NOT_CAUSAL,原始与匹配取消/长延误/联合率、覆盖、配对差值与后续期,不假造效用/票价/地面交通；不由一条路线推广全国
 A54,迁移与稀疏支持,训练中未见季度的历史基线仍充分代表强基线,A22;A26,development2023训练仅Q1-Q3；留出Q4全退回训练总率,披露弱基线季节外推失效，避免夸大树收益,UNSEEN_QUARTER_BASELINE_LIMITATION,主计划全年训练；记录未见组比例；校准/近期基线为后续候选,不能把开发基线差距写成普遍性能提升
+A55,数学恒等式,共享五叶按同一信息集及U=0构成互斥完备分区,P1;P2,P1 PDF p4 §3.1式(1)后未编号式；P2 PDF p5 Definition2后未编号路径乘积；V6_MODELING_DERIVATION §2-4,同卡两个阈值必须来自一个分布，不要求取消/改航独立,PRIMARY_TEXT_PLUS_ALGEBRA,检查四个风险集、叶和、p15-p60=中间叶质量,只保证结构合法，不保证校准/未来适用
+A56,统计函数形式,新增15至60分支可用局部logistic近似,P1;P2,P1 PDF pp4-5；joint_candidate_v6.py SharedFiveLeafModel,在完成且延误小于60的条件集内细分；是否线性未知,CANDIDATE_NOT_ESTABLISHED,分支/子群校准、稀有事件数、未来未看月比较,保留15分钟变差反例，不宣称结构修复带来预测提高
+A57,工程默认,候选C=0.1、每分支抽样50000、seed2701,V6_CODE;A40;A42;A51,joint_candidate_v6.py；candidate_status.json risk_sets,重复v5树配置以便回顾对比，不是文献常数,DECLARED_ENGINEERING_NOT_OPTIMAL,更高上限、多seed、稀有分支足量与公平对照,记录实际分支样本/事件；不称最优或无损
+A58,时间设计,候选复用2023至2024Q1拟合、2024Q2校准,VALIDATION_V5;V6_CODE,VALIDATION_V5.json；joint_candidate_v6.py；candidate_status.json,不使用测试标签训练，但19留出月结果已看过,RETROSPECTIVE_NOT_NEW_UNSEEN_VALIDATION,冻结新候选后保留另一期未查看月并追踪时间戳,不把回顾复算当成新增盲测或事前预注册
+A59,比较总体,共同支持为报送航司×季节×6小时时段,BTS_FIELDS;V6_CODE,traveler_card_v6.py；traveler_card/card_status.json；support_coverage.csv,同目的地DEN的可比历史子总体，不代表运营航司完全对齐或混杂消失,DECLARED_COMPARISON_SCOPE,核每机场覆盖、被排除构成和Reporting_Airline字段语义,覆盖差异须随卡列示；不作全机场或因果结论
+A60,工程门槛,两机场每格至少30个已知结局,V6_CODE,traveler_card_v6.py min_known；card_status.json,限制极稀疏格；30不是统计充分性保证,DECLARED_ENGINEERING_NOT_SUFFICIENCY,15/30/60等阈值重算支持和敏感性；不冒充补证,低覆盖缩小总体；换门槛属新版本不得覆盖旧结果
+A61,参考构成,调整权重为两机场支持内计划构成平均,V6_CODE;A16,traveler_card_v6.py；V6_MODELING_DERIVATION §6,构造对称历史参考分布；不是旅客偏好或2027客流,DECLARED_REFERENCE_POPULATION,权重非负和为1；条件延误用联合质量除完成质量,不得把分格条件率直接平均或称因果公平
+A62,总体限制,EWR99.59%与LGA43.37%共同支持覆盖允许限制性比较,V6_TABLES,traveler_card/support_coverage.csv period2023-2025；route_rates.csv,可计算不等于全总体代表性；固定年度支持另有范围,OBSERVED_COVERAGE_ONLY,报告分母、被排除群体；外推需额外数据,不删除低覆盖提示；不把LGA局部优点泛化
+A63,统计依赖,1/7/14日配对区块可给实验性不确定性展示,V6_CODE;A18,traveler_card_v6.py；card_status.json；traveler_card/matched_comparisons.csv,同日共同冲击可能存在；尚未获得区块有效性/覆盖率依据,EXPERIMENTAL_NOT_VALIDATED_INTERVAL,补读原始区块研究与依赖诊断、区块选择；固定支持条件披露,不称严格95%覆盖；区块敏感性不证明依赖假设
+A64,工程默认,区块重复1000次、seed2701及固定支持,V6_CODE,traveler_card_v6.py；card_status.json,可复现算力设置，不是文献规定精度,DECLARED_NUMERICAL_DEFAULT,更多重复收敛；区别MC误差与抽样不确定性,不把重复次数当有效样本量或有效区间证明
+A65,事件范围,MCO10月9日至10日是EOC一级响应窗口而非已证全场关闭,MCO_BOARD;NHC_MILTON,EXTERNAL_EVENTS_V5.json；GOAA219页PDF pp93-94，工作日冲突保留；NHC不证明关闭,采用官方记载做压力窗口；邻近星期对照不保证平静,OFFICIAL_WINDOW_NOT_CAUSAL_IDENTIFICATION,核窗口/筛选/时区及789条事件773取消,不称全机场关闭、不作因果估计、不拟造冲击乘数
+A66,事件范围,达美7月19日至23日是公开报告支持的运营扰动窗口,DELTA_SEC_8K_20240808;V6_TABLES,EXTERNAL_EVENTS_V5.json；Delta2024-08-08 8-K Item7.01；external_event_scores.csv,"5,458条为选定十出发机场Reporting_Airline=DL子集，非达美全网",SUPPORTED_STRESS_SCOPE,核事件4168/5458及取消2139；三模型预测并列,严重低估必须保留，不能以异常为由删掉失败或外推2027
+A67,发布选择,五叶候选只作历史同卡一致性比较，不替换已选阈值评分模型,V6_TABLES;A55;A56,candidate_comparison.csv；V6_MODELING_DERIVATION §5,15分钟Brier在各期组略差；60分几乎重复既有分支,RETROSPECTIVE_CANDIDATE_ONLY,冻结候选后新未看期复核双阈值和校准/评分,不宣称全面提高；原分别评分及倒置明细保留
+A68,复现门槛,跨环境数值对照用绝对容差1e-10,V6_REVIEW_CODE,review_v6_evidence.py compare_csv_trees；independent_replay_all_csv_review.json,仅工程浮点一致性；本轮实测最大差约1.25e-14,DECLARED_ENGINEERING_TOLERANCE,记录实际最大差；文本/整数/缺失模式精确；清单完整,不作为预测误差、置信区间、统计等效性或字节一致证明

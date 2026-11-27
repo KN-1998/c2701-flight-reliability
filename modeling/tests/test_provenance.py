@@ -18,11 +18,15 @@ class ProvenanceTests(unittest.TestCase):
             if sid in ['P1','P2']:
                 self.assertEqual(item['status'],'PRIMARY_RESEARCH_PREPRINT_READ')
                 self.assertIn('including references',item['full_text_read_scope'])
+            elif sid == 'CAL2005':
+                self.assertEqual(item['status'], 'PRIMARY_RESEARCH_PAPER_FULL_TEXT_READ')
+                self.assertIn('including', item['full_text_read_scope'])
+                self.assertIn('after v6', item['reading_gate'])
             else:
                 # Selected-page inspection cannot satisfy this project's full-reading gate.
                 self.assertEqual(item['status'],'BIBLIOGRAPHY_VERIFIED_FULL_READING_GATE_PENDING')
         gate=json.loads((ROOT/'docs/PROVENANCE_GATE.json').read_text(encoding='utf-8'))
-        self.assertEqual(set(gate['auxiliary_full_reading_gate_pending']),{'T0','CAL2005','SCORE2007'})
+        self.assertEqual(set(gate['auxiliary_full_reading_gate_pending']),{'T0','SCORE2007'})
         self.assertEqual(sources['K_META']['status'],'METADATA_ONLY_NOT_FULLTEXT')
 
     def test_registry_keeps_evidence_gaps_visible(self):

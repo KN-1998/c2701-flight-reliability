@@ -1,0 +1,73 @@
+{
+  "release_internal_manifest": {
+    "successful": true,
+    "checked_files": 485,
+    "errors": []
+  },
+  "zip_payload_files": 486,
+  "exact_zip_vs_commit_files": 477,
+  "different": [
+    {
+      "path": "00_编程手先读.md",
+      "zip_sha256": "7f98f5a680eb0804a2bd6395a66e0f8141011180357501e1b7dc776b49c5d1d9",
+      "git_sha256": "9b430e7d2ce7040a5b888c8eafb5f4652f67988cb856f0f2fa224caef3e2567a"
+    },
+    {
+      "path": "CHECKSUMS.sha256",
+      "zip_sha256": "8346ca0a10c9737101b30e82d8309e5be40e8f3d1c3adbba8517da2879b35d5b",
+      "git_sha256": "245c4a4b9e34d6bc6ee6fe5d6864b0feebd80ed1679848387fd64485f2040003"
+    },
+    {
+      "path": "HANDOFF_CONTENTS.json",
+      "zip_sha256": "72b2aaf028e4dbaedadf7423e8f1027e051cc4013b0ea7259341a4c538876615",
+      "git_sha256": "5dcb80f8b56de679a8c76c556d90f417612986266fd5d8af6785e68db885eb62"
+    },
+    {
+      "path": "PUBLICATION_NOTES.md",
+      "zip_sha256": "ffb8991d22ee9215849b808e2f5320a7c121e7026be7c85f6f25584bf0cb20bc",
+      "git_sha256": "8f187c71dc7621cc4476fbd70ffb2595e0176efc4187331c5495489da51d8a75"
+    },
+    {
+      "path": "README.md",
+      "zip_sha256": "d8befaea63744ef37a6e1a3b9863eabbb0f8ea55412993ffbec379b90267ea8a",
+      "git_sha256": "8c8440b3ed33f2811f20237ba6b5acc8fb645e042e13e437c86c089b12e758c2"
+    },
+    {
+      "path": "modeling/README_编程手先读.md",
+      "zip_sha256": "97fe03b5960ad6dc7522215da7bb097ccc7418b5d5b35e0feecb0ec1c0b12879",
+      "git_sha256": "40077b7d18449ba90ca9684846c178bb82e796ccd88b642580e7df66632b963b"
+    },
+    {
+      "path": "modeling/results/TEST_REPORT.txt",
+      "zip_sha256": "8336fe88d25f41e38bd717c872b767b4e86c953618cfb2ff6cc8d4c20b19cd35",
+      "git_sha256": "a7231fd24813be595faf9b36e8d926f7d9873f19ad2a91bebafa23cb5c42bc2d"
+    },
+    {
+      "path": "modeling/results/TEST_STATUS.json",
+      "zip_sha256": "c3374b484d42c9eb67d56a0851aa629ed637e74d2d46ca8b54c89252a4e735ac",
+      "git_sha256": "16a1d68a6eb1b0bc76e01974a8766755e360835a11f5e75c94a2a522dacaa779"
+    },
+    {
+      "path": "modeling/tests/test_review_v4.py",
+      "zip_sha256": "6bbadffaf75234a7014bcb0e93cd11c39dd818c177dae374655885a4755a0735",
+      "git_sha256": "6d737bcb7ecc081f7ad930eaac9c28a168e26eeadbd241c1cb39bf592ee16e6e"
+    }
+  ],
+  "only_in_zip": [],
+  "only_in_commit": [
+    "modeling/docs/COLLABORATION_STATUS_20261127.json",
+    "modeling/docs/COUNTEREXAMPLE_PROCESS_20261127.md",
+    "modeling/docs/CURRENT_TEAM_REQUIREMENTS_20261127.md",
+    "modeling/docs/FOLLOWUP_DECISION_REGISTER_20261127.csv",
+    "modeling/docs/FOLLOWUP_PROCESS_20261127.md",
+    "modeling/docs/V5_ACCEPTANCE_REPORTED_20261127.json",
+    "modeling/docs/V5_THRESHOLD_RECHECK_REPORTED_20261127.json",
+    "modeling/results/followup_20261127/FINDINGS.md",
+    "modeling/results/followup_20261127/TEST_ATTEMPT_1_UTF8_FAILURE.txt",
+    "modeling/results/followup_20261127/diagnostic_inputs.json",
+    "modeling/results/followup_20261127/threshold_coherence.csv",
+    "modeling/results/followup_20261127/threshold_coherence_examples.csv",
+    "modeling/results/followup_20261127/threshold_coherence_status.json"
+  ],
+  "scope": "Package content comparison; differences listed, not silently called identical"
+}

@@ -9,11 +9,28 @@ test_gate_uses_total_not_sum_of_month_and_total (test_counterexample_display.Cou
 test_no_inversion_does_not_authorize_joint_display (test_counterexample_display.CounterexampleDisplayTests.test_no_inversion_does_not_authorize_joint_display) ... ok
 test_reported_rounded_values_detect_negative_interval_mass (test_counterexample_display.CounterexampleDisplayTests.test_reported_rounded_values_detect_negative_interval_mass) ... ok
 test_sub_tolerance_difference_is_not_display_approval (test_counterexample_display.CounterexampleDisplayTests.test_sub_tolerance_difference_is_not_display_approval) ... ok
+test_partitioned_recheck_matches_full_reference_and_retains_all_inversions (test_delivery_v6.DeliveryThresholdTests.test_partitioned_recheck_matches_full_reference_and_retains_all_inversions) ... ok
+test_rejects_missing_month_without_creating_outputs (test_delivery_v6.DeliveryThresholdTests.test_rejects_missing_month_without_creating_outputs) ... ok
+test_all_csv_rejects_integer_boolean_and_identity_changes (test_evidence_review_v6.EvidenceReviewTests.test_all_csv_rejects_integer_boolean_and_identity_changes) ... ok
+test_all_csv_rejects_inventory_or_missingness_change (test_evidence_review_v6.EvidenceReviewTests.test_all_csv_rejects_inventory_or_missingness_change) ... ok
+test_all_csv_reports_measured_float_difference (test_evidence_review_v6.EvidenceReviewTests.test_all_csv_reports_measured_float_difference) ... ok
+test_reject_duplicate_audit_month (test_evidence_review_v6.EvidenceReviewTests.test_reject_duplicate_audit_month) ... ok
+test_reject_nonclosing_leaf_report (test_evidence_review_v6.EvidenceReviewTests.test_reject_nonclosing_leaf_report) ... ok
+test_reject_structure_fingerprint_mismatch (test_evidence_review_v6.EvidenceReviewTests.test_reject_structure_fingerprint_mismatch) ... ok
+test_reject_upgraded_future_gate (test_evidence_review_v6.EvidenceReviewTests.test_reject_upgraded_future_gate) ... ok
+test_saved_evidence_scope_and_tradeoff (test_evidence_review_v6.EvidenceReviewTests.test_saved_evidence_scope_and_tradeoff) ... ok
+test_existing_protocol_matches_frozen_calendar (test_forecast_protocol.ForecastProtocolTests.test_existing_protocol_matches_frozen_calendar) ... ok
+test_flight_keys_survive_numeric_csv_types_and_refuse_invalid_rows (test_forecast_protocol.ForecastProtocolTests.test_flight_keys_survive_numeric_csv_types_and_refuse_invalid_rows) ... ok
+test_impossible_or_unsupported_settings_are_rejected (test_forecast_protocol.ForecastProtocolTests.test_impossible_or_unsupported_settings_are_rejected) ... ok
+test_protocol_controls_parameters_windows_and_audit_outputs (test_forecast_protocol.ForecastProtocolTests.test_protocol_controls_parameters_windows_and_audit_outputs) ... ok
 test_block_resampling (test_integration.IntegrationTests.test_block_resampling) ... ok
 test_comparison_smoke (test_integration.IntegrationTests.test_comparison_smoke) ... ok
 test_prediction_smoke (test_integration.IntegrationTests.test_prediction_smoke) ... ok
 test_stress_smoke (test_integration.IntegrationTests.test_stress_smoke) ... ok
 test_threshold_monotonicity (test_integration.IntegrationTests.test_threshold_monotonicity) ... ok
+test_candidate_uses_both_thresholds_and_exact_risk_sets (test_joint_candidate_v6.SharedFiveLeafTests.test_candidate_uses_both_thresholds_and_exact_risk_sets) ... ok
+test_composition_endpoints_and_nested_probabilities (test_joint_candidate_v6.SharedFiveLeafTests.test_composition_endpoints_and_nested_probabilities) ... ok
+test_observed_boundaries (test_joint_candidate_v6.SharedFiveLeafTests.test_observed_boundaries) ... ok
 test_original_sources_and_exact_versions (test_provenance.ProvenanceTests.test_original_sources_and_exact_versions) ... ok
 test_registry_keeps_evidence_gaps_visible (test_provenance.ProvenanceTests.test_registry_keeps_evidence_gaps_visible) ... ok
 test_support_and_mix_are_not_the_same_component (test_provenance.ProvenanceTests.test_support_and_mix_are_not_the_same_component) ... ok
@@ -42,6 +59,9 @@ test_saved_input_contract (test_review_v4.ReviewV4Tests.test_saved_input_contrac
 test_saved_output_never_overwritten (test_review_v4.ReviewV4Tests.test_saved_output_never_overwritten) ... ok
 test_saved_risk_sets_integration (test_review_v4.ReviewV4Tests.test_saved_risk_sets_integration) ... ok
 test_zero_events_not_dropped (test_review_v4.ReviewV4Tests.test_zero_events_not_dropped) ... ok
+test_baseline_conditional_risk_sets (test_review_v5.ValidationV5Tests.test_baseline_conditional_risk_sets) ... ok
+test_carrier_scoped_event_and_origin_matching (test_review_v5.ValidationV5Tests.test_carrier_scoped_event_and_origin_matching) ... ok
+test_unseen_periods_and_late_period_are_scored_separately (test_review_v5.ValidationV5Tests.test_unseen_periods_and_late_period_are_scored_separately) ... ok
 test_adapter_bad_fingerprint_and_count_fail (test_threshold_coherence.LegacyPairingTests.test_adapter_bad_fingerprint_and_count_fail) ... ok
 test_adapter_duplicate_identity_fail (test_threshold_coherence.LegacyPairingTests.test_adapter_duplicate_identity_fail) ... ok
 test_adapter_empty_or_duplicate_period_fail (test_threshold_coherence.LegacyPairingTests.test_adapter_empty_or_duplicate_period_fail) ... ok
@@ -61,8 +81,12 @@ test_missing_method_or_metadata_fail (test_threshold_coherence.ThresholdCoherenc
 test_nested_events_and_counts (test_threshold_coherence.ThresholdCoherenceTests.test_nested_events_and_counts) ... ok
 test_threshold_and_label_contracts (test_threshold_coherence.ThresholdCoherenceTests.test_threshold_and_label_contracts) ... ok
 test_tolerance_does_not_change_forecasts (test_threshold_coherence.ThresholdCoherenceTests.test_tolerance_does_not_change_forecasts) ... ok
+test_absent_routes_produce_a_readable_empty_card (test_traveler_card_v6.TravelerCardTests.test_absent_routes_produce_a_readable_empty_card) ... ok
+test_annual_comparisons_keep_a_fixed_common_mix (test_traveler_card_v6.TravelerCardTests.test_annual_comparisons_keep_a_fixed_common_mix) ... ok
+test_missing_support_and_missing_completion_are_reported_separately (test_traveler_card_v6.TravelerCardTests.test_missing_support_and_missing_completion_are_reported_separately) ... ok
+test_shared_partition_keeps_boundary_labels_and_both_denominators (test_traveler_card_v6.TravelerCardTests.test_shared_partition_keeps_boundary_labels_and_both_denominators) ... ok
 
 ----------------------------------------------------------------------
-Ran 63 tests in 4.736s
+Ran 87 tests in 6.466s
 
 OK

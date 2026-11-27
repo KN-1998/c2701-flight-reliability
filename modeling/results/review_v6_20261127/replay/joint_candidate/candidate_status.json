@@ -1,0 +1,110 @@
+{
+  "status": "retrospective_candidate_scored",
+  "method": "shared_five_leaf",
+  "evidence_level": "retrospective comparison on already examined holdouts",
+  "actual_flight_prediction_authorized": false,
+  "independent_later_validation_completed": false,
+  "thresholds_minutes": [
+    15,
+    60
+  ],
+  "training_start": "2023-01-01",
+  "training_end": "2024-03-31",
+  "calibration_start": "2024-04-01",
+  "calibration_end": "2024-06-30",
+  "calibration_months": [
+    "2024-04",
+    "2024-05",
+    "2024-06"
+  ],
+  "seed": 2701,
+  "fit_cap_per_branch": 50000,
+  "regularization_C": 0.1,
+  "regularization_basis": "Fixed engineering setting. The default repeats the prior v5 tree C.",
+  "features": [
+    "Origin",
+    "Dest",
+    "Reporting_Airline",
+    "month",
+    "weekday",
+    "time_bin",
+    "dep_minutes",
+    "arr_minutes",
+    "Distance",
+    "CRSElapsedTime"
+  ],
+  "risk_sets": [
+    {
+      "branch": "cancel",
+      "training_available": 2475534,
+      "training_available_events": 37232,
+      "training_n": 50000,
+      "training_events": 767,
+      "fit_warnings": "[]",
+      "calibration_n": 523735,
+      "calibration_events": 7117,
+      "calibration_applied": true
+    },
+    {
+      "branch": "divert_given_not_cancel",
+      "training_available": 2438302,
+      "training_available_events": 6124,
+      "training_n": 50000,
+      "training_events": 114,
+      "fit_warnings": "[]",
+      "calibration_n": 516618,
+      "calibration_events": 1500,
+      "calibration_applied": true
+    },
+    {
+      "branch": "delay60_given_completed",
+      "training_available": 2432178,
+      "training_available_events": 180112,
+      "training_n": 50000,
+      "training_events": 3726,
+      "fit_warnings": "[]",
+      "calibration_n": 515118,
+      "calibration_events": 49774,
+      "calibration_applied": true
+    },
+    {
+      "branch": "delay15_given_completed_and_below60",
+      "training_available": 2252066,
+      "training_available_events": 358786,
+      "training_n": 50000,
+      "training_events": 8010,
+      "fit_warnings": "[]",
+      "calibration_n": 465344,
+      "calibration_events": 83257,
+      "calibration_applied": true
+    }
+  ],
+  "holdout_months": [
+    "2024-07",
+    "2024-08",
+    "2024-09",
+    "2024-10",
+    "2024-11",
+    "2024-12",
+    "2025-01",
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-09"
+  ],
+  "holdout_row_count": 3287437,
+  "threshold_violations": 0,
+  "max_leaf_sum_error": 4.440892098500626e-16,
+  "max_threshold_reconstruction_error": 3.3306690738754696e-16,
+  "row_hash_definition": "Same month rows, columns and index order as v5 primary diagnostics.",
+  "data_scope": "Known audited outcomes with static and reported schedule proxy features.",
+  "examples": "First row of each month, for illustrating the probability columns."
+}

@@ -192,7 +192,7 @@ def _markdown(status, raw, coverage, matched):
     ]
     for a, b in zip(raw[:2], coverage[:2]):
         lines.append(f"|{a['airport']}|{a['n_planned']:,}|{a['n_completed']:,}|{a['unknown']:,}|{b['n_supported']:,}|{_percent(b['coverage'])}|")
-    lines += ['', '对比以相同运营航司、季节和 6 小时时段分格，两机场各自达到最少已知航段数后纳入。'
+    lines += ['', '对比以相同报送航司（Reporting_Airline）、季节和 6 小时时段分格，两机场各自达到最少已知航段数后纳入。'
               '原始率使用全部可用航段。调整率使用两机场共同支持内航班构成的等权平均。'
               '年度对比使用各观察年均过门槛的固定分格及固定参考权重。', '',
               '## 三年原始风险和调整对照', '',
