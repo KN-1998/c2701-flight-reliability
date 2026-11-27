@@ -1,0 +1,41 @@
+{
+  "checked_at": "2026-11-27T10:34:09.485250+08:00",
+  "repository": "KN-1998/c2701-flight-reliability",
+  "collaborators": [
+    {
+      "login": "shaoshuiyu0222",
+      "role_name": "write",
+      "permissions": {
+        "admin": false,
+        "maintain": false,
+        "push": true,
+        "triage": true,
+        "pull": true
+      }
+    },
+    {
+      "login": "KN-1998",
+      "role_name": "admin",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "push": true,
+        "triage": true,
+        "pull": true
+      }
+    },
+    {
+      "login": "EveyGA",
+      "role_name": "write",
+      "permissions": {
+        "admin": false,
+        "maintain": false,
+        "push": true,
+        "triage": true,
+        "pull": true
+      }
+    }
+  ],
+  "pending_invitations": [],
+  "observation": "Both named teammates have write permission; no pending invitations at this check. This is a dated snapshot, not a promise about later permissions."
+}

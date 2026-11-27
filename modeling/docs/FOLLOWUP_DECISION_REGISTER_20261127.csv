@@ -1,0 +1,9 @@
+id,type,statement,source_ids,exact_location,reason,status,required_evidence_or_test,failure_disposition
+F01,数学恒等式,同总体同信息下B60包含于B15，差为正常完成且15≤D<60的概率,P2;D1-D2,P2 PDF p5 Definition 2后未编号式；THRESHOLD_COHERENCE §2,由互斥叶及集合包含直接推出,DERIVED_NOT_EMPIRICAL_ASSUMPTION,核标签/分母/信息时点；不需iid,条件不同则禁止逐项解释
+F02,应用前提,阈值对照必须同一稳定航段、同一总体及信息时点,D1-D2;SOURCE_CONTRACT,THRESHOLD_COHERENCE §§2–3；threshold_coherence.aligned_inputs,否则嵌套事件的条件分布不相同,KEYS_CHECKED_TIMESTAMP_NOT_CERTIFIED,唯一完整身份、原行哈希、源序列及结局核对；另查时间戳,缺时点证据不称实际预订时预测
+F03,工程默认,浮点倒置诊断容差1e-12,LOCAL_ENGINEERING,threshold_coherence.py coherence_tables atol,分离浮点微差与概率倒置，保留原始差,DISCLOSED_DEFAULT_NOT_LITERATURE_PARAMETER,0容差回归测试；输出atol和原始最大差,不当作统计显著性或旅客偏好阈值
+F04,未训练候选,五叶共享分区可以结构保证双阈值一致性,P1;P2,P1 PDF pp4–5；P2 PDF p5；THRESHOLD_COHERENCE §4,F1增加一个条件分支、F2组成同一分布,ALGEBRA_ONLY_NO_PERFORMANCE_CLAIM,风险集充分性、参数预算、真实新验证,未验证不替换v5、不宣称提升
+F05,证据状态,用户报告v5验收，工件未在当前机器及远端检出,USER_REPORT;GITHUB_API,V5_ACCEPTANCE_REPORTED_20261127.json,防止把已接收摘要冒充本机复算,REPORTED_ACCEPTED_PENDING_ARTIFACT_SYNC,接收后核41项原测试及月/事件表,不重写用户验收，不宣称本轮推送v5数据
+F06,诊断选择,旧样本双阈值检查不重新拟合或投影概率,LOCAL_AUDIT,threshold_coherence.py；diagnostic_inputs.json,保留冻结结果，不把后验修整包装成验证,IMPLEMENTED_AND_CONTRACT_TESTED,副作用/新输出目录/同键缺失拒绝测试,发生矛盾时留痕而不静默修补
+F07,算术派生,报告样本取消率约39.19%，是同分母观测联合率下界,USER_REPORT;D2,用户摘要5458/2139；THRESHOLD_COHERENCE §5,取消是联合事件的互斥组成部分,REPORTED_COUNTS_ARITHMETIC_ONLY,工件可用后核确切分母、窗口、未知数,不当独立复算、不冒充预测自身的结构下界
+F08,研究过程,本轮是验收后补查，不是事前冻结新实验,PROCESS_RECORD,FOLLOWUP_PROCESS_20261127.md,保持实际研究顺序和反例,RETROSPECTIVE_FOLLOWUP,核文件/提交及规则冻结时点,不倒填研究工时或预注册

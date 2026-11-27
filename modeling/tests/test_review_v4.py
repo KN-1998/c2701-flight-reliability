@@ -1,4 +1,4 @@
-import tempfile,unittest,subprocess,sys
+import tempfile,unittest,subprocess,sys,os
 from pathlib import Path
 import numpy as np
 import pandas as pd
@@ -84,7 +84,7 @@ class ReviewV4Tests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             out=Path(td)/'must_not_be_created'
             script=Path(__file__).resolve().parents[1]/'src/reproduce_review_v3.py'
-            result=subprocess.run([sys.executable,str(script),'--out',str(out),'--mc-check','--reps','20'],capture_output=True,text=True,timeout=30)
+            result=subprocess.run([sys.executable,str(script),'--out',str(out),'--mc-check','--reps','20'],capture_output=True,text=True,encoding="utf-8",env={**os.environ,"PYTHONIOENCODING":"utf-8"},timeout=30)
             self.assertNotEqual(result.returncode,0)
             self.assertIn('--mc-check requires --reps 1000',result.stderr)
             self.assertFalse(out.exists())

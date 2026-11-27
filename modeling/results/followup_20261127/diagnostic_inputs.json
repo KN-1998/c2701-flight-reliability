@@ -1,0 +1,62 @@
+{
+  "kind": "REANALYSIS_OF_PREVIOUSLY_SEEN_V3_PREDICTIONS_NOT_V5_VALIDATION",
+  "inputs": [
+    {
+      "role": "audited_v3_cache",
+      "name": "review_primary_data.pkl",
+      "sha256": "4fb9909526f8c59536d4052d29f82f1902756b9ab8d94646ec566569105abcc0"
+    },
+    {
+      "role": "predictions",
+      "threshold": 15,
+      "name": "prediction_primary_t15/predictions.pkl",
+      "sha256": "f1d147bbaddcfdc293a82b0cb24697a01715ab361071663a8e456c87d6de3bb0"
+    },
+    {
+      "role": "prediction_status",
+      "threshold": 15,
+      "name": "prediction_primary_t15/prediction_status.json",
+      "sha256": "2ef12e30b76fe60fef676c7d7b99a21b5bc681aac10cdcad3ae3b15df394c8af"
+    },
+    {
+      "role": "predictions",
+      "threshold": 60,
+      "name": "prediction_primary_t60/predictions.pkl",
+      "sha256": "3dd9116b69923ede9175cd6dd8768af811c22ee61f2fef928c60870d679cf6c2"
+    },
+    {
+      "role": "prediction_status",
+      "threshold": 60,
+      "name": "prediction_primary_t60/prediction_status.json",
+      "sha256": "ef4079dd13d45509d6744c2281987023b9458e9772028089f3c8d502359799b1"
+    }
+  ],
+  "pairing_proof": {
+    "holdout_months": [
+      {
+        "period": "2024-10",
+        "n": 178852,
+        "row_hash": "bbfc55613e946fc9566bb952826a861dbea3d15bbe05d565798dd05bfd32ad13"
+      },
+      {
+        "period": "2025-01",
+        "n": 157372,
+        "row_hash": "ccd7f853d26a35ceb764bd764a3b45e9e1e74de552bc894ea6f527d50eb6045b"
+      }
+    ],
+    "source_order_and_outcome_checked": true,
+    "identity_columns": [
+      "date",
+      "Origin",
+      "Dest",
+      "Reporting_Airline",
+      "Flight_Number_Reporting_Airline",
+      "dep_minutes",
+      "scheduled_dep_2400"
+    ],
+    "paired_key_list_sha256": "6006d4d090f633f8882c9ab1460f1f1756340c86074f047e501abd49ef7b97fd"
+  },
+  "new_data": false,
+  "new_training": false,
+  "v5_artifacts_available": false
+}

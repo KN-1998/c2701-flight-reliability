@@ -1,6 +1,6 @@
 {
   "date": "2026-11-27 Asia/Shanghai",
-  "packaged_at_utc": "2026-11-26T17:20:35.377166+00:00",
+  "packaged_at_utc": "2026-11-27T02:57:35.712478+00:00",
   "role": "modeler_to_coder",
   "entrypoint": "00_编程手先读.md",
   "status": "PARTIAL_CORE",
@@ -90,7 +90,7 @@
     "2024-07"
   ],
   "tests": {
-    "tests_run": 38,
+    "tests_run": 57,
     "failures": 0,
     "errors": 0,
     "successful": true,
@@ -105,15 +105,15 @@
   },
   "original_v2_sha256": "506649802a1464d159fbb2a27d450e440b37cbf903ebdfcf10d3c9d08bb1e516",
   "not_completed": [
-    "15 missing core months and optional 2026-09",
+    "Corresponding accepted-v5 artifacts not located in inspected local/remote locations; sync and independently reproduce when available, without requiring a rebuild",
+    "Verify original frozen selection record, same-flight monthly scores, exact event window and denominators from v5 artifacts",
     "Block-method original and dependency/coverage conditions",
     "Auxiliary full-reading gate and parameter applicability",
     "Real booking/preflight availability timestamps",
     "Weather matching and wider external-event validation",
     "2027 actual schedules and defensible scenario strengths",
-    "Delta ten-airport event independent recount and exact window verification",
     "Three award-certified O papers read in full",
-    "Research net-time ratio not certified; phase wall-clock only"
+    "Research net-time ratio not certified; no retrospective time fabrication"
   ],
   "files_before_this_manifest_and_checksums": [
     {
@@ -122,7 +122,7 @@
     },
     {
       "path": "00_编程手先读.md",
-      "bytes": 2818
+      "bytes": 3255
     },
     {
       "path": "AGENTS.md",
@@ -130,15 +130,15 @@
     },
     {
       "path": "PUBLICATION_NOTES.md",
-      "bytes": 1851
+      "bytes": 2611
     },
     {
       "path": "README.md",
-      "bytes": 5034
+      "bytes": 6588
     },
     {
       "path": "modeling/README_编程手先读.md",
-      "bytes": 3987
+      "bytes": 4426
     },
     {
       "path": "modeling/data/REVIEW_V3_ACQUISITION_RANGES.json",
@@ -341,8 +341,16 @@
       "bytes": 3544
     },
     {
+      "path": "modeling/docs/COLLABORATION_STATUS_20261127.json",
+      "bytes": 980
+    },
+    {
       "path": "modeling/docs/CORRECTIONS.md",
       "bytes": 3198
+    },
+    {
+      "path": "modeling/docs/CURRENT_TEAM_REQUIREMENTS_20261127.md",
+      "bytes": 5731
     },
     {
       "path": "modeling/docs/DERIVATION_LOG.md",
@@ -363,6 +371,14 @@
     {
       "path": "modeling/docs/FIRST_HOUR.md",
       "bytes": 1194
+    },
+    {
+      "path": "modeling/docs/FOLLOWUP_DECISION_REGISTER_20261127.csv",
+      "bytes": 2618
+    },
+    {
+      "path": "modeling/docs/FOLLOWUP_PROCESS_20261127.md",
+      "bytes": 3260
     },
     {
       "path": "modeling/docs/FORMULA_PROVENANCE.md",
@@ -433,12 +449,20 @@
       "bytes": 2898
     },
     {
+      "path": "modeling/docs/THRESHOLD_COHERENCE_20261127.md",
+      "bytes": 5258
+    },
+    {
       "path": "modeling/docs/TRAVELER_SCORECARD_V3.md",
       "bytes": 5941
     },
     {
       "path": "modeling/docs/V4_DECISION_REGISTER.csv",
       "bytes": 1526
+    },
+    {
+      "path": "modeling/docs/V5_ACCEPTANCE_REPORTED_20261127.json",
+      "bytes": 1564
     },
     {
       "path": "modeling/docs/VALIDATION_PLAN_V4.md",
@@ -562,11 +586,35 @@
     },
     {
       "path": "modeling/results/TEST_REPORT.txt",
-      "bytes": 4386
+      "bytes": 6899
     },
     {
       "path": "modeling/results/TEST_STATUS.json",
-      "bytes": 157
+      "bytes": 159
+    },
+    {
+      "path": "modeling/results/followup_20261127/FINDINGS.md",
+      "bytes": 3367
+    },
+    {
+      "path": "modeling/results/followup_20261127/TEST_ATTEMPT_1_UTF8_FAILURE.txt",
+      "bytes": 7615
+    },
+    {
+      "path": "modeling/results/followup_20261127/diagnostic_inputs.json",
+      "bytes": 1891
+    },
+    {
+      "path": "modeling/results/followup_20261127/threshold_coherence.csv",
+      "bytes": 2509
+    },
+    {
+      "path": "modeling/results/followup_20261127/threshold_coherence_examples.csv",
+      "bytes": 77
+    },
+    {
+      "path": "modeling/results/followup_20261127/threshold_coherence_status.json",
+      "bytes": 442
     },
     {
       "path": "modeling/results/review_v3/CURRENT_FINDINGS_V3.md",
@@ -1281,6 +1329,10 @@
       "bytes": 4446
     },
     {
+      "path": "modeling/src/reproduce_threshold_followup.py",
+      "bytes": 5250
+    },
+    {
       "path": "modeling/src/reproduce_v2_failure.py",
       "bytes": 1180
     },
@@ -1291,6 +1343,10 @@
     {
       "path": "modeling/src/stress.py",
       "bytes": 7179
+    },
+    {
+      "path": "modeling/src/threshold_coherence.py",
+      "bytes": 6429
     },
     {
       "path": "modeling/src/verify_handoff.py",
@@ -1314,7 +1370,11 @@
     },
     {
       "path": "modeling/tests/test_review_v4.py",
-      "bytes": 6435
+      "bytes": 6501
+    },
+    {
+      "path": "modeling/tests/test_threshold_coherence.py",
+      "bytes": 8391
     },
     {
       "path": "problem/2027_MCM_C_Mock_On_Time_On_Paper(1).pdf",
@@ -1336,7 +1396,7 @@
   "public_repository": "KN-1998/c2701-flight-reliability",
   "public_snapshot_source_zip_sha256": "1419a057837b73c47782fa37c921b80b1e393bb1299b3bfe61f512ac9c4a3490",
   "privacy_change": "Only review_extracted.json source path replaced by package-relative source path; original review text and original DOCX unchanged.",
-  "release_version": "v4_requirements_and_diagnostics",
+  "release_version": "acceptance_followup_threshold_audit_20261127",
   "auxiliary_primary_text_verified": [
     "CORP2020 arXiv:2008.03033v1 PDF pp1-16; auxiliary descriptive diagnostic only"
   ],
@@ -1352,7 +1412,57 @@
     "v3_experimental_outputs_unchanged": true,
     "research_ratio_verified": false
   },
-  "previous_public_commit": "aa56b21714463809faa49d907abb3ef4aff9a588",
-  "expected_total_files": 306,
-  "expected_checksum_entries": 305
+  "previous_public_commit": "b16a0e0dfa2aca8901984d86b86ceb0e584d052f",
+  "expected_total_files": 321,
+  "expected_checksum_entries": 320,
+  "status_scope": "PARTIAL_CORE refers only to the verified v3/v4 data included here, not a denial of reported external v5 acceptance",
+  "historical_v4_not_completed_at_that_snapshot": [
+    "15 missing core months and optional 2026-09",
+    "Block-method original and dependency/coverage conditions",
+    "Auxiliary full-reading gate and parameter applicability",
+    "Real booking/preflight availability timestamps",
+    "Weather matching and wider external-event validation",
+    "2027 actual schedules and defensible scenario strengths",
+    "Delta ten-airport event independent recount and exact window verification",
+    "Three award-certified O papers read in full",
+    "Research net-time ratio not certified; phase wall-clock only"
+  ],
+  "reported_v5_acceptance": {
+    "evidence_file": "modeling/docs/V5_ACCEPTANCE_REPORTED_20261127.json",
+    "status": "USER_REPORTED_ACCEPTED_NOT_LOCALLY_REPRODUCED",
+    "core_months": 36,
+    "core_records_approximate": "611万",
+    "late_period": "2026-09 separate",
+    "reported_tests_passed": 41,
+    "artifacts_included_in_this_package": false,
+    "locally_reproduced": false
+  },
+  "followup_increment": {
+    "new_tests": 19,
+    "base_tests": 38,
+    "total_local_tests": 57,
+    "new_typed_decisions": 8,
+    "original_assumption_register_items_unchanged": 54,
+    "core_formula_sources_unchanged": [
+      "P1",
+      "P2"
+    ],
+    "reread_this_turn": "Relevant pages only: P1 pp4-5 and P2 pp5,7-8; not a new full reading",
+    "diagnostic_old_periods": [
+      "2024-10",
+      "2025-01"
+    ],
+    "diagnostic_paired_rows": 336224,
+    "checked_method_combinations": 4,
+    "threshold_inversions_each_combination": 0,
+    "new_data": false,
+    "new_training": false,
+    "new_holdout_validation": false,
+    "v5_reproduced": false,
+    "forecasts_modified": false,
+    "historical_experimental_files_unchanged": 165,
+    "five_leaf_candidate_status": "DERIVED_ONLY_NOT_FITTED_OR_DEPLOYED",
+    "research_ratio_verified": false,
+    "collaborator_check": "modeling/docs/COLLABORATION_STATUS_20261127.json"
+  }
 }

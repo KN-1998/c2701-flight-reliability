@@ -1,0 +1,13 @@
+{
+  "status": "DESCRIPTIVE_ONLY",
+  "paired_rows": 336224,
+  "lower_minutes": 15,
+  "upper_minutes": 60,
+  "forecasts_modified": false,
+  "v5_reproduced": false,
+  "new_training": false,
+  "counterfactual_warning": "Mixed-method check does not reselect or endorse a model",
+  "unique_flight_keys_checked": true,
+  "probability_tolerance": 1e-12,
+  "gate": "Coherence alone does not establish calibration, skill, or future transportability"
+}

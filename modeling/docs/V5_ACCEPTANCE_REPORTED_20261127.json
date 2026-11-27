@@ -1,0 +1,45 @@
+{
+  "received_date": "2026-11-27",
+  "evidence_type": "USER_REPORTED_ACCEPTED_V5_NOT_INDEPENDENTLY_REPRODUCED",
+  "core_period": "2023-01 through 2025-12",
+  "reported_core_months": 36,
+  "reported_core_records_approximate": "611万",
+  "reported_added_core_months": 15,
+  "late_period": "2026-09",
+  "late_period_separate": true,
+  "reported_selected_models": {
+    "15": "direct_joint",
+    "60": "conditional_tree"
+  },
+  "reported_brier_comparison": "lower than historical baseline on the same batch of flight legs in the 15 new core months under a previously determined rule; exact scores and freezing record not supplied here",
+  "reported_delta": {
+    "n": 5458,
+    "cancelled": 2139,
+    "threshold_minutes": 60,
+    "observed_joint_rate_percent_rounded": 76.36,
+    "three_model_mean_predictions_percent_rounded_range": [
+      10.16,
+      11.77
+    ]
+  },
+  "reported_tests_passed": 41,
+  "reported_handoff_contains": [
+    "monthly scores",
+    "event comparison",
+    "reproduction scripts"
+  ],
+  "locally_reproduced": false,
+  "corresponding_artifacts_found": false,
+  "remote_observed_before_followup": {
+    "checked_at": "2026-11-27T10:34:09.485250+08:00",
+    "branches": [
+      {
+        "name": "codex/c2701-v3",
+        "sha": "b16a0e0dfa2aca8901984d86b86ceb0e584d052f"
+      }
+    ],
+    "release_count": 0,
+    "pull_request_count": 0
+  },
+  "use_boundary": "Historical reference only; actual 2027 predictions require timestamped schedules and weather. Do not infer independent selection validation or significance from this summary."
+}

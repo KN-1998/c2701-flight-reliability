@@ -36,8 +36,27 @@ test_saved_input_contract (test_review_v4.ReviewV4Tests.test_saved_input_contrac
 test_saved_output_never_overwritten (test_review_v4.ReviewV4Tests.test_saved_output_never_overwritten) ... ok
 test_saved_risk_sets_integration (test_review_v4.ReviewV4Tests.test_saved_risk_sets_integration) ... ok
 test_zero_events_not_dropped (test_review_v4.ReviewV4Tests.test_zero_events_not_dropped) ... ok
+test_adapter_bad_fingerprint_and_count_fail (test_threshold_coherence.LegacyPairingTests.test_adapter_bad_fingerprint_and_count_fail) ... ok
+test_adapter_duplicate_identity_fail (test_threshold_coherence.LegacyPairingTests.test_adapter_duplicate_identity_fail) ... ok
+test_adapter_empty_or_duplicate_period_fail (test_threshold_coherence.LegacyPairingTests.test_adapter_empty_or_duplicate_period_fail) ... ok
+test_adapter_missing_identity_fail (test_threshold_coherence.LegacyPairingTests.test_adapter_missing_identity_fail) ... ok
+test_adapter_prediction_order_not_guessed (test_threshold_coherence.LegacyPairingTests.test_adapter_prediction_order_not_guessed) ... ok
+test_adapter_preserves_verified_identity (test_threshold_coherence.LegacyPairingTests.test_adapter_preserves_verified_identity) ... ok
+test_adapter_threshold_and_prediction_count_fail (test_threshold_coherence.LegacyPairingTests.test_adapter_threshold_and_prediction_count_fail) ... ok
+test_align_by_key_not_order (test_threshold_coherence.ThresholdCoherenceTests.test_align_by_key_not_order) ... ok
+test_changed_metadata_fail (test_threshold_coherence.ThresholdCoherenceTests.test_changed_metadata_fail) ... ok
+test_csv_roundtrip (test_threshold_coherence.ThresholdCoherenceTests.test_csv_roundtrip) ... ok
+test_duplicate_missing_and_empty_keys_fail (test_threshold_coherence.ThresholdCoherenceTests.test_duplicate_missing_and_empty_keys_fail) ... ok
+test_each_method_and_mixed_violation (test_threshold_coherence.ThresholdCoherenceTests.test_each_method_and_mixed_violation) ... ok
+test_fresh_output_and_failed_validation (test_threshold_coherence.ThresholdCoherenceTests.test_fresh_output_and_failed_validation) ... ok
+test_invalid_probability_and_unknown_fail (test_threshold_coherence.ThresholdCoherenceTests.test_invalid_probability_and_unknown_fail) ... ok
+test_key_sets_must_match_without_dropping (test_threshold_coherence.ThresholdCoherenceTests.test_key_sets_must_match_without_dropping) ... ok
+test_missing_method_or_metadata_fail (test_threshold_coherence.ThresholdCoherenceTests.test_missing_method_or_metadata_fail) ... ok
+test_nested_events_and_counts (test_threshold_coherence.ThresholdCoherenceTests.test_nested_events_and_counts) ... ok
+test_threshold_and_label_contracts (test_threshold_coherence.ThresholdCoherenceTests.test_threshold_and_label_contracts) ... ok
+test_tolerance_does_not_change_forecasts (test_threshold_coherence.ThresholdCoherenceTests.test_tolerance_does_not_change_forecasts) ... ok
 
 ----------------------------------------------------------------------
-Ran 38 tests in 9.469s
+Ran 57 tests in 10.717s
 
 OK
