@@ -1,0 +1,35 @@
+{
+  "received_date": "2026-11-27",
+  "evidence_type": "USER_REPORTED_V5_THRESHOLD_RECHECK_NOT_LOCALLY_REPRODUCED",
+  "audited_code_commit": "ec6c428e4f36619ea019baefe56b8b725b68f09f",
+  "reported_tests_passed": 57,
+  "reported_holdout_months": 19,
+  "reported_flight_legs": 3287437,
+  "selected_combination": {
+    "15": "direct_joint",
+    "60": "conditional_tree"
+  },
+  "reported_inversions": 1,
+  "reported_example": {
+    "date": "2025-08-24",
+    "Origin": "EWR",
+    "Dest": "BOS",
+    "p15_percent_rounded": "9.021",
+    "p60_percent_rounded": "9.177",
+    "excess_percentage_points_rounded": "0.156",
+    "flight_key": null,
+    "airline": null,
+    "flight_number": null,
+    "observed_outcome": null,
+    "unknown_fields_not_inferred": true
+  },
+  "reported_retained_artifacts": [
+    "original predictions",
+    "monthly statistics",
+    "inversion detail"
+  ],
+  "locally_reproduced": false,
+  "local_regression_scope": "Synthetic test fixture uses the reported rounded probabilities only; not the actual flight",
+  "decision": "Keep separate-threshold historical scoring; do not authorize mixed-threshold joint passenger-card display; use a shared outcome distribution with later genuinely unexposed evaluation for a future candidate",
+  "raw_prediction_files_included": false
+}

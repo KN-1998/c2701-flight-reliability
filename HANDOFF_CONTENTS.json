@@ -1,6 +1,6 @@
 {
   "date": "2026-11-27 Asia/Shanghai",
-  "packaged_at_utc": "2026-11-27T02:57:35.712478+00:00",
+  "packaged_at_utc": "2026-11-27T04:02:35.074176+00:00",
   "role": "modeler_to_coder",
   "entrypoint": "00_编程手先读.md",
   "status": "PARTIAL_CORE",
@@ -90,7 +90,7 @@
     "2024-07"
   ],
   "tests": {
-    "tests_run": 57,
+    "tests_run": 63,
     "failures": 0,
     "errors": 0,
     "successful": true,
@@ -113,7 +113,10 @@
     "Weather matching and wider external-event validation",
     "2027 actual schedules and defensible scenario strengths",
     "Three award-certified O papers read in full",
-    "Research net-time ratio not certified; no retrospective time fabrication"
+    "Research net-time ratio not certified; no retrospective time fabrication",
+    "Receive and independently verify v5 threshold recheck original unrounded predictions, full identity and input hashes",
+    "Fit and evaluate shared-distribution candidate only after a real recorded freeze and on genuinely unexposed later data; no replacement deployed",
+    "Passenger-card integration not verified; diagnostic authorization status alone is not an actual application release gate"
   ],
   "files_before_this_manifest_and_checksums": [
     {
@@ -122,7 +125,7 @@
     },
     {
       "path": "00_编程手先读.md",
-      "bytes": 3255
+      "bytes": 3753
     },
     {
       "path": "AGENTS.md",
@@ -130,15 +133,15 @@
     },
     {
       "path": "PUBLICATION_NOTES.md",
-      "bytes": 2611
+      "bytes": 3205
     },
     {
       "path": "README.md",
-      "bytes": 6588
+      "bytes": 7275
     },
     {
       "path": "modeling/README_编程手先读.md",
-      "bytes": 4426
+      "bytes": 4917
     },
     {
       "path": "modeling/data/REVIEW_V3_ACQUISITION_RANGES.json",
@@ -349,8 +352,16 @@
       "bytes": 3198
     },
     {
+      "path": "modeling/docs/COUNTEREXAMPLE_PROCESS_20261127.md",
+      "bytes": 1513
+    },
+    {
+      "path": "modeling/docs/COUNTEREXAMPLE_RESPONSE_20261127.md",
+      "bytes": 6471
+    },
+    {
       "path": "modeling/docs/CURRENT_TEAM_REQUIREMENTS_20261127.md",
-      "bytes": 5731
+      "bytes": 6089
     },
     {
       "path": "modeling/docs/DERIVATION_LOG.md",
@@ -374,7 +385,7 @@
     },
     {
       "path": "modeling/docs/FOLLOWUP_DECISION_REGISTER_20261127.csv",
-      "bytes": 2618
+      "bytes": 4269
     },
     {
       "path": "modeling/docs/FOLLOWUP_PROCESS_20261127.md",
@@ -450,7 +461,7 @@
     },
     {
       "path": "modeling/docs/THRESHOLD_COHERENCE_20261127.md",
-      "bytes": 5258
+      "bytes": 5616
     },
     {
       "path": "modeling/docs/TRAVELER_SCORECARD_V3.md",
@@ -463,6 +474,10 @@
     {
       "path": "modeling/docs/V5_ACCEPTANCE_REPORTED_20261127.json",
       "bytes": 1564
+    },
+    {
+      "path": "modeling/docs/V5_THRESHOLD_RECHECK_REPORTED_20261127.json",
+      "bytes": 1293
     },
     {
       "path": "modeling/docs/VALIDATION_PLAN_V4.md",
@@ -586,7 +601,7 @@
     },
     {
       "path": "modeling/results/TEST_REPORT.txt",
-      "bytes": 6899
+      "bytes": 7930
     },
     {
       "path": "modeling/results/TEST_STATUS.json",
@@ -1346,7 +1361,7 @@
     },
     {
       "path": "modeling/src/threshold_coherence.py",
-      "bytes": 6429
+      "bytes": 7197
     },
     {
       "path": "modeling/src/verify_handoff.py",
@@ -1355,6 +1370,10 @@
     {
       "path": "modeling/tests/test_contract.py",
       "bytes": 2626
+    },
+    {
+      "path": "modeling/tests/test_counterexample_display.py",
+      "bytes": 3694
     },
     {
       "path": "modeling/tests/test_integration.py",
@@ -1396,7 +1415,7 @@
   "public_repository": "KN-1998/c2701-flight-reliability",
   "public_snapshot_source_zip_sha256": "1419a057837b73c47782fa37c921b80b1e393bb1299b3bfe61f512ac9c4a3490",
   "privacy_change": "Only review_extracted.json source path replaced by package-relative source path; original review text and original DOCX unchanged.",
-  "release_version": "acceptance_followup_threshold_audit_20261127",
+  "release_version": "counterexample_response_joint_display_20261127",
   "auxiliary_primary_text_verified": [
     "CORP2020 arXiv:2008.03033v1 PDF pp1-16; auxiliary descriptive diagnostic only"
   ],
@@ -1412,9 +1431,9 @@
     "v3_experimental_outputs_unchanged": true,
     "research_ratio_verified": false
   },
-  "previous_public_commit": "b16a0e0dfa2aca8901984d86b86ceb0e584d052f",
-  "expected_total_files": 321,
-  "expected_checksum_entries": 320,
+  "previous_public_commit": "ec6c428e4f36619ea019baefe56b8b725b68f09f",
+  "expected_total_files": 325,
+  "expected_checksum_entries": 324,
   "status_scope": "PARTIAL_CORE refers only to the verified v3/v4 data included here, not a denial of reported external v5 acceptance",
   "historical_v4_not_completed_at_that_snapshot": [
     "15 missing core months and optional 2026-09",
@@ -1463,6 +1482,36 @@
     "historical_experimental_files_unchanged": 165,
     "five_leaf_candidate_status": "DERIVED_ONLY_NOT_FITTED_OR_DEPLOYED",
     "research_ratio_verified": false,
-    "collaborator_check": "modeling/docs/COLLABORATION_STATUS_20261127.json"
+    "collaborator_check": "modeling/docs/COLLABORATION_STATUS_20261127.json",
+    "historical_scope": "Prior ec6c428 increment: 57 tests and old two-month diagnostic; not current v5 expansion"
+  },
+  "reported_v5_threshold_recheck": {
+    "evidence_file": "modeling/docs/V5_THRESHOLD_RECHECK_REPORTED_20261127.json",
+    "status": "USER_REPORTED_COMPLETED_NOT_LOCALLY_REPRODUCED",
+    "holdout_months": 19,
+    "flight_legs": 3287437,
+    "inversions_selected_combination": 1,
+    "reported_ec6c428_tests_passed": 57,
+    "raw_predictions_included": false,
+    "locally_reproduced": false
+  },
+  "counterexample_increment": {
+    "new_tests": 6,
+    "prior_tests": 57,
+    "current_local_tests": 63,
+    "test_scope": "Synthetic regression using reported rounded values and display-status contracts, NOT the actual v5 flight or full v5 reproduction",
+    "new_decisions": 4,
+    "typed_followup_decisions_total": 12,
+    "original_assumption_register_unchanged": 54,
+    "historical_result_files_unchanged": 171,
+    "forecasts_modified": false,
+    "new_training": false,
+    "candidate_deployed": false,
+    "new_independent_holdout": false,
+    "mixed_joint_display_authorized": false,
+    "actual_passenger_card_integration_verified": false,
+    "shared_distribution_candidate": "DERIVED_ONLY; future evaluation must use genuinely unexposed periods after an actual recorded freeze",
+    "new_original_paper_reading_this_turn": false,
+    "source_and_formula_scope": "Existing P1/F1 and P2/F2; no third core model or new original formula claim"
   }
 }

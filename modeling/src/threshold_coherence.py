@@ -86,10 +86,22 @@ def write_diagnostics(low, high, out, *, lower=15, upper=60, atol=1e-12):
     out.mkdir(parents=True, exist_ok=True)
     summary.to_csv(out/'threshold_coherence.csv', index=False)
     examples.to_csv(out/'threshold_coherence_examples.csv', index=False)
+    # Necessary condition only: even a clean finite batch cannot certify a shared
+    # outcome distribution, information timestamp, calibration, or card readiness.
+    joint_display = {}
+    for row in summary.loc[summary.period.eq('ALL')].itertuples(index=False):
+        inverted = row.violations > 0
+        joint_display[row.method] = dict(
+            violations=int(row.violations),
+            nested_threshold_check='FAIL' if inverted else 'NO_VIOLATIONS_ABOVE_TOLERANCE',
+            joint_display_authorized=False,
+            reason='BLOCKED_THRESHOLD_INVERSION' if inverted else 'SHARED_DISTRIBUTION_AND_LATER_VALIDATION_NOT_CERTIFIED')
     status = dict(status='DESCRIPTIVE_ONLY', paired_rows=len(low), lower_minutes=lower, upper_minutes=upper,
                   forecasts_modified=False, v5_reproduced=False, new_training=False,
                   counterfactual_warning='Mixed-method check does not reselect or endorse a model',
                   unique_flight_keys_checked=True, probability_tolerance=atol,
+                  joint_display_by_method=joint_display,
+                  historical_marginal_scoring_changed=False,
                   gate='Coherence alone does not establish calibration, skill, or future transportability')
     (out/'threshold_coherence_status.json').write_text(json.dumps(status, indent=2)+'\n', encoding='utf-8')
     return status

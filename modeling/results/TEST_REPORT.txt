@@ -3,6 +3,12 @@ test_duplicates (test_contract.ContractTests.test_duplicates) ... ok
 test_hhmm (test_contract.ContractTests.test_hhmm) ... ok
 test_no_completed (test_contract.ContractTests.test_no_completed) ... ok
 test_probability_chain (test_contract.ContractTests.test_probability_chain) ... ok
+test_display_gate_never_rewrites_forecasts_or_marginal_scores (test_counterexample_display.CounterexampleDisplayTests.test_display_gate_never_rewrites_forecasts_or_marginal_scores) ... ok
+test_gate_blocks_only_the_affected_combination (test_counterexample_display.CounterexampleDisplayTests.test_gate_blocks_only_the_affected_combination) ... ok
+test_gate_uses_total_not_sum_of_month_and_total (test_counterexample_display.CounterexampleDisplayTests.test_gate_uses_total_not_sum_of_month_and_total) ... ok
+test_no_inversion_does_not_authorize_joint_display (test_counterexample_display.CounterexampleDisplayTests.test_no_inversion_does_not_authorize_joint_display) ... ok
+test_reported_rounded_values_detect_negative_interval_mass (test_counterexample_display.CounterexampleDisplayTests.test_reported_rounded_values_detect_negative_interval_mass) ... ok
+test_sub_tolerance_difference_is_not_display_approval (test_counterexample_display.CounterexampleDisplayTests.test_sub_tolerance_difference_is_not_display_approval) ... ok
 test_block_resampling (test_integration.IntegrationTests.test_block_resampling) ... ok
 test_comparison_smoke (test_integration.IntegrationTests.test_comparison_smoke) ... ok
 test_prediction_smoke (test_integration.IntegrationTests.test_prediction_smoke) ... ok
@@ -57,6 +63,6 @@ test_threshold_and_label_contracts (test_threshold_coherence.ThresholdCoherenceT
 test_tolerance_does_not_change_forecasts (test_threshold_coherence.ThresholdCoherenceTests.test_tolerance_does_not_change_forecasts) ... ok
 
 ----------------------------------------------------------------------
-Ran 57 tests in 10.717s
+Ran 63 tests in 4.736s
 
 OK

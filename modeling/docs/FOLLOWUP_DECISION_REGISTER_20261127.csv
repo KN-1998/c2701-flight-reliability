@@ -7,3 +7,7 @@ F05,证据状态,用户报告v5验收，工件未在当前机器及远端检出,
 F06,诊断选择,旧样本双阈值检查不重新拟合或投影概率,LOCAL_AUDIT,threshold_coherence.py；diagnostic_inputs.json,保留冻结结果，不把后验修整包装成验证,IMPLEMENTED_AND_CONTRACT_TESTED,副作用/新输出目录/同键缺失拒绝测试,发生矛盾时留痕而不静默修补
 F07,算术派生,报告样本取消率约39.19%，是同分母观测联合率下界,USER_REPORT;D2,用户摘要5458/2139；THRESHOLD_COHERENCE §5,取消是联合事件的互斥组成部分,REPORTED_COUNTS_ARITHMETIC_ONLY,工件可用后核确切分母、窗口、未知数,不当独立复算、不冒充预测自身的结构下界
 F08,研究过程,本轮是验收后补查，不是事前冻结新实验,PROCESS_RECORD,FOLLOWUP_PROCESS_20261127.md,保持实际研究顺序和反例,RETROSPECTIVE_FOLLOWUP,核文件/提交及规则冻结时点,不倒填研究工时或预注册
+F09,用户报告的实证反例,v5混合组合19月3287437条有1倒置，p15=9.021%/p60=9.177%,USER_REPORT,V5_THRESHOLD_RECHECK_REPORTED_20261127.json;COUNTEREXAMPLE_RESPONSE §1,扩大样本给出分别选优不保证同分布的反例,REPORTED_NOT_LOCALLY_REPRODUCED,待真实原表核航段键、未舍入概率、SHA256；合成回归不冒充复算,不伪造航司/结局/其他组合和逐月计数
+F10,数学解释,同信息同分布下p15-p60为非负中间区间质量；报告数差为负,F2;D2;USER_REPORT,P2 PDF p5路径乘积;COUNTEREXAMPLE_RESPONSE §2,事件包含关系约束共同分布，不要求独立航班,IDENTITY_AND_REPORTED_ROUNDED_ARITHMETIC,按报告舍入值算-0.00156；不推精确原始值,撤回混合概率可直接同卡解释，不撤回恒等式或另阈值历史评分
+F11,产品保护默认,有倒置阻止同分布解释；无倒置不自动授权同卡,LOCAL_ENGINEERING;F10,threshold_coherence.write_diagnostics;COUNTEREXAMPLE_RESPONSE §5,有限样本一致性是必要条件，不是共享分布/未来有效证明,STATUS_CONTRACT_ONLY_NOT_CARD_APP_INTEGRATION,合成夹具及无倒置、容差、不可变输入回归,不截断、不排序、不改冻结预测；不声称已修改实际卡应用
+F12,后续实验建议,共享五叶候选应冻结后用真正未接触后续月评估,P1;P2;PROCESS_RECORD,"P1 pp4-5;P2 pp5,7-8;COUNTEREXAMPLE_RESPONSE §§4,6",已暴露19个月不能再冒充修改方案的新独立盲测,PROPOSED_NOT_TRAINED_NOT_PREREGISTERED,先留真实冻结时间、训练窗、预算；后续同批双阈值评分,无新独立月则降级为回顾性，不宣称提高或已验证
