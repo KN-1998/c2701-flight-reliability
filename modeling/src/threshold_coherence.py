@@ -9,6 +9,7 @@ import numpy as np
 import pandas as pd
 from calibration_diagnostics import validate_saved_predictions
 
+DEFAULT_ATOL = 1e-12
 METHODS = {
     'conditional_tree': ('model_p', 'model_p'),
     'direct_joint': ('direct_p', 'direct_p'),
@@ -18,7 +19,7 @@ METHODS = {
 METADATA = ['date', 'Origin', 'Dest', 'Reporting_Airline', 'state', 'completed', 'ArrDelay']
 
 
-def aligned_inputs(low, high, *, lower=15, upper=60, atol=1e-12):
+def aligned_inputs(low, high, *, lower=15, upper=60, atol=DEFAULT_ATOL):
     if not np.isfinite([lower, upper, atol]).all() or not (0 < lower < upper) or lower != int(lower) or upper != int(upper) or atol < 0:
         raise ValueError('Ordered positive integer thresholds and finite nonnegative tolerance required')
     for df, threshold in [(low, lower), (high, upper)]:
@@ -47,7 +48,7 @@ def aligned_inputs(low, high, *, lower=15, upper=60, atol=1e-12):
     return a, b
 
 
-def coherence_tables(low, high, *, lower=15, upper=60, atol=1e-12, example_limit=5):
+def coherence_tables(low, high, *, lower=15, upper=60, atol=DEFAULT_ATOL, example_limit=5):
     a, b = aligned_inputs(low, high, lower=lower, upper=upper, atol=atol)
     months = pd.to_datetime(a.date).dt.strftime('%Y-%m').to_numpy()
     groups = [('ALL', np.ones(len(a), dtype=bool))]
@@ -77,13 +78,13 @@ def coherence_tables(low, high, *, lower=15, upper=60, atol=1e-12, example_limit
     return pd.DataFrame(rows), pd.DataFrame(examples, columns=['flight_key','date','method','lower_probability','upper_probability','upper_minus_lower'])
 
 
-def write_diagnostics(low, high, out, *, lower=15, upper=60, atol=1e-12):
+def write_diagnostics(low, high, out, *, lower=15, upper=60, atol=DEFAULT_ATOL):
     # Validate and calculate before creating output; never modify either input.
     summary, examples = coherence_tables(low, high, lower=lower, upper=upper, atol=atol)
     return write_coherence_results(summary, examples, out, lower=lower, upper=upper, atol=atol)
 
 
-def write_coherence_results(summary, examples, out, *, lower=15, upper=60, atol=1e-12, refit=False):
+def write_coherence_results(summary, examples, out, *, lower=15, upper=60, atol=DEFAULT_ATOL, refit=False):
     overall = summary.loc[summary.period.eq("ALL")]
     if len(overall) != len(METHODS) or overall.n.nunique() != 1 or set(overall.method) != set(METHODS):
         raise ValueError("A common pooled denominator and all methods are required")

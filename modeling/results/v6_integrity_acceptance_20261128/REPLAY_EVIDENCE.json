@@ -1,0 +1,1217 @@
+{
+  "status": "SAVED_EVIDENCE_CROSSCHECK_PASSED",
+  "scope": "saved tables; not a new fit or blind validation",
+  "checks": [
+    "monthly_denominators",
+    "candidate_same_rows_labels_and_fingerprints",
+    "weighted_candidate_tradeoff",
+    "exhaustive_inversion_inventory",
+    "historical_card_counts_and_support",
+    "event_denominators_and_cancellation_subset",
+    "retrospective_boundary_preserved"
+  ],
+  "core_months": 36,
+  "all_months": 37,
+  "core_rows": 6112183,
+  "all_rows": 6286707,
+  "holdout_rows": 3287437,
+  "candidate_tradeoffs": [
+    {
+      "scope": "late_months",
+      "threshold_minutes": 15,
+      "n": 174524,
+      "selected_brier": 0.18606183947676966,
+      "candidate_brier": 0.1869316572123785,
+      "candidate_minus_selected": 0.0008698177356088466
+    },
+    {
+      "scope": "late_months",
+      "threshold_minutes": 60,
+      "n": 174524,
+      "selected_brier": 0.09109176863548075,
+      "candidate_brier": 0.09109176863548075,
+      "candidate_minus_selected": 0.0
+    },
+    {
+      "scope": "new_core_months",
+      "threshold_minutes": 15,
+      "n": 2592299,
+      "selected_brier": 0.1813219844162625,
+      "candidate_brier": 0.18142169132919747,
+      "candidate_minus_selected": 9.970691293498257e-05
+    },
+    {
+      "scope": "new_core_months",
+      "threshold_minutes": 60,
+      "n": 2592299,
+      "selected_brier": 0.08834168193092824,
+      "candidate_brier": 0.08834168193092824,
+      "candidate_minus_selected": 0.0
+    },
+    {
+      "scope": "previously_scored_months",
+      "threshold_minutes": 15,
+      "n": 520614,
+      "selected_brier": 0.17266752044389677,
+      "candidate_brier": 0.17278255517858152,
+      "candidate_minus_selected": 0.00011503473468474357
+    },
+    {
+      "scope": "previously_scored_months",
+      "threshold_minutes": 60,
+      "n": 520614,
+      "selected_brier": 0.08974917191039829,
+      "candidate_brier": 0.08974917191039829,
+      "candidate_minus_selected": 0.0
+    }
+  ],
+  "inversions_by_method": {
+    "conditional_tree": 1,
+    "direct_joint": 2,
+    "historical_baseline": 0,
+    "selected_direct_low_tree_high": 1
+  },
+  "inversion_records": [
+    {
+      "flight_key": "2025-08-24|YX|5841|EWR|BOS|1535",
+      "date": "2025-08-24",
+      "method": "conditional_tree",
+      "lower_probability": 0.09148960600076761,
+      "upper_probability": 0.09177193949531104,
+      "upper_minus_lower": 0.0002823334945434297
+    },
+    {
+      "flight_key": "2025-08-21|YX|5841|EWR|BOS|1535",
+      "date": "2025-08-21",
+      "method": "direct_joint",
+      "lower_probability": 0.08893367128244621,
+      "upper_probability": 0.11567249150216988,
+      "upper_minus_lower": 0.026738820219723666
+    },
+    {
+      "flight_key": "2025-08-24|YX|5841|EWR|BOS|1535",
+      "date": "2025-08-24",
+      "method": "direct_joint",
+      "lower_probability": 0.09021133869228415,
+      "upper_probability": 0.11731631502657038,
+      "upper_minus_lower": 0.027104976334286227
+    },
+    {
+      "flight_key": "2025-08-24|YX|5841|EWR|BOS|1535",
+      "date": "2025-08-24",
+      "method": "selected_direct_low_tree_high",
+      "lower_probability": 0.09021133869228415,
+      "upper_probability": 0.09177193949531104,
+      "upper_minus_lower": 0.0015606008030268903
+    }
+  ],
+  "pooled_card_coverage": [
+    {
+      "period": "2023-2025",
+      "reference_scope": "pooled_common_support",
+      "airport": "EWR",
+      "n_planned": 9572,
+      "n_supported": 9533,
+      "n_supported_known": 9533,
+      "n_supported_completed": 9305,
+      "coverage": 0.9959256163811115,
+      "shared_cells": 12
+    },
+    {
+      "period": "2023-2025",
+      "reference_scope": "pooled_common_support",
+      "airport": "LGA",
+      "n_planned": 14451,
+      "n_supported": 6267,
+      "n_supported_known": 6267,
+      "n_supported_completed": 6136,
+      "coverage": 0.433672410213826,
+      "shared_cells": 12
+    }
+  ],
+  "events_60": [
+    {
+      "event": "MCO_Milton_EOC_Level_I_20241009_10",
+      "method": "conditional_tree",
+      "n": 789,
+      "events": 773,
+      "cancelled": 773,
+      "observed": 0.9797211660329531,
+      "predicted": 0.09406871465406509
+    },
+    {
+      "event": "MCO_Milton_EOC_Level_I_20241009_10",
+      "method": "historical_baseline",
+      "n": 789,
+      "events": 773,
+      "cancelled": 773,
+      "observed": 0.9797211660329531,
+      "predicted": 0.06016504435805981
+    },
+    {
+      "event": "MCO_Milton_EOC_Level_I_20241009_10",
+      "method": "direct_joint",
+      "n": 789,
+      "events": 773,
+      "cancelled": 773,
+      "observed": 0.9797211660329531,
+      "predicted": 0.08036398474476548
+    },
+    {
+      "event": "DL_CrowdStrike_20240719_23",
+      "method": "conditional_tree",
+      "n": 5458,
+      "events": 4168,
+      "cancelled": 2139,
+      "observed": 0.7636496885305973,
+      "predicted": 0.11771222394016288
+    },
+    {
+      "event": "DL_CrowdStrike_20240719_23",
+      "method": "historical_baseline",
+      "n": 5458,
+      "events": 4168,
+      "cancelled": 2139,
+      "observed": 0.7636496885305973,
+      "predicted": 0.1015685868812264
+    },
+    {
+      "event": "DL_CrowdStrike_20240719_23",
+      "method": "direct_joint",
+      "n": 5458,
+      "events": 4168,
+      "cancelled": 2139,
+      "observed": 0.7636496885305973,
+      "predicted": 0.11074350450608386
+    }
+  ],
+  "replay_comparison": [
+    {
+      "threshold": 15,
+      "table": "prediction_metrics.csv",
+      "max_abs_numeric_difference": 1.2434497875801753e-14
+    },
+    {
+      "threshold": 15,
+      "table": "joint_monthly_v5.csv",
+      "max_abs_numeric_difference": 4.440892098500626e-16
+    },
+    {
+      "threshold": 15,
+      "table": "joint_pooled_v5.csv",
+      "max_abs_numeric_difference": 1.3877787807814457e-16
+    },
+    {
+      "threshold": 15,
+      "table": "external_event_scores.csv",
+      "max_abs_numeric_difference": 8.881784197001252e-16
+    },
+    {
+      "threshold": 60,
+      "table": "prediction_metrics.csv",
+      "max_abs_numeric_difference": 1.2434497875801753e-14
+    },
+    {
+      "threshold": 60,
+      "table": "joint_monthly_v5.csv",
+      "max_abs_numeric_difference": 6.661338147750939e-16
+    },
+    {
+      "threshold": 60,
+      "table": "joint_pooled_v5.csv",
+      "max_abs_numeric_difference": 1.1102230246251565e-16
+    },
+    {
+      "threshold": 60,
+      "table": "external_event_scores.csv",
+      "max_abs_numeric_difference": 3.552713678800501e-15
+    }
+  ],
+  "source_file_sha256": {
+    "audit_by_month.csv": "53af3450fe91ced47c961e3ec490bdfb93bfcd483b83acbad0c7fec445f7b928",
+    "comparison_2023_2025/bootstrap_diagnostics.csv": "eba30e9ff0b3c46dc372acc7bd23b74739e0c0ce1be4f513cfb974cbbfb3842e",
+    "comparison_2023_2025/cell_day_exposure.csv": "ca3146c8e386d7c7322bc305a2a6bcdf299272d2c092c6d296dd4002bab32a2b",
+    "comparison_2023_2025/common_support_coverage.csv": "407964ece810c903afb9a1f71543b41e90aa93ba3a550d2892f6ce205f7edd82",
+    "comparison_2023_2025/comparison_status.json": "d6f3b86a9a0a81fb473832a66eadcd62668bc08c9c96d138fc1e6b55653931a9",
+    "comparison_2023_2025/empty_cell_frequencies.csv": "9d4e2e5e9f1efcc2269f885d148f9990ddb0a281858e9be3f3b50acdde13bde8",
+    "comparison_2023_2025/mix_decomposition.csv": "2dbbe3a8f68634c083d6f7539d47e5c256cccd8b7342aff54b87e3e45592c7f4",
+    "comparison_2023_2025/pairwise_comparisons.csv": "f0209790fd4af76a9cbd2dfa94a9114bf460462ef4044734c1dbbb293a8a2775",
+    "comparison_2023_2025/rank_intervals.csv": "d7b5507c9246d092b485042e10c886989b996617b9261367c62a00a8654172a8",
+    "comparison_2023_2025/resampling_calendar_episodes.json": "93d0de19c4ec37de81f02752f31cdaacf01d8e66fba25670479c2c7568181bbf",
+    "comparison_2023_2025/standard_population_weights.csv": "1a3b96bd14b0cd2bf19ed20718002fe5ccee732ae40d8c00cbad7f5c294a6105",
+    "comparison_2023_2025/standardization_cells.csv": "6ee251ba6d641e8f6436b4a74cf68924927a6debb2b43ef099019b4bfa1a2b6b",
+    "data_snapshot.json": "c08d40c32f8ffc3033db0f1994c8aa6da05b52752124a163c682f60dc109c866",
+    "delivery_status.json": "7275daee47b8fa2de7750d11302991a6c646fbcb7a4c2d091acdd95fc66b58d9",
+    "historical_airport_scorecard.csv": "cab8326ed1fb892d7c85be57aba11605d43c16e35a2a309fb00c6bdc7b21c9c3",
+    "joint_candidate/candidate_calibration_bins.csv": "13f8504e476eaafc40b4c8c453d63832d2f59c62bdbef26bb5eb3fd96077501e",
+    "joint_candidate/candidate_comparison.csv": "42912f0db244817db29845ebbea7b8e4f669c4295f2bfd15f20ebdf00a3a7100",
+    "joint_candidate/candidate_joint_monthly.csv": "87c0abf48f4895cd3a9fa88b2b867eda7db918f0ffed8ed60c5af3d10597953d",
+    "joint_candidate/candidate_joint_pooled.csv": "390f7ec7fdc23a69a69b3d8e02fbe6e51189a803d7df285e9ce3ba02e3d847a5",
+    "joint_candidate/candidate_leaf_monthly.csv": "768566eff6681e500201f0a9acccdb58396194cf5eebe3d6b08b20d536945202",
+    "joint_candidate/candidate_probability_examples.csv": "8dc73ca2579b1eed867b85336a8e5e0d3b1b48945284bc9e90c53644c9409324",
+    "joint_candidate/candidate_risk_sets.csv": "0906709d61329c407b22c137beeff845e2dcc32f5d82cfc76471f2d620d7ca20",
+    "joint_candidate/candidate_status.json": "ade8bae9a91173933dfb268297706a103a21ca4e06e430ac759143fc0b535b22",
+    "joint_candidate/candidate_structure_monthly.csv": "3e00239de3ae8bda5365f4a081f47953ba0d267d7e497009d980aa926162963b",
+    "metrics_by_year_airport.csv": "9a883def457832079cc99e2d6fb145b2a55a4f7ff951caad354fe69fa335c0c7",
+    "primary_t15/calibration/calibration_bins_v4.csv": "f9fcca1bb748e73c6c6e7b0ef7515cb77d595abdcf5129420764dac502666f4d",
+    "primary_t15/calibration/calibration_pav_plateaus_v4.csv": "64908bdbb729990d6dd38cb5520a16133497dfce40de69572656ac848f936f20",
+    "primary_t15/calibration/calibration_status_v4.json": "254749536fb546283e836cdbbe4dd59273eed77c44f47f78c6c104f9bba7d1dc",
+    "primary_t15/calibration/calibration_summary_v4.csv": "215faace83478fbfc6399fde4327581d909d3d4500aac986b4c617de3dcbc1fe",
+    "primary_t15/calibration_bins.csv": "606036735bfa0f4232c913197a66d597dff11a11c17f03da04244ddb17f0e893",
+    "primary_t15/external_event_matched.csv": "9a840f49c5582fa9975c0be38eb97037670b0f6f21a362ded9cc97ba32ce1c9c",
+    "primary_t15/external_event_scores.csv": "5e60cdb3afb98461d1e82577ffbf1067ec5650dfbe4c008d73eaa0037d6f3546",
+    "primary_t15/external_event_status.json": "0df38cbed65d1843064b60b65907772fb24d5174ac82407549c0bbfffd95468f",
+    "primary_t15/joint_monthly_v5.csv": "dcd918a302071d4dbd290d97bb8f20c96e5ccd1db3e8ae1d42d83f61f4800535",
+    "primary_t15/joint_pooled_v5.csv": "00af22868b2145848c6eefb4af48fc5b495df0d9b9029d199c142f69613cc850",
+    "primary_t15/paired_prediction_loss.csv": "7c0cfeb2853fc52888c8dcc1a029629860fe313eea859a443babd0a8fab378de",
+    "primary_t15/paired_prediction_loss_by_day.csv": "71479d0797269ea59d3dd85f08b9bf70b40012ccaa38ca0453c50fdc8357a9d9",
+    "primary_t15/prediction_metrics.csv": "8bab37773537b6ecfb6dab8ce46211952f0ad40b8c60802791ec44b516ba2679",
+    "primary_t15/prediction_status.json": "881548d59688f32a3d60189c2ce2b0975c7a41e1e0b92298c4831aaef9006cad",
+    "primary_t15/tail_day_diagnostics_2025.csv": "2a2567a4e212adde43a2b18ae9f913d09d0861abbc4b40e69d5e116a47c6f05a",
+    "primary_t15/tuning.csv": "90b488a8a17d7c7d1ce49c7938fb068e60d00ac106bc50f34f7f9fe4a1c704a9",
+    "primary_t60/calibration/calibration_bins_v4.csv": "283a2b4a41e3f137ca59587739df95bba5134e8affb3d9b893bb2d7eccb29c95",
+    "primary_t60/calibration/calibration_pav_plateaus_v4.csv": "b1b1f200ae66a8bc173545a244f2594a5a18243cdc41540ec4142fad97adcdfb",
+    "primary_t60/calibration/calibration_status_v4.json": "254749536fb546283e836cdbbe4dd59273eed77c44f47f78c6c104f9bba7d1dc",
+    "primary_t60/calibration/calibration_summary_v4.csv": "d9891d95c2beaa5dccd24b433dad7759537d326f9f6af206f02967ddefcbaeb7",
+    "primary_t60/calibration_bins.csv": "a319c5bbd6ad2e98ff8e46ba7553889e5b48c4162e8def1cd1b99b4800ba1178",
+    "primary_t60/diversion_fit_sensitivity_v5.csv": "c65051a43f35fe6c02944b2173641e00fa23f6a2040e8aae63ab5088013f1151",
+    "primary_t60/external_event_matched.csv": "b9748617708139095588bfee1f8a6e0c5110298f56b31ac5c4a32a5a90a0a2a8",
+    "primary_t60/external_event_scores.csv": "e889ba6745f050a2b4687f4332454fdaed462a2e58d062929f617cb748ce7a53",
+    "primary_t60/external_event_status.json": "0df38cbed65d1843064b60b65907772fb24d5174ac82407549c0bbfffd95468f",
+    "primary_t60/joint_monthly_v5.csv": "ae21983f4e8cdd73cda74552fe4e8fb14fb7d572d216cb687923d2e1fe983fd0",
+    "primary_t60/joint_pooled_v5.csv": "9a9d092885ee39b5cce986bf028665f10008e2b164339a11040998793fac5652",
+    "primary_t60/paired_prediction_loss.csv": "f8648e7ee2477b542771d1706585888217528122df791ac8d23552c0327b1f67",
+    "primary_t60/paired_prediction_loss_by_day.csv": "2f73c56149659fbfb90c538835f344f1197bae20b8020d76fea66801d4c7e203",
+    "primary_t60/prediction_metrics.csv": "255737370286bcc32e4a13d048c68f790fe5d271fb726bbc77d0d5e651ac3e72",
+    "primary_t60/prediction_status.json": "1d3f9fb3f3e22653263a8015f4cd60e032c58584125969373e13e007ad27a82a",
+    "primary_t60/tail_day_diagnostics_2025.csv": "19d610e0024d67a1500f0d27c3ba4897f156675dc37ba9dbd54c81ea3cda494b",
+    "primary_t60/tuning.csv": "3d79285ea0e5a11206f5938693187937cb9ea8d402cbc327c677dd8413de43ca",
+    "reporting_carrier_coverage.csv": "362d42882f8f1c9ff811c4cbe25aacc0e79d13a0604aa29dac3cd53d07fa6042",
+    "threshold_coherence/paired_identity_months.csv": "0452009dedb873ed6fcceb5cbae28d1d8ada707cce7bc06cab8d98fcfed7a6a6",
+    "threshold_coherence/threshold_coherence.csv": "ff4585600552cfa1c49e2522209c62cf9ce227387d80b4ccd326eab6e2ce9d73",
+    "threshold_coherence/threshold_coherence_examples.csv": "11cbb3cb9875736fa10473cd67863baf5637fa4b036c503d4e0b9d3f602cb54d",
+    "threshold_coherence/threshold_coherence_status.json": "8daace43e14e0d9dd2e62b2f37ae9767c8ca8abaeeea735996c3f67abcad2722",
+    "traveler_card/card_status.json": "f9d13a30adffe7f9580a4d5958bfb588981b747525a237a9d647998b2200f0b7",
+    "traveler_card/matched_comparisons.csv": "78392410bfaba32b79a7a502226555d2f3e5254a4bd1f86280921348837c3b8f",
+    "traveler_card/reference_weights.csv": "72eddb6a5866dc25a51ca9bb5200af242e531025b81ae099afee1bf51e30d6d6",
+    "traveler_card/route_rates.csv": "6f08c090d34f9268f2d5d5bccc05f3201460874360de07957ede7a0d11a12b28",
+    "traveler_card/support_coverage.csv": "472e673474d419b0025d00aa63841652660708f7b10c39240d8842e229ca55b6",
+    "traveler_card/TRAVELER_CARD.md": "9922905afc1280a3308785865e0bf5441b6a922cee3565f2a10ec94f352d19be",
+    "unknown_records.csv": "f6398a55273148ed916402b1e440f2943036b4f11e8172483ab2b421a4f016dd",
+    "validation_status.json": "f014f4e5ff19086a67933e96ca859ffcedb9037cb8c10782750ff878d14d7e87"
+  },
+  "environment": {
+    "python": "3.12.16",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1"
+  },
+  "all_csv_comparison": {
+    "status": "ALL_CSV_COMPARISON_PASSED",
+    "tables_compared": 56,
+    "absolute_tolerance": 1e-10,
+    "scope": "engineering reproducibility, not forecast uncertainty",
+    "maximum_observed_abs_difference": 1.8474111129762605e-13,
+    "tables": [
+      {
+        "path": "audit_by_month.csv",
+        "rows": 37,
+        "max_abs_numeric_difference": 0.0,
+        "numeric_columns": {
+          "input_rows": 0.0,
+          "exact_duplicates_removed": 0.0,
+          "retained_rows": 0.0,
+          "invalid_identity": 0.0,
+          "conflicting_key_rows": 0.0,
+          "invalid_flags": 0.0,
+          "both_cancelled_and_diverted": 0.0,
+          "cancelled_with_arrival": 0.0,
+          "missing_or_invalid_normal_arrival": 0.0,
+          "cancel_code_missing": 0.0,
+          "scheduled_dep_2400": 0.0,
+          "scheduled_arr_2400": 0.0,
+          "diverted_reached_destination": 0.0,
+          "diverted_not_reached_destination": 0.0,
+          "diverted_reached_status_missing_invalid": 0.0,
+          "arrdel15_disagreement": 0.0,
+          "on_time": 0.0,
+          "late": 0.0,
+          "cancelled": 0.0,
+          "diverted": 0.0,
+          "unknown": 0.0,
+          "national_rows": 0.0,
+          "verified_days": 0.0
+        }
+      },
+      {
+        "path": "comparison_2023_2025/bootstrap_diagnostics.csv",
+        "rows": 3,
+        "max_abs_numeric_difference": 0.0,
+        "numeric_columns": {
+          "block_days": 0.0,
+          "requested_reps": 0.0,
+          "valid_common_support_reps": 0.0,
+          "invalid_reps": 0.0,
+          "empty_cell_draws": 0.0,
+          "redraws": 0.0,
+          "dropped_reps": 0.0
+        }
+      },
+      {
+        "path": "comparison_2023_2025/cell_day_exposure.csv",
+        "rows": 240,
+        "max_abs_numeric_difference": 0.0,
+        "numeric_columns": {
+          "positive_count_days": 0.0,
+          "equal_count_equivalent_days": 0.0
+        }
+      },
+      {
+        "path": "comparison_2023_2025/common_support_coverage.csv",
+        "rows": 10,
+        "max_abs_numeric_difference": 0.0,
+        "numeric_columns": {
+          "total_n": 0.0,
+          "supported_n": 0.0,
+          "coverage": 0.0
+        }
+      },
+      {
+        "path": "comparison_2023_2025/empty_cell_frequencies.csv",
+        "rows": 720,
+        "max_abs_numeric_difference": 0.0,
+        "numeric_columns": {
+          "block_days": 0.0,
+          "empty_reps": 0.0,
+          "requested_reps": 0.0
+        }
+      },
+      {
+        "path": "comparison_2023_2025/mix_decomposition.csv",
+        "rows": 45,
+        "max_abs_numeric_difference": 0.0,
+        "numeric_columns": {
+          "raw_gap": 0.0,
+          "raw_gap_common_support": 0.0,
+          "adjusted_gap": 0.0,
+          "mix_component": 0.0,
+          "support_restriction_component": 0.0,
+          "identity_residual": 0.0
+        }
+      },
+      {
+        "path": "comparison_2023_2025/pairwise_comparisons.csv",
+        "rows": 405,
+        "max_abs_numeric_difference": 2.220446049250313e-16,
+        "numeric_columns": {
+          "threshold_minutes": 0.0,
+          "block_days": 0.0,
+          "difference": 0.0,
+          "identification_difference_lower": 0.0,
+          "identification_difference_upper": 0.0,
+          "ci_lower": 2.220446049250313e-16,
+          "ci_upper": 2.220446049250313e-16,
+          "prob_a_better": 0.0
+        }
+      },
+      {
+        "path": "comparison_2023_2025/rank_intervals.csv",
+        "rows": 90,
+        "max_abs_numeric_difference": 1.1102230246251565e-16,
+        "numeric_columns": {
+          "threshold_minutes": 0.0,
+          "block_days": 0.0,
+          "rate": 0.0,
+          "identification_lower": 0.0,
+          "identification_upper": 0.0,
+          "ci_lower": 1.1102230246251565e-16,
+          "ci_upper": 1.1102230246251565e-16,
+          "rank": 0.0,
+          "rank_lower": 0.0,
+          "rank_upper": 0.0,
+          "common_support_coverage": 0.0,
+          "common_strata": 0.0
+        }
+      },
+      {
+        "path": "comparison_2023_2025/standard_population_weights.csv",
+        "rows": 24,
+        "max_abs_numeric_difference": 1.3877787807814457e-17,
+        "numeric_columns": {
+          "standard_weight": 1.3877787807814457e-17
+        }
+      },
+      {
+        "path": "comparison_2023_2025/standardization_cells.csv",
+        "rows": 602,
+        "max_abs_numeric_difference": 0.0,
+        "numeric_columns": {
+          "n": 0.0,
+          "success": 0.0,
+          "known": 0.0,
+          "unknown": 0.0,
+          "observed_days": 0.0,
+          "rate_lower": 0.0,
+          "rate_upper": 0.0
+        }
+      },
+      {
+        "path": "historical_airport_scorecard.csv",
+        "rows": 10,
+        "max_abs_numeric_difference": 0.0,
+        "numeric_columns": {
+          "n": 0.0,
+          "completed": 0.0,
+          "unknown": 0.0,
+          "unknown_rate": 0.0,
+          "cancellation_rate": 0.0,
+          "diversion_rate": 0.0,
+          "completion_lower": 0.0,
+          "completion_upper": 0.0,
+          "conditional_on_time": 0.0,
+          "conditional_long_delay": 0.0,
+          "unconditional_long_delay": 0.0,
+          "delay_p90_completed": 0.0,
+          "delay_p99_completed": 0.0,
+          "diverted_n": 0.0,
+          "diverted_reached_n": 0.0,
+          "diverted_reached_rate": 0.0,
+          "final_destination_documented_lower": 0.0,
+          "diverted_reached_delay_valid_n": 0.0,
+          "diverted_reached_delay_median": 0.0,
+          "reliability_0_lower": 0.0,
+          "reliability_0_upper": 0.0,
+          "reliability_15_lower": 0.0,
+          "reliability_15_upper": 0.0,
+          "reliability_30_lower": 0.0,
+          "reliability_30_upper": 0.0,
+          "reliability_60_lower": 0.0,
+          "reliability_60_upper": 0.0,
+          "reliability_120_lower": 0.0,
+          "reliability_120_upper": 0.0
+        }
+      },
+      {
+        "path": "joint_candidate/candidate_calibration_bins.csv",
+        "rows": 380,
+        "max_abs_numeric_difference": 2.220446049250313e-16,
+        "numeric_columns": {
+          "threshold_minutes": 0.0,
+          "bin_left": 0.0,
+          "bin_right": 0.0,
+          "n": 0.0,
+          "events": 0.0,
+          "observed": 0.0,
+          "predicted": 2.220446049250313e-16
+        }
+      },
+      {
+        "path": "joint_candidate/candidate_comparison.csv",
+        "rows": 114,
+        "max_abs_numeric_difference": 6.661338147750939e-16,
+        "numeric_columns": {
+          "threshold_minutes": 0.0,
+          "n": 0.0,
+          "events": 0.0,
+          "observed": 9.71445146547012e-17,
+          "predicted": 1.3877787807814457e-16,
+          "brier": 9.71445146547012e-17,
+          "log_loss": 2.220446049250313e-16,
+          "oe_ratio": 6.661338147750939e-16,
+          "roc_auc": 0.0,
+          "pr_auc": 8.326672684688674e-17,
+          "ece_10_fixed_bins": 1.3877787807814457e-16,
+          "brier_minus_baseline": 1.7694179454963432e-16,
+          "candidate_n": 0.0,
+          "candidate_events": 0.0,
+          "candidate_brier": 9.71445146547012e-17,
+          "candidate_log_loss": 1.3877787807814457e-16,
+          "candidate_brier_minus_existing": 8.326672684688674e-17,
+          "candidate_log_loss_minus_existing": 2.220446049250313e-16
+        }
+      },
+      {
+        "path": "joint_candidate/candidate_joint_monthly.csv",
+        "rows": 38,
+        "max_abs_numeric_difference": 6.661338147750939e-16,
+        "numeric_columns": {
+          "threshold_minutes": 0.0,
+          "n": 0.0,
+          "events": 0.0,
+          "observed": 0.0,
+          "predicted": 1.1102230246251565e-16,
+          "brier": 2.7755575615628914e-17,
+          "log_loss": 1.1102230246251565e-16,
+          "oe_ratio": 6.661338147750939e-16,
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "ece_10_fixed_bins": 7.28583859910259e-17
+        }
+      },
+      {
+        "path": "joint_candidate/candidate_joint_pooled.csv",
+        "rows": 6,
+        "max_abs_numeric_difference": 1.1102230246251565e-16,
+        "numeric_columns": {
+          "threshold_minutes": 0.0,
+          "month_count": 0.0,
+          "n": 0.0,
+          "events": 0.0,
+          "observed": 0.0,
+          "predicted": 5.551115123125783e-17,
+          "pooled_brier": 0.0,
+          "equal_month_brier": 0.0,
+          "pooled_log_loss": 1.1102230246251565e-16
+        }
+      },
+      {
+        "path": "joint_candidate/candidate_leaf_monthly.csv",
+        "rows": 95,
+        "max_abs_numeric_difference": 1.1102230246251565e-16,
+        "numeric_columns": {
+          "n": 0.0,
+          "events": 0.0,
+          "observed": 0.0,
+          "predicted": 1.1102230246251565e-16,
+          "brier": 2.7755575615628914e-17
+        }
+      },
+      {
+        "path": "joint_candidate/candidate_probability_examples.csv",
+        "rows": 19,
+        "max_abs_numeric_difference": 1.1102230246251565e-16,
+        "numeric_columns": {
+          "dep_minutes": 0.0,
+          "Flight_Number_Reporting_Airline": 0.0,
+          "CRSDepTime": 0.0,
+          "p15": 1.1102230246251565e-16,
+          "p60": 1.1102230246251565e-16,
+          "cancelled": 3.469446951953614e-17,
+          "diverted": 8.673617379884035e-19,
+          "completed_delay_ge60": 5.551115123125783e-17,
+          "completed_delay_15_to_lt60": 5.551115123125783e-17,
+          "completed_delay_lt15": 1.1102230246251565e-16
+        }
+      },
+      {
+        "path": "joint_candidate/candidate_risk_sets.csv",
+        "rows": 4,
+        "max_abs_numeric_difference": 0.0,
+        "numeric_columns": {
+          "training_available": 0.0,
+          "training_available_events": 0.0,
+          "training_n": 0.0,
+          "training_events": 0.0,
+          "calibration_n": 0.0,
+          "calibration_events": 0.0
+        }
+      },
+      {
+        "path": "joint_candidate/candidate_structure_monthly.csv",
+        "rows": 19,
+        "max_abs_numeric_difference": 1.1102230246251565e-16,
+        "numeric_columns": {
+          "n": 0.0,
+          "min_leaf_probability": 4.336808689942018e-19,
+          "max_leaf_sum_error": 1.1102230246251565e-16,
+          "max_threshold_reconstruction_error": 1.3877787807814457e-17,
+          "threshold_violations": 0.0,
+          "max_p60_minus_p15": 0.0
+        }
+      },
+      {
+        "path": "metrics_by_year_airport.csv",
+        "rows": 40,
+        "max_abs_numeric_difference": 0.0,
+        "numeric_columns": {
+          "year": 0.0,
+          "n": 0.0,
+          "completed": 0.0,
+          "unknown": 0.0,
+          "unknown_rate": 0.0,
+          "cancellation_rate": 0.0,
+          "diversion_rate": 0.0,
+          "completion_lower": 0.0,
+          "completion_upper": 0.0,
+          "conditional_on_time": 0.0,
+          "conditional_long_delay": 0.0,
+          "unconditional_long_delay": 0.0,
+          "delay_p90_completed": 0.0,
+          "delay_p99_completed": 0.0,
+          "diverted_n": 0.0,
+          "diverted_reached_n": 0.0,
+          "diverted_reached_rate": 0.0,
+          "final_destination_documented_lower": 0.0,
+          "diverted_reached_delay_valid_n": 0.0,
+          "diverted_reached_delay_median": 0.0,
+          "reliability_0_lower": 0.0,
+          "reliability_0_upper": 0.0,
+          "reliability_15_lower": 0.0,
+          "reliability_15_upper": 0.0,
+          "reliability_30_lower": 0.0,
+          "reliability_30_upper": 0.0,
+          "reliability_60_lower": 0.0,
+          "reliability_60_upper": 0.0,
+          "reliability_120_lower": 0.0,
+          "reliability_120_upper": 0.0
+        }
+      },
+      {
+        "path": "primary_t15/calibration/calibration_bins_v4.csv",
+        "rows": 6080,
+        "max_abs_numeric_difference": 2.220446049250313e-16,
+        "numeric_columns": {
+          "bin": 0.0,
+          "left": 2.220446049250313e-16,
+          "right": 2.220446049250313e-16,
+          "n": 0.0,
+          "events": 0.0,
+          "non_events": 0.0,
+          "predicted": 1.6653345369377348e-16,
+          "observed": 0.0
+        }
+      },
+      {
+        "path": "primary_t15/calibration/calibration_pav_plateaus_v4.csv",
+        "rows": 5297,
+        "max_abs_numeric_difference": 2.914335439641036e-16,
+        "numeric_columns": {
+          "cep": 0.0,
+          "p_min": 2.498001805406602e-16,
+          "p_max": 2.914335439641036e-16,
+          "n": 0.0,
+          "events": 0.0,
+          "unique_p": 0.0
+        }
+      },
+      {
+        "path": "primary_t15/calibration/calibration_summary_v4.csv",
+        "rows": 190,
+        "max_abs_numeric_difference": 5.551115123125783e-17,
+        "numeric_columns": {
+          "n": 0.0,
+          "events": 0.0,
+          "unique_p": 0.0,
+          "pav_plateaus": 0.0,
+          "brier_original": 5.551115123125783e-17,
+          "brier_pav_same_sample_diagnostic": 0.0,
+          "MCB": 5.551115123125783e-17,
+          "DSC": 0.0,
+          "UNC": 0.0,
+          "identity_residual": 0.0
+        }
+      },
+      {
+        "path": "primary_t15/calibration_bins.csv",
+        "rows": 303,
+        "max_abs_numeric_difference": 1.1102230246251565e-16,
+        "numeric_columns": {
+          "bin_left": 0.0,
+          "bin_right": 0.0,
+          "n": 0.0,
+          "predicted": 1.1102230246251565e-16,
+          "observed": 0.0
+        }
+      },
+      {
+        "path": "primary_t15/external_event_matched.csv",
+        "rows": 12,
+        "max_abs_numeric_difference": 1.1102230246251565e-16,
+        "numeric_columns": {
+          "common_cells": 0.0,
+          "n": 0.0,
+          "coverage": 0.0,
+          "observed": 0.0,
+          "predicted": 5.551115123125783e-17,
+          "residual": 1.1102230246251565e-16
+        }
+      },
+      {
+        "path": "primary_t15/external_event_scores.csv",
+        "rows": 12,
+        "max_abs_numeric_difference": 8.881784197001252e-16,
+        "numeric_columns": {
+          "days": 0.0,
+          "n": 0.0,
+          "events": 0.0,
+          "observed": 0.0,
+          "predicted": 8.326672684688674e-17,
+          "brier": 1.1102230246251565e-16,
+          "log_loss": 2.220446049250313e-16,
+          "oe_ratio": 8.881784197001252e-16,
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "ece_10_fixed_bins": 2.7755575615628914e-17,
+          "cancelled": 0.0
+        }
+      },
+      {
+        "path": "primary_t15/joint_monthly_v5.csv",
+        "rows": 57,
+        "max_abs_numeric_difference": 4.440892098500626e-16,
+        "numeric_columns": {
+          "threshold_minutes": 0.0,
+          "n": 0.0,
+          "events": 0.0,
+          "observed": 8.326672684688674e-17,
+          "predicted": 1.3877787807814457e-16,
+          "brier": 8.326672684688674e-17,
+          "log_loss": 2.220446049250313e-16,
+          "oe_ratio": 4.440892098500626e-16,
+          "roc_auc": 0.0,
+          "pr_auc": 8.326672684688674e-17,
+          "ece_10_fixed_bins": 1.1102230246251565e-16,
+          "brier_minus_baseline": 8.326672684688674e-17
+        }
+      },
+      {
+        "path": "primary_t15/joint_pooled_v5.csv",
+        "rows": 9,
+        "max_abs_numeric_difference": 1.3877787807814457e-16,
+        "numeric_columns": {
+          "threshold_minutes": 0.0,
+          "month_count": 0.0,
+          "expected_months": 0.0,
+          "n": 0.0,
+          "events": 0.0,
+          "observed": 0.0,
+          "predicted": 1.3877787807814457e-16,
+          "pooled_brier": 8.326672684688674e-17,
+          "equal_month_brier": 5.551115123125783e-17,
+          "pooled_log_loss": 1.1102230246251565e-16,
+          "wins_vs_baseline": 0.0
+        }
+      },
+      {
+        "path": "primary_t15/paired_prediction_loss.csv",
+        "rows": 38,
+        "max_abs_numeric_difference": 3.122502256758253e-17,
+        "numeric_columns": {
+          "n": 0.0,
+          "brier_difference": 8.253489038045903e-18,
+          "daily_difference_min": 3.122502256758253e-17,
+          "daily_difference_max": 2.0816681711721685e-17
+        }
+      },
+      {
+        "path": "primary_t15/paired_prediction_loss_by_day.csv",
+        "rows": 1158,
+        "max_abs_numeric_difference": 1.8474111129762605e-13,
+        "numeric_columns": {
+          "n": 0.0,
+          "loss_difference_sum": 1.8474111129762605e-13,
+          "brier_difference": 3.122502256758253e-17
+        }
+      },
+      {
+        "path": "primary_t15/prediction_metrics.csv",
+        "rows": 171,
+        "max_abs_numeric_difference": 1.2434497875801753e-14,
+        "numeric_columns": {
+          "threshold_minutes": 0.0,
+          "n": 0.0,
+          "events": 0.0,
+          "observed": 0.0,
+          "predicted": 8.326672684688674e-17,
+          "brier": 5.551115123125783e-17,
+          "log_loss": 2.220446049250313e-16,
+          "oe_ratio": 1.2434497875801753e-14,
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "ece_10_fixed_bins": 5.551115123125783e-17
+        }
+      },
+      {
+        "path": "primary_t15/tail_day_diagnostics_2025.csv",
+        "rows": 6,
+        "max_abs_numeric_difference": 2.7755575615628914e-17,
+        "numeric_columns": {
+          "training_daily_threshold": 0.0,
+          "days": 0.0,
+          "n": 0.0,
+          "events": 0.0,
+          "observed": 0.0,
+          "predicted": 0.0,
+          "brier": 2.7755575615628914e-17,
+          "log_loss": 0.0,
+          "oe_ratio": 0.0,
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "ece_10_fixed_bins": 8.673617379884035e-18
+        }
+      },
+      {
+        "path": "primary_t15/tuning.csv",
+        "rows": 6,
+        "max_abs_numeric_difference": 1.1102230246251565e-16,
+        "numeric_columns": {
+          "C": 0.0,
+          "n": 0.0,
+          "events": 0.0,
+          "observed": 0.0,
+          "predicted": 2.7755575615628914e-17,
+          "brier": 0.0,
+          "log_loss": 0.0,
+          "oe_ratio": 1.1102230246251565e-16,
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "ece_10_fixed_bins": 1.0408340855860843e-17
+        }
+      },
+      {
+        "path": "primary_t60/calibration/calibration_bins_v4.csv",
+        "rows": 6080,
+        "max_abs_numeric_difference": 2.220446049250313e-16,
+        "numeric_columns": {
+          "bin": 0.0,
+          "left": 2.220446049250313e-16,
+          "right": 2.220446049250313e-16,
+          "n": 0.0,
+          "events": 0.0,
+          "non_events": 0.0,
+          "predicted": 2.220446049250313e-16,
+          "observed": 0.0
+        }
+      },
+      {
+        "path": "primary_t60/calibration/calibration_pav_plateaus_v4.csv",
+        "rows": 4857,
+        "max_abs_numeric_difference": 3.3306690738754696e-16,
+        "numeric_columns": {
+          "cep": 0.0,
+          "p_min": 3.3306690738754696e-16,
+          "p_max": 3.3306690738754696e-16,
+          "n": 0.0,
+          "events": 0.0,
+          "unique_p": 0.0
+        }
+      },
+      {
+        "path": "primary_t60/calibration/calibration_summary_v4.csv",
+        "rows": 190,
+        "max_abs_numeric_difference": 2.7755575615628914e-17,
+        "numeric_columns": {
+          "n": 0.0,
+          "events": 0.0,
+          "unique_p": 0.0,
+          "pav_plateaus": 0.0,
+          "brier_original": 2.7755575615628914e-17,
+          "brier_pav_same_sample_diagnostic": 0.0,
+          "MCB": 2.7755575615628914e-17,
+          "DSC": 0.0,
+          "UNC": 0.0,
+          "identity_residual": 0.0
+        }
+      },
+      {
+        "path": "primary_t60/calibration_bins.csv",
+        "rows": 160,
+        "max_abs_numeric_difference": 2.220446049250313e-16,
+        "numeric_columns": {
+          "bin_left": 0.0,
+          "bin_right": 0.0,
+          "n": 0.0,
+          "predicted": 2.220446049250313e-16,
+          "observed": 0.0
+        }
+      },
+      {
+        "path": "primary_t60/diversion_fit_sensitivity_v5.csv",
+        "rows": 9,
+        "max_abs_numeric_difference": 0.0,
+        "numeric_columns": {
+          "fit_cap": 0.0,
+          "seed": 0.0,
+          "fitted_n": 0.0,
+          "fitted_events": 0.0,
+          "regularization_C": 0.0,
+          "fit_warning_count": 0.0,
+          "n": 0.0,
+          "events": 0.0,
+          "observed": 0.0,
+          "predicted": 0.0,
+          "brier": 0.0,
+          "log_loss": 0.0,
+          "oe_ratio": 0.0,
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "ece_10_fixed_bins": 0.0
+        }
+      },
+      {
+        "path": "primary_t60/external_event_matched.csv",
+        "rows": 12,
+        "max_abs_numeric_difference": 4.163336342344337e-17,
+        "numeric_columns": {
+          "common_cells": 0.0,
+          "n": 0.0,
+          "coverage": 0.0,
+          "observed": 0.0,
+          "predicted": 4.163336342344337e-17,
+          "residual": 3.2959746043559335e-17
+        }
+      },
+      {
+        "path": "primary_t60/external_event_scores.csv",
+        "rows": 12,
+        "max_abs_numeric_difference": 3.552713678800501e-15,
+        "numeric_columns": {
+          "days": 0.0,
+          "n": 0.0,
+          "events": 0.0,
+          "observed": 0.0,
+          "predicted": 4.163336342344337e-17,
+          "brier": 0.0,
+          "log_loss": 2.220446049250313e-16,
+          "oe_ratio": 3.552713678800501e-15,
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "ece_10_fixed_bins": 2.7755575615628914e-17,
+          "cancelled": 0.0
+        }
+      },
+      {
+        "path": "primary_t60/joint_monthly_v5.csv",
+        "rows": 57,
+        "max_abs_numeric_difference": 6.661338147750939e-16,
+        "numeric_columns": {
+          "threshold_minutes": 0.0,
+          "n": 0.0,
+          "events": 0.0,
+          "observed": 9.71445146547012e-17,
+          "predicted": 9.71445146547012e-17,
+          "brier": 9.71445146547012e-17,
+          "log_loss": 1.3877787807814457e-16,
+          "oe_ratio": 6.661338147750939e-16,
+          "roc_auc": 0.0,
+          "pr_auc": 8.326672684688674e-17,
+          "ece_10_fixed_bins": 1.3877787807814457e-16,
+          "brier_minus_baseline": 9.020562075079397e-17
+        }
+      },
+      {
+        "path": "primary_t60/joint_pooled_v5.csv",
+        "rows": 9,
+        "max_abs_numeric_difference": 1.1102230246251565e-16,
+        "numeric_columns": {
+          "threshold_minutes": 0.0,
+          "month_count": 0.0,
+          "expected_months": 0.0,
+          "n": 0.0,
+          "events": 0.0,
+          "observed": 0.0,
+          "predicted": 8.326672684688674e-17,
+          "pooled_brier": 8.326672684688674e-17,
+          "equal_month_brier": 6.938893903907228e-17,
+          "pooled_log_loss": 1.1102230246251565e-16,
+          "wins_vs_baseline": 0.0
+        }
+      },
+      {
+        "path": "primary_t60/paired_prediction_loss.csv",
+        "rows": 38,
+        "max_abs_numeric_difference": 2.42861286636753e-17,
+        "numeric_columns": {
+          "n": 0.0,
+          "brier_difference": 4.553649124439119e-18,
+          "daily_difference_min": 2.42861286636753e-17,
+          "daily_difference_max": 1.3877787807814457e-17
+        }
+      },
+      {
+        "path": "primary_t60/paired_prediction_loss_by_day.csv",
+        "rows": 1158,
+        "max_abs_numeric_difference": 1.4210854715202004e-13,
+        "numeric_columns": {
+          "n": 0.0,
+          "loss_difference_sum": 1.4210854715202004e-13,
+          "brier_difference": 2.42861286636753e-17
+        }
+      },
+      {
+        "path": "primary_t60/prediction_metrics.csv",
+        "rows": 171,
+        "max_abs_numeric_difference": 1.2434497875801753e-14,
+        "numeric_columns": {
+          "threshold_minutes": 0.0,
+          "n": 0.0,
+          "events": 0.0,
+          "observed": 0.0,
+          "predicted": 5.551115123125783e-17,
+          "brier": 2.7755575615628914e-17,
+          "log_loss": 8.326672684688674e-17,
+          "oe_ratio": 1.2434497875801753e-14,
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "ece_10_fixed_bins": 7.28583859910259e-17
+        }
+      },
+      {
+        "path": "primary_t60/tail_day_diagnostics_2025.csv",
+        "rows": 6,
+        "max_abs_numeric_difference": 4.440892098500626e-16,
+        "numeric_columns": {
+          "training_daily_threshold": 0.0,
+          "days": 0.0,
+          "n": 0.0,
+          "events": 0.0,
+          "observed": 0.0,
+          "predicted": 4.163336342344337e-17,
+          "brier": 0.0,
+          "log_loss": 0.0,
+          "oe_ratio": 4.440892098500626e-16,
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "ece_10_fixed_bins": 2.7755575615628914e-17
+        }
+      },
+      {
+        "path": "primary_t60/tuning.csv",
+        "rows": 6,
+        "max_abs_numeric_difference": 1.3877787807814457e-17,
+        "numeric_columns": {
+          "C": 0.0,
+          "n": 0.0,
+          "events": 0.0,
+          "observed": 0.0,
+          "predicted": 0.0,
+          "brier": 1.3877787807814457e-17,
+          "log_loss": 0.0,
+          "oe_ratio": 0.0,
+          "roc_auc": 0.0,
+          "pr_auc": 0.0,
+          "ece_10_fixed_bins": 1.0408340855860843e-17
+        }
+      },
+      {
+        "path": "reporting_carrier_coverage.csv",
+        "rows": 540,
+        "max_abs_numeric_difference": 0.0,
+        "numeric_columns": {
+          "dot_id": 0.0,
+          "retained_rows": 0.0,
+          "observed_days": 0.0,
+          "airports": 0.0
+        }
+      },
+      {
+        "path": "threshold_coherence/paired_identity_months.csv",
+        "rows": 19,
+        "max_abs_numeric_difference": 0.0,
+        "numeric_columns": {
+          "n": 0.0
+        }
+      },
+      {
+        "path": "threshold_coherence/threshold_coherence.csv",
+        "rows": 80,
+        "max_abs_numeric_difference": 1.1102230246251565e-16,
+        "numeric_columns": {
+          "lower_minutes": 0.0,
+          "upper_minutes": 0.0,
+          "n": 0.0,
+          "observed_low_events": 0.0,
+          "observed_high_events": 0.0,
+          "observed_between_events": 0.0,
+          "violations": 0.0,
+          "violation_rate": 0.0,
+          "max_upper_minus_lower": 1.1102230246251565e-16,
+          "max_positive_excess": 1.3877787807814457e-17,
+          "mean_low_probability": 8.326672684688674e-17,
+          "mean_high_probability": 5.551115123125783e-17,
+          "mean_implied_between_probability": 8.326672684688674e-17,
+          "atol": 0.0
+        }
+      },
+      {
+        "path": "threshold_coherence/threshold_coherence_examples.csv",
+        "rows": 4,
+        "max_abs_numeric_difference": 4.163336342344337e-17,
+        "numeric_columns": {
+          "lower_probability": 0.0,
+          "upper_probability": 4.163336342344337e-17,
+          "upper_minus_lower": 4.163336342344337e-17
+        }
+      },
+      {
+        "path": "traveler_card/matched_comparisons.csv",
+        "rows": 72,
+        "max_abs_numeric_difference": 0.0,
+        "numeric_columns": {
+          "block_days": 0.0,
+          "shared_cells": 0.0,
+          "EWR_adjusted_rate": 0.0,
+          "LGA_adjusted_rate": 0.0,
+          "adjusted_difference": 0.0,
+          "identified_difference_low": 0.0,
+          "identified_difference_high": 0.0,
+          "experimental_95_low": 0.0,
+          "experimental_95_high": 0.0,
+          "reps": 0.0,
+          "invalid_reps": 0.0
+        }
+      },
+      {
+        "path": "traveler_card/reference_weights.csv",
+        "rows": 21,
+        "max_abs_numeric_difference": 0.0,
+        "numeric_columns": {
+          "weight": 0.0
+        }
+      },
+      {
+        "path": "traveler_card/route_rates.csv",
+        "rows": 8,
+        "max_abs_numeric_difference": 0.0,
+        "numeric_columns": {
+          "n_planned": 0.0,
+          "n_completed": 0.0,
+          "cancelled": 0.0,
+          "diverted": 0.0,
+          "completed_under_15": 0.0,
+          "completed_15_to_under_60": 0.0,
+          "completed_at_least_60": 0.0,
+          "unknown": 0.0,
+          "cancellation": 0.0,
+          "cancellation_identified_low": 0.0,
+          "cancellation_identified_high": 0.0,
+          "diversion": 0.0,
+          "diversion_identified_low": 0.0,
+          "diversion_identified_high": 0.0,
+          "long_delay_60_per_scheduled": 0.0,
+          "long_delay_60_per_scheduled_identified_low": 0.0,
+          "long_delay_60_per_scheduled_identified_high": 0.0,
+          "long_delay_60_given_completed": 0.0,
+          "long_delay_60_given_completed_identified_low": 0.0,
+          "long_delay_60_given_completed_identified_high": 0.0,
+          "joint_bad_15": 0.0,
+          "joint_bad_15_identified_low": 0.0,
+          "joint_bad_15_identified_high": 0.0,
+          "joint_bad_60": 0.0,
+          "joint_bad_60_identified_low": 0.0,
+          "joint_bad_60_identified_high": 0.0
+        }
+      },
+      {
+        "path": "traveler_card/support_coverage.csv",
+        "rows": 8,
+        "max_abs_numeric_difference": 0.0,
+        "numeric_columns": {
+          "n_planned": 0.0,
+          "n_supported": 0.0,
+          "n_supported_known": 0.0,
+          "n_supported_completed": 0.0,
+          "coverage": 0.0,
+          "shared_cells": 0.0
+        }
+      },
+      {
+        "path": "unknown_records.csv",
+        "rows": 1,
+        "max_abs_numeric_difference": 0.0,
+        "numeric_columns": {
+          "Flight_Number_Reporting_Airline": 0.0
+        }
+      }
+    ]
+  }
+}

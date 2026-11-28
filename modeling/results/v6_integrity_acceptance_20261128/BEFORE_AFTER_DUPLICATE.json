@@ -1,0 +1,10 @@
+{
+  "base_commit": "8a3b15bb6861a71c788024712a4e0ba10861c7a6",
+  "operation": "Replace smaller direct_joint inversion with a copy of the larger inversion; preserve method/month counts and maximum",
+  "old_reviewer": "ACCEPTED_DUPLICATE",
+  "new_reviewer": "REJECTED_DUPLICATE",
+  "rejection": "Duplicate inversion flight key and method",
+  "frozen_inputs_modified": false,
+  "duplicate_in_temporary_copy_only": true,
+  "replayed_model_training": false
+}

@@ -8,12 +8,105 @@ from pathlib import Path
 import argparse,hashlib,json,platform
 import numpy as np
 import pandas as pd
+from threshold_coherence import DEFAULT_ATOL, METHODS
 
 ROOT=Path(__file__).resolve().parents[1]
 
 def require(ok, message):
     if not ok:
         raise ValueError(message)
+
+def check_inversion_inventory(results, structure, scored, expected_status):
+    folder = results/'threshold_coherence'
+    summary = pd.read_csv(folder/'threshold_coherence.csv', float_precision='round_trip')
+    detail = pd.read_csv(folder/'threshold_coherence_examples.csv', float_precision='round_trip')
+    identities = pd.read_csv(folder/'paired_identity_months.csv')
+    status = json.loads((folder/'threshold_coherence_status.json').read_text(encoding='utf-8'))
+
+    require(identities.period.is_unique and set(identities.period) == set(structure.period),
+            'Paired month inventory differs')
+    require(identities.flight_key_set_sha256.astype('string').str.fullmatch(r'[0-9a-f]{64}', na=False).all(),
+            'Malformed paired flight fingerprint')
+    by_month = identities.set_index('period')
+    require(structure.n.eq(structure.period.map(by_month.n)).all(),
+            'Candidate and paired monthly denominators differ')
+    require(scored.flight_identity_sha256.eq(scored.period.map(by_month.flight_key_set_sha256)).all(),
+            'Scored flight identity fingerprint differs from pairing')
+
+    indexed = summary.set_index(['period', 'method'])
+    expected = pd.MultiIndex.from_product([['ALL', *by_month.index], METHODS], names=indexed.index.names)
+    require(indexed.index.is_unique and indexed.index.sort_values().equals(expected.sort_values()),
+            'Missing or duplicate monthly or pooled inversion summary')
+    require(summary.lower_minutes.eq(15).all() and summary.upper_minutes.eq(60).all()
+            and summary.atol.eq(DEFAULT_ATOL).all(), 'Inversion thresholds or tolerance differ')
+    overall = indexed.loc['ALL']
+    monthly = indexed.drop(index='ALL', level='period')
+    pooled_n = int(by_month.n.sum())
+    require(monthly.n.eq(monthly.index.get_level_values('period').map(by_month.n)).all()
+            and overall.n.eq(pooled_n).all(), 'Inversion summary denominator differs')
+    counts = pd.to_numeric(indexed.violations, errors='coerce')
+    require(np.isfinite(counts).all() and counts.mod(1).eq(0).all() and counts.between(0, indexed.n).all(),
+            'Invalid inversion count')
+    rates = pd.to_numeric(indexed.violation_rate, errors='coerce')
+    require(np.allclose(rates, counts / indexed.n, atol=1e-15, rtol=0),
+            'Inversion rates disagree with the summary counts and denominators')
+
+    flight_key = detail.flight_key.astype('string')
+    require(flight_key.str.fullmatch(r'\d{4}-\d{2}-\d{2}(?:\|[^|\r\n]+){5}', na=False).all(),
+            'Malformed inversion flight key')
+    require(not detail.duplicated(['flight_key', 'method']).any(),
+            'Duplicate inversion flight key and method')
+    dates = pd.to_datetime(detail.date, format='%Y-%m-%d', errors='coerce')
+    require(dates.dt.strftime('%Y-%m-%d').eq(detail.date).all()
+            and flight_key.str.slice(0, 10).eq(detail.date).all(),
+            'Invalid inversion date or flight-key date mismatch')
+    periods = dates.dt.strftime('%Y-%m')
+    require(detail.method.isin(METHODS).all() and periods.isin(by_month.index).all(),
+            'Unexpected inversion period or method')
+
+    probabilities = detail[['lower_probability', 'upper_probability', 'upper_minus_lower']].apply(
+        pd.to_numeric, errors='coerce').astype(float)
+    require(np.isfinite(probabilities.to_numpy(dtype=float)).all()
+            and probabilities.ge(0).all().all() and probabilities.le(1).all().all(),
+            'Invalid inversion probability or difference')
+    gap = probabilities.upper_probability - probabilities.lower_probability
+    require(gap.gt(DEFAULT_ATOL).all(), 'Inversion difference must exceed the decision tolerance')
+    require(np.allclose(gap, probabilities.upper_minus_lower, atol=1e-15, rtol=0),
+            'Stored inversion difference disagrees with the probabilities')
+
+    detail_by_group = detail.assign(period=periods, gap=gap).groupby(['period', 'method']).gap
+    actual = detail_by_group.size().reindex(monthly.index, fill_value=0)
+    require(actual.eq(monthly.violations).all(), 'Monthly inversion count differs from detail')
+    pooled_counts = actual.groupby(level='method').sum().reindex(overall.index)
+    require(pooled_counts.eq(overall.violations).all(), 'Pooled inversion count differs from monthly counts')
+    for claimed, observed in [
+        (monthly, detail_by_group.max()),
+        (overall, gap.groupby(detail.method).max()),
+    ]:
+        # Below-tolerance positive differences may be summarized without a detail row.
+        maximum = pd.to_numeric(claimed.max_upper_minus_lower, errors='coerce')
+        reported = pd.to_numeric(claimed.max_positive_excess, errors='coerce')
+        require(np.isfinite(maximum).all() and maximum.between(-1, 1).all()
+                and np.allclose(maximum.clip(lower=0), reported, atol=1e-15, rtol=0),
+                'Invalid inversion summary maximum')
+        expected_excess = observed.reindex(claimed.index, fill_value=0)
+        require(claimed.violations.gt(0).eq(maximum.gt(DEFAULT_ATOL)).all()
+                and np.allclose(reported[claimed.violations.gt(0)],
+                                expected_excess[claimed.violations.gt(0)], atol=1e-15, rtol=0),
+                'Inversion maximum differs from detail')
+
+    require(status == expected_status and status.get('inversions_are_exhaustive') is True
+            and status.get('unique_flight_keys_checked') is True
+            and status.get('probability_tolerance') == DEFAULT_ATOL
+            and status.get('paired_rows') == pooled_n and status.get('months') == len(by_month),
+            'Pairing status disagrees with the exhaustive inversion inventory')
+    summary_counts = overall.violations.astype(int).to_dict()
+    by_method = status['joint_display_by_method']
+    require(set(by_method) == set(summary_counts) and all(
+        by_method[method]['violations'] == count for method, count in summary_counts.items()),
+        'Per-method inversion status disagrees with the summary')
+    return summary_counts, detail
+
 
 def inspect_evidence(results, archive=None):
     """Cross-check saved tables only. This is not a refit or independent validation."""
@@ -94,18 +187,8 @@ def inspect_evidence(results, archive=None):
         comparisons.append({'scope':scope,'threshold_minutes':int(t),'n':int(group.n.sum()),
                             'selected_brier':baseline,'candidate_brier':score,'candidate_minus_selected':score-baseline})
     checks.append('weighted_candidate_tradeoff')
-    coherence=read('threshold_coherence/threshold_coherence.csv')
-    total=coherence.loc[coherence.period.eq('ALL')]
-    detail=read('threshold_coherence/threshold_coherence_examples.csv')
-    require(int(total.violations.sum())==len(detail),'Inversion detail is not exhaustive')
-    identities=read('threshold_coherence/paired_identity_months.csv')
-    require(identities.period.is_unique and len(identities)==19,'Paired month inventory differs')
-    require(int(identities.n.sum())==int(struct.n.sum()),'Candidate and paired denominators differ')
-    require(total.n.eq(identities.n.sum()).all(),'Pooled pair denominator differs')
-    for method, group in detail.groupby('method'):
-        require(method in set(total.method), 'Unknown inversion method')
-        require(len(group) == int(total.loc[total.method.eq(method), 'violations'].iloc[0]),
-                'Per-method inversion count differs')
+    inversion_counts, detail = check_inversion_inventory(
+        results, struct, old, status.get('paired_thresholds'))
     checks.append('exhaustive_inversion_inventory')
     rates=read('traveler_card/route_rates.csv')
     leaves=['cancelled','diverted','completed_under_15','completed_15_to_under_60','completed_at_least_60','unknown']
@@ -128,7 +211,7 @@ def inspect_evidence(results, archive=None):
     return {'status':'SAVED_EVIDENCE_CROSSCHECK_PASSED','scope':'saved tables; not a new fit or blind validation',
             'checks':checks,'core_months':36,'all_months':37,'core_rows':int(core.retained_rows.sum()),
             'all_rows':int(months.retained_rows.sum()),'holdout_rows':int(struct.n.sum()),
-            'candidate_tradeoffs':comparisons,'inversions_by_method':dict(zip(total.method,total.violations.astype(int))),
+            'candidate_tradeoffs':comparisons,'inversions_by_method':inversion_counts,
             'inversion_records':detail.to_dict('records'),'pooled_card_coverage':coverage.loc[coverage.period.eq('2023-2025')].to_dict('records'),
             'events_60':events[['event','method','n','events','cancelled','observed','predicted']].to_dict('records'),
             'replay_comparison':replay_diff,'source_file_sha256':fingerprints,

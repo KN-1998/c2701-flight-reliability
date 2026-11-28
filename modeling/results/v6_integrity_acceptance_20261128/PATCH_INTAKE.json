@@ -1,0 +1,14 @@
+{
+  "sha256": "5471651d5dab8d7ff855803ab11b91186bb901bfcf59ad4370168073dd1131a2",
+  "bytes": 49251,
+  "crc_passed": true,
+  "safe_paths": true,
+  "files": [
+    "README_应用补丁.md",
+    "V6_核验完善说明.md",
+    "C2701-v6-integrity.patch",
+    "TEST_STATUS.json",
+    "TEST_REPORT.txt",
+    "REPLAY_EVIDENCE.json"
+  ]
+}

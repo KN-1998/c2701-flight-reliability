@@ -1,15 +1,15 @@
 {
-  "release_version": "C2701_v6_modeling_review_20261127",
-  "date": "2026-11-27 Asia/Shanghai",
+  "release_version": "C2701_v6_integrity_independently_accepted_20261128",
+  "date": "2026-11-28 Asia/Shanghai",
   "base_commit": "80b953ecbfc8cdf08389ad5065115784dcb6db74",
   "entrypoint": "modeling/src/run_delivery_v6.py",
   "review_entrypoint": "modeling/src/review_v6_evidence.py",
-  "handoff_guide": "V6_建模复核交接.md",
+  "handoff_guide": "V6_核验补丁独立验收_20261128.md",
   "frozen_results": "modeling/results/implementation_v6",
   "independent_replay_results": "modeling/results/review_v6_20261127/replay",
   "review_results": "modeling/results/review_v6_20261127",
-  "expected_total_files": 596,
-  "expected_checksum_entries": 595,
+  "expected_total_files": 609,
+  "expected_checksum_entries": 608,
   "included_files_before_manifests": [
     {
       "path": ".gitignore",
@@ -17,7 +17,7 @@
     },
     {
       "path": "00_编程手先读.md",
-      "bytes": 7797
+      "bytes": 8252
     },
     {
       "path": "AGENTS.md",
@@ -29,7 +29,7 @@
     },
     {
       "path": "README.md",
-      "bytes": 14221
+      "bytes": 14641
     },
     {
       "path": "V5_复算说明.md",
@@ -42,6 +42,14 @@
     {
       "path": "V6_建模复核交接.md",
       "bytes": 2694
+    },
+    {
+      "path": "V6_核验完善说明.md",
+      "bytes": 1653
+    },
+    {
+      "path": "V6_核验补丁独立验收_20261128.md",
+      "bytes": 4011
     },
     {
       "path": "modeling/README_编程手先读.md",
@@ -665,7 +673,7 @@
     },
     {
       "path": "modeling/results/TEST_REPORT.txt",
-      "bytes": 11573
+      "bytes": 12826
     },
     {
       "path": "modeling/results/TEST_STATUS.json",
@@ -2016,6 +2024,46 @@
       "bytes": 157
     },
     {
+      "path": "modeling/results/v6_integrity_20261128/REPLAY_EVIDENCE.json",
+      "bytes": 44722
+    },
+    {
+      "path": "modeling/results/v6_integrity_20261128/TEST_REPORT.txt",
+      "bytes": 12826
+    },
+    {
+      "path": "modeling/results/v6_integrity_20261128/TEST_STATUS.json",
+      "bytes": 157
+    },
+    {
+      "path": "modeling/results/v6_integrity_acceptance_20261128/BEFORE_AFTER_DUPLICATE.json",
+      "bytes": 464
+    },
+    {
+      "path": "modeling/results/v6_integrity_acceptance_20261128/FROZEN_EVIDENCE.json",
+      "bytes": 14367
+    },
+    {
+      "path": "modeling/results/v6_integrity_acceptance_20261128/LOCAL_ENVIRONMENT.json",
+      "bytes": 117
+    },
+    {
+      "path": "modeling/results/v6_integrity_acceptance_20261128/PATCH_INTAKE.json",
+      "bytes": 343
+    },
+    {
+      "path": "modeling/results/v6_integrity_acceptance_20261128/REPLAY_EVIDENCE.json",
+      "bytes": 45108
+    },
+    {
+      "path": "modeling/results/v6_integrity_acceptance_20261128/tests/TEST_REPORT.txt",
+      "bytes": 12826
+    },
+    {
+      "path": "modeling/results/v6_integrity_acceptance_20261128/tests/TEST_STATUS.json",
+      "bytes": 157
+    },
+    {
       "path": "modeling/results/validation_v5/FINDINGS_V5.md",
       "bytes": 3622
     },
@@ -2289,7 +2337,7 @@
     },
     {
       "path": "modeling/src/review_v6_evidence.py",
-      "bytes": 13604
+      "bytes": 18949
     },
     {
       "path": "modeling/src/run.py",
@@ -2309,7 +2357,7 @@
     },
     {
       "path": "modeling/src/threshold_coherence.py",
-      "bytes": 7752
+      "bytes": 7802
     },
     {
       "path": "modeling/src/traveler_card_v6.py",
@@ -2342,6 +2390,10 @@
     {
       "path": "modeling/tests/test_integration.py",
       "bytes": 4418
+    },
+    {
+      "path": "modeling/tests/test_inversion_inventory_v6.py",
+      "bytes": 7531
     },
     {
       "path": "modeling/tests/test_joint_candidate_v6.py",
@@ -2389,7 +2441,7 @@
     }
   ],
   "test_status": {
-    "tests_run": 87,
+    "tests_run": 94,
     "failures": 0,
     "errors": 0,
     "successful": true,
@@ -2424,5 +2476,26 @@
   "source_audit_complete": false,
   "new_unseen_validation": false,
   "live_2027_forecast_authorized": false,
-  "scope_note": "Engineering replay + post-implementation source/derivation review, not newly unseen evaluation. Original frozen results preserved. ZIP hash and exact published commit are external to avoid circular self-reference."
+  "scope_note": "Engineering replay + post-implementation source/derivation review, not newly unseen evaluation. Original frozen results preserved. ZIP hash and exact published commit are external to avoid circular self-reference.",
+  "integrity_patch_parent": "8a3b15bb6861a71c788024712a4e0ba10861c7a6",
+  "integrity_guide": "V6_核验完善说明.md",
+  "integrity_results": "modeling/results/v6_integrity_20261128",
+  "integrity_tests": {
+    "tests_run": 94,
+    "failures": 0,
+    "errors": 0,
+    "successful": true,
+    "evidence_level": "numeric/integration checks, NOT empirical validation"
+  },
+  "integrity_acceptance_results": "modeling/results/v6_integrity_acceptance_20261128",
+  "previous_87_tests": "modeling/results/review_v6_20261127/final_tests/TEST_STATUS.json",
+  "integrity_acceptance_environment": {
+    "python": "3.12.16",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "scipy": "1.18.1",
+    "sklearn": "1.9.1"
+  },
+  "integrity_training_refit_this_turn": false,
+  "integrity_acceptance_scope": "94 tests and existing frozen/replay tables rechecked. No model algorithm, parameters, formula or prediction changes. Existing 37-month refit was performed on 2026-11-27."
 }

@@ -28,6 +28,13 @@ test_comparison_smoke (test_integration.IntegrationTests.test_comparison_smoke) 
 test_prediction_smoke (test_integration.IntegrationTests.test_prediction_smoke) ... ok
 test_stress_smoke (test_integration.IntegrationTests.test_stress_smoke) ... ok
 test_threshold_monotonicity (test_integration.IntegrationTests.test_threshold_monotonicity) ... ok
+test_accept_empty_inventory_including_below_tolerance_margin (test_inversion_inventory_v6.InversionInventoryTests.test_accept_empty_inventory_including_below_tolerance_margin) ... ok
+test_reject_illegal_or_inconsistent_probability_differences (test_inversion_inventory_v6.InversionInventoryTests.test_reject_illegal_or_inconsistent_probability_differences) ... ok
+test_reject_monthly_and_pooled_count_changes (test_inversion_inventory_v6.InversionInventoryTests.test_reject_monthly_and_pooled_count_changes) ... ok
+test_reject_record_date_differing_from_flight_key_in_same_month (test_inversion_inventory_v6.InversionInventoryTests.test_reject_record_date_differing_from_flight_key_in_same_month) ... ok
+test_reject_same_method_and_flight_duplicate_with_unchanged_counts (test_inversion_inventory_v6.InversionInventoryTests.test_reject_same_method_and_flight_duplicate_with_unchanged_counts) ... ok
+test_round_trip_preserves_the_strict_decision_boundary (test_inversion_inventory_v6.InversionInventoryTests.test_round_trip_preserves_the_strict_decision_boundary) ... ok
+test_same_flight_can_have_inversions_in_multiple_methods (test_inversion_inventory_v6.InversionInventoryTests.test_same_flight_can_have_inversions_in_multiple_methods) ... ok
 test_candidate_uses_both_thresholds_and_exact_risk_sets (test_joint_candidate_v6.SharedFiveLeafTests.test_candidate_uses_both_thresholds_and_exact_risk_sets) ... ok
 test_composition_endpoints_and_nested_probabilities (test_joint_candidate_v6.SharedFiveLeafTests.test_composition_endpoints_and_nested_probabilities) ... ok
 test_observed_boundaries (test_joint_candidate_v6.SharedFiveLeafTests.test_observed_boundaries) ... ok
@@ -87,6 +94,6 @@ test_missing_support_and_missing_completion_are_reported_separately (test_travel
 test_shared_partition_keeps_boundary_labels_and_both_denominators (test_traveler_card_v6.TravelerCardTests.test_shared_partition_keeps_boundary_labels_and_both_denominators) ... ok
 
 ----------------------------------------------------------------------
-Ran 87 tests in 6.466s
+Ran 94 tests in 11.521s
 
 OK

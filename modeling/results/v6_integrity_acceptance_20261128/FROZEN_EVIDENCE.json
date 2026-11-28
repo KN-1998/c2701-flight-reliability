@@ -1,0 +1,271 @@
+{
+  "status": "SAVED_EVIDENCE_CROSSCHECK_PASSED",
+  "scope": "saved tables; not a new fit or blind validation",
+  "checks": [
+    "monthly_denominators",
+    "candidate_same_rows_labels_and_fingerprints",
+    "weighted_candidate_tradeoff",
+    "exhaustive_inversion_inventory",
+    "historical_card_counts_and_support",
+    "event_denominators_and_cancellation_subset",
+    "retrospective_boundary_preserved"
+  ],
+  "core_months": 36,
+  "all_months": 37,
+  "core_rows": 6112183,
+  "all_rows": 6286707,
+  "holdout_rows": 3287437,
+  "candidate_tradeoffs": [
+    {
+      "scope": "late_months",
+      "threshold_minutes": 15,
+      "n": 174524,
+      "selected_brier": 0.1860618394767696,
+      "candidate_brier": 0.1869316572123785,
+      "candidate_minus_selected": 0.0008698177356089021
+    },
+    {
+      "scope": "late_months",
+      "threshold_minutes": 60,
+      "n": 174524,
+      "selected_brier": 0.0910917686354807,
+      "candidate_brier": 0.09109176863548075,
+      "candidate_minus_selected": 5.551115123125783e-17
+    },
+    {
+      "scope": "new_core_months",
+      "threshold_minutes": 15,
+      "n": 2592299,
+      "selected_brier": 0.1813219844162625,
+      "candidate_brier": 0.18142169132919747,
+      "candidate_minus_selected": 9.970691293498257e-05
+    },
+    {
+      "scope": "new_core_months",
+      "threshold_minutes": 60,
+      "n": 2592299,
+      "selected_brier": 0.08834168193092819,
+      "candidate_brier": 0.08834168193092824,
+      "candidate_minus_selected": 5.551115123125783e-17
+    },
+    {
+      "scope": "previously_scored_months",
+      "threshold_minutes": 15,
+      "n": 520614,
+      "selected_brier": 0.17266752044389674,
+      "candidate_brier": 0.17278255517858152,
+      "candidate_minus_selected": 0.00011503473468477132
+    },
+    {
+      "scope": "previously_scored_months",
+      "threshold_minutes": 60,
+      "n": 520614,
+      "selected_brier": 0.0897491719103982,
+      "candidate_brier": 0.08974917191039829,
+      "candidate_minus_selected": 8.326672684688674e-17
+    }
+  ],
+  "inversions_by_method": {
+    "conditional_tree": 1,
+    "direct_joint": 2,
+    "historical_baseline": 0,
+    "selected_direct_low_tree_high": 1
+  },
+  "inversion_records": [
+    {
+      "flight_key": "2025-08-24|YX|5841|EWR|BOS|1535",
+      "date": "2025-08-24",
+      "method": "conditional_tree",
+      "lower_probability": 0.09148960600076761,
+      "upper_probability": 0.09177193949531104,
+      "upper_minus_lower": 0.0002823334945434297
+    },
+    {
+      "flight_key": "2025-08-21|YX|5841|EWR|BOS|1535",
+      "date": "2025-08-21",
+      "method": "direct_joint",
+      "lower_probability": 0.08893367128244621,
+      "upper_probability": 0.11567249150216992,
+      "upper_minus_lower": 0.026738820219723708
+    },
+    {
+      "flight_key": "2025-08-24|YX|5841|EWR|BOS|1535",
+      "date": "2025-08-24",
+      "method": "direct_joint",
+      "lower_probability": 0.09021133869228415,
+      "upper_probability": 0.11731631502657039,
+      "upper_minus_lower": 0.02710497633428624
+    },
+    {
+      "flight_key": "2025-08-24|YX|5841|EWR|BOS|1535",
+      "date": "2025-08-24",
+      "method": "selected_direct_low_tree_high",
+      "lower_probability": 0.09021133869228415,
+      "upper_probability": 0.09177193949531104,
+      "upper_minus_lower": 0.0015606008030268903
+    }
+  ],
+  "pooled_card_coverage": [
+    {
+      "period": "2023-2025",
+      "reference_scope": "pooled_common_support",
+      "airport": "EWR",
+      "n_planned": 9572,
+      "n_supported": 9533,
+      "n_supported_known": 9533,
+      "n_supported_completed": 9305,
+      "coverage": 0.9959256163811115,
+      "shared_cells": 12
+    },
+    {
+      "period": "2023-2025",
+      "reference_scope": "pooled_common_support",
+      "airport": "LGA",
+      "n_planned": 14451,
+      "n_supported": 6267,
+      "n_supported_known": 6267,
+      "n_supported_completed": 6136,
+      "coverage": 0.433672410213826,
+      "shared_cells": 12
+    }
+  ],
+  "events_60": [
+    {
+      "event": "MCO_Milton_EOC_Level_I_20241009_10",
+      "method": "conditional_tree",
+      "n": 789,
+      "events": 773,
+      "cancelled": 773,
+      "observed": 0.9797211660329531,
+      "predicted": 0.09406871465406506
+    },
+    {
+      "event": "MCO_Milton_EOC_Level_I_20241009_10",
+      "method": "historical_baseline",
+      "n": 789,
+      "events": 773,
+      "cancelled": 773,
+      "observed": 0.9797211660329531,
+      "predicted": 0.06016504435805981
+    },
+    {
+      "event": "MCO_Milton_EOC_Level_I_20241009_10",
+      "method": "direct_joint",
+      "n": 789,
+      "events": 773,
+      "cancelled": 773,
+      "observed": 0.9797211660329531,
+      "predicted": 0.08036398474476548
+    },
+    {
+      "event": "DL_CrowdStrike_20240719_23",
+      "method": "conditional_tree",
+      "n": 5458,
+      "events": 4168,
+      "cancelled": 2139,
+      "observed": 0.7636496885305973,
+      "predicted": 0.11771222394016288
+    },
+    {
+      "event": "DL_CrowdStrike_20240719_23",
+      "method": "historical_baseline",
+      "n": 5458,
+      "events": 4168,
+      "cancelled": 2139,
+      "observed": 0.7636496885305973,
+      "predicted": 0.1015685868812264
+    },
+    {
+      "event": "DL_CrowdStrike_20240719_23",
+      "method": "direct_joint",
+      "n": 5458,
+      "events": 4168,
+      "cancelled": 2139,
+      "observed": 0.7636496885305973,
+      "predicted": 0.1107435045060839
+    }
+  ],
+  "replay_comparison": [],
+  "source_file_sha256": {
+    "audit_by_month.csv": "53af3450fe91ced47c961e3ec490bdfb93bfcd483b83acbad0c7fec445f7b928",
+    "comparison_2023_2025/bootstrap_diagnostics.csv": "eba30e9ff0b3c46dc372acc7bd23b74739e0c0ce1be4f513cfb974cbbfb3842e",
+    "comparison_2023_2025/cell_day_exposure.csv": "ca3146c8e386d7c7322bc305a2a6bcdf299272d2c092c6d296dd4002bab32a2b",
+    "comparison_2023_2025/common_support_coverage.csv": "407964ece810c903afb9a1f71543b41e90aa93ba3a550d2892f6ce205f7edd82",
+    "comparison_2023_2025/comparison_status.json": "d6f3b86a9a0a81fb473832a66eadcd62668bc08c9c96d138fc1e6b55653931a9",
+    "comparison_2023_2025/empty_cell_frequencies.csv": "9d4e2e5e9f1efcc2269f885d148f9990ddb0a281858e9be3f3b50acdde13bde8",
+    "comparison_2023_2025/mix_decomposition.csv": "2dbbe3a8f68634c083d6f7539d47e5c256cccd8b7342aff54b87e3e45592c7f4",
+    "comparison_2023_2025/pairwise_comparisons.csv": "82aac3dc44d57d38f4c3c7df5e3bfd682e1abb6fd573a5bcde1b0f754360228f",
+    "comparison_2023_2025/rank_intervals.csv": "95b060a9f06fb855330c39f3a16d3b23d8e41c979ccad77208174276f13b806a",
+    "comparison_2023_2025/resampling_calendar_episodes.json": "93d0de19c4ec37de81f02752f31cdaacf01d8e66fba25670479c2c7568181bbf",
+    "comparison_2023_2025/standard_population_weights.csv": "fe1974cd47bea940180940cc782513467cea8623e3d7c4061cf8ce98a7a51d30",
+    "comparison_2023_2025/standardization_cells.csv": "6ee251ba6d641e8f6436b4a74cf68924927a6debb2b43ef099019b4bfa1a2b6b",
+    "data_snapshot.json": "c08d40c32f8ffc3033db0f1994c8aa6da05b52752124a163c682f60dc109c866",
+    "DELIVERY_RESULTS.md": "92e8bd2d3ded5d804c3d7fbdf610a9177abf5f52e08dad8945b1a3b14f86ce3a",
+    "delivery_status.json": "8dd7724eea56bd76a1895bf0329027fd72ca6c620707ea7e42ddc3dd2d57106f",
+    "historical_airport_scorecard.csv": "cab8326ed1fb892d7c85be57aba11605d43c16e35a2a309fb00c6bdc7b21c9c3",
+    "joint_candidate/candidate_calibration_bins.csv": "4152fa4edd7748b98f908749f93b6fa4f8d4dc243234012693f20d8932c39370",
+    "joint_candidate/candidate_comparison.csv": "ff62dea9daf083ae96b83f7cf738aa36410c3a52dd4c5d9371e0051c349787c2",
+    "joint_candidate/candidate_joint_monthly.csv": "0b8e7a114fd640fd8a7d4478e384a12c6b213b2bcfa9486523e80a60d9caea40",
+    "joint_candidate/candidate_joint_pooled.csv": "3c7ad572fb6a116af33e7e1c1f436036ead0d843f2e7ffa7191a1a2588fee8d4",
+    "joint_candidate/candidate_leaf_monthly.csv": "f91bb0c2d29c82370ff1c381969ef2620a6eda150c759235293e66ea0ea55869",
+    "joint_candidate/candidate_probability_examples.csv": "2b461fbed43b453f55d7a1093326feb7cad8f3ee0c674870e93784d447efc665",
+    "joint_candidate/candidate_risk_sets.csv": "0906709d61329c407b22c137beeff845e2dcc32f5d82cfc76471f2d620d7ca20",
+    "joint_candidate/candidate_status.json": "c67f4b66c64ddd4ae9b5420787511caa313cb6bdf1c36d47ee99d0089d1a1f47",
+    "joint_candidate/candidate_structure_monthly.csv": "8a124b520a996084a272548ca09132e8c6c888f55616d128928bfefe4a3608a1",
+    "metrics_by_year_airport.csv": "9a883def457832079cc99e2d6fb145b2a55a4f7ff951caad354fe69fa335c0c7",
+    "primary_t15/calibration/calibration_bins_v4.csv": "6fa3fc4e9ea8c2c6ceb8ca9e9994ec458581b5b946d65b1c78992893f320f120",
+    "primary_t15/calibration/calibration_pav_plateaus_v4.csv": "c969f0ca9baeed187c92bc62388198e22bdaf947b4ce3e9d7819cf8ea2c16e7d",
+    "primary_t15/calibration/calibration_status_v4.json": "254749536fb546283e836cdbbe4dd59273eed77c44f47f78c6c104f9bba7d1dc",
+    "primary_t15/calibration/calibration_summary_v4.csv": "798dbb0978c609180de408d0ded3b156b60b24bda412d01aa3ec09599680b35c",
+    "primary_t15/calibration_bins.csv": "44e6d059ab4c378876f3467792a91308ac6d58e25db84a1d56c5e3e742a25a00",
+    "primary_t15/external_event_matched.csv": "8c279e134c2d9bbbd24fe692cc2988664ef4b7126255f42f2d274c91522eb005",
+    "primary_t15/external_event_scores.csv": "c49fdbec4f49a3f0938c51e0927d995366b34832b54800dc7ffbef947fb40e97",
+    "primary_t15/external_event_status.json": "0df38cbed65d1843064b60b65907772fb24d5174ac82407549c0bbfffd95468f",
+    "primary_t15/joint_monthly_v5.csv": "305da1df40006c68210c67b2b0f2b8f3c8b28249e3736cb8f7cd802dc6b1a56c",
+    "primary_t15/joint_pooled_v5.csv": "e4715949a7c2d3e8223bc544b4b59bba7b86eff68bb5e251c4faeef8101942a8",
+    "primary_t15/paired_prediction_loss.csv": "7213995936c096923df10c6046997628edfe8efb04b11a65f00ff4fe49fa97b9",
+    "primary_t15/paired_prediction_loss_by_day.csv": "b08be1038319a8297cbbe91ff7b7d98dfe3112ae837b341b76eba70fc6d09af7",
+    "primary_t15/prediction_metrics.csv": "8377c4442db3ed5067374e1b4c3cf7c38e32f4d6579c2502ec57f56ac371f77b",
+    "primary_t15/prediction_status.json": "881548d59688f32a3d60189c2ce2b0975c7a41e1e0b92298c4831aaef9006cad",
+    "primary_t15/tail_day_diagnostics_2025.csv": "158ace953dd39332f9bef7725a4e9d1e53fdff488655f43322c59f15d3cb275b",
+    "primary_t15/tuning.csv": "ae5500b0c69edcb171b6663a0b7776b51614bc5ff9d6536fb2676a9b7c9e7d2e",
+    "primary_t60/calibration/calibration_bins_v4.csv": "6a0d1104bdadda0c7cbce1d9932fe24f764a04b36f0f826cfc4cc39b93e23110",
+    "primary_t60/calibration/calibration_pav_plateaus_v4.csv": "c109fcdd20e8deecf457407c60bc5a67f9ab8d333b457dc5b718ad68d46193ab",
+    "primary_t60/calibration/calibration_status_v4.json": "254749536fb546283e836cdbbe4dd59273eed77c44f47f78c6c104f9bba7d1dc",
+    "primary_t60/calibration/calibration_summary_v4.csv": "0aea34c9dd3854540d4eced676e15920812452122012d6391ce9928e83942996",
+    "primary_t60/calibration_bins.csv": "ab518b04d03ef9a7991b03c86d9d52a6cf123fee301cbf253605144cd5bdb04b",
+    "primary_t60/diversion_fit_sensitivity_v5.csv": "c65051a43f35fe6c02944b2173641e00fa23f6a2040e8aae63ab5088013f1151",
+    "primary_t60/external_event_matched.csv": "f5219e57d2f138685452e3fe98480292341da7327b615ad25ccc1b3baae3d004",
+    "primary_t60/external_event_scores.csv": "dce345d84d1c168c5536269470b73ad6ead7649d6b2a2e42399961c27c5ac11c",
+    "primary_t60/external_event_status.json": "0df38cbed65d1843064b60b65907772fb24d5174ac82407549c0bbfffd95468f",
+    "primary_t60/joint_monthly_v5.csv": "7ff57f53e6666965577ff8b4a687b8cc5a12bba765f2fdc703d51615c72b9d0f",
+    "primary_t60/joint_pooled_v5.csv": "dcb2422e984a4ab2c4277412e6dc32aa75935b42ceb21bd8fd679c5b589b0c83",
+    "primary_t60/paired_prediction_loss.csv": "699f8f16f2fbfc1beca3a29dc02f266545b45189f6ec07d3d3081fdd7b9580a5",
+    "primary_t60/paired_prediction_loss_by_day.csv": "29fc09c8c1f133db57b8a2010ef181163abed1c5e78bba66877933e9c450e339",
+    "primary_t60/prediction_metrics.csv": "804973769ffefb842ebf3cdf822efbea90bb27292349242c386d7eec8a4df5a8",
+    "primary_t60/prediction_status.json": "1d3f9fb3f3e22653263a8015f4cd60e032c58584125969373e13e007ad27a82a",
+    "primary_t60/tail_day_diagnostics_2025.csv": "0c5374f6a1370f24278990b59a9b0b497d4f6d20203bb3bff851d9aaaf866eb6",
+    "primary_t60/tuning.csv": "8809b218647597aeb7f55ea520409d3b8426f03e464a4ae2a6328b3b13c739d0",
+    "reporting_carrier_coverage.csv": "362d42882f8f1c9ff811c4cbe25aacc0e79d13a0604aa29dac3cd53d07fa6042",
+    "testing/TEST_REPORT.txt": "835b24075c376e8f29f1e35daca598c0ba682c3c66f3030113ab64af2c4a749d",
+    "testing/TEST_STATUS.json": "9be66ae8d5c460af127a7a489c7e1d404b4e751cae9b4549c82ff327775f0be6",
+    "threshold_coherence/paired_identity_months.csv": "0452009dedb873ed6fcceb5cbae28d1d8ada707cce7bc06cab8d98fcfed7a6a6",
+    "threshold_coherence/threshold_coherence.csv": "c270c3fbeaf907867d777e09f872b10e9a25f5378f56af667d20ea297dd81361",
+    "threshold_coherence/threshold_coherence_examples.csv": "fe9f2aab87c5766a8934891763e5965fd31c06c8e4434698543087806b5a4249",
+    "threshold_coherence/threshold_coherence_status.json": "8daace43e14e0d9dd2e62b2f37ae9767c8ca8abaeeea735996c3f67abcad2722",
+    "traveler_card/card_status.json": "f9d13a30adffe7f9580a4d5958bfb588981b747525a237a9d647998b2200f0b7",
+    "traveler_card/matched_comparisons.csv": "78392410bfaba32b79a7a502226555d2f3e5254a4bd1f86280921348837c3b8f",
+    "traveler_card/reference_weights.csv": "72eddb6a5866dc25a51ca9bb5200af242e531025b81ae099afee1bf51e30d6d6",
+    "traveler_card/route_rates.csv": "6f08c090d34f9268f2d5d5bccc05f3201460874360de07957ede7a0d11a12b28",
+    "traveler_card/support_coverage.csv": "472e673474d419b0025d00aa63841652660708f7b10c39240d8842e229ca55b6",
+    "traveler_card/TRAVELER_CARD.md": "9922905afc1280a3308785865e0bf5441b6a922cee3565f2a10ec94f352d19be",
+    "unknown_records.csv": "f6398a55273148ed916402b1e440f2943036b4f11e8172483ab2b421a4f016dd",
+    "validation_status.json": "91929ef6856fddf056d6dced708a8ce0e3d81ef5446694a35e42853d23f272a4",
+    "verification_summary.json": "0cfcd6daf72cf20af7c19f0dad6b9d60bc0e45d941d0d0aa10f18963980b61e9"
+  },
+  "environment": {
+    "python": "3.12.16",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1"
+  }
+}
