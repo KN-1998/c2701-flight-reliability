@@ -1,0 +1,22 @@
+{
+  "label": "C2701_V8_TAF_SOURCE_CORRECTION_AND_COHERENT_MODEL",
+  "base_commit": "da21fba0c243e25428be259e832fce36975b0990",
+  "protocol_written_date": "2026-11-28 Asia/Shanghai",
+  "v7_protocol_sha256": "ebc6f9318aa2c16eb056d6de231af3ff9faa5dbaf5c0b19e99a9545f16293e0b",
+  "fit_and_calibration": "Same dates, sampling, timing cutoff, thresholds and regularization as VALIDATION_V7.json. For the coherent candidate, branch-specific sampling and calibration are paired between the schedule and weather variants.",
+  "retrospective_score_months": ["2026-01", "2026-02", "2026-03", "2026-04", "2026-05", "2026-06", "2026-07", "2026-08"],
+  "retrospective_reference_months": ["2026-09"],
+  "source_policy": "Recover exact station and AWIPS/WMO product identity. Only initial and FM are prevailing. Do not import probabilistic, temporary or becoming conditions. Refit and recalibrate after feature corrections. Preserve archived v7 inputs and result files.",
+  "sensitivity_policy": "Keep text-supported archive-wide variable-wind amendments separate from exact full-bulletin corrections. Compare outcome-independent traceable field semantics. Preserve matching keys and evaluate paired identities.",
+  "comparisons": [
+    "Original binary TAF and exact-source-corrected binary TAF, paired to the same schedule-proxy comparison",
+    "Corrected matched schedule-proxy and corrected matched TAF, shared five-leaf product distributions",
+    "Text-supported variable-wind sensitivity kept separate from the exact-source result"
+  ],
+  "evaluation": "Report Brier and log loss for both cumulative thresholds. Diagnose bias, adverse group and missing matches. Verify five leaves are nonnegative, sum to one, and P60 <= P15; retain zero-inversion claims as empirical for separate binary fits only. Use date-block ranges descriptively, with unchanged v7 day boundaries.",
+  "no_retrospective_promotion": true,
+  "prospective_months": ["2026-10", "2026-11", "2026-12"],
+  "prospective_readout": "Use currently unavailable BTS Reporting Carrier On-Time Performance months after September. Score the implemented pre-specified candidates for every outcome month that becomes available, with coverage and missingness. Do not tune on these outcomes or add them to fitting. Rebuild forecasts under the same as-of cutoff with versioned TAF inputs. Report by month and pooled, keeping both thresholds, adverse-weather calibration, and the known limitations visible. Use schedule-only predictions as a paired fallback where TAF is unavailable. Promotion requires separate review of calibration, 60-minute Brier and prospective support, plus actual versioned schedule and receipt timestamps for operational use.",
+  "booking_time_prediction_authorized": false,
+  "live_2027_prediction_authorized": false
+}

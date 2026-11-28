@@ -1,0 +1,36 @@
+{
+  "status": "TARGETED_EXACT_NWS_GROUPS_REPAIRED",
+  "source": "NWS issuance bytes retrieved from the IEM NWS Text Archive via exact WMO/AWIPS/BBB IDs",
+  "source_documentation": "https://mesonet.agron.iastate.edu/nws/text.php",
+  "product_guide": "https://www.weather.gov/media/directives/010_pdfs/pd01008013curr.pdf",
+  "scope": "Every prevailing group in the products flagged by the v7 text diagnostic. Other structured records remain unchanged.",
+  "exact_products": 20,
+  "counts": {
+    "all_segments": 362285,
+    "exact_groups_checked": 49,
+    "unchanged": 22,
+    "text_or_relation_repaired": 8,
+    "v7_diagnostic_flags_rechecked": 27,
+    "feature_fields_repaired": 19
+  },
+  "changed_field_counts": {
+    "ceiling_ft_agl": 18,
+    "ceiling_status": 7,
+    "gust_kt": 1,
+    "source_forecast_text": 9,
+    "visibility_relation": 6,
+    "weather_codes": 18,
+    "wind_speed_kt": 1
+  },
+  "inputs_sha256": {
+    "taf_prevailing_normalized.csv.gz": "a39fd8434590b1c7241f325ff50bfbe82d2f5d041dd87320a7753e469608f73d",
+    "taf_text_flagged_segments.csv": "aa59be3b9d8e671620dd932f8a1008b9193d531b4c148e7b4957d1e5014f51b6",
+    "original_products/manifest.json": "b5fb5e96bc9ab462ed8f4f6bea22e12e1cf9fbce7a7257e59e2df73f84f2e665"
+  },
+  "outputs_sha256": {
+    "taf_prevailing_corrected.csv.gz": "29e0d72c5bb9a4d0d9ee2596c29a11823846ab3f9135f9017bcb661bdc95d853",
+    "exact_product_adjudication.csv": "a055504799cf7dd7479a823556dc5021bf074694718c45546b16e3cb0c2b7c7e"
+  },
+  "source_text_note": "The archived group text is repaired only after the exact raw bulletin is matched.",
+  "timing": "The v7 product inventory, segment keys, timing, fit scope, and matching rules are reused."
+}

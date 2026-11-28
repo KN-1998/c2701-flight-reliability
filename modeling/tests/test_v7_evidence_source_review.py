@@ -11,6 +11,7 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'src'))
 from audit_taf_text_v7 import raw_text_flags
 from review_v7_evidence import inspect_evidence
+from run_study_v7 import pooled
 
 
 class V7EvidenceSourceReviewTests(unittest.TestCase):
@@ -24,6 +25,68 @@ class V7EvidenceSourceReviewTests(unittest.TestCase):
             file=dest/'weather/taf_monthly.csv';frame=pd.read_csv(file)
             frame.loc[0,'identity_sha256']='0'*64;frame.to_csv(file,index=False)
             with self.assertRaisesRegex(ValueError,'identity'):
+                inspect_evidence(dest)
+
+    def test_rejects_consistently_relabelled_previously_reviewed_month(self):
+        with TemporaryDirectory() as tmp:
+            dest=Path(tmp)/'evidence'
+            shutil.copytree(ROOT/'results/v7_20261128',dest)
+            for folder,prefix in [('followup','followup'),('weather','taf')]:
+                base=dest/folder
+                for table in ('monthly','calibration'):
+                    file=base/f'{prefix}_{table}.csv'
+                    frame=pd.read_csv(file)
+                    frame.loc[frame.period.eq('2026-09'),'scope']='frozen_followup'
+                    frame.to_csv(file,index=False)
+                    if table=='monthly':
+                        pooled(frame).to_csv(base/f'{prefix}_pooled.csv',index=False)
+            file=dest/'weather/taf_stress_monthly.csv'
+            stress=pd.read_csv(file)
+            stress.loc[stress.period.eq('2026-09'),'scope']='frozen_followup'
+            stress.to_csv(file,index=False)
+            pooled(stress,extras=('group',)).to_csv(dest/'weather/taf_stress_pooled.csv',index=False)
+            with self.assertRaisesRegex(ValueError,'scope differs from frozen protocol'):
+                inspect_evidence(dest)
+
+    def test_rejects_missing_or_unexpected_score_month(self):
+        for replacement in (None,'2026-10'):
+            with self.subTest(replacement=replacement),TemporaryDirectory() as tmp:
+                dest=Path(tmp)/'evidence'
+                shutil.copytree(ROOT/'results/v7_20261128',dest)
+                file=dest/'followup/followup_monthly.csv'
+                frame=pd.read_csv(file)
+                inspected=frame.period.eq('2026-09')
+                if replacement is None:
+                    frame=frame.loc[~inspected]
+                else:
+                    frame.loc[inspected,'period']=replacement
+                frame.to_csv(file,index=False)
+                with self.assertRaisesRegex(ValueError,'month inventory differs from frozen protocol'):
+                    inspect_evidence(dest)
+
+    def test_rejects_invalid_decile_bounds_or_mean_with_unchanged_aggregation(self):
+        for bounds,error in [((2.,3.),'Invalid calibration decile bounds'),
+                             ((.9,1.),'Mean prediction lies outside its calibration decile')]:
+            with self.subTest(bounds=bounds),TemporaryDirectory() as tmp:
+                dest=Path(tmp)/'evidence'
+                shutil.copytree(ROOT/'results/v7_20261128',dest)
+                file=dest/'weather/taf_calibration.csv'
+                frame=pd.read_csv(file)
+                frame.loc[0,['lower','upper']]=bounds
+                frame.to_csv(file,index=False)
+                with self.assertRaisesRegex(ValueError,error):
+                    inspect_evidence(dest)
+
+    def test_rejects_fractional_calibration_counts(self):
+        with TemporaryDirectory() as tmp:
+            dest=Path(tmp)/'evidence'
+            shutil.copytree(ROOT/'results/v7_20261128',dest)
+            file=dest/'weather/taf_calibration.csv'
+            frame=pd.read_csv(file)
+            frame['n']=frame.n.astype(float)
+            frame.loc[0,'n']+=.5
+            frame.to_csv(file,index=False)
+            with self.assertRaisesRegex(ValueError,'Invalid calibration count'):
                 inspect_evidence(dest)
 
     def test_rejects_corrupted_pooled_daily_or_stress_evidence(self):

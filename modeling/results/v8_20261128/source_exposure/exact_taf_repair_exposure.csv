@@ -1,0 +1,13 @@
+role,period,matched,model_field_repair_matches,text_or_relation_only_matches
+fit_pool,all,2415385,524,0
+fit_sample,all,50000,9,0
+calibration,all,510895,362,0
+historical_score,2026-01,157266,0,32
+historical_score,2026-02,148218,0,0
+historical_score,2026-03,174857,0,0
+historical_score,2026-04,173065,0,0
+historical_score,2026-05,178916,0,0
+historical_score,2026-06,177644,0,0
+historical_score,2026-07,184288,0,0
+historical_score,2026-08,179303,0,0
+historical_score,2026-09,170657,0,0

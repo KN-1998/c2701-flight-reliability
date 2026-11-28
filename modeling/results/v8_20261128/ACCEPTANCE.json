@@ -1,0 +1,82 @@
+{
+  "status": "historical_replay_passed_prospective_outcomes_pending",
+  "base_commit": "da21fba0c243e25428be259e832fce36975b0990",
+  "matched_historical_jan_aug": 1373557,
+  "known_outcome_historical_jan_aug": 1407837,
+  "exact_bulletins": 48,
+  "exact_groups_reviewed": 186,
+  "structured_corrections": 58,
+  "segments_with_actual_model_input_changes": 51,
+  "vrb_sensitivity_segments": 23134,
+  "tests": 126,
+  "matlab_figures": 9,
+  "matlab_v8_appended_figures": 1,
+  "october_taf_station_qc": 10,
+  "latest_published_bts_outcomes": "2026-09",
+  "new_unseen_outcomes_scored": false,
+  "operational_prediction_authorized": false,
+  "coherent_weather": {
+    "joint": {
+      "matched_brier": {
+        "15": 0.1863497906901251,
+        "60": 0.1000528616067098
+      },
+      "matched_taf_minus_schedule": {
+        "15": -0.00538722025481389,
+        "60": -0.003033770691136195
+      },
+      "fallback_taf_minus_schedule": {
+        "15": -0.005256044621317207,
+        "60": -0.002959900165434598
+      },
+      "adverse_60": {
+        "n": 84960,
+        "observed": 0.2821798493408663,
+        "predicted": 0.2035241402424946
+      },
+      "threshold_violations": 0,
+      "max_leaf_sum_error": 4.440892098500626e-16
+    },
+    "extended_exact_joint": {
+      "matched_brier": {
+        "15": 0.1863504437595158,
+        "60": 0.1000547976744464
+      },
+      "matched_taf_minus_schedule": {
+        "15": -0.005386567185423213,
+        "60": -0.003031834623399593
+      },
+      "fallback_taf_minus_schedule": {
+        "15": -0.005255407453780808,
+        "60": -0.0029580112398047004
+      },
+      "adverse_60": {
+        "n": 84960,
+        "observed": 0.2821798493408663,
+        "predicted": 0.2034538183128184
+      },
+      "threshold_violations": 0,
+      "max_leaf_sum_error": 4.440892098500626e-16
+    }
+  },
+  "matched_binary_brier": {
+    "original": {
+      "15": 0.1872748174107567,
+      "60": 0.1004290867941337
+    },
+    "corrected_binary": {
+      "15": 0.1872716869542212,
+      "60": 0.100428246208869
+    },
+    "vrb_sensitivity": {
+      "15": 0.1872822690293753,
+      "60": 0.1003985572727072
+    },
+    "extended_exact_binary": {
+      "15": 0.1872697222028692,
+      "60": 0.1004279575594078
+    }
+  },
+  "release_check": "bts_2026_10_release_check.json",
+  "completed_utc": "2026-11-28T13:06:35.958205+00:00"
+}

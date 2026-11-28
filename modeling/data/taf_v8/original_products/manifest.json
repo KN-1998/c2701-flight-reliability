@@ -1,0 +1,182 @@
+[
+  {
+    "product_id": "202304230256-KLOT-FTUS43-TAFORD-AAA",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202304230256-KLOT-FTUS43-TAFORD-AAA",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "retrieved_at": "2026-11-28T12:31:04.903851+00:00",
+    "bytes": 132,
+    "sha256": "23054d77bf4a35b5943ad5746636fef7dd701dc36c51be9ca5c8584e8057ef2c"
+  },
+  {
+    "product_id": "202304230520-KLOT-FTUS43-TAFORD",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202304230520-KLOT-FTUS43-TAFORD",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "retrieved_at": "2026-11-28T12:31:04.905177+00:00",
+    "bytes": 158,
+    "sha256": "12c2c0005b6d03cb9f283f1156e23ed9eae913e86074b84116ae73cc3ce84f34"
+  },
+  {
+    "product_id": "202304230858-KLOT-FTUS43-TAFORD-AAA",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202304230858-KLOT-FTUS43-TAFORD-AAA",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "retrieved_at": "2026-11-28T12:31:04.904394+00:00",
+    "bytes": 166,
+    "sha256": "d5732c2ba0445b96ebd7b441701e4b208afa108f356786d18bee32f57d27d939"
+  },
+  {
+    "product_id": "202305052320-KLOT-FTUS43-TAFORD",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202305052320-KLOT-FTUS43-TAFORD",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "retrieved_at": "2026-11-28T12:31:04.876319+00:00",
+    "bytes": 193,
+    "sha256": "a627116ba88a1f7782429e276cfdc88f0df0194b88bab0ad1a5b7976a039f4ec"
+  },
+  {
+    "product_id": "202307220302-KLOT-FTUS43-TAFORD-AAA",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202307220302-KLOT-FTUS43-TAFORD-AAA",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "retrieved_at": "2026-11-28T12:31:07.445898+00:00",
+    "bytes": 181,
+    "sha256": "cc5ffaf9a233182c1d406b68a77d62b1b4148436848d1a11563d36d1827367cc"
+  },
+  {
+    "product_id": "202309232320-KLOT-FTUS43-TAFORD",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202309232320-KLOT-FTUS43-TAFORD",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "retrieved_at": "2026-11-28T12:31:07.027277+00:00",
+    "bytes": 122,
+    "sha256": "d5d4ab744ce57b758718db868f8592275ed178232848e9fe3c15a403dfefd8f3"
+  },
+  {
+    "product_id": "202309240247-KLOT-FTUS43-TAFORD-AAA",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202309240247-KLOT-FTUS43-TAFORD-AAA",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "retrieved_at": "2026-11-28T12:31:07.062279+00:00",
+    "bytes": 130,
+    "sha256": "056d66bed97fbc88e4f88909e2f9095036b5aebd36b1c8b44d77e588190d9786"
+  },
+  {
+    "product_id": "202309240900-KLOT-FTUS43-TAFORD-AAA",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202309240900-KLOT-FTUS43-TAFORD-AAA",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "retrieved_at": "2026-11-28T12:31:06.675230+00:00",
+    "bytes": 171,
+    "sha256": "c6f2a935940f7eb3c4fb8a75bdd8e678bc826edc1958374ccbee7c45ec5452d7"
+  },
+  {
+    "product_id": "202403162338-KLOT-FTUS43-TAFORD",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202403162338-KLOT-FTUS43-TAFORD",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "retrieved_at": "2026-11-28T12:31:08.306450+00:00",
+    "bytes": 125,
+    "sha256": "5b602245dbe586cd3becec4398ff96d2bb6d1c7b5682f8d22c49a12da76cd563"
+  },
+  {
+    "product_id": "202403170252-KLOT-FTUS43-TAFORD-AAA",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202403170252-KLOT-FTUS43-TAFORD-AAA",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "retrieved_at": "2026-11-28T12:31:08.686260+00:00",
+    "bytes": 133,
+    "sha256": "41762eb0c5c77682b5fc19117f0b514381d63ffed2291140d8b55eae6e25ae6c"
+  },
+  {
+    "product_id": "202403170520-KLOT-FTUS43-TAFORD",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202403170520-KLOT-FTUS43-TAFORD",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "retrieved_at": "2026-11-28T12:31:08.721014+00:00",
+    "bytes": 125,
+    "sha256": "e7aba0c0b228874441be35f19a1fa4499952c607ca7c90189bd2a7bbc189c68c"
+  },
+  {
+    "product_id": "202403212101-KLOT-FTUS43-TAFORD-AAA",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202403212101-KLOT-FTUS43-TAFORD-AAA",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "retrieved_at": "2026-11-28T12:31:09.078479+00:00",
+    "bytes": 224,
+    "sha256": "b769cba5b8d92c5485cef8adfd398fc4523469b46ea9967c58cf6f2f86d5ba95"
+  },
+  {
+    "product_id": "202405050237-KOKX-FTUS41-TAFEWR-AAA",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202405050237-KOKX-FTUS41-TAFEWR-AAA",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "retrieved_at": "2026-11-28T12:31:09.913244+00:00",
+    "bytes": 292,
+    "sha256": "0dc576ccfe87e28dba19ec84b00d1dbb856409331c430f4e701f214be9bd8c72"
+  },
+  {
+    "product_id": "202406121720-KLOT-FTUS43-TAFORD",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202406121720-KLOT-FTUS43-TAFORD",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "retrieved_at": "2026-11-28T12:31:10.451653+00:00",
+    "bytes": 260,
+    "sha256": "92d0b473c8124f22f3ed3b7ef0cdd15e548a6686b64d86c65251b2c58ec88d59"
+  },
+  {
+    "product_id": "202406122117-KLOT-FTUS43-TAFORD-AAA",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202406122117-KLOT-FTUS43-TAFORD-AAA",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "retrieved_at": "2026-11-28T12:31:10.451153+00:00",
+    "bytes": 268,
+    "sha256": "83af6181c8b11209ed3649347740324ecee5246a9fbb264df3261ea477fb8907"
+  },
+  {
+    "product_id": "202406182320-KLOT-FTUS43-TAFORD",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202406182320-KLOT-FTUS43-TAFORD",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "retrieved_at": "2026-11-28T12:31:10.711600+00:00",
+    "bytes": 206,
+    "sha256": "2aae80f5614d4c5c528a44762d2d179215517910467643e02f539e88afbc10cb"
+  },
+  {
+    "product_id": "202406190232-KLOT-FTUS43-TAFORD-AAA",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202406190232-KLOT-FTUS43-TAFORD-AAA",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "retrieved_at": "2026-11-28T12:31:13.042891+00:00",
+    "bytes": 214,
+    "sha256": "3bb478147ac82542c318a7defdd8bbaf9910e428d5fe15c441ddfc99d08fd82e"
+  },
+  {
+    "product_id": "202406190330-KLOT-FTUS43-TAFORD-AAB",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202406190330-KLOT-FTUS43-TAFORD-AAB",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "retrieved_at": "2026-11-28T12:31:13.435755+00:00",
+    "bytes": 214,
+    "sha256": "aa5194a950bdab9addcfaa44ef11bfe32461626aa28579e370193ef5a0ea2f4f"
+  },
+  {
+    "product_id": "202601071258-KFFC-FTUS42-TAFATL-AAA",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202601071258-KFFC-FTUS42-TAFATL-AAA",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "retrieved_at": "2026-11-28T12:31:13.824041+00:00",
+    "bytes": 270,
+    "sha256": "26d8015e65489ec208af7d0f504629270e4071cbe26b66e16e3b8f9afc73b37c"
+  },
+  {
+    "product_id": "202601081444-KLOT-FTUS43-TAFORD-AAA",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202601081444-KLOT-FTUS43-TAFORD-AAA",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "retrieved_at": "2026-11-28T12:31:13.426680+00:00",
+    "bytes": 397,
+    "sha256": "2a63201d930c32d9b7bbde23555d5f2f763a5f9a92f925d72b0e2df9459d1160"
+  }
+]

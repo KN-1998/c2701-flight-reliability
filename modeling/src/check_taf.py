@@ -9,6 +9,7 @@ from download_taf import STATIONS
 
 parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('out',type=Path)
+parser.add_argument('--expected-months',nargs='+',help='UTC issuance months that must be covered at every station')
 args=parser.parse_args()
 out=args.out
 manifest=json.loads((out/'taf_normalization_manifest.json').read_text(encoding='utf-8'))
@@ -54,7 +55,9 @@ period = products.issued_utc.dt.strftime('%Y-%m')
 coverage=(products.assign(period=period,usable=products.product_status.eq('usable'))
           .groupby(['station','period']).agg(products=('product_id','size'),usable_products=('usable','sum'))
           .reset_index())
-expected={str(p) for a,b in [('2023-01','2024-06'),('2026-01','2026-09')] for p in pd.period_range(a,b,freq="M")}
+expected=set(args.expected_months) if args.expected_months else {
+    str(p) for a,b in [('2023-01','2024-06'),('2026-01','2026-09')] for p in pd.period_range(a,b,freq="M")
+}
 needed=coverage[coverage.period.isin(expected)]
 assert needed.groupby('station').period.nunique().eq(len(expected)).all()
 assert len(needed)==len(STATIONS)*len(expected) and needed.usable_products.gt(0).all()

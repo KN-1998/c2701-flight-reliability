@@ -1,0 +1,184 @@
+{
+  "scope": "Matched BTS flights from segments with changed v7 model numeric/ceiling-state fields or changed TS/FZRA indicator. Counts exclude changes confined to text or unmodeled weather codes.",
+  "fit_sample": "Exact seeded positions on unchanged v7 matched pool with previous monthly counts checked on affected months.",
+  "totals": {
+    "primary_exact": {
+      "changed_model_input_segments": 19,
+      "fit": 524,
+      "sampled_fit": 9,
+      "calibration": 362,
+      "frozen_followup": 0,
+      "previously_reviewed": 0
+    },
+    "additional_exact": {
+      "changed_model_input_segments": 32,
+      "fit": 265,
+      "sampled_fit": 10,
+      "calibration": 0,
+      "frozen_followup": 1,
+      "previously_reviewed": 0
+    }
+  },
+  "months": [
+    {
+      "scenario": "primary_exact",
+      "stage": "fit",
+      "period": "2023-01",
+      "known_matched": 151479,
+      "changed_model_input_matched": 0,
+      "sampled_fit_hits": 0
+    },
+    {
+      "scenario": "additional_exact",
+      "stage": "fit",
+      "period": "2023-01",
+      "known_matched": 151479,
+      "changed_model_input_matched": 265,
+      "sampled_fit_hits": 10
+    },
+    {
+      "scenario": "primary_exact",
+      "stage": "fit",
+      "period": "2023-04",
+      "known_matched": 159266,
+      "changed_model_input_matched": 142,
+      "sampled_fit_hits": 2
+    },
+    {
+      "scenario": "additional_exact",
+      "stage": "fit",
+      "period": "2023-04",
+      "known_matched": 159266,
+      "changed_model_input_matched": 0,
+      "sampled_fit_hits": 0
+    },
+    {
+      "scenario": "primary_exact",
+      "stage": "fit",
+      "period": "2023-05",
+      "known_matched": 166083,
+      "changed_model_input_matched": 30,
+      "sampled_fit_hits": 0
+    },
+    {
+      "scenario": "additional_exact",
+      "stage": "fit",
+      "period": "2023-05",
+      "known_matched": 166083,
+      "changed_model_input_matched": 0,
+      "sampled_fit_hits": 0
+    },
+    {
+      "scenario": "primary_exact",
+      "stage": "fit",
+      "period": "2023-07",
+      "known_matched": 172088,
+      "changed_model_input_matched": 1,
+      "sampled_fit_hits": 0
+    },
+    {
+      "scenario": "additional_exact",
+      "stage": "fit",
+      "period": "2023-07",
+      "known_matched": 172088,
+      "changed_model_input_matched": 0,
+      "sampled_fit_hits": 0
+    },
+    {
+      "scenario": "primary_exact",
+      "stage": "fit",
+      "period": "2023-09",
+      "known_matched": 164544,
+      "changed_model_input_matched": 170,
+      "sampled_fit_hits": 4
+    },
+    {
+      "scenario": "additional_exact",
+      "stage": "fit",
+      "period": "2023-09",
+      "known_matched": 164544,
+      "changed_model_input_matched": 0,
+      "sampled_fit_hits": 0
+    },
+    {
+      "scenario": "primary_exact",
+      "stage": "fit",
+      "period": "2024-03",
+      "known_matched": 165597,
+      "changed_model_input_matched": 181,
+      "sampled_fit_hits": 3
+    },
+    {
+      "scenario": "additional_exact",
+      "stage": "fit",
+      "period": "2024-03",
+      "known_matched": 165597,
+      "changed_model_input_matched": 0,
+      "sampled_fit_hits": 0
+    },
+    {
+      "scenario": "primary_exact",
+      "stage": "calibration",
+      "period": "2024-05",
+      "known_matched": 173668,
+      "changed_model_input_matched": 0,
+      "sampled_fit_hits": null
+    },
+    {
+      "scenario": "additional_exact",
+      "stage": "calibration",
+      "period": "2024-05",
+      "known_matched": 173668,
+      "changed_model_input_matched": 0,
+      "sampled_fit_hits": null
+    },
+    {
+      "scenario": "primary_exact",
+      "stage": "calibration",
+      "period": "2024-06",
+      "known_matched": 172909,
+      "changed_model_input_matched": 362,
+      "sampled_fit_hits": null
+    },
+    {
+      "scenario": "additional_exact",
+      "stage": "calibration",
+      "period": "2024-06",
+      "known_matched": 172909,
+      "changed_model_input_matched": 0,
+      "sampled_fit_hits": null
+    },
+    {
+      "scenario": "primary_exact",
+      "stage": "frozen_followup",
+      "period": "2026-01",
+      "known_matched": 157266,
+      "changed_model_input_matched": 0,
+      "sampled_fit_hits": null
+    },
+    {
+      "scenario": "additional_exact",
+      "stage": "frozen_followup",
+      "period": "2026-01",
+      "known_matched": 157266,
+      "changed_model_input_matched": 1,
+      "sampled_fit_hits": null
+    },
+    {
+      "scenario": "primary_exact",
+      "stage": "frozen_followup",
+      "period": "2026-03",
+      "known_matched": 174857,
+      "changed_model_input_matched": 0,
+      "sampled_fit_hits": null
+    },
+    {
+      "scenario": "additional_exact",
+      "stage": "frozen_followup",
+      "period": "2026-03",
+      "known_matched": 174857,
+      "changed_model_input_matched": 0,
+      "sampled_fit_hits": null
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+[
+  {
+    "product_id": "202301032323-KOKX-FTUS41-TAFLGA",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202301032323-KOKX-FTUS41-TAFLGA",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 362,
+    "retrieved_at_utc": "2026-11-28T13:00:47.827441+00:00",
+    "sha256": "97a19f4f3982af1f6b70c8495c11732f6bb4a71767e15ffef45e2403493867ed"
+  },
+  {
+    "product_id": "202301251130-KMTR-FTUS46-TAFSFO",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202301251130-KMTR-FTUS46-TAFSFO",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 197,
+    "retrieved_at_utc": "2026-11-28T13:00:47.128399+00:00",
+    "sha256": "95f4f0e97d98b4d51926ff65b19bb0a9c7a1e554d7228f38b2750e3b2bb44c8c"
+  },
+  {
+    "product_id": "202301251501-KMTR-FTUS46-TAFSFO-AAA",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202301251501-KMTR-FTUS46-TAFSFO-AAA",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 205,
+    "retrieved_at_utc": "2026-11-28T13:00:45.903195+00:00",
+    "sha256": "b82813c7a39f00bd0aacdbcc45068608c0f01e33a552eaa1ec61faf88d0eb958"
+  },
+  {
+    "product_id": "202301251720-KMTR-FTUS46-TAFSFO",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202301251720-KMTR-FTUS46-TAFSFO",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 228,
+    "retrieved_at_utc": "2026-11-28T13:00:45.552837+00:00",
+    "sha256": "89eb00943bd4d0ee2e9718a9fe98ddd27264e1f8a84bc51b22174d04589d9cc8"
+  },
+  {
+    "product_id": "202301252101-KMTR-FTUS46-TAFSFO-AAA",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202301252101-KMTR-FTUS46-TAFSFO-AAA",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 236,
+    "retrieved_at_utc": "2026-11-28T13:00:47.015958+00:00",
+    "sha256": "44563b083759b754a7c1075fb3a4d4c45bc2a51ea95042d902df26ba8e4b6d22"
+  },
+  {
+    "product_id": "202301252337-KMTR-FTUS46-TAFSFO",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202301252337-KMTR-FTUS46-TAFSFO",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 197,
+    "retrieved_at_utc": "2026-11-28T13:00:45.542598+00:00",
+    "sha256": "cdf4e71dc976ea4eb516fe1708d1fe509b298c59056e31042f47dbb1f85e5cd5"
+  },
+  {
+    "product_id": "202301260256-KMTR-FTUS46-TAFSFO-AAA",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202301260256-KMTR-FTUS46-TAFSFO-AAA",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 174,
+    "retrieved_at_utc": "2026-11-28T13:00:47.385593+00:00",
+    "sha256": "a6e347e3599384938265544c5c93f5fbac6ce0f1d5da0895fd4ef16a98c743c2"
+  },
+  {
+    "product_id": "202301260520-KMTR-FTUS46-TAFSFO",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202301260520-KMTR-FTUS46-TAFSFO",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 183,
+    "retrieved_at_utc": "2026-11-28T13:00:47.358920+00:00",
+    "sha256": "9f30a670a621bf3a57748140ceeb38518effd2fc80d32bd57ae6d66dadeeeb41"
+  },
+  {
+    "product_id": "202304052340-KOKX-FTUS41-TAFEWR",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202304052340-KOKX-FTUS41-TAFEWR",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 355,
+    "retrieved_at_utc": "2026-11-28T13:00:47.928478+00:00",
+    "sha256": "dcf264f252f61029b39c0f5eb97afb110045bee5437f642b8318414986a7ab20"
+  },
+  {
+    "product_id": "202304052340-KOKX-FTUS41-TAFLGA",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202304052340-KOKX-FTUS41-TAFLGA",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 384,
+    "retrieved_at_utc": "2026-11-28T13:00:48.723134+00:00",
+    "sha256": "2c49c883b630ebd5438f60a0d1ee4cf978e8b89083dd7bbb350a1158d0eaba1c"
+  },
+  {
+    "product_id": "202304060240-KOKX-FTUS41-TAFEWR-AAA",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202304060240-KOKX-FTUS41-TAFEWR-AAA",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 363,
+    "retrieved_at_utc": "2026-11-28T13:00:50.296454+00:00",
+    "sha256": "9fe1a78085584af6db9bf87c4ae2bf24e7383442a7c6aaea9cf894facecdd3ab"
+  },
+  {
+    "product_id": "202304060240-KOKX-FTUS41-TAFLGA-AAA",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202304060240-KOKX-FTUS41-TAFLGA-AAA",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 392,
+    "retrieved_at_utc": "2026-11-28T13:00:49.453040+00:00",
+    "sha256": "35f62a91871720d4811048268b5ffcbd5402b80a50e5db47f0a22b70bdfc7362"
+  },
+  {
+    "product_id": "202304060520-KOKX-FTUS41-TAFEWR",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202304060520-KOKX-FTUS41-TAFEWR",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 433,
+    "retrieved_at_utc": "2026-11-28T13:00:51.428290+00:00",
+    "sha256": "772ed61cfc800dbba5c6812038fbd4d1854f123603fcdb05d0a80a45561b8cf5"
+  },
+  {
+    "product_id": "202304060520-KOKX-FTUS41-TAFLGA",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202304060520-KOKX-FTUS41-TAFLGA",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 426,
+    "retrieved_at_utc": "2026-11-28T13:00:49.831923+00:00",
+    "sha256": "b9132f18d953960e10f7c54e23a33a2bb81548fa76f2d94b6b71c62377f13116"
+  },
+  {
+    "product_id": "202304230156-KOKX-FTUS41-TAFLGA-AAA",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202304230156-KOKX-FTUS41-TAFLGA-AAA",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 390,
+    "retrieved_at_utc": "2026-11-28T13:00:49.452617+00:00",
+    "sha256": "860a9107d4ee1f73e60d1d38effe0442b201bdb03ac72da3745c9bbe4e5217cb"
+  },
+  {
+    "product_id": "202306180200-KMLB-FTUS42-TAFMCO-AAB",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202306180200-KMLB-FTUS42-TAFMCO-AAB",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 262,
+    "retrieved_at_utc": "2026-11-28T13:00:51.894735+00:00",
+    "sha256": "4f423785ec50cc5fa5f88c5ad7354cc6d83d1f58a2d8d329bfe157afaef806ca"
+  },
+  {
+    "product_id": "202306180255-KMLB-FTUS42-TAFMCO-AAC",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202306180255-KMLB-FTUS42-TAFMCO-AAC",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 341,
+    "retrieved_at_utc": "2026-11-28T13:00:51.864352+00:00",
+    "sha256": "192e680f7f3c60036b32bd36a01b11d5c625a58a901613a0aacfc5552e3007ed"
+  },
+  {
+    "product_id": "202403150540-KOKX-FTUS41-TAFEWR",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202403150540-KOKX-FTUS41-TAFEWR",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 360,
+    "retrieved_at_utc": "2026-11-28T13:00:51.867409+00:00",
+    "sha256": "08b457180c04df9715de6d31fab719b15a16faa7544ed2b4d50897021531ea31"
+  },
+  {
+    "product_id": "202403150540-KOKX-FTUS41-TAFLGA",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202403150540-KOKX-FTUS41-TAFLGA",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 353,
+    "retrieved_at_utc": "2026-11-28T13:00:52.113907+00:00",
+    "sha256": "ed04f73aa017a66a6d1e37fcf3bcd6610605ae142d2749d2e519a133adc88c8f"
+  },
+  {
+    "product_id": "202403150839-KOKX-FTUS41-TAFLGA-AAA",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202403150839-KOKX-FTUS41-TAFLGA-AAA",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 385,
+    "retrieved_at_utc": "2026-11-28T13:00:52.113471+00:00",
+    "sha256": "c3df2bc012b43bbdff686b46e368479c42789934067f7618db2f201b23a42f72"
+  },
+  {
+    "product_id": "202403172320-KLOT-FTUS43-TAFORD",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202403172320-KLOT-FTUS43-TAFORD",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 115,
+    "retrieved_at_utc": "2026-11-28T13:00:55.177492+00:00",
+    "sha256": "ab357ff547fa28e399b8540c1a2334bd4ffe18f0027b900e06e2889d892c4f36"
+  },
+  {
+    "product_id": "202403180520-KLOT-FTUS43-TAFORD",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202403180520-KLOT-FTUS43-TAFORD",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 189,
+    "retrieved_at_utc": "2026-11-28T13:00:53.897955+00:00",
+    "sha256": "2a93ef4835684932edc285a6484f801931b229b6a6f0d3d1d567d638fe68626b"
+  },
+  {
+    "product_id": "202404150701-KSEW-FTUS46-TAFSEA-AAC",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202404150701-KSEW-FTUS46-TAFSEA-AAC",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 259,
+    "retrieved_at_utc": "2026-11-28T13:00:53.534383+00:00",
+    "sha256": "96038d90361ee5ec309f0b10b1e8a2a7bc5d399a87229b629edd643d547bfe68"
+  },
+  {
+    "product_id": "202601051730-KFWD-FTUS44-TAFDFW",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202601051730-KFWD-FTUS44-TAFDFW",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 154,
+    "retrieved_at_utc": "2026-11-28T13:00:53.487659+00:00",
+    "sha256": "5151bcd7cdb5d1295ab565af7d41c75ce674049487a5d748b380fe798e466f1b"
+  },
+  {
+    "product_id": "202601141359-PHFO-FTPA31-TAFHNL-AAA",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202601141359-PHFO-FTPA31-TAFHNL-AAA",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 235,
+    "retrieved_at_utc": "2026-11-28T13:00:57.028473+00:00",
+    "sha256": "432950476a4e1dcf7eeb67dda0eeab92e466b78fd3e543d65bc5d93ea1c4cd1d"
+  },
+  {
+    "product_id": "202601141437-PHFO-FTPA31-TAFHNL-AAB",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202601141437-PHFO-FTPA31-TAFHNL-AAB",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 235,
+    "retrieved_at_utc": "2026-11-28T13:00:53.741668+00:00",
+    "sha256": "2d43f06f90be4fa55bf7a34b5d2839954fa3f513ad2009f13e79f6370ac0e26d"
+  },
+  {
+    "product_id": "202603120535-KOKX-FTUS41-TAFEWR",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202603120535-KOKX-FTUS41-TAFEWR",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 363,
+    "retrieved_at_utc": "2026-11-28T13:00:55.224718+00:00",
+    "sha256": "67063884116e41c51f3d6b75ee9004342a8b7d0429d14fa62d913b52914f4d9f"
+  },
+  {
+    "product_id": "202603120535-KOKX-FTUS41-TAFLGA",
+    "url": "https://mesonet.agron.iastate.edu/api/1/nwstext/202603120535-KOKX-FTUS41-TAFLGA",
+    "status": 200,
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 395,
+    "retrieved_at_utc": "2026-11-28T13:00:55.168969+00:00",
+    "sha256": "32a0fb247d19ef58a9b2100ca49cedf3272019d4c12de6c6208f2f8e32c1d52f"
+  }
+]

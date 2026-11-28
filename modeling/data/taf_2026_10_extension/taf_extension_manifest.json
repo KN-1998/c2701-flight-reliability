@@ -1,0 +1,19 @@
+{
+  "cutover_utc": "2026-10-02T00:00:00+00:00",
+  "old_products_retained": 80587,
+  "extension_products_added": 3025,
+  "prevailing_segments": 374465,
+  "older_archive_sha256": {
+    "taf_products_normalized.csv.gz": "45e620772a766be477ad4c019f2e4320f42e06c8e50c396c0a82572d40db3b57",
+    "taf_prevailing_normalized.csv.gz": "f0b735f76de5dcd677f2b22e707cd2f76ce5dbf0b9f154a7d453c88c2214992b"
+  },
+  "extension_sha256": {
+    "taf_products_normalized.csv.gz": "24fe8691015a709733a5ff617c999cc4d44525081113dec721a4ab1c6b42d56f",
+    "taf_prevailing_normalized.csv.gz": "de36c9e3b09f65d23fc06dc3b0ab6f2b257f3188b101d030950967d6b248be0f"
+  },
+  "combined_sha256": {
+    "taf_products_normalized.csv.gz": "8d1ca5a5b9c844a1abac605da950938938654f0d5b32ba15ceea831999e43d39",
+    "taf_prevailing_normalized.csv.gz": "837ed6a6408d66568bff9d448eb408b9d608b03a39537db35c15426c6a3ebdfe"
+  },
+  "note": "Archive assembled before official BTS outcomes were available; cadence, station coverage and timing do not certify full original-text semantics."
+}

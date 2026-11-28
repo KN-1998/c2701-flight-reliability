@@ -1,0 +1,7 @@
+{
+  "protocol_sha256": "7837acd76d48a457b9277af899af201805d4030d79116760268ba9dc5e972519",
+  "corrected_archive_sha256": "29e0d72c5bb9a4d0d9ee2596c29a11823846ab3f9135f9017bcb661bdc95d853",
+  "segment_decisions_sha256": "a055504799cf7dd7479a823556dc5021bf074694718c45546b16e3cb0c2b7c7e",
+  "fit_sample_identity_sha256": "e02002c0d5befe848ac017585133de0c20faa738026dc1050b2459f05674adf8",
+  "status": "VERIFIED_SOURCE_REPAIR_EXPOSURE"
+}

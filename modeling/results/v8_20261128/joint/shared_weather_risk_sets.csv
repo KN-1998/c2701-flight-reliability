@@ -1,0 +1,9 @@
+branch,training_available,training_available_events,training_n,training_events,fit_warnings,calibration_n,calibration_events,calibration_applied,method
+cancel,2415385,35838,50000,758,[],510895,6587,True,shared_schedule
+divert_given_not_cancel,2379547,5975,50000,136,[],504308,1468,True,shared_schedule
+delay60_given_completed,2373572,174301,50000,3760,[],502840,48155,True,shared_schedule
+delay15_given_completed_and_below60,2199271,348828,50000,7905,[],454685,80986,True,shared_schedule
+cancel,2415385,35838,50000,758,[],510895,6587,True,shared_schedule_plus_origin_taf
+divert_given_not_cancel,2379547,5975,50000,136,[],504308,1468,True,shared_schedule_plus_origin_taf
+delay60_given_completed,2373572,174301,50000,3760,[],502840,48155,True,shared_schedule_plus_origin_taf
+delay15_given_completed_and_below60,2199271,348828,50000,7905,[],454685,80986,True,shared_schedule_plus_origin_taf

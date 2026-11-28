@@ -1,0 +1,7 @@
+threshold_minutes,contrast,block_days,n,estimate,low,high,valid_reps,interpretation
+15,schedule_plus_origin_taf_minus_schedule_proxy_only,1,1373557,-0.0053285865094537185,-0.006598050992133563,-0.004269487594692569,1000,Exploratory paired date-block range. No coverage or causal claim.
+15,schedule_plus_origin_taf_minus_schedule_proxy_only,7,1373557,-0.0053285865094537185,-0.0067869425187422104,-0.004215580572009997,1000,Exploratory paired date-block range. No coverage or causal claim.
+15,schedule_plus_origin_taf_minus_schedule_proxy_only,14,1373557,-0.0053285865094537185,-0.006913313676333921,-0.004281357335328587,1000,Exploratory paired date-block range. No coverage or causal claim.
+60,schedule_plus_origin_taf_minus_schedule_proxy_only,1,1373557,-0.002973289602590235,-0.003918017297319688,-0.0021288233007158773,1000,Exploratory paired date-block range. No coverage or causal claim.
+60,schedule_plus_origin_taf_minus_schedule_proxy_only,7,1373557,-0.002973289602590235,-0.004056901907287715,-0.002142591287134109,1000,Exploratory paired date-block range. No coverage or causal claim.
+60,schedule_plus_origin_taf_minus_schedule_proxy_only,14,1373557,-0.002973289602590235,-0.004089329575666933,-0.002210686135780885,1000,Exploratory paired date-block range. No coverage or causal claim.

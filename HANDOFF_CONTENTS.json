@@ -1,22 +1,22 @@
 {
-  "release_version": "C2701_v7_independent_review_20261128",
+  "release_version": "C2701_v8_TAF_and_coherence_20261128",
   "date": "2026-11-28 Asia/Shanghai",
-  "base_commit": "29b495907a087c7931ce624fdf99cdeaa956d587",
-  "entrypoint": "modeling/src/run_study_v7.py",
+  "base_commit": "da21fba0c243e25428be259e832fce36975b0990",
+  "entrypoint": "modeling/src/run_weather_v8.py",
   "review_entrypoint": "modeling/src/review_v7_evidence.py",
   "additional_review_entrypoints": [
     "modeling/src/audit_weather_thresholds_v7.py",
     "modeling/src/audit_taf_text_v7.py"
   ],
-  "handoff_guide": "V7_独立复核与来源待办交接.md",
+  "handoff_guide": "V8_TAF修正与复算交接.md",
   "frozen_results": "modeling/results/v7_20261128",
   "independent_replay_results": "modeling/results/v7_review_20261128/replay",
   "review_results": "modeling/results/v7_review_20261128",
   "review_status": "modeling/results/v7_review_20261128/REVIEW_STATUS.json",
-  "expected_total_files": 779,
-  "expected_checksum_entries": 778,
+  "expected_total_files": 990,
+  "expected_checksum_entries": 989,
   "test_status": {
-    "tests_run": 114,
+    "tests_run": 126,
     "failures": 0,
     "errors": 0,
     "successful": true,
@@ -143,63 +143,11 @@
     },
     {
       "path": "00_编程手先读.md",
-      "bytes": 9250
+      "bytes": 9524
     },
     {
       "path": "AGENTS.md",
       "bytes": 1260
-    },
-    {
-      "path": "PUBLICATION_NOTES.md",
-      "bytes": 4090
-    },
-    {
-      "path": "README.md",
-      "bytes": 15639
-    },
-    {
-      "path": "V5_复算说明.md",
-      "bytes": 2078
-    },
-    {
-      "path": "V6_复算与交接.md",
-      "bytes": 3267
-    },
-    {
-      "path": "V6_建模复核交接.md",
-      "bytes": 2694
-    },
-    {
-      "path": "V6_核验完善说明.md",
-      "bytes": 1653
-    },
-    {
-      "path": "V6_核验补丁独立验收_20261128.md",
-      "bytes": 4011
-    },
-    {
-      "path": "V7_独立复核与来源待办交接.md",
-      "bytes": 3910
-    },
-    {
-      "path": "V7_验证与图表交接.md",
-      "bytes": 4583
-    },
-    {
-      "path": "modeling/README_编程手先读.md",
-      "bytes": 9809
-    },
-    {
-      "path": "modeling/data/REVIEW_V3_ACQUISITION_RANGES.json",
-      "bytes": 6668
-    },
-    {
-      "path": "modeling/data/REVIEW_V3_ACQUISITION_SNAPSHOT.json",
-      "bytes": 3198
-    },
-    {
-      "path": "modeling/data/REVIEW_V3_PRIORITY_HOLDOUTS.json",
-      "bytes": 3336
     },
     {
       "path": "modeling/data/bts_2023_01.csv.gz",
@@ -566,6 +514,46 @@
       "bytes": 72755
     },
     {
+      "path": "modeling/data/REVIEW_V3_ACQUISITION_RANGES.json",
+      "bytes": 6668
+    },
+    {
+      "path": "modeling/data/REVIEW_V3_ACQUISITION_SNAPSHOT.json",
+      "bytes": 3198
+    },
+    {
+      "path": "modeling/data/REVIEW_V3_PRIORITY_HOLDOUTS.json",
+      "bytes": 3336
+    },
+    {
+      "path": "modeling/data/taf_2026_10_extension/download_manifest.json",
+      "bytes": 9839
+    },
+    {
+      "path": "modeling/data/taf_2026_10_extension/taf_extension_manifest.json",
+      "bytes": 1058
+    },
+    {
+      "path": "modeling/data/taf_2026_10_extension/taf_normalization_manifest.json",
+      "bytes": 2043
+    },
+    {
+      "path": "modeling/data/taf_2026_10_extension/taf_prevailing_normalized.csv.gz",
+      "bytes": 188730
+    },
+    {
+      "path": "modeling/data/taf_2026_10_extension/taf_product_coverage_by_month.csv",
+      "bytes": 661
+    },
+    {
+      "path": "modeling/data/taf_2026_10_extension/taf_products_normalized.csv.gz",
+      "bytes": 49766
+    },
+    {
+      "path": "modeling/data/taf_2026_10_extension/taf_qc.json",
+      "bytes": 435
+    },
+    {
       "path": "modeling/data/taf_v7/download_manifest.json",
       "bytes": 52344
     },
@@ -588,6 +576,342 @@
     {
       "path": "modeling/data/taf_v7/taf_qc.json",
       "bytes": 439
+    },
+    {
+      "path": "modeling/data/taf_v8/.gitattributes",
+      "bytes": 195
+    },
+    {
+      "path": "modeling/data/taf_v8/exact_product_adjudication.csv",
+      "bytes": 12621
+    },
+    {
+      "path": "modeling/data/taf_v8/exact_repairs_flight_exposure.json",
+      "bytes": 5014
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/diagnostic_inventory.csv",
+      "bytes": 2597
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/exact_product_adjudication.csv",
+      "bytes": 24425
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202301032323-KOKX-FTUS41-TAFLGA.txt",
+      "bytes": 362
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202301251130-KMTR-FTUS46-TAFSFO.txt",
+      "bytes": 197
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202301251501-KMTR-FTUS46-TAFSFO-AAA.txt",
+      "bytes": 205
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202301251720-KMTR-FTUS46-TAFSFO.txt",
+      "bytes": 228
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202301252101-KMTR-FTUS46-TAFSFO-AAA.txt",
+      "bytes": 236
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202301252337-KMTR-FTUS46-TAFSFO.txt",
+      "bytes": 197
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202301260256-KMTR-FTUS46-TAFSFO-AAA.txt",
+      "bytes": 174
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202301260520-KMTR-FTUS46-TAFSFO.txt",
+      "bytes": 183
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202304052340-KOKX-FTUS41-TAFEWR.txt",
+      "bytes": 355
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202304052340-KOKX-FTUS41-TAFLGA.txt",
+      "bytes": 384
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202304060240-KOKX-FTUS41-TAFEWR-AAA.txt",
+      "bytes": 363
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202304060240-KOKX-FTUS41-TAFLGA-AAA.txt",
+      "bytes": 392
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202304060520-KOKX-FTUS41-TAFEWR.txt",
+      "bytes": 433
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202304060520-KOKX-FTUS41-TAFLGA.txt",
+      "bytes": 426
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202304230156-KOKX-FTUS41-TAFLGA-AAA.txt",
+      "bytes": 390
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202306180200-KMLB-FTUS42-TAFMCO-AAB.txt",
+      "bytes": 262
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202306180255-KMLB-FTUS42-TAFMCO-AAC.txt",
+      "bytes": 341
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202403150540-KOKX-FTUS41-TAFEWR.txt",
+      "bytes": 360
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202403150540-KOKX-FTUS41-TAFLGA.txt",
+      "bytes": 353
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202403150839-KOKX-FTUS41-TAFLGA-AAA.txt",
+      "bytes": 385
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202403172320-KLOT-FTUS43-TAFORD.txt",
+      "bytes": 115
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202403180520-KLOT-FTUS43-TAFORD.txt",
+      "bytes": 189
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202404150701-KSEW-FTUS46-TAFSEA-AAC.txt",
+      "bytes": 259
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202601051730-KFWD-FTUS44-TAFDFW.txt",
+      "bytes": 154
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202601141359-PHFO-FTPA31-TAFHNL-AAA.txt",
+      "bytes": 235
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202601141437-PHFO-FTPA31-TAFHNL-AAB.txt",
+      "bytes": 235
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202603120535-KOKX-FTUS41-TAFEWR.txt",
+      "bytes": 363
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/202603120535-KOKX-FTUS41-TAFLGA.txt",
+      "bytes": 395
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/original_products/manifest.json",
+      "bytes": 11077
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/taf_correction_manifest.json",
+      "bytes": 1643
+    },
+    {
+      "path": "modeling/data/taf_v8/extended_exact/taf_prevailing_corrected.csv.gz",
+      "bytes": 4873691
+    },
+    {
+      "path": "modeling/data/taf_v8/original_products/202304230256-KLOT-FTUS43-TAFORD-AAA.txt",
+      "bytes": 132
+    },
+    {
+      "path": "modeling/data/taf_v8/original_products/202304230520-KLOT-FTUS43-TAFORD.txt",
+      "bytes": 158
+    },
+    {
+      "path": "modeling/data/taf_v8/original_products/202304230858-KLOT-FTUS43-TAFORD-AAA.txt",
+      "bytes": 166
+    },
+    {
+      "path": "modeling/data/taf_v8/original_products/202305052320-KLOT-FTUS43-TAFORD.txt",
+      "bytes": 193
+    },
+    {
+      "path": "modeling/data/taf_v8/original_products/202307220302-KLOT-FTUS43-TAFORD-AAA.txt",
+      "bytes": 181
+    },
+    {
+      "path": "modeling/data/taf_v8/original_products/202309232320-KLOT-FTUS43-TAFORD.txt",
+      "bytes": 122
+    },
+    {
+      "path": "modeling/data/taf_v8/original_products/202309240247-KLOT-FTUS43-TAFORD-AAA.txt",
+      "bytes": 130
+    },
+    {
+      "path": "modeling/data/taf_v8/original_products/202309240900-KLOT-FTUS43-TAFORD-AAA.txt",
+      "bytes": 171
+    },
+    {
+      "path": "modeling/data/taf_v8/original_products/202403162338-KLOT-FTUS43-TAFORD.txt",
+      "bytes": 125
+    },
+    {
+      "path": "modeling/data/taf_v8/original_products/202403170252-KLOT-FTUS43-TAFORD-AAA.txt",
+      "bytes": 133
+    },
+    {
+      "path": "modeling/data/taf_v8/original_products/202403170520-KLOT-FTUS43-TAFORD.txt",
+      "bytes": 125
+    },
+    {
+      "path": "modeling/data/taf_v8/original_products/202403212101-KLOT-FTUS43-TAFORD-AAA.txt",
+      "bytes": 224
+    },
+    {
+      "path": "modeling/data/taf_v8/original_products/202405050237-KOKX-FTUS41-TAFEWR-AAA.txt",
+      "bytes": 292
+    },
+    {
+      "path": "modeling/data/taf_v8/original_products/202406121720-KLOT-FTUS43-TAFORD.txt",
+      "bytes": 260
+    },
+    {
+      "path": "modeling/data/taf_v8/original_products/202406122117-KLOT-FTUS43-TAFORD-AAA.txt",
+      "bytes": 268
+    },
+    {
+      "path": "modeling/data/taf_v8/original_products/202406182320-KLOT-FTUS43-TAFORD.txt",
+      "bytes": 206
+    },
+    {
+      "path": "modeling/data/taf_v8/original_products/202406190232-KLOT-FTUS43-TAFORD-AAA.txt",
+      "bytes": 214
+    },
+    {
+      "path": "modeling/data/taf_v8/original_products/202406190330-KLOT-FTUS43-TAFORD-AAB.txt",
+      "bytes": 214
+    },
+    {
+      "path": "modeling/data/taf_v8/original_products/202601071258-KFFC-FTUS42-TAFATL-AAA.txt",
+      "bytes": 270
+    },
+    {
+      "path": "modeling/data/taf_v8/original_products/202601081444-KLOT-FTUS43-TAFORD-AAA.txt",
+      "bytes": 397
+    },
+    {
+      "path": "modeling/data/taf_v8/original_products/manifest.json",
+      "bytes": 7869
+    },
+    {
+      "path": "modeling/data/taf_v8/README.md",
+      "bytes": 2999
+    },
+    {
+      "path": "modeling/data/taf_v8/taf_correction_manifest.json",
+      "bytes": 1731
+    },
+    {
+      "path": "modeling/data/taf_v8/taf_prevailing_corrected.csv.gz",
+      "bytes": 4873685
+    },
+    {
+      "path": "modeling/data/taf_v8/taf_prevailing_vrb_sensitivity.csv.gz",
+      "bytes": 4878477
+    },
+    {
+      "path": "modeling/data/taf_v8/taf_vrb_sensitivity_manifest.json",
+      "bytes": 8461
+    },
+    {
+      "path": "modeling/data/taf_v8/vrb_sensitivity_by_station_month.csv",
+      "bytes": 4786
+    },
+    {
+      "path": "modeling/data/taf_v8/vrb_source_challenge/202301111928-KLOT-FTUS43-TAFORD-AAA.txt",
+      "bytes": 209
+    },
+    {
+      "path": "modeling/data/taf_v8/vrb_source_challenge/202302250859-KFWD-FTUS44-TAFDFW-AAC.txt",
+      "bytes": 251
+    },
+    {
+      "path": "modeling/data/taf_v8/vrb_source_challenge/202305231432-KOKX-FTUS41-TAFLGA-AAA.txt",
+      "bytes": 264
+    },
+    {
+      "path": "modeling/data/taf_v8/vrb_source_challenge/202305290011-KBOU-FTUS45-TAFDEN-AAA.txt",
+      "bytes": 333
+    },
+    {
+      "path": "modeling/data/taf_v8/vrb_source_challenge/202311050520-KLOT-FTUS43-TAFORD.txt",
+      "bytes": 187
+    },
+    {
+      "path": "modeling/data/taf_v8/vrb_source_challenge/202401220535-KFWD-FTUS44-TAFDFW.txt",
+      "bytes": 347
+    },
+    {
+      "path": "modeling/data/taf_v8/vrb_source_challenge/202402021106-KOKX-FTUS41-TAFEWR-AAB.txt",
+      "bytes": 230
+    },
+    {
+      "path": "modeling/data/taf_v8/vrb_source_challenge/202402030533-KSEW-FTUS46-TAFSEA.txt",
+      "bytes": 256
+    },
+    {
+      "path": "modeling/data/taf_v8/vrb_source_challenge/202402100833-KOKX-FTUS41-TAFLGA-AAA.txt",
+      "bytes": 237
+    },
+    {
+      "path": "modeling/data/taf_v8/vrb_source_challenge/202404170855-KMTR-FTUS46-TAFSFO-AAA.txt",
+      "bytes": 149
+    },
+    {
+      "path": "modeling/data/taf_v8/vrb_source_challenge/202405122339-KFFC-FTUS42-TAFATL.txt",
+      "bytes": 357
+    },
+    {
+      "path": "modeling/data/taf_v8/vrb_source_challenge/202405300539-KMLB-FTUS42-TAFMCO.txt",
+      "bytes": 182
+    },
+    {
+      "path": "modeling/data/taf_v8/vrb_source_challenge/202406030550-KFFC-FTUS42-TAFATL.txt",
+      "bytes": 387
+    },
+    {
+      "path": "modeling/data/taf_v8/vrb_source_challenge/202603172334-PHFO-FTPA31-TAFHNL.txt",
+      "bytes": 159
+    },
+    {
+      "path": "modeling/data/taf_v8/vrb_source_challenge/202603291603-KSEW-FTUS46-TAFSEA-AAC.txt",
+      "bytes": 358
+    },
+    {
+      "path": "modeling/data/taf_v8/vrb_source_challenge/202605020246-KBOU-FTUS45-TAFDEN-AAA.txt",
+      "bytes": 220
+    },
+    {
+      "path": "modeling/data/taf_v8/vrb_source_challenge/202605110707-KMTR-FTUS46-TAFSFO-AAA.txt",
+      "bytes": 271
+    },
+    {
+      "path": "modeling/data/taf_v8/vrb_source_challenge/202608042338-KOKX-FTUS41-TAFEWR.txt",
+      "bytes": 290
+    },
+    {
+      "path": "modeling/data/taf_v8/vrb_source_challenge/202608111120-KMLB-FTUS42-TAFMCO.txt",
+      "bytes": 248
+    },
+    {
+      "path": "modeling/data/taf_v8/vrb_source_challenge/202608201122-PHFO-FTPA31-TAFHNL.txt",
+      "bytes": 161
+    },
+    {
+      "path": "modeling/data/taf_v8/vrb_source_challenge/CHALLENGE_RECEIPT.json",
+      "bytes": 20292
     },
     {
       "path": "modeling/docs/ASSUMPTION_POLICY.md",
@@ -678,16 +1002,16 @@
       "bytes": 2236
     },
     {
+      "path": "modeling/docs/MODEL_SPEC.md",
+      "bytes": 2484
+    },
+    {
       "path": "modeling/docs/MODELER_REQUIREMENTS_V4.md",
       "bytes": 3075
     },
     {
       "path": "modeling/docs/MODELING_REVISION_V3.md",
       "bytes": 9057
-    },
-    {
-      "path": "modeling/docs/MODEL_SPEC.md",
-      "bytes": 2484
     },
     {
       "path": "modeling/docs/O_PAPER_READING_V4.md",
@@ -703,7 +1027,7 @@
     },
     {
       "path": "modeling/docs/PROVENANCE_GATE.json",
-      "bytes": 5087
+      "bytes": 5594
     },
     {
       "path": "modeling/docs/REVIEW_RESPONSE_V3.csv",
@@ -716,6 +1040,22 @@
     {
       "path": "modeling/docs/REVIEW_V3_SOURCE_NOTES.md",
       "bytes": 2328
+    },
+    {
+      "path": "modeling/docs/reviews/C2701_审查报告_原件.docx",
+      "bytes": 46045
+    },
+    {
+      "path": "modeling/docs/reviews/review_extracted.json",
+      "bytes": 17734
+    },
+    {
+      "path": "modeling/docs/reviews/V2_DATA_MANIFEST.json",
+      "bytes": 23002
+    },
+    {
+      "path": "modeling/docs/reviews/V2_REPRODUCTION.md",
+      "bytes": 698
     },
     {
       "path": "modeling/docs/SOURCE_LEDGER.csv",
@@ -782,6 +1122,10 @@
       "bytes": 12954
     },
     {
+      "path": "modeling/docs/V8_PROSPECTIVE_READOUT.md",
+      "bytes": 2219
+    },
+    {
       "path": "modeling/docs/VALIDATION_PLAN_V4.md",
       "bytes": 2172
     },
@@ -794,48 +1138,12 @@
       "bytes": 3051
     },
     {
+      "path": "modeling/docs/VALIDATION_V8.json",
+      "bytes": 2787
+    },
+    {
       "path": "modeling/docs/WRITER_REQUIREMENTS_V4.md",
       "bytes": 3060
-    },
-    {
-      "path": "modeling/docs/reviews/C2701_审查报告_原件.docx",
-      "bytes": 46045
-    },
-    {
-      "path": "modeling/docs/reviews/V2_DATA_MANIFEST.json",
-      "bytes": 23002
-    },
-    {
-      "path": "modeling/docs/reviews/V2_REPRODUCTION.md",
-      "bytes": 698
-    },
-    {
-      "path": "modeling/docs/reviews/review_extracted.json",
-      "bytes": 17734
-    },
-    {
-      "path": "modeling/figures/v7/FIGURE_INDEX.md",
-      "bytes": 2857
-    },
-    {
-      "path": "modeling/figures/v7/HISTORICAL_FIGURE_INPUTS.sha256",
-      "bytes": 536
-    },
-    {
-      "path": "modeling/figures/v7/HISTORICAL_FIGURE_SOURCES.md",
-      "bytes": 2776
-    },
-    {
-      "path": "modeling/figures/v7/MODEL_FIGURE_INPUTS.sha256",
-      "bytes": 721
-    },
-    {
-      "path": "modeling/figures/v7/README_model_figures.md",
-      "bytes": 2225
-    },
-    {
-      "path": "modeling/figures/v7/V7_FIGURE_INPUTS.sha256",
-      "bytes": 1012
     },
     {
       "path": "modeling/figures/v7/fig01_reliability_definitions.pdf",
@@ -878,8 +1186,24 @@
       "bytes": 229573
     },
     {
+      "path": "modeling/figures/v7/FIGURE_INDEX.md",
+      "bytes": 2857
+    },
+    {
+      "path": "modeling/figures/v7/HISTORICAL_FIGURE_INPUTS.sha256",
+      "bytes": 536
+    },
+    {
+      "path": "modeling/figures/v7/HISTORICAL_FIGURE_SOURCES.md",
+      "bytes": 2776
+    },
+    {
       "path": "modeling/figures/v7/make_model_figures.m",
       "bytes": 15814
+    },
+    {
+      "path": "modeling/figures/v7/MODEL_FIGURE_INPUTS.sha256",
+      "bytes": 721
     },
     {
       "path": "modeling/figures/v7/model_figures_matlab_run.json",
@@ -922,6 +1246,10 @@
       "bytes": 937
     },
     {
+      "path": "modeling/figures/v7/README_model_figures.md",
+      "bytes": 2225
+    },
+    {
       "path": "modeling/figures/v7/render_historical_figures.m",
       "bytes": 11963
     },
@@ -952,6 +1280,26 @@
     {
       "path": "modeling/figures/v7/table_v7_taf_stress_date_blocks.csv",
       "bytes": 10116
+    },
+    {
+      "path": "modeling/figures/v7/V7_FIGURE_INPUTS.sha256",
+      "bytes": 1012
+    },
+    {
+      "path": "modeling/figures/v8/fig09_taf_source_and_coherence.pdf",
+      "bytes": 15760
+    },
+    {
+      "path": "modeling/figures/v8/fig09_taf_source_and_coherence.png",
+      "bytes": 347327
+    },
+    {
+      "path": "modeling/figures/v8/FIGURE_INDEX.md",
+      "bytes": 1059
+    },
+    {
+      "path": "modeling/figures/v8/render_v8_weather.m",
+      "bytes": 6792
     },
     {
       "path": "modeling/literature/ARXIV_METADATA.xml",
@@ -994,14 +1342,6 @@
       "bytes": 3018
     },
     {
-      "path": "modeling/literature/SOURCE_MANIFEST.json",
-      "bytes": 8529
-    },
-    {
-      "path": "modeling/literature/TUTZ2020.pdf",
-      "bytes": 428560
-    },
-    {
       "path": "modeling/literature/review_v3/BTS_FIELDS.html",
       "bytes": 149783
     },
@@ -1042,6 +1382,18 @@
       "bytes": 3531
     },
     {
+      "path": "modeling/literature/SOURCE_MANIFEST.json",
+      "bytes": 8529
+    },
+    {
+      "path": "modeling/literature/TUTZ2020.pdf",
+      "bytes": 428560
+    },
+    {
+      "path": "modeling/README_编程手先读.md",
+      "bytes": 9809
+    },
+    {
       "path": "modeling/requirements.lock.txt",
       "bytes": 434
     },
@@ -1054,12 +1406,8 @@
       "bytes": 399
     },
     {
-      "path": "modeling/results/TEST_REPORT.txt",
-      "bytes": 16067
-    },
-    {
-      "path": "modeling/results/TEST_STATUS.json",
-      "bytes": 158
+      "path": "modeling/results/followup_20261127/diagnostic_inputs.json",
+      "bytes": 1891
     },
     {
       "path": "modeling/results/followup_20261127/FINDINGS.md",
@@ -1068,10 +1416,6 @@
     {
       "path": "modeling/results/followup_20261127/TEST_ATTEMPT_1_UTF8_FAILURE.txt",
       "bytes": 7615
-    },
-    {
-      "path": "modeling/results/followup_20261127/diagnostic_inputs.json",
-      "bytes": 1891
     },
     {
       "path": "modeling/results/followup_20261127/threshold_coherence.csv",
@@ -1084,10 +1428,6 @@
     {
       "path": "modeling/results/followup_20261127/threshold_coherence_status.json",
       "bytes": 442
-    },
-    {
-      "path": "modeling/results/implementation_v6/DELIVERY_RESULTS.md",
-      "bytes": 1905
     },
     {
       "path": "modeling/results/implementation_v6/audit_by_month.csv",
@@ -1140,6 +1480,10 @@
     {
       "path": "modeling/results/implementation_v6/data_snapshot.json",
       "bytes": 60375
+    },
+    {
+      "path": "modeling/results/implementation_v6/DELIVERY_RESULTS.md",
+      "bytes": 1905
     },
     {
       "path": "modeling/results/implementation_v6/delivery_status.json",
@@ -1350,10 +1694,6 @@
       "bytes": 1449
     },
     {
-      "path": "modeling/results/implementation_v6/traveler_card/TRAVELER_CARD.md",
-      "bytes": 2491
-    },
-    {
       "path": "modeling/results/implementation_v6/traveler_card/card_status.json",
       "bytes": 1235
     },
@@ -1374,6 +1714,10 @@
       "bytes": 774
     },
     {
+      "path": "modeling/results/implementation_v6/traveler_card/TRAVELER_CARD.md",
+      "bytes": 2491
+    },
+    {
       "path": "modeling/results/implementation_v6/unknown_records.csv",
       "bytes": 139
     },
@@ -1384,10 +1728,6 @@
     {
       "path": "modeling/results/implementation_v6/verification_summary.json",
       "bytes": 415
-    },
-    {
-      "path": "modeling/results/review_v3/CURRENT_FINDINGS_V3.md",
-      "bytes": 8496
     },
     {
       "path": "modeling/results/review_v3/common_support_coverage_2023.png",
@@ -1622,6 +1962,26 @@
       "bytes": 64199
     },
     {
+      "path": "modeling/results/review_v3/CURRENT_FINDINGS_V3.md",
+      "bytes": 8496
+    },
+    {
+      "path": "modeling/results/review_v3/descriptive/airport_selection_distance_bin_2023.csv",
+      "bytes": 1475
+    },
+    {
+      "path": "modeling/results/review_v3/descriptive/airport_selection_evidence_2023.csv",
+      "bytes": 1357
+    },
+    {
+      "path": "modeling/results/review_v3/descriptive/airport_selection_season_2023.csv",
+      "bytes": 1544
+    },
+    {
+      "path": "modeling/results/review_v3/descriptive/airport_selection_time_bin_2023.csv",
+      "bytes": 1339
+    },
+    {
       "path": "modeling/results/review_v3/descriptive/EWR_LGA_to_DEN_2023/case_status.json",
       "bytes": 791
     },
@@ -1660,22 +2020,6 @@
     {
       "path": "modeling/results/review_v3/descriptive/EWR_LGA_to_DEN_later_observed/support_coverage.csv",
       "bytes": 100
-    },
-    {
-      "path": "modeling/results/review_v3/descriptive/airport_selection_distance_bin_2023.csv",
-      "bytes": 1475
-    },
-    {
-      "path": "modeling/results/review_v3/descriptive/airport_selection_evidence_2023.csv",
-      "bytes": 1357
-    },
-    {
-      "path": "modeling/results/review_v3/descriptive/airport_selection_season_2023.csv",
-      "bytes": 1544
-    },
-    {
-      "path": "modeling/results/review_v3/descriptive/airport_selection_time_bin_2023.csv",
-      "bytes": 1339
     },
     {
       "path": "modeling/results/review_v3/descriptive/metrics_2023_airports.csv",
@@ -1994,16 +2338,12 @@
       "bytes": 2125
     },
     {
-      "path": "modeling/results/review_v4/FINDINGS_V4.md",
-      "bytes": 5283
-    },
-    {
-      "path": "modeling/results/review_v4/WORKLOG_V4.json",
-      "bytes": 1428
-    },
-    {
       "path": "modeling/results/review_v4/diagnostic_inputs.json",
       "bytes": 963
+    },
+    {
+      "path": "modeling/results/review_v4/FINDINGS_V4.md",
+      "bytes": 5283
     },
     {
       "path": "modeling/results/review_v4/input_contract_recheck.json",
@@ -2046,6 +2386,10 @@
       "bytes": 4719
     },
     {
+      "path": "modeling/results/review_v4/WORKLOG_V4.json",
+      "bytes": 1428
+    },
+    {
       "path": "modeling/results/review_v6_20261127/ASSET_VERIFICATION.json",
       "bytes": 365
     },
@@ -2054,36 +2398,16 @@
       "bytes": 45108
     },
     {
-      "path": "modeling/results/review_v6_20261127/FINDINGS.md",
-      "bytes": 5481
-    },
-    {
-      "path": "modeling/results/review_v6_20261127/LOCAL_ENVIRONMENT.json",
-      "bytes": 117
-    },
-    {
-      "path": "modeling/results/review_v6_20261127/RELEASE_VS_COMMIT.json",
-      "bytes": 3290
-    },
-    {
-      "path": "modeling/results/review_v6_20261127/REPLAY_CONSOLE_RAW_UTF16.log",
-      "bytes": 10530
-    },
-    {
-      "path": "modeling/results/review_v6_20261127/REPLAY_LOG.txt",
-      "bytes": 5276
-    },
-    {
-      "path": "modeling/results/review_v6_20261127/REPLAY_LOG_ENCODING.json",
-      "bytes": 608
-    },
-    {
       "path": "modeling/results/review_v6_20261127/final_tests/TEST_REPORT.txt",
       "bytes": 11574
     },
     {
       "path": "modeling/results/review_v6_20261127/final_tests/TEST_STATUS.json",
       "bytes": 157
+    },
+    {
+      "path": "modeling/results/review_v6_20261127/FINDINGS.md",
+      "bytes": 5481
     },
     {
       "path": "modeling/results/review_v6_20261127/independent_replay_all_csv_review.json",
@@ -2100,6 +2424,14 @@
     {
       "path": "modeling/results/review_v6_20261127/legacy_root_test_reports_at_80b953e/TEST_STATUS.json",
       "bytes": 159
+    },
+    {
+      "path": "modeling/results/review_v6_20261127/LOCAL_ENVIRONMENT.json",
+      "bytes": 117
+    },
+    {
+      "path": "modeling/results/review_v6_20261127/RELEASE_VS_COMMIT.json",
+      "bytes": 3290
     },
     {
       "path": "modeling/results/review_v6_20261127/release_zip_tests/TEST_REPORT.txt",
@@ -2362,10 +2694,6 @@
       "bytes": 1449
     },
     {
-      "path": "modeling/results/review_v6_20261127/replay/traveler_card/TRAVELER_CARD.md",
-      "bytes": 2491
-    },
-    {
       "path": "modeling/results/review_v6_20261127/replay/traveler_card/card_status.json",
       "bytes": 1235
     },
@@ -2386,12 +2714,28 @@
       "bytes": 774
     },
     {
+      "path": "modeling/results/review_v6_20261127/replay/traveler_card/TRAVELER_CARD.md",
+      "bytes": 2491
+    },
+    {
       "path": "modeling/results/review_v6_20261127/replay/unknown_records.csv",
       "bytes": 139
     },
     {
       "path": "modeling/results/review_v6_20261127/replay/validation_status.json",
       "bytes": 3363
+    },
+    {
+      "path": "modeling/results/review_v6_20261127/REPLAY_CONSOLE_RAW_UTF16.log",
+      "bytes": 10530
+    },
+    {
+      "path": "modeling/results/review_v6_20261127/REPLAY_LOG.txt",
+      "bytes": 5276
+    },
+    {
+      "path": "modeling/results/review_v6_20261127/REPLAY_LOG_ENCODING.json",
+      "bytes": 608
     },
     {
       "path": "modeling/results/review_v6_20261127/saved_evidence_review.json",
@@ -2404,6 +2748,14 @@
     {
       "path": "modeling/results/review_v6_20261127/upstream_79_tests/TEST_STATUS.json",
       "bytes": 157
+    },
+    {
+      "path": "modeling/results/TEST_REPORT.txt",
+      "bytes": 16067
+    },
+    {
+      "path": "modeling/results/TEST_STATUS.json",
+      "bytes": 158
     },
     {
       "path": "modeling/results/v6_integrity_20261128/REPLAY_EVIDENCE.json",
@@ -2590,42 +2942,6 @@
       "bytes": 1229
     },
     {
-      "path": "modeling/results/v7_review_20261128/FIGURE_FILE_REVIEW.json",
-      "bytes": 3044
-    },
-    {
-      "path": "modeling/results/v7_review_20261128/IEM_PARSER_SOURCE.json",
-      "bytes": 447
-    },
-    {
-      "path": "modeling/results/v7_review_20261128/PARSER_TEXT_DIAGNOSTIC.json",
-      "bytes": 346
-    },
-    {
-      "path": "modeling/results/v7_review_20261128/RELEASE_ASSET_REVIEW.json",
-      "bytes": 7176
-    },
-    {
-      "path": "modeling/results/v7_review_20261128/REPLAY_CSV_COMPARISON.json",
-      "bytes": 8612
-    },
-    {
-      "path": "modeling/results/v7_review_20261128/REPRODUCTION_ENTRYPOINTS.json",
-      "bytes": 1135
-    },
-    {
-      "path": "modeling/results/v7_review_20261128/REVIEW_STATUS.json",
-      "bytes": 2084
-    },
-    {
-      "path": "modeling/results/v7_review_20261128/SAVED_EVIDENCE.json",
-      "bytes": 1517
-    },
-    {
-      "path": "modeling/results/v7_review_20261128/WEB_SOURCE_RETRIEVAL.json",
-      "bytes": 1927
-    },
-    {
       "path": "modeling/results/v7_review_20261128/airport_groups/airport_subgroups.csv",
       "bytes": 497303
     },
@@ -2640,6 +2956,22 @@
     {
       "path": "modeling/results/v7_review_20261128/airport_groups/subgroup_status.json",
       "bytes": 6291
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/FIGURE_FILE_REVIEW.json",
+      "bytes": 3044
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/IEM_PARSER_SOURCE.json",
+      "bytes": 447
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/PARSER_TEXT_DIAGNOSTIC.json",
+      "bytes": 346
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/RELEASE_ASSET_REVIEW.json",
+      "bytes": 7176
     },
     {
       "path": "modeling/results/v7_review_20261128/replay/audit_by_month.csv",
@@ -2734,8 +3066,20 @@
       "bytes": 139
     },
     {
-      "path": "modeling/results/v7_review_20261128/taf_text_audit/TAF_TEXT_AUDIT_STATUS.json",
-      "bytes": 495
+      "path": "modeling/results/v7_review_20261128/REPLAY_CSV_COMPARISON.json",
+      "bytes": 8612
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/REPRODUCTION_ENTRYPOINTS.json",
+      "bytes": 1135
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/REVIEW_STATUS.json",
+      "bytes": 2084
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/SAVED_EVIDENCE.json",
+      "bytes": 1517
     },
     {
       "path": "modeling/results/v7_review_20261128/taf_text_audit/audit_by_month.csv",
@@ -2748,6 +3092,10 @@
     {
       "path": "modeling/results/v7_review_20261128/taf_text_audit/reporting_carrier_coverage.csv",
       "bytes": 10970
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/taf_text_audit/TAF_TEXT_AUDIT_STATUS.json",
+      "bytes": 495
     },
     {
       "path": "modeling/results/v7_review_20261128/taf_text_audit/taf_text_flag_exposure.csv",
@@ -2778,10 +3126,6 @@
       "bytes": 158
     },
     {
-      "path": "modeling/results/v7_review_20261128/weather_audit/WEATHER_AUDIT_STATUS.json",
-      "bytes": 2924
-    },
-    {
       "path": "modeling/results/v7_review_20261128/weather_audit/audit_by_month.csv",
       "bytes": 2819
     },
@@ -2810,6 +3154,10 @@
       "bytes": 139
     },
     {
+      "path": "modeling/results/v7_review_20261128/weather_audit/WEATHER_AUDIT_STATUS.json",
+      "bytes": 2924
+    },
+    {
       "path": "modeling/results/v7_review_20261128/weather_audit/weather_threshold_inversions.csv",
       "bytes": 91
     },
@@ -2822,8 +3170,432 @@
       "bytes": 368
     },
     {
-      "path": "modeling/results/validation_v5/FINDINGS_V5.md",
-      "bytes": 3622
+      "path": "modeling/results/v7_review_20261128/WEB_SOURCE_RETRIEVAL.json",
+      "bytes": 1927
+    },
+    {
+      "path": "modeling/results/v8_20261128/ACCEPTANCE.json",
+      "bytes": 2352
+    },
+    {
+      "path": "modeling/results/v8_20261128/bts_2026_10_release_check.json",
+      "bytes": 390
+    },
+    {
+      "path": "modeling/results/v8_20261128/corrected_binary/audit_by_month.csv",
+      "bytes": 2819
+    },
+    {
+      "path": "modeling/results/v8_20261128/corrected_binary/data_snapshot.json",
+      "bytes": 42435
+    },
+    {
+      "path": "modeling/results/v8_20261128/corrected_binary/reporting_carrier_coverage.csv",
+      "bytes": 10970
+    },
+    {
+      "path": "modeling/results/v8_20261128/corrected_binary/study_status.json",
+      "bytes": 2338
+    },
+    {
+      "path": "modeling/results/v8_20261128/corrected_binary/taf_calibration.csv",
+      "bytes": 21284
+    },
+    {
+      "path": "modeling/results/v8_20261128/corrected_binary/taf_coverage.csv",
+      "bytes": 555
+    },
+    {
+      "path": "modeling/results/v8_20261128/corrected_binary/taf_coverage_by_airport.csv",
+      "bytes": 6161
+    },
+    {
+      "path": "modeling/results/v8_20261128/corrected_binary/taf_daily_losses.csv",
+      "bytes": 49303
+    },
+    {
+      "path": "modeling/results/v8_20261128/corrected_binary/taf_date_blocks.csv",
+      "bytes": 1299
+    },
+    {
+      "path": "modeling/results/v8_20261128/corrected_binary/taf_monthly.csv",
+      "bytes": 10402
+    },
+    {
+      "path": "modeling/results/v8_20261128/corrected_binary/taf_pooled.csv",
+      "bytes": 1194
+    },
+    {
+      "path": "modeling/results/v8_20261128/corrected_binary/taf_source_impact_daily.csv",
+      "bytes": 39324
+    },
+    {
+      "path": "modeling/results/v8_20261128/corrected_binary/taf_source_impact_date_blocks.csv",
+      "bytes": 1203
+    },
+    {
+      "path": "modeling/results/v8_20261128/corrected_binary/taf_source_impact_pooled.csv",
+      "bytes": 1021
+    },
+    {
+      "path": "modeling/results/v8_20261128/corrected_binary/taf_stress_daily_residuals.csv",
+      "bytes": 333394
+    },
+    {
+      "path": "modeling/results/v8_20261128/corrected_binary/taf_stress_date_blocks.csv",
+      "bytes": 10322
+    },
+    {
+      "path": "modeling/results/v8_20261128/corrected_binary/taf_stress_monthly.csv",
+      "bytes": 31777
+    },
+    {
+      "path": "modeling/results/v8_20261128/corrected_binary/taf_stress_pooled.csv",
+      "bytes": 5768
+    },
+    {
+      "path": "modeling/results/v8_20261128/corrected_binary/unknown_records.csv",
+      "bytes": 139
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_binary/audit_by_month.csv",
+      "bytes": 2819
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_binary/data_snapshot.json",
+      "bytes": 42435
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_binary/reporting_carrier_coverage.csv",
+      "bytes": 10970
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_binary/study_status.json",
+      "bytes": 2338
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_binary/taf_calibration.csv",
+      "bytes": 21295
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_binary/taf_coverage.csv",
+      "bytes": 555
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_binary/taf_coverage_by_airport.csv",
+      "bytes": 6161
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_binary/taf_daily_losses.csv",
+      "bytes": 49326
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_binary/taf_date_blocks.csv",
+      "bytes": 1304
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_binary/taf_monthly.csv",
+      "bytes": 10402
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_binary/taf_pooled.csv",
+      "bytes": 1194
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_binary/taf_source_impact_daily.csv",
+      "bytes": 39339
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_binary/taf_source_impact_date_blocks.csv",
+      "bytes": 1204
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_binary/taf_source_impact_pooled.csv",
+      "bytes": 1015
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_binary/taf_stress_daily_residuals.csv",
+      "bytes": 333403
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_binary/taf_stress_date_blocks.csv",
+      "bytes": 10326
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_binary/taf_stress_monthly.csv",
+      "bytes": 31789
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_binary/taf_stress_pooled.csv",
+      "bytes": 5757
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_binary/unknown_records.csv",
+      "bytes": 139
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_joint/audit_by_month.csv",
+      "bytes": 2819
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_joint/data_snapshot.json",
+      "bytes": 42435
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_joint/reporting_carrier_coverage.csv",
+      "bytes": 10970
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_joint/shared_weather_calibration.csv",
+      "bytes": 25284
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_joint/shared_weather_comparison_monthly.csv",
+      "bytes": 32958
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_joint/shared_weather_comparison_pooled.csv",
+      "bytes": 3912
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_joint/shared_weather_coverage_by_airport.csv",
+      "bytes": 6161
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_joint/shared_weather_daily_losses.csv",
+      "bytes": 102895
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_joint/shared_weather_date_blocks.csv",
+      "bytes": 2562
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_joint/shared_weather_fallback_calibration.csv",
+      "bytes": 25504
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_joint/shared_weather_fallback_monthly.csv",
+      "bytes": 10868
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_joint/shared_weather_fallback_pooled.csv",
+      "bytes": 1291
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_joint/shared_weather_leaf_monthly.csv",
+      "bytes": 41306
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_joint/shared_weather_monthly.csv",
+      "bytes": 10834
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_joint/shared_weather_pooled.csv",
+      "bytes": 1282
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_joint/shared_weather_risk_sets.csv",
+      "bytes": 897
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_joint/shared_weather_status.json",
+      "bytes": 4210
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_joint/shared_weather_stress_monthly.csv",
+      "bytes": 33055
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_joint/shared_weather_stress_pooled.csv",
+      "bytes": 5454
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_joint/shared_weather_structure.csv",
+      "bytes": 8643
+    },
+    {
+      "path": "modeling/results/v8_20261128/extended_exact_joint/unknown_records.csv",
+      "bytes": 139
+    },
+    {
+      "path": "modeling/results/v8_20261128/joint/audit_by_month.csv",
+      "bytes": 2819
+    },
+    {
+      "path": "modeling/results/v8_20261128/joint/data_snapshot.json",
+      "bytes": 42435
+    },
+    {
+      "path": "modeling/results/v8_20261128/joint/reporting_carrier_coverage.csv",
+      "bytes": 10970
+    },
+    {
+      "path": "modeling/results/v8_20261128/joint/shared_weather_calibration.csv",
+      "bytes": 25299
+    },
+    {
+      "path": "modeling/results/v8_20261128/joint/shared_weather_comparison_monthly.csv",
+      "bytes": 32956
+    },
+    {
+      "path": "modeling/results/v8_20261128/joint/shared_weather_comparison_pooled.csv",
+      "bytes": 3915
+    },
+    {
+      "path": "modeling/results/v8_20261128/joint/shared_weather_coverage_by_airport.csv",
+      "bytes": 6161
+    },
+    {
+      "path": "modeling/results/v8_20261128/joint/shared_weather_daily_losses.csv",
+      "bytes": 102899
+    },
+    {
+      "path": "modeling/results/v8_20261128/joint/shared_weather_date_blocks.csv",
+      "bytes": 2561
+    },
+    {
+      "path": "modeling/results/v8_20261128/joint/shared_weather_fallback_calibration.csv",
+      "bytes": 25544
+    },
+    {
+      "path": "modeling/results/v8_20261128/joint/shared_weather_fallback_monthly.csv",
+      "bytes": 10880
+    },
+    {
+      "path": "modeling/results/v8_20261128/joint/shared_weather_fallback_pooled.csv",
+      "bytes": 1290
+    },
+    {
+      "path": "modeling/results/v8_20261128/joint/shared_weather_leaf_monthly.csv",
+      "bytes": 41284
+    },
+    {
+      "path": "modeling/results/v8_20261128/joint/shared_weather_monthly.csv",
+      "bytes": 10839
+    },
+    {
+      "path": "modeling/results/v8_20261128/joint/shared_weather_pooled.csv",
+      "bytes": 1286
+    },
+    {
+      "path": "modeling/results/v8_20261128/joint/shared_weather_risk_sets.csv",
+      "bytes": 897
+    },
+    {
+      "path": "modeling/results/v8_20261128/joint/shared_weather_status.json",
+      "bytes": 4210
+    },
+    {
+      "path": "modeling/results/v8_20261128/joint/shared_weather_stress_monthly.csv",
+      "bytes": 33073
+    },
+    {
+      "path": "modeling/results/v8_20261128/joint/shared_weather_stress_pooled.csv",
+      "bytes": 5453
+    },
+    {
+      "path": "modeling/results/v8_20261128/joint/shared_weather_structure.csv",
+      "bytes": 8636
+    },
+    {
+      "path": "modeling/results/v8_20261128/joint/unknown_records.csv",
+      "bytes": 139
+    },
+    {
+      "path": "modeling/results/v8_20261128/source_exposure/exact_taf_repair_exposure.csv",
+      "bytes": 496
+    },
+    {
+      "path": "modeling/results/v8_20261128/source_exposure/exposure_status.json",
+      "bytes": 440
+    },
+    {
+      "path": "modeling/results/v8_20261128/testing/retained_v7_evidence.json",
+      "bytes": 1517
+    },
+    {
+      "path": "modeling/results/v8_20261128/testing/TEST_REPORT.txt",
+      "bytes": 18085
+    },
+    {
+      "path": "modeling/results/v8_20261128/testing/TEST_STATUS.json",
+      "bytes": 158
+    },
+    {
+      "path": "modeling/results/v8_20261128/vrb_sensitivity/audit_by_month.csv",
+      "bytes": 2819
+    },
+    {
+      "path": "modeling/results/v8_20261128/vrb_sensitivity/data_snapshot.json",
+      "bytes": 42435
+    },
+    {
+      "path": "modeling/results/v8_20261128/vrb_sensitivity/reporting_carrier_coverage.csv",
+      "bytes": 10970
+    },
+    {
+      "path": "modeling/results/v8_20261128/vrb_sensitivity/study_status.json",
+      "bytes": 2338
+    },
+    {
+      "path": "modeling/results/v8_20261128/vrb_sensitivity/taf_calibration.csv",
+      "bytes": 21344
+    },
+    {
+      "path": "modeling/results/v8_20261128/vrb_sensitivity/taf_coverage.csv",
+      "bytes": 555
+    },
+    {
+      "path": "modeling/results/v8_20261128/vrb_sensitivity/taf_coverage_by_airport.csv",
+      "bytes": 6161
+    },
+    {
+      "path": "modeling/results/v8_20261128/vrb_sensitivity/taf_daily_losses.csv",
+      "bytes": 49305
+    },
+    {
+      "path": "modeling/results/v8_20261128/vrb_sensitivity/taf_date_blocks.csv",
+      "bytes": 1302
+    },
+    {
+      "path": "modeling/results/v8_20261128/vrb_sensitivity/taf_monthly.csv",
+      "bytes": 10400
+    },
+    {
+      "path": "modeling/results/v8_20261128/vrb_sensitivity/taf_pooled.csv",
+      "bytes": 1192
+    },
+    {
+      "path": "modeling/results/v8_20261128/vrb_sensitivity/taf_source_impact_daily.csv",
+      "bytes": 38879
+    },
+    {
+      "path": "modeling/results/v8_20261128/vrb_sensitivity/taf_source_impact_date_blocks.csv",
+      "bytes": 1201
+    },
+    {
+      "path": "modeling/results/v8_20261128/vrb_sensitivity/taf_source_impact_pooled.csv",
+      "bytes": 1018
+    },
+    {
+      "path": "modeling/results/v8_20261128/vrb_sensitivity/taf_stress_daily_residuals.csv",
+      "bytes": 333437
+    },
+    {
+      "path": "modeling/results/v8_20261128/vrb_sensitivity/taf_stress_date_blocks.csv",
+      "bytes": 10327
+    },
+    {
+      "path": "modeling/results/v8_20261128/vrb_sensitivity/taf_stress_monthly.csv",
+      "bytes": 31802
+    },
+    {
+      "path": "modeling/results/v8_20261128/vrb_sensitivity/taf_stress_pooled.csv",
+      "bytes": 5772
+    },
+    {
+      "path": "modeling/results/v8_20261128/vrb_sensitivity/unknown_records.csv",
+      "bytes": 139
     },
     {
       "path": "modeling/results/validation_v5/audit_by_month.csv",
@@ -2876,6 +3648,10 @@
     {
       "path": "modeling/results/validation_v5/data_snapshot.json",
       "bytes": 60375
+    },
+    {
+      "path": "modeling/results/validation_v5/FINDINGS_V5.md",
+      "bytes": 3622
     },
     {
       "path": "modeling/results/validation_v5/historical_airport_scorecard.csv",
@@ -3034,6 +3810,10 @@
       "bytes": 7140
     },
     {
+      "path": "modeling/src/audit_taf_repair_exposure_v8.py",
+      "bytes": 2821
+    },
+    {
       "path": "modeling/src/audit_taf_text_v7.py",
       "bytes": 4601
     },
@@ -3055,15 +3835,23 @@
     },
     {
       "path": "modeling/src/check_taf.py",
-      "bytes": 4002
+      "bytes": 4182
     },
     {
       "path": "modeling/src/comparison.py",
       "bytes": 10838
     },
     {
+      "path": "modeling/src/correct_taf_v8.py",
+      "bytes": 23098
+    },
+    {
       "path": "modeling/src/download_taf.py",
-      "bytes": 7172
+      "bytes": 7716
+    },
+    {
+      "path": "modeling/src/extend_taf_v8.py",
+      "bytes": 4313
     },
     {
       "path": "modeling/src/fetch_bts.py",
@@ -3079,7 +3867,7 @@
     },
     {
       "path": "modeling/src/joint_candidate_v6.py",
-      "bytes": 15029
+      "bytes": 15249
     },
     {
       "path": "modeling/src/legacy_v2_comparison.py",
@@ -3127,7 +3915,7 @@
     },
     {
       "path": "modeling/src/review_v7_evidence.py",
-      "bytes": 8461
+      "bytes": 9543
     },
     {
       "path": "modeling/src/run.py",
@@ -3139,11 +3927,15 @@
     },
     {
       "path": "modeling/src/run_study_v7.py",
-      "bytes": 18251
+      "bytes": 18363
     },
     {
       "path": "modeling/src/run_validation_v5.py",
       "bytes": 14465
+    },
+    {
+      "path": "modeling/src/run_weather_v8.py",
+      "bytes": 7261
     },
     {
       "path": "modeling/src/stress.py",
@@ -3162,8 +3954,16 @@
       "bytes": 2156
     },
     {
+      "path": "modeling/src/weather_joint_v8.py",
+      "bytes": 17621
+    },
+    {
       "path": "modeling/tests/test_contract.py",
       "bytes": 2626
+    },
+    {
+      "path": "modeling/tests/test_correct_taf_v8.py",
+      "bytes": 3258
     },
     {
       "path": "modeling/tests/test_counterexample_display.py",
@@ -3223,7 +4023,11 @@
     },
     {
       "path": "modeling/tests/test_v7_evidence_source_review.py",
-      "bytes": 3272
+      "bytes": 6582
+    },
+    {
+      "path": "modeling/tests/test_weather_joint_v8.py",
+      "bytes": 5701
     },
     {
       "path": "modeling/tests/test_weather_threshold_review_v7.py",
@@ -3244,6 +4048,47 @@
     {
       "path": "problem/requirements_extracted.txt",
       "bytes": 53672
+    },
+    {
+      "path": "PUBLICATION_NOTES.md",
+      "bytes": 4090
+    },
+    {
+      "path": "README.md",
+      "bytes": 15913
+    },
+    {
+      "path": "V5_复算说明.md",
+      "bytes": 2078
+    },
+    {
+      "path": "V6_复算与交接.md",
+      "bytes": 3267
+    },
+    {
+      "path": "V6_建模复核交接.md",
+      "bytes": 2694
+    },
+    {
+      "path": "V6_核验完善说明.md",
+      "bytes": 1653
+    },
+    {
+      "path": "V6_核验补丁独立验收_20261128.md",
+      "bytes": 4011
+    },
+    {
+      "path": "V7_独立复核与来源待办交接.md",
+      "bytes": 3910
+    },
+    {
+      "path": "V7_验证与图表交接.md",
+      "bytes": 4583
+    },
+    {
+      "path": "V8_TAF修正与复算交接.md",
+      "bytes": 7190
     }
-  ]
+  ],
+  "acceptance": "modeling/results/v8_20261128/ACCEPTANCE.json"
 }

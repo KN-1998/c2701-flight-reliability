@@ -1,0 +1,203 @@
+{
+  "status": "GUARDED_VRB_TEXT_SENSITIVITY",
+  "scope": "Separate sensitivity, using normalized attached text outside the exact archived-product adjudication.",
+  "eligibility": {
+    "candidate": "Missing structured wind speed and a VRB group wind token.",
+    "group": "Initial text starts with VRB or FM token agrees with normalized UTC start. Repeated product text excluded.",
+    "checks": "Decoded visibility and qualifier, ceiling and state, weather codes, and any known gust agree.",
+    "write": "Recover only missing speed/gust fields, with 0 gust when no G token. Keep original source text and all timing."
+  },
+  "input_sha256": "29e0d72c5bb9a4d0d9ee2596c29a11823846ab3f9135f9017bcb661bdc95d853",
+  "counts": {
+    "not_missing_vrb": 339102,
+    "text_supported_vrb_repair": 23134,
+    "exact_products_excluded_segments": 49
+  },
+  "outputs_sha256": {
+    "taf_prevailing_vrb_sensitivity.csv.gz": "e2acdba8eab119bdf062a4238f2fc5a2fffc3c7abb7a4016b97fa55737f23761",
+    "vrb_sensitivity_by_station_month.csv": "4f88ffd4a22aaa3ea9741993561e5f2f24843da37de4b4fe45aa89f44c0a4aa4"
+  },
+  "raw_challenge_samples": [
+    {
+      "sha256_selection": "003c5d3c22a0d9f0de5fdb8dd521fedf801551fa43fa1614e0f854f870bcc709",
+      "station": "KATL",
+      "product_id": "202405122339-KFFC-FTUS42-TAFATL",
+      "valid_from_utc": "2024-05-13T06:00:00Z",
+      "source_forecast_text": "FM130600 VRB03KT P6SM SCT100 BKN250",
+      "wind_speed_kt": "3",
+      "gust_kt": "0"
+    },
+    {
+      "sha256_selection": "004807f91a7c11365f1845945ecccb48dcb88fbd4a0d11827fc4da21922a98d9",
+      "station": "KATL",
+      "product_id": "202406030550-KFFC-FTUS42-TAFATL",
+      "valid_from_utc": "2024-06-03T10:00:00Z",
+      "source_forecast_text": "FM031000 VRB03KT P6SM SCT006 BKN012",
+      "wind_speed_kt": "3",
+      "gust_kt": "0"
+    },
+    {
+      "sha256_selection": "00190c5558ed4e92f91ce9a62068e8efb9723d58b6f0ac68726bb1661dc10fb1",
+      "station": "KDEN",
+      "product_id": "202605020246-KBOU-FTUS45-TAFDEN-AAA",
+      "valid_from_utc": "2026-05-02T05:00:00Z",
+      "source_forecast_text": "FM020500 VRB06KT P6SM FEW120",
+      "wind_speed_kt": "6",
+      "gust_kt": "0"
+    },
+    {
+      "sha256_selection": "0029177456418b4e5c503450b078377603883a18fac72e19131615c8a6bfb184",
+      "station": "KDEN",
+      "product_id": "202305290011-KBOU-FTUS45-TAFDEN-AAA",
+      "valid_from_utc": "2023-05-29T14:00:00Z",
+      "source_forecast_text": "FM291400 VRB06KT P6SM SCT140",
+      "wind_speed_kt": "6",
+      "gust_kt": "0"
+    },
+    {
+      "sha256_selection": "011998d8242d540af53beea16eaa704eed91dc69b6316867020f444b86dbd4f5",
+      "station": "KDFW",
+      "product_id": "202302250859-KFWD-FTUS44-TAFDFW-AAC",
+      "valid_from_utc": "2023-02-26T09:00:00Z",
+      "source_forecast_text": "FM260900 VRB02KT 4SM -DZ BR BKN006",
+      "wind_speed_kt": "2",
+      "gust_kt": "0"
+    },
+    {
+      "sha256_selection": "02a269cf54f137c4a9e8f547752ff3dc03e7259eef3eaf6f9f2d84bc6f700ddb",
+      "station": "KDFW",
+      "product_id": "202401220535-KFWD-FTUS44-TAFDFW",
+      "valid_from_utc": "2024-01-23T05:00:00Z",
+      "source_forecast_text": "FM230500 VRB03KT 1/2SM FG VV002",
+      "wind_speed_kt": "3",
+      "gust_kt": "0"
+    },
+    {
+      "sha256_selection": "002cbe26e9c0e3649a96c66a030f567120fc009d789cf89ab0b0752317e7319c",
+      "station": "KEWR",
+      "product_id": "202402021106-KOKX-FTUS41-TAFEWR-AAB",
+      "valid_from_utc": "2024-02-02T11:00:00Z",
+      "source_forecast_text": "VRB03KT P6SM BKN015",
+      "wind_speed_kt": "3",
+      "gust_kt": "0"
+    },
+    {
+      "sha256_selection": "005b44e5f584b18ccedfaaff975363a1cedd8e029d7c0847ede1894422091d98",
+      "station": "KEWR",
+      "product_id": "202608042338-KOKX-FTUS41-TAFEWR",
+      "valid_from_utc": "2026-08-05T02:00:00Z",
+      "source_forecast_text": "FM050200 VRB04KT P6SM BKN150",
+      "wind_speed_kt": "4",
+      "gust_kt": "0"
+    },
+    {
+      "sha256_selection": "00492c6cf88b00798a3c8ee924385c7851c006b731cf15ae98ac8651f65418a9",
+      "station": "KLGA",
+      "product_id": "202305231432-KOKX-FTUS41-TAFLGA-AAA",
+      "valid_from_utc": "2023-05-24T05:00:00Z",
+      "source_forecast_text": "FM240500 VRB04KT P6SM SCT250",
+      "wind_speed_kt": "4",
+      "gust_kt": "0"
+    },
+    {
+      "sha256_selection": "004ecaef5332a751b132f074434101bca113c29bf5d59b00d143d37abef4ecfb",
+      "station": "KLGA",
+      "product_id": "202402100833-KOKX-FTUS41-TAFLGA-AAA",
+      "valid_from_utc": "2024-02-10T09:00:00Z",
+      "source_forecast_text": "VRB04KT P6SM SCT100 BKN250",
+      "wind_speed_kt": "4",
+      "gust_kt": "0"
+    },
+    {
+      "sha256_selection": "000c1b0c72cf375a4daeddeacd3c809bcd3496ac563b9b2bf1eab40e67e7839e",
+      "station": "KMCO",
+      "product_id": "202608111120-KMLB-FTUS42-TAFMCO",
+      "valid_from_utc": "2026-08-12T00:00:00Z",
+      "source_forecast_text": "FM120000 VRB04KT P6SM FEW050 SCT250",
+      "wind_speed_kt": "4",
+      "gust_kt": "0"
+    },
+    {
+      "sha256_selection": "003ec665caf6ff1fb6ea7126e2d506f484293d0587eb112f14abc6edc0d58d4b",
+      "station": "KMCO",
+      "product_id": "202405300539-KMLB-FTUS42-TAFMCO",
+      "valid_from_utc": "2024-05-30T06:00:00Z",
+      "source_forecast_text": "VRB03KT P6SM SKC",
+      "wind_speed_kt": "3",
+      "gust_kt": "0"
+    },
+    {
+      "sha256_selection": "00602c1834a321cbad30b0770393afc5dc21a08da417318cb068da652d5f98eb",
+      "station": "KORD",
+      "product_id": "202311050520-KLOT-FTUS43-TAFORD",
+      "valid_from_utc": "2023-11-05T06:00:00Z",
+      "source_forecast_text": "VRB03KT 6SM BCFG FEW250",
+      "wind_speed_kt": "3",
+      "gust_kt": "0"
+    },
+    {
+      "sha256_selection": "01180313967497de58441e1aff505f20f400546fab0b97196ba13958e1fec97e",
+      "station": "KORD",
+      "product_id": "202301111928-KLOT-FTUS43-TAFORD-AAA",
+      "valid_from_utc": "2023-01-11T22:00:00Z",
+      "source_forecast_text": "FM112200 VRB04KT P6SM BKN020",
+      "wind_speed_kt": "4",
+      "gust_kt": "0"
+    },
+    {
+      "sha256_selection": "0027ff968c91cbe6f6d10785d9ee2ccaa83e5df5a427a23671bd9cf7837a0fa7",
+      "station": "KSEA",
+      "product_id": "202402030533-KSEW-FTUS46-TAFSEA",
+      "valid_from_utc": "2024-02-03T06:00:00Z",
+      "source_forecast_text": "VRB04KT P6SM SCT050",
+      "wind_speed_kt": "4",
+      "gust_kt": "0"
+    },
+    {
+      "sha256_selection": "0098c358300991a09c2569bd09a27fced2f9cb9f0d8021c1dc0eb8ad6a452175",
+      "station": "KSEA",
+      "product_id": "202603291603-KSEW-FTUS46-TAFSEA-AAC",
+      "valid_from_utc": "2026-03-30T03:00:00Z",
+      "source_forecast_text": "FM300300 VRB04KT P6SM -SHRA SCT025 OVC050",
+      "wind_speed_kt": "4",
+      "gust_kt": "0"
+    },
+    {
+      "sha256_selection": "001418a9150efe2aafc4fb4ffaa462450f5a7c362ee811d6e8585d455e6bbda0",
+      "station": "KSFO",
+      "product_id": "202605110707-KMTR-FTUS46-TAFSFO-AAA",
+      "valid_from_utc": "2026-05-11T12:00:00Z",
+      "source_forecast_text": "FM111200 VRB05KT P6SM OVC007",
+      "wind_speed_kt": "5",
+      "gust_kt": "0"
+    },
+    {
+      "sha256_selection": "00237fd3eabf4fdd02a18005a7321e6b81ea6f2e7fde5230ce41de61d110d68b",
+      "station": "KSFO",
+      "product_id": "202404170855-KMTR-FTUS46-TAFSFO-AAA",
+      "valid_from_utc": "2024-04-18T06:00:00Z",
+      "source_forecast_text": "FM180600 VRB05KT P6SM SKC",
+      "wind_speed_kt": "5",
+      "gust_kt": "0"
+    },
+    {
+      "sha256_selection": "00453d3a5610a201d934a7635a16d9a9586c91f98c7867a0a8fb9e7bd90d9f35",
+      "station": "PHNL",
+      "product_id": "202603172334-PHFO-FTPA31-TAFHNL",
+      "valid_from_utc": "2026-03-18T05:00:00Z",
+      "source_forecast_text": "FM180500 VRB06KT P6SM BKN050",
+      "wind_speed_kt": "6",
+      "gust_kt": "0"
+    },
+    {
+      "sha256_selection": "004f7880af994512355acf5195faf4806116ed9e79cf90e1bb05f59058d6ad2f",
+      "station": "PHNL",
+      "product_id": "202608201122-PHFO-FTPA31-TAFHNL",
+      "valid_from_utc": "2026-08-20T12:00:00Z",
+      "source_forecast_text": "VRB06KT P6SM FEW025",
+      "wind_speed_kt": "6",
+      "gust_kt": "0"
+    }
+  ],
+  "raw_challenge_design": "Two lexicographically smallest SHA-256 digests of station/product/segment per station among corrected records, for later exact-bulletin challenge."
+}

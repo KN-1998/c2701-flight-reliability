@@ -199,13 +199,17 @@ def weather_features(frame,use_weather):
     return x
 
 
-def fit_weather_models(train, cal, fit, threshold):
-    # Select exactly the same sampled rows and calibration denominators.
+def sample_weather_rows(train, fit):
     take=np.arange(len(train))
     if len(take)>fit['fit_cap']:
         rng=np.random.default_rng(fit['random_seed'])
         take=np.sort(rng.choice(take,fit['fit_cap'],replace=False))
-    sampled=train.iloc[take]
+    return train.iloc[take]
+
+
+def fit_weather_models(train, cal, fit, threshold):
+    # Select exactly the same sampled rows and calibration denominators.
+    sampled=sample_weather_rows(train,fit)
     y=joint_target(sampled,threshold)
     cy=joint_target(cal,threshold)
     if len(np.unique(y))!=2 or len(np.unique(cy))!=2:
@@ -221,7 +225,7 @@ def fit_weather_models(train, cal, fit, threshold):
         model.fit(weather_features(sampled,use_weather),y)
         cal_fit=fit_sigmoid(prob(model,weather_features(cal,use_weather)),cy)
         models[use_weather]=(model,cal_fit)
-    return models, len(take)
+    return models, len(sampled)
 
 
 def taf_coverage(role, period, eligible, matched):
@@ -235,7 +239,7 @@ def taf_coverage(role, period, eligible, matched):
     return rows
 
 
-def weather(train,cal,test,protocol,taf_path,products_path,out):
+def weather(train,cal,test,protocol,taf_path,products_path,out,holidays=HOLIDAYS):
     taf=read_taf(taf_path,products_path)
     info=protocol['information_experiment']
     train_known=attach(train,taf,info)
@@ -250,7 +254,7 @@ def weather(train,cal,test,protocol,taf_path,products_path,out):
     coverage_detail=taf_coverage('fit','all',train,train_known)+taf_coverage('calibration','all',cal,cal_known)
     del train_known, cal_known
     rows,bins,daily,stress,stress_daily=[], [], [], [], []
-    holiday_days=set(pd.to_datetime(HOLIDAYS))
+    holiday_days=set(pd.to_datetime(holidays))
     holiday_window={date+pd.Timedelta(days=d) for date in holiday_days for d in (-1,0,1)}
     for period,flight in groups(test):
         scope='frozen_followup' if period in protocol['holdout_months'] else 'previously_reviewed'
@@ -306,7 +310,7 @@ def weather(train,cal,test,protocol,taf_path,products_path,out):
     return {'normalized_taf_sha256':sha(taf_path),'taf_product_inventory_sha256':sha(products_path),'training_match_n':train_count,
             'sampled_training_rows':n_sampled,'calibration_match_n':cal_count,
             'match_rule':info,'coverage_months':int(result.period.nunique()),
-            'calendar_proxy_2026':HOLIDAYS,
+            'calendar_proxy_2026':list(holidays),
             'calibration_scope':'Same time-eligible schedule proxy flights for both models'}
 
 

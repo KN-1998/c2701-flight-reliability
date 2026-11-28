@@ -1,0 +1,57 @@
+{
+  "generated_utc": "2026-11-28T12:58:01.658084+00:00",
+  "partial": false,
+  "raw_products": 3408,
+  "prevailing_segments": 14050,
+  "product_status_counts": {
+    "usable": 3301,
+    "invalid_or_missing_product_validity": 98,
+    "ambiguous_same_availability_minute": 8,
+    "initial_group_missing": 1
+  },
+  "stations_products": {
+    "KATL": 442,
+    "KDEN": 375,
+    "KDFW": 325,
+    "KEWR": 328,
+    "KLGA": 320,
+    "KMCO": 323,
+    "KORD": 318,
+    "KSEA": 363,
+    "KSFO": 305,
+    "PHNL": 309
+  },
+  "stations_segments": {
+    "KATL": 1467,
+    "KDEN": 2271,
+    "KDFW": 808,
+    "KEWR": 1550,
+    "KLGA": 1545,
+    "KMCO": 1291,
+    "KORD": 1032,
+    "KSEA": 1819,
+    "KSFO": 1269,
+    "PHNL": 998
+  },
+  "group_type_counts": {
+    "Forecast": 11133,
+    "Observation": 3408,
+    "Temporary": 907,
+    "Probability 30": 474
+  },
+  "source_group_only_products": 0,
+  "source_group_only_by_station": {},
+  "source_group_only_top_15_sample": [],
+  "diagnostics": {
+    "initial_group_start_differs_from_product_valid_start": 3205,
+    "segment_at_or_after_expiry_or_empty": 4,
+    "same_minute_version_barrier_products": 8
+  },
+  "normalized_sha256": {
+    "taf_products_normalized.csv.gz": "24fe8691015a709733a5ff617c999cc4d44525081113dec721a4ab1c6b42d56f",
+    "taf_prevailing_normalized.csv.gz": "de36c9e3b09f65d23fc06dc3b0ab6f2b257f3188b101d030950967d6b248be0f"
+  },
+  "availability_assumption": "available_utc is the later of stored product issue, WMO header minute and parsed issuance metadata; a user-chosen availability lag is additional.",
+  "join_rule": "Choose the newest product issued/available by cutoff, with any required additional lag; if unusable, expired or has no valid prevailing segment, forecast is missing. Do not fall back to superseded product. Segment interval is [valid_from_utc,valid_to_utc).",
+  "forecast_scope": "Origin terminal NWS TAF, initial prevailing + FM. TEMPO/PROB not substituted for prevailing; BECMG products marked unavailable."
+}

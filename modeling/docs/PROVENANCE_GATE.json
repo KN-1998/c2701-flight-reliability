@@ -94,5 +94,21 @@
     "live_2027_forecast_authorized": false,
     "results": "../results/v7_review_20261128",
     "legacy_flags_note": "Older generic flags retain historical stages; this review only repeats already reported v7 outcomes."
+  },
+  "v8_taf_source_and_coherent_weather": {
+    "targeted_raw_bulletins_adjudicated": 48,
+    "targeted_prevailing_groups_adjudicated": 186,
+    "full_archive_semantics_verified": false,
+    "exact_historical_corrected_replay_complete": true,
+    "joint_weather_structural_gate_passed": true,
+    "new_unseen_validation": false,
+    "real_booking_time_schedule_and_actual_taf_receipt_times_verified": false,
+    "live_2027_forecast_authorized": false,
+    "registered_future_months": [
+      "2026-10",
+      "2026-11",
+      "2026-12"
+    ],
+    "acceptance": "../results/v8_20261128/ACCEPTANCE.json"
   }
 }

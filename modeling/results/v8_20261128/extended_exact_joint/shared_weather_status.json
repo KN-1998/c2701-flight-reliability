@@ -1,0 +1,117 @@
+{
+  "status": "retrospective_coherent_weather_candidate_scored",
+  "months_and_labels": {
+    "2026-01": "retrospective_2026_jan_aug",
+    "2026-02": "retrospective_2026_jan_aug",
+    "2026-03": "retrospective_2026_jan_aug",
+    "2026-04": "retrospective_2026_jan_aug",
+    "2026-05": "retrospective_2026_jan_aug",
+    "2026-06": "retrospective_2026_jan_aug",
+    "2026-07": "retrospective_2026_jan_aug",
+    "2026-08": "retrospective_2026_jan_aug",
+    "2026-09": "separately_reviewed_2026_sep"
+  },
+  "v7_evaluation_months_were_already_observed": true,
+  "later_month_scoring_completed": false,
+  "first_access_to_later_outcomes_requires_external_confirmation": false,
+  "live_prediction_authorized": false,
+  "refit_settings": {
+    "from": "2023-01-01",
+    "through": "2024-03-31",
+    "calibration_months": [
+      "2024-04",
+      "2024-05",
+      "2024-06"
+    ],
+    "random_seed": 2701,
+    "fit_cap": 50000,
+    "C": 0.1,
+    "history_strength": 20
+  },
+  "as_of_matching_rule": {
+    "source": "Archived NWS terminal aerodrome forecast issue time as preserved by Iowa Environmental Mesonet",
+    "comparison": "same stable BTS schedule proxies and eligible flights, static model versus static plus origin TAF",
+    "decision_lead_minutes": 120,
+    "issuance_safety_lag_minutes": 30,
+    "scheduled_time": "BTS FlightDate and CRSDepTime localized to origin; 2400 and ambiguous or nonexistent clock values excluded from the TAF comparison",
+    "features": "Origin prevailing forecast visibility, ceiling, winds and weather indicators including missingness; exact feature definitions fixed from archive schema before matching outcomes",
+    "evaluation_role": "predeparture proxy experiment, neither observed future weather nor actual booking-time schedules"
+  },
+  "sample_pairing": "Both models use the same audited matched pool, branch masks, ordered seed and fit cap.",
+  "fallback": "Both whole-population forecasts share the matched-pool schedule model for rows without a usable TAF. This is a retrospective fallback policy check.",
+  "threshold_minutes": [
+    15,
+    60
+  ],
+  "leaf_names": [
+    "cancelled",
+    "diverted",
+    "completed_delay_ge60",
+    "completed_delay_15_to_lt60",
+    "completed_delay_lt15"
+  ],
+  "branch_names": [
+    "cancel",
+    "divert_given_not_cancel",
+    "delay60_given_completed",
+    "delay15_given_completed_and_below60"
+  ],
+  "schedule_features": [
+    "Origin",
+    "Dest",
+    "Reporting_Airline",
+    "month",
+    "weekday",
+    "time_bin",
+    "dep_minutes",
+    "arr_minutes",
+    "Distance",
+    "CRSElapsedTime"
+  ],
+  "additional_weather_features": [
+    "visibility_sm",
+    "ceiling_ft_agl",
+    "wind_speed_kt",
+    "gust_kt",
+    "clear_ceiling",
+    "adverse_forecast"
+  ],
+  "probability_structure": "Per-branch sigmoid calibration precedes multiplication. No threshold reordering.",
+  "reference_counts_and_identity_checked": true,
+  "matched_score_months": [
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08",
+    "2026-09"
+  ],
+  "fit_input_counts": {
+    "fit_eligible": 2475534,
+    "fit_matched": 2415385,
+    "calibration_eligible": 523735,
+    "calibration_matched": 510895
+  },
+  "max_leaf_sum_error": 4.440892098500626e-16,
+  "max_reconstruction_error": 3.3306690738754696e-16,
+  "threshold_violations": 0,
+  "input_sha256": {
+    "protocol": "ebc6f9318aa2c16eb056d6de231af3ff9faa5dbaf5c0b19e99a9545f16293e0b",
+    "v8_registry": "7837acd76d48a457b9277af899af201805d4030d79116760268ba9dc5e972519",
+    "taf_segments": "f0b735f76de5dcd677f2b22e707cd2f76ce5dbf0b9f154a7d453c88c2214992b",
+    "taf_products": "45e620772a766be477ad4c019f2e4320f42e06c8e50c396c0a82572d40db3b57",
+    "v7_binary": "53f0ba87731a292b3e9591474d49de1ff093979415160899024f8cea60200294",
+    "v8_binary": "91c47f845625b4df8df4c92a340452be7dfb5ab8876f923c220dac4339479709"
+  },
+  "environment": {
+    "python": "3.13.7",
+    "numpy": "2.5.0",
+    "pandas": "3.0.2",
+    "scipy": "1.17.1",
+    "sklearn": "1.8.0"
+  },
+  "completed_utc": "2026-11-28T13:05:10.786244+00:00"
+}

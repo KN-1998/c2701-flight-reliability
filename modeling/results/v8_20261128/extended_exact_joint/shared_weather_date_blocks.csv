@@ -1,0 +1,13 @@
+threshold_minutes,contrast,block_days,n,estimate,low,high,valid_reps,interpretation
+15,shared_schedule_plus_origin_taf_minus_shared_schedule,1,1373557,-0.005386567185423212,-0.00679161120655515,-0.004205941265087208,1000,Exploratory paired date-block range. No coverage or causal claim.
+15,shared_schedule_plus_origin_taf_minus_shared_schedule,7,1373557,-0.005386567185423212,-0.007110050169917199,-0.004072366827425525,1000,Exploratory paired date-block range. No coverage or causal claim.
+15,shared_schedule_plus_origin_taf_minus_shared_schedule,14,1373557,-0.005386567185423212,-0.007215728587976931,-0.004117587037154627,1000,Exploratory paired date-block range. No coverage or causal claim.
+15,shared_taf_with_schedule_fallback_minus_shared_schedule,1,1407837,-0.005255407453780765,-0.006646051752530148,-0.004072473906594973,1000,Exploratory paired date-block range. No coverage or causal claim.
+15,shared_taf_with_schedule_fallback_minus_shared_schedule,7,1407837,-0.005255407453780765,-0.006975034257477335,-0.00398688608300237,1000,Exploratory paired date-block range. No coverage or causal claim.
+15,shared_taf_with_schedule_fallback_minus_shared_schedule,14,1407837,-0.005255407453780765,-0.00710298155630937,-0.0040436819214313986,1000,Exploratory paired date-block range. No coverage or causal claim.
+60,shared_schedule_plus_origin_taf_minus_shared_schedule,1,1373557,-0.0030318346233996134,-0.004027280092320058,-0.0021394099101129647,1000,Exploratory paired date-block range. No coverage or causal claim.
+60,shared_schedule_plus_origin_taf_minus_shared_schedule,7,1373557,-0.0030318346233996134,-0.004228562692288304,-0.002126798000574384,1000,Exploratory paired date-block range. No coverage or causal claim.
+60,shared_schedule_plus_origin_taf_minus_shared_schedule,14,1373557,-0.0030318346233996134,-0.004284117407805291,-0.00218329776492837,1000,Exploratory paired date-block range. No coverage or causal claim.
+60,shared_taf_with_schedule_fallback_minus_shared_schedule,1,1407837,-0.002958011239804681,-0.003929247727688855,-0.0020880793053596604,1000,Exploratory paired date-block range. No coverage or causal claim.
+60,shared_taf_with_schedule_fallback_minus_shared_schedule,7,1407837,-0.002958011239804681,-0.004128565280135141,-0.002087090890123423,1000,Exploratory paired date-block range. No coverage or causal claim.
+60,shared_taf_with_schedule_fallback_minus_shared_schedule,14,1407837,-0.002958011239804681,-0.00420655845692954,-0.002128589428537709,1000,Exploratory paired date-block range. No coverage or causal claim.

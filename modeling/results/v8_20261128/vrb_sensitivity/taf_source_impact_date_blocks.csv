@@ -1,0 +1,7 @@
+threshold_minutes,contrast,block_days,n,estimate,low,high,valid_reps,interpretation
+15,revised_taf_minus_original_taf,1,1373557,1.0582075154077287e-05,2.7705366488926803e-06,1.8011053114870725e-05,1000,Exploratory paired date-block range. No coverage or causal claim.
+15,revised_taf_minus_original_taf,7,1373557,1.0582075154077287e-05,2.399007779342307e-06,1.9407988729104018e-05,1000,Exploratory paired date-block range. No coverage or causal claim.
+15,revised_taf_minus_original_taf,14,1373557,1.0582075154077287e-05,4.488210179859225e-06,1.9940481250483483e-05,1000,Exploratory paired date-block range. No coverage or causal claim.
+60,revised_taf_minus_original_taf,1,1373557,-2.9688936161836607e-05,-4.867543404152507e-05,-1.268121745478574e-05,1000,Exploratory paired date-block range. No coverage or causal claim.
+60,revised_taf_minus_original_taf,7,1373557,-2.9688936161836607e-05,-5.252567233295117e-05,-1.2676516895732204e-05,1000,Exploratory paired date-block range. No coverage or causal claim.
+60,revised_taf_minus_original_taf,14,1373557,-2.9688936161836607e-05,-5.5205386368109216e-05,-1.5700561707946726e-05,1000,Exploratory paired date-block range. No coverage or causal claim.

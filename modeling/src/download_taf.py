@@ -51,8 +51,8 @@ def describe(path, kind, station, start, stop):
             'last_issued_utc':max(times)}
 
 
-def segment_spans():
-    for start,end in PERIODS:
+def segment_spans(periods=PERIODS):
+    for start,end in periods:
         begin = date.fromisoformat(start)
         finish = date.fromisoformat(end)
         while begin<finish:
@@ -64,11 +64,11 @@ def segment_spans():
             begin = stop
 
 
-def jobs():
+def jobs(periods=PERIODS, product_spans=PRODUCT_SPANS):
     # Metadata accepts one station and at most one year. CSV supports multiple stations.
     # Interleave segments with metadata; keep the serving site at two requests at once.
-    products = [(station,a,b) for (a,b) in PRODUCT_SPANS for station in STATIONS]
-    segments = [(','.join(STATIONS),a,b) for a,b in segment_spans()]
+    products = [(station,a,b) for (a,b) in product_spans for station in STATIONS]
+    segments = [(','.join(STATIONS),a,b) for a,b in segment_spans(periods)]
     for j in range(max(len(products),len(segments))):
         if j<len(products):
             yield ('product',*products[j])
@@ -119,13 +119,22 @@ def fetch(root, item):
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--out',type=Path,default=Path('taf_raw'))
+    parser.add_argument('--date-range',nargs=2,type=date.fromisoformat,metavar=('START','STOP'),
+                        help='A separate bounded issuance archive, with UTC endpoints in YYYY-MM-DD')
     args=parser.parse_args()
+    if args.date_range:
+        start,stop=args.date_range
+        if not 4 <= (stop-start).days <= 365:
+            parser.error('Date range must cover 4 to 365 days')
+        ranges=[(start.isoformat(),stop.isoformat())]
+        pending=list(jobs(ranges,ranges))
+    else:
+        pending=list(jobs())
     args.out.mkdir(parents=True,exist_ok=True)
     manifest_path=args.out/'download_manifest.json'
     previous={}
     if manifest_path.exists():
         previous={i['file']:i for i in json.loads(manifest_path.read_text(encoding='utf-8'))['successes']}
-    pending=list(jobs())
     records,errors=[],[]
     with ThreadPoolExecutor(max_workers=2) as pool:
         futures={pool.submit(fetch,args.out,item):item for item in pending}

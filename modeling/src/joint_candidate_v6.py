@@ -86,7 +86,8 @@ def _risk_sets(leaves):
 
 
 class SharedFiveLeafModel:
-    def __init__(self, *, regularization_c, fit_cap, seed):
+    def __init__(self, *, regularization_c, fit_cap, seed, feature_builder=features,
+                 binary_fitter=fit_binary):
         if (isinstance(fit_cap, bool) or not isinstance(fit_cap, int) or fit_cap < 1
                 or isinstance(seed, bool) or not isinstance(seed, int) or seed < 0
                 or isinstance(regularization_c, bool) or not isinstance(regularization_c, Real)
@@ -96,6 +97,8 @@ class SharedFiveLeafModel:
         self.regularization_c = regularization_c
         self.fit_cap = fit_cap
         self.seed = seed
+        self.feature_builder = feature_builder
+        self.binary_fitter = binary_fitter
         self.models = []
         self.calibrators = []
         self.risk_counts = []
@@ -105,7 +108,7 @@ class SharedFiveLeafModel:
         calibration_sets = _risk_sets(observed_leaves(cal))
         generator = np.random.default_rng(self.seed)
         models, calibrators, counts = [], [], []
-        cal_x = features(cal)
+        cal_x = self.feature_builder(cal)
         for name, (train_mask, train_y), (cal_mask, cal_y) in zip(
                 BRANCHES, training_sets, calibration_sets):
             available = np.flatnonzero(train_mask)
@@ -115,7 +118,8 @@ class SharedFiveLeafModel:
             if len(available) > self.fit_cap:
                 indices = np.sort(generator.choice(available, self.fit_cap, replace=False))
             y = train_y[indices]
-            model, warnings = fit_binary(features(train.iloc[indices]), y, self.regularization_c)
+            model, warnings = self.binary_fitter(
+                self.feature_builder(train.iloc[indices]), y, self.regularization_c)
             cal_target = cal_y[cal_mask]
             calibrator = None
             if len(cal_target) and cal_target.any() and not cal_target.all():
@@ -134,7 +138,7 @@ class SharedFiveLeafModel:
     def predict(self, frame):
         if not self.models:
             raise ValueError('Fit the five-leaf model before predicting')
-        x = features(frame)
+        x = self.feature_builder(frame)
         local = np.column_stack([apply_sigmoid(prob(model, x), calibrator)
                                  for model, calibrator in zip(self.models, self.calibrators)])
         return path_probabilities(local)

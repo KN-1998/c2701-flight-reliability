@@ -1,0 +1,4 @@
+# Preserve raw NWS archives byte-for-byte for the SHA-256 receipts.
+original_products/*.txt -text -diff
+extended_exact/original_products/*.txt -text -diff
+vrb_source_challenge/*.txt -text -diff
