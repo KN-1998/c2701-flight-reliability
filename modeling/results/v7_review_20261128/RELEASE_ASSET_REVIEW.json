@@ -1,0 +1,217 @@
+{
+  "asset_sha256": "acfa2be799c4b3102207a67173f487c3a9503a00adc2cf3f820b3833547ca9ed",
+  "crc_pass": true,
+  "safe_paths": true,
+  "files": [
+    {
+      "name": "fig01_reliability_definitions.pdf",
+      "bytes": 26732,
+      "sha256": "8f86ced3a45265ccf7ed7dfa051d2ca31a0f94b61dbb9538a013103c8b43145e",
+      "repository_match": true
+    },
+    {
+      "name": "fig01_reliability_definitions.png",
+      "bytes": 293698,
+      "sha256": "f0a61a0f6010ea718d1128ce35f776b01f53c12aa6b5c89d40bcd170f7c2c890",
+      "repository_match": true
+    },
+    {
+      "name": "fig02_airport_composition.pdf",
+      "bytes": 27389,
+      "sha256": "96d938ce242ed9ebecf2fdc8cf4dbea5e4c84a26002e2960f56965f1ff875857",
+      "repository_match": true
+    },
+    {
+      "name": "fig02_airport_composition.png",
+      "bytes": 238108,
+      "sha256": "83ff2895005f925953bd9b109c3c6c57ce0d5376b4f06be347fd13ff4d3f5563",
+      "repository_match": true
+    },
+    {
+      "name": "fig03_traveler_scorecard.pdf",
+      "bytes": 25887,
+      "sha256": "2d62a39ed57bbc013f7fe91ff47736b24b49f34ad0bee0feae9fa928bb221c63",
+      "repository_match": true
+    },
+    {
+      "name": "fig03_traveler_scorecard.png",
+      "bytes": 222297,
+      "sha256": "0c992c3cfe4b982592ce7958c480fdf52d9afe6054de8948c10494443a87f435",
+      "repository_match": true
+    },
+    {
+      "name": "fig07_frozen_followup.pdf",
+      "bytes": 27901,
+      "sha256": "ee8f278411e66bf8ef8f51f69f62425e36822c1dfd4d9403d4eeecc96b0eb3f5",
+      "repository_match": true
+    },
+    {
+      "name": "fig07_frozen_followup.png",
+      "bytes": 610112,
+      "sha256": "cdf03ae605f58727527bdcdd73524679302a4cabdc4f0d9e227f095a74c75441",
+      "repository_match": true
+    },
+    {
+      "name": "fig08_predeparture_taf.pdf",
+      "bytes": 14477,
+      "sha256": "0afc4b5dbaa6b654bf05262ec1cac18cbac8825e5285542fad6bb10528126572",
+      "repository_match": true
+    },
+    {
+      "name": "fig08_predeparture_taf.png",
+      "bytes": 229573,
+      "sha256": "2537e14d46c47e91824618b6afce9f6785f3bb6baea418fbfda99c519b94190d",
+      "repository_match": true
+    },
+    {
+      "name": "FIGURE_INDEX.md",
+      "bytes": 2857,
+      "sha256": "10ffd02ee7996595240eb5b00be459b3c834d2c7a5849456644a05a6641eb55d",
+      "repository_match": true
+    },
+    {
+      "name": "HISTORICAL_FIGURE_INPUTS.sha256",
+      "bytes": 536,
+      "sha256": "723587bc3e713064ecae45f71103693a9bb6db82b9c8d16a95baaeaddcc9da46",
+      "repository_match": true
+    },
+    {
+      "name": "HISTORICAL_FIGURE_SOURCES.md",
+      "bytes": 2776,
+      "sha256": "e597d2c5957c6a5006c10917c82a4fecd40bb8efb4aee9ee7acd5a0b0160960d",
+      "repository_match": true
+    },
+    {
+      "name": "make_model_figures.m",
+      "bytes": 15814,
+      "sha256": "4c5d66a27819d9bf192dc597cbaaebbb831c5242b0c6e75b334480295fce5791",
+      "repository_match": true
+    },
+    {
+      "name": "MODEL_FIGURE_INPUTS.sha256",
+      "bytes": 721,
+      "sha256": "592fec0a6e21c825d67bb7e896bdc97b2b83f2a1712abdc9aabf46101e7c53b7",
+      "repository_match": true
+    },
+    {
+      "name": "model_figures_matlab_run.json",
+      "bytes": 546,
+      "sha256": "9edf5a69c30b13bd03008b5f26bf0b4a4883765e9608dda3d4b74e2dc3cb1643",
+      "repository_match": true
+    },
+    {
+      "name": "q3_model_brier.pdf",
+      "bytes": 24806,
+      "sha256": "43503c07bc384257d7c019522bb09af6d88a388514fc778543c235a91aa2825a",
+      "repository_match": true
+    },
+    {
+      "name": "q3_model_brier.png",
+      "bytes": 181945,
+      "sha256": "8f9fa3f8b139f60acd9fde3219ee9bdfc0332dd577c18f76304e2ab9867c8f20",
+      "repository_match": true
+    },
+    {
+      "name": "q3_model_brier_values.csv",
+      "bytes": 654,
+      "sha256": "df66d0636bedbdfc5aecae1eeeab0c833c52ea2309ee561ebaededc14d860bde",
+      "repository_match": true
+    },
+    {
+      "name": "q3_september_calibration.pdf",
+      "bytes": 22389,
+      "sha256": "4791410db95c7615317736443a681d5b97b24406f671e2f1bb117e9d4475aa5d",
+      "repository_match": true
+    },
+    {
+      "name": "q3_september_calibration.png",
+      "bytes": 175612,
+      "sha256": "164469fd93df1d9e00fe53e513b1383fef1e1c382039950d21d9d1c8ac7dccee",
+      "repository_match": true
+    },
+    {
+      "name": "q3_september_calibration_values.csv",
+      "bytes": 658,
+      "sha256": "66300abe42636ee666e8a71b6a2af9b6b15f45cac2ecc049ea83534fe89937f2",
+      "repository_match": true
+    },
+    {
+      "name": "q4_external_event_stress.pdf",
+      "bytes": 22016,
+      "sha256": "3c4eb70472faeae14093cef92116a89576722986857e59f447348c7cecb36b29",
+      "repository_match": true
+    },
+    {
+      "name": "q4_external_event_stress.png",
+      "bytes": 174262,
+      "sha256": "94ff06bcc3f5f2beeffff26061736f39457a2ddd16ea30546f29a5e4f5ee82ea",
+      "repository_match": true
+    },
+    {
+      "name": "q4_external_event_stress_values.csv",
+      "bytes": 937,
+      "sha256": "7508b79df19e6964cf6487dadf8a32c9b560151f7bbec4269c296520265527da",
+      "repository_match": true
+    },
+    {
+      "name": "README_model_figures.md",
+      "bytes": 2225,
+      "sha256": "d472b6db34c4ed8a65ae9fb7837075801175af9e4a6c58fce2daf2f242d64118",
+      "repository_match": true
+    },
+    {
+      "name": "render_historical_figures.m",
+      "bytes": 11963,
+      "sha256": "89d4818b9eb6748d06f6439e1ee948911bd66c8d3a8da09bbed75b7e1db681a1",
+      "repository_match": true
+    },
+    {
+      "name": "render_v7_followup.m",
+      "bytes": 6762,
+      "sha256": "52d30a9e5138364e840257d2f99dd1c810add04da7d5f15d498111aaaac6ccd3",
+      "repository_match": true
+    },
+    {
+      "name": "table_v7_coverage_by_stratification.csv",
+      "bytes": 247,
+      "sha256": "c9408ae66fb0eb9ad26004d71c56d2375fb2026da138e34c01217f261ffeb0a5",
+      "repository_match": true
+    },
+    {
+      "name": "table_v7_followup_date_blocks.csv",
+      "bytes": 3323,
+      "sha256": "f06eea271e464e47eff7f71f59ae5a2983b57ec68f12abffc8525921c9e9a130",
+      "repository_match": true
+    },
+    {
+      "name": "table_v7_followup_pooled.csv",
+      "bytes": 2103,
+      "sha256": "f2160af99fd8c63d70d43bd0e3c8e23e00a624a58514c630bbdc8721992d7edf",
+      "repository_match": true
+    },
+    {
+      "name": "table_v7_taf_pooled.csv",
+      "bytes": 1144,
+      "sha256": "72a4d6a31bd1dfa728f93bbc2c0a7032246cd9faa63962c6289b60077165e63b",
+      "repository_match": true
+    },
+    {
+      "name": "table_v7_taf_stress.csv",
+      "bytes": 5536,
+      "sha256": "7de8414bafb0742f7e0cfad914b7776d8157fd06a9860e22068b0fdb6d5ab4af",
+      "repository_match": true
+    },
+    {
+      "name": "table_v7_taf_stress_date_blocks.csv",
+      "bytes": 10116,
+      "sha256": "cc46400807fc8373361df272dde815ee7d18be86e2344cc162a8a632c0a6b00f",
+      "repository_match": true
+    },
+    {
+      "name": "V7_FIGURE_INPUTS.sha256",
+      "bytes": 1012,
+      "sha256": "b668f97f7fe22ce124742a7c4f86390d9c5d23a2d5b71ec164afe0b7379a9325",
+      "repository_match": true
+    }
+  ]
+}

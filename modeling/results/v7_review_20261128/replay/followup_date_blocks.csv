@@ -1,0 +1,19 @@
+threshold_minutes,contrast,block_days,n,estimate,low,high,valid_reps,interpretation
+15,conditional_tree_minus_baseline,1,1407837,-0.0032107305983053737,-0.004198430575830241,-0.0022677119182750232,1000,Exploratory paired date-block range. No coverage or causal claim.
+15,conditional_tree_minus_baseline,7,1407837,-0.0032107305983053737,-0.004802963794019473,-0.001664982745198011,1000,Exploratory paired date-block range. No coverage or causal claim.
+15,conditional_tree_minus_baseline,14,1407837,-0.0032107305983053737,-0.005089606680708431,-0.0018437762756600314,1000,Exploratory paired date-block range. No coverage or causal claim.
+15,direct_joint_minus_baseline,1,1407837,-0.0034956030500845254,-0.004450451960480212,-0.0026267284481026275,1000,Exploratory paired date-block range. No coverage or causal claim.
+15,direct_joint_minus_baseline,7,1407837,-0.0034956030500845254,-0.005000474564795165,-0.0021243846923369573,1000,Exploratory paired date-block range. No coverage or causal claim.
+15,direct_joint_minus_baseline,14,1407837,-0.0034956030500845254,-0.0053942797349310345,-0.0023178977404112386,1000,Exploratory paired date-block range. No coverage or causal claim.
+15,shared_five_leaf_minus_baseline,1,1407837,-0.0033932935480164572,-0.004409576403562472,-0.0023709835061507473,1000,Exploratory paired date-block range. No coverage or causal claim.
+15,shared_five_leaf_minus_baseline,7,1407837,-0.0033932935480164572,-0.00510539115455683,-0.001827518702168726,1000,Exploratory paired date-block range. No coverage or causal claim.
+15,shared_five_leaf_minus_baseline,14,1407837,-0.0033932935480164572,-0.005353859746627111,-0.001958530810614078,1000,Exploratory paired date-block range. No coverage or causal claim.
+60,conditional_tree_minus_baseline,1,1407837,-0.0008205980819596988,-0.0013534370175598128,-0.000321908397979544,1000,Exploratory paired date-block range. No coverage or causal claim.
+60,conditional_tree_minus_baseline,7,1407837,-0.0008205980819596988,-0.0016765791069238585,-1.997119058821396e-06,1000,Exploratory paired date-block range. No coverage or causal claim.
+60,conditional_tree_minus_baseline,14,1407837,-0.0008205980819596988,-0.0018308971574841283,3.008673334492181e-05,1000,Exploratory paired date-block range. No coverage or causal claim.
+60,direct_joint_minus_baseline,1,1407837,-0.0008542979545328198,-0.001344128813591227,-0.0003761335432746909,1000,Exploratory paired date-block range. No coverage or causal claim.
+60,direct_joint_minus_baseline,7,1407837,-0.0008542979545328198,-0.001669007535744908,-9.846877546224491e-05,1000,Exploratory paired date-block range. No coverage or causal claim.
+60,direct_joint_minus_baseline,14,1407837,-0.0008542979545328198,-0.0018522079209135778,-8.050649265329993e-05,1000,Exploratory paired date-block range. No coverage or causal claim.
+60,shared_five_leaf_minus_baseline,1,1407837,-0.0008205980819596988,-0.0013534370175598128,-0.000321908397979544,1000,Exploratory paired date-block range. No coverage or causal claim.
+60,shared_five_leaf_minus_baseline,7,1407837,-0.0008205980819596988,-0.0016765791069238585,-1.997119058821396e-06,1000,Exploratory paired date-block range. No coverage or causal claim.
+60,shared_five_leaf_minus_baseline,14,1407837,-0.0008205980819596988,-0.0018308971574841283,3.008673334492181e-05,1000,Exploratory paired date-block range. No coverage or causal claim.

@@ -1,0 +1,56 @@
+{
+  "status": "completed",
+  "stage": "all",
+  "protocol_sha256": "ebc6f9318aa2c16eb056d6de231af3ff9faa5dbaf5c0b19e99a9545f16293e0b",
+  "scored_after_rule_freeze": [
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08"
+  ],
+  "previously_reviewed": [
+    "2026-09"
+  ],
+  "training_n": 2475534,
+  "calibration_n": 523735,
+  "archived_2027_live_forecast_authorized": false,
+  "environment": {
+    "python": "3.12.16",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "scipy": "1.18.1",
+    "sklearn": "1.9.1"
+  },
+  "weather": {
+    "normalized_taf_sha256": "a39fd8434590b1c7241f325ff50bfbe82d2f5d041dd87320a7753e469608f73d",
+    "taf_product_inventory_sha256": "45e620772a766be477ad4c019f2e4320f42e06c8e50c396c0a82572d40db3b57",
+    "training_match_n": 2415385,
+    "sampled_training_rows": 50000,
+    "calibration_match_n": 510895,
+    "match_rule": {
+      "source": "Archived NWS terminal aerodrome forecast issue time as preserved by Iowa Environmental Mesonet",
+      "comparison": "same stable BTS schedule proxies and eligible flights, static model versus static plus origin TAF",
+      "decision_lead_minutes": 120,
+      "issuance_safety_lag_minutes": 30,
+      "scheduled_time": "BTS FlightDate and CRSDepTime localized to origin; 2400 and ambiguous or nonexistent clock values excluded from the TAF comparison",
+      "features": "Origin prevailing forecast visibility, ceiling, winds and weather indicators including missingness; exact feature definitions fixed from archive schema before matching outcomes",
+      "evaluation_role": "predeparture proxy experiment, neither observed future weather nor actual booking-time schedules"
+    },
+    "coverage_months": 9,
+    "calendar_proxy_2026": [
+      "2026-01-01",
+      "2026-01-19",
+      "2026-02-16",
+      "2026-05-25",
+      "2026-06-19",
+      "2026-07-03",
+      "2026-09-07"
+    ],
+    "calibration_scope": "Same time-eligible schedule proxy flights for both models"
+  },
+  "completed_utc": "2026-11-28T06:20:09.792385+00:00"
+}

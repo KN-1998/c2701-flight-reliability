@@ -1,7 +1,7 @@
 {
   "status": "SOURCE_AUDIT_INCOMPLETE",
   "all_substantive_assumptions_justified": false,
-  "assumptions_registered": 68,
+  "assumptions_registered": 80,
   "core_formulas_primary_text_verified": [
     "P1 PDF p4",
     "P2 PDF p5"
@@ -75,5 +75,24 @@
     "live_2027_forecast_authorized": false,
     "results": "../results/review_v6_20261127",
     "legacy_generic_flags_note": "v5/new_holdout flags retain history; module threshold_coherence flags cover that diagnostic alone, not whole delivery."
+  },
+  "v7_independent_review": {
+    "base_commit": "29b495907a087c7931ce624fdf99cdeaa956d587",
+    "actual_frozen_refit_completed": true,
+    "all_validation_csv_tables_compared": 21,
+    "airport_csv_tables_compared": 3,
+    "max_validation_abs_difference": 7.673861546209082e-13,
+    "new_unseen_validation_this_review": false,
+    "external_preregistration_independently_verified": false,
+    "same_matched_flight_n": 1373557,
+    "weather_methods_observed_inversions": 0,
+    "weather_joint_card_authorized": false,
+    "taf_source_semantics_fully_verified": false,
+    "taf_candidate_discrepancy_segments": 27,
+    "taf_candidate_discrepancy_products": 20,
+    "raw_product_adjudication_complete": false,
+    "live_2027_forecast_authorized": false,
+    "results": "../results/v7_review_20261128",
+    "legacy_flags_note": "Older generic flags retain historical stages; this review only repeats already reported v7 outcomes."
   }
 }

@@ -1,0 +1,2 @@
+FlightDate,Origin,Dest,Reporting_Airline,Flight_Number_Reporting_Airline,audit_reason
+2023-05-21,LGA,BNA,YX,5612,normal_arrival_missing;

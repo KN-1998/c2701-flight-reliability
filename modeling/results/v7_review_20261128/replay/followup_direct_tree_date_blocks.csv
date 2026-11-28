@@ -1,0 +1,7 @@
+threshold_minutes,contrast,block_days,n,estimate,low,high,valid_reps,interpretation
+15,direct_joint_minus_conditional_tree,1,1407837,-0.00028487245177915107,-0.0005685257250157041,-1.919714169895544e-06,1000,Exploratory paired date-block range. No coverage or causal claim.
+15,direct_joint_minus_conditional_tree,7,1407837,-0.00028487245177915107,-0.000711616326888179,0.0001248649791468516,1000,Exploratory paired date-block range. No coverage or causal claim.
+15,direct_joint_minus_conditional_tree,14,1407837,-0.00028487245177915107,-0.0007569887515466995,0.00017701536847958288,1000,Exploratory paired date-block range. No coverage or causal claim.
+60,direct_joint_minus_conditional_tree,1,1407837,-3.369987257312116e-05,-0.00016869705485049593,0.00010150348405292794,1000,Exploratory paired date-block range. No coverage or causal claim.
+60,direct_joint_minus_conditional_tree,7,1407837,-3.369987257312116e-05,-0.0002190363660521462,0.0001451274451364341,1000,Exploratory paired date-block range. No coverage or causal claim.
+60,direct_joint_minus_conditional_tree,14,1407837,-3.369987257312116e-05,-0.00022247409648436364,0.00014039216832005696,1000,Exploratory paired date-block range. No coverage or causal claim.

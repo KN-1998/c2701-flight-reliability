@@ -1,0 +1,5 @@
+scope,method,n,violations,violation_rate,max_upper_minus_lower
+frozen_followup,schedule_plus_origin_taf,1373557,0,0.0,-0.01066271410393789
+frozen_followup,schedule_proxy_only,1373557,0,0.0,-0.01934343016315819
+previously_reviewed,schedule_plus_origin_taf,170657,0,0.0,-0.0283448841054754
+previously_reviewed,schedule_proxy_only,170657,0,0.0,-0.044100968947505405

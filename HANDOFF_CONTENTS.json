@@ -1,15 +1,141 @@
 {
-  "release_version": "C2701_v7_followup_MATLAB_20261128",
+  "release_version": "C2701_v7_independent_review_20261128",
   "date": "2026-11-28 Asia/Shanghai",
-  "base_commit": "d060ce4ebe371c3bb1b2285f3b02545391e32e70",
+  "base_commit": "29b495907a087c7931ce624fdf99cdeaa956d587",
   "entrypoint": "modeling/src/run_study_v7.py",
-  "review_entrypoint": "modeling/src/review_v6_evidence.py",
-  "handoff_guide": "V6_核验补丁独立验收_20261128.md",
-  "frozen_results": "modeling/results/implementation_v6",
-  "independent_replay_results": "modeling/results/review_v6_20261127/replay",
-  "review_results": "modeling/results/review_v6_20261127",
-  "expected_total_files": 712,
-  "expected_checksum_entries": 711,
+  "review_entrypoint": "modeling/src/review_v7_evidence.py",
+  "additional_review_entrypoints": [
+    "modeling/src/audit_weather_thresholds_v7.py",
+    "modeling/src/audit_taf_text_v7.py"
+  ],
+  "handoff_guide": "V7_独立复核与来源待办交接.md",
+  "frozen_results": "modeling/results/v7_20261128",
+  "independent_replay_results": "modeling/results/v7_review_20261128/replay",
+  "review_results": "modeling/results/v7_review_20261128",
+  "review_status": "modeling/results/v7_review_20261128/REVIEW_STATUS.json",
+  "expected_total_files": 779,
+  "expected_checksum_entries": 778,
+  "test_status": {
+    "tests_run": 114,
+    "failures": 0,
+    "errors": 0,
+    "successful": true,
+    "evidence_level": "numeric/integration checks, NOT empirical validation"
+  },
+  "environment": {
+    "python": "3.12.16",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "scipy": "1.18.1",
+    "sklearn": "1.9.1"
+  },
+  "original_v7_followup_months": [
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08"
+  ],
+  "original_v7_followup_known_rows": 1407837,
+  "taf_same_flight_rows": 1373557,
+  "previously_reviewed_late_month": "2026-09",
+  "all_csv_tables_compared_this_review": 21,
+  "airport_csv_tables_compared_this_review": 3,
+  "max_observed_csv_numeric_difference": 7.673861546209082e-13,
+  "source_audit_complete": false,
+  "new_unseen_validation": false,
+  "joint_weather_card_authorized": false,
+  "live_2027_forecast_authorized": false,
+  "upstream_original_release_asset": {
+    "release_tag": "v7-20261128",
+    "name": "C2701-v7-MATLAB-figures-20261128.zip",
+    "bytes": 2174264,
+    "sha256": "acfa2be799c4b3102207a67173f487c3a9503a00adc2cf3f820b3833547ca9ed"
+  },
+  "scope_note": "Full original repository payload plus new replay/source review. Original frozen results retained. Numerical replay is NOT a semantic source certification or a new unseen validation. Exact published commit and archive digest are external. External paired-probability duplicates and local caches are excluded.",
+  "historical_metadata_before_this_review": {
+    "release_version": "C2701_v7_followup_MATLAB_20261128",
+    "date": "2026-11-28 Asia/Shanghai",
+    "base_commit": "d060ce4ebe371c3bb1b2285f3b02545391e32e70",
+    "entrypoint": "modeling/src/run_study_v7.py",
+    "review_entrypoint": "modeling/src/review_v6_evidence.py",
+    "handoff_guide": "V6_核验补丁独立验收_20261128.md",
+    "frozen_results": "modeling/results/implementation_v6",
+    "independent_replay_results": "modeling/results/review_v6_20261127/replay",
+    "review_results": "modeling/results/review_v6_20261127",
+    "expected_total_files": 712,
+    "expected_checksum_entries": 711,
+    "test_status": {
+      "tests_run": 94,
+      "failures": 0,
+      "errors": 0,
+      "successful": true,
+      "evidence_level": "numeric/integration checks, NOT empirical validation"
+    },
+    "upstream_test_rerun": 79,
+    "release_zip_test_rerun": 79,
+    "all_csv_tables_compared": 56,
+    "max_observed_csv_numeric_difference": 1.8474111129762605e-13,
+    "core_rows": 6112183,
+    "core_months": 36,
+    "all_months": 37,
+    "late_months": [
+      "2026-09"
+    ],
+    "holdout_months": 19,
+    "holdout_known_rows": 3287437,
+    "environment": {
+      "python": "3.12.16",
+      "numpy": "2.5.5",
+      "pandas": "3.1.1",
+      "scipy": "1.18.1",
+      "sklearn": "1.9.1"
+    },
+    "upstream_original_release_asset": {
+      "release_tag": "v6-20261127",
+      "name": "C2701-v6-code-handoff-20261127.zip",
+      "bytes": 128128225,
+      "sha256": "a52e383f492dec41bb8b36697dbbac786dec610d9325b579add3f8c18cf4f10c"
+    },
+    "original_release_vs_commit": "modeling/results/review_v6_20261127/RELEASE_VS_COMMIT.json",
+    "source_audit_complete": false,
+    "new_unseen_validation": false,
+    "live_2027_forecast_authorized": false,
+    "scope_note": "Engineering replay + post-implementation source/derivation review, not newly unseen evaluation. Original frozen results preserved. ZIP hash and exact published commit are external to avoid circular self-reference.",
+    "integrity_patch_parent": "8a3b15bb6861a71c788024712a4e0ba10861c7a6",
+    "integrity_guide": "V6_核验完善说明.md",
+    "integrity_results": "modeling/results/v6_integrity_20261128",
+    "integrity_tests": {
+      "tests_run": 94,
+      "failures": 0,
+      "errors": 0,
+      "successful": true,
+      "evidence_level": "numeric/integration checks, NOT empirical validation"
+    },
+    "integrity_acceptance_results": "modeling/results/v6_integrity_acceptance_20261128",
+    "previous_87_tests": "modeling/results/review_v6_20261127/final_tests/TEST_STATUS.json",
+    "integrity_acceptance_environment": {
+      "python": "3.12.16",
+      "numpy": "2.5.5",
+      "pandas": "3.1.1",
+      "scipy": "1.18.1",
+      "sklearn": "1.9.1"
+    },
+    "integrity_training_refit_this_turn": false,
+    "integrity_acceptance_scope": "94 tests and existing frozen/replay tables rechecked. No model algorithm, parameters, formula or prediction changes. Existing 37-month refit was performed on 2026-11-27.",
+    "v7_tests": {
+      "tests_run": 100,
+      "failures": 0,
+      "errors": 0,
+      "successful": true,
+      "evidence_level": "numeric/integration checks, NOT empirical validation"
+    },
+    "v7_handoff": "V7_验证与图表交接.md",
+    "v7_figures": "modeling/figures/v7"
+  },
   "included_files_before_manifests": [
     {
       "path": ".gitignore",
@@ -17,11 +143,63 @@
     },
     {
       "path": "00_编程手先读.md",
-      "bytes": 8568
+      "bytes": 9250
     },
     {
       "path": "AGENTS.md",
       "bytes": 1260
+    },
+    {
+      "path": "PUBLICATION_NOTES.md",
+      "bytes": 4090
+    },
+    {
+      "path": "README.md",
+      "bytes": 15639
+    },
+    {
+      "path": "V5_复算说明.md",
+      "bytes": 2078
+    },
+    {
+      "path": "V6_复算与交接.md",
+      "bytes": 3267
+    },
+    {
+      "path": "V6_建模复核交接.md",
+      "bytes": 2694
+    },
+    {
+      "path": "V6_核验完善说明.md",
+      "bytes": 1653
+    },
+    {
+      "path": "V6_核验补丁独立验收_20261128.md",
+      "bytes": 4011
+    },
+    {
+      "path": "V7_独立复核与来源待办交接.md",
+      "bytes": 3910
+    },
+    {
+      "path": "V7_验证与图表交接.md",
+      "bytes": 4583
+    },
+    {
+      "path": "modeling/README_编程手先读.md",
+      "bytes": 9809
+    },
+    {
+      "path": "modeling/data/REVIEW_V3_ACQUISITION_RANGES.json",
+      "bytes": 6668
+    },
+    {
+      "path": "modeling/data/REVIEW_V3_ACQUISITION_SNAPSHOT.json",
+      "bytes": 3198
+    },
+    {
+      "path": "modeling/data/REVIEW_V3_PRIORITY_HOLDOUTS.json",
+      "bytes": 3336
     },
     {
       "path": "modeling/data/bts_2023_01.csv.gz",
@@ -388,18 +566,6 @@
       "bytes": 72755
     },
     {
-      "path": "modeling/data/REVIEW_V3_ACQUISITION_RANGES.json",
-      "bytes": 6668
-    },
-    {
-      "path": "modeling/data/REVIEW_V3_ACQUISITION_SNAPSHOT.json",
-      "bytes": 3198
-    },
-    {
-      "path": "modeling/data/REVIEW_V3_PRIORITY_HOLDOUTS.json",
-      "bytes": 3336
-    },
-    {
       "path": "modeling/data/taf_v7/download_manifest.json",
       "bytes": 52344
     },
@@ -429,7 +595,7 @@
     },
     {
       "path": "modeling/docs/ASSUMPTION_REGISTER.csv",
-      "bytes": 22048
+      "bytes": 26685
     },
     {
       "path": "modeling/docs/AUXILIARY_FULL_READING_V6_20261127.md",
@@ -461,7 +627,7 @@
     },
     {
       "path": "modeling/docs/CURRENT_TEAM_REQUIREMENTS_20261127.md",
-      "bytes": 6388
+      "bytes": 6735
     },
     {
       "path": "modeling/docs/DERIVATION_LOG.md",
@@ -512,16 +678,16 @@
       "bytes": 2236
     },
     {
-      "path": "modeling/docs/MODEL_SPEC.md",
-      "bytes": 2484
-    },
-    {
       "path": "modeling/docs/MODELER_REQUIREMENTS_V4.md",
-      "bytes": 2729
+      "bytes": 3075
     },
     {
       "path": "modeling/docs/MODELING_REVISION_V3.md",
       "bytes": 9057
+    },
+    {
+      "path": "modeling/docs/MODEL_SPEC.md",
+      "bytes": 2484
     },
     {
       "path": "modeling/docs/O_PAPER_READING_V4.md",
@@ -533,11 +699,11 @@
     },
     {
       "path": "modeling/docs/PROGRAMMER_REQUIREMENTS_V4.md",
-      "bytes": 3285
+      "bytes": 3631
     },
     {
       "path": "modeling/docs/PROVENANCE_GATE.json",
-      "bytes": 4136
+      "bytes": 5087
     },
     {
       "path": "modeling/docs/REVIEW_RESPONSE_V3.csv",
@@ -550,22 +716,6 @@
     {
       "path": "modeling/docs/REVIEW_V3_SOURCE_NOTES.md",
       "bytes": 2328
-    },
-    {
-      "path": "modeling/docs/reviews/C2701_审查报告_原件.docx",
-      "bytes": 46045
-    },
-    {
-      "path": "modeling/docs/reviews/review_extracted.json",
-      "bytes": 17734
-    },
-    {
-      "path": "modeling/docs/reviews/V2_DATA_MANIFEST.json",
-      "bytes": 23002
-    },
-    {
-      "path": "modeling/docs/reviews/V2_REPRODUCTION.md",
-      "bytes": 698
     },
     {
       "path": "modeling/docs/SOURCE_LEDGER.csv",
@@ -586,6 +736,10 @@
     {
       "path": "modeling/docs/TEAM_REQUIREMENTS_V6_20261127.md",
       "bytes": 5142
+    },
+    {
+      "path": "modeling/docs/TEAM_REQUIREMENTS_V7_REVIEW_20261128.md",
+      "bytes": 4166
     },
     {
       "path": "modeling/docs/THRESHOLD_COHERENCE_20261127.md",
@@ -624,6 +778,10 @@
       "bytes": 2034
     },
     {
+      "path": "modeling/docs/V7_INDEPENDENT_MODELING_REVIEW_20261128.md",
+      "bytes": 12954
+    },
+    {
       "path": "modeling/docs/VALIDATION_PLAN_V4.md",
       "bytes": 2172
     },
@@ -637,7 +795,47 @@
     },
     {
       "path": "modeling/docs/WRITER_REQUIREMENTS_V4.md",
-      "bytes": 2714
+      "bytes": 3060
+    },
+    {
+      "path": "modeling/docs/reviews/C2701_审查报告_原件.docx",
+      "bytes": 46045
+    },
+    {
+      "path": "modeling/docs/reviews/V2_DATA_MANIFEST.json",
+      "bytes": 23002
+    },
+    {
+      "path": "modeling/docs/reviews/V2_REPRODUCTION.md",
+      "bytes": 698
+    },
+    {
+      "path": "modeling/docs/reviews/review_extracted.json",
+      "bytes": 17734
+    },
+    {
+      "path": "modeling/figures/v7/FIGURE_INDEX.md",
+      "bytes": 2857
+    },
+    {
+      "path": "modeling/figures/v7/HISTORICAL_FIGURE_INPUTS.sha256",
+      "bytes": 536
+    },
+    {
+      "path": "modeling/figures/v7/HISTORICAL_FIGURE_SOURCES.md",
+      "bytes": 2776
+    },
+    {
+      "path": "modeling/figures/v7/MODEL_FIGURE_INPUTS.sha256",
+      "bytes": 721
+    },
+    {
+      "path": "modeling/figures/v7/README_model_figures.md",
+      "bytes": 2225
+    },
+    {
+      "path": "modeling/figures/v7/V7_FIGURE_INPUTS.sha256",
+      "bytes": 1012
     },
     {
       "path": "modeling/figures/v7/fig01_reliability_definitions.pdf",
@@ -680,24 +878,8 @@
       "bytes": 229573
     },
     {
-      "path": "modeling/figures/v7/FIGURE_INDEX.md",
-      "bytes": 2857
-    },
-    {
-      "path": "modeling/figures/v7/HISTORICAL_FIGURE_INPUTS.sha256",
-      "bytes": 536
-    },
-    {
-      "path": "modeling/figures/v7/HISTORICAL_FIGURE_SOURCES.md",
-      "bytes": 2776
-    },
-    {
       "path": "modeling/figures/v7/make_model_figures.m",
       "bytes": 15814
-    },
-    {
-      "path": "modeling/figures/v7/MODEL_FIGURE_INPUTS.sha256",
-      "bytes": 721
     },
     {
       "path": "modeling/figures/v7/model_figures_matlab_run.json",
@@ -740,10 +922,6 @@
       "bytes": 937
     },
     {
-      "path": "modeling/figures/v7/README_model_figures.md",
-      "bytes": 2225
-    },
-    {
       "path": "modeling/figures/v7/render_historical_figures.m",
       "bytes": 11963
     },
@@ -774,10 +952,6 @@
     {
       "path": "modeling/figures/v7/table_v7_taf_stress_date_blocks.csv",
       "bytes": 10116
-    },
-    {
-      "path": "modeling/figures/v7/V7_FIGURE_INPUTS.sha256",
-      "bytes": 1012
     },
     {
       "path": "modeling/literature/ARXIV_METADATA.xml",
@@ -820,6 +994,14 @@
       "bytes": 3018
     },
     {
+      "path": "modeling/literature/SOURCE_MANIFEST.json",
+      "bytes": 8529
+    },
+    {
+      "path": "modeling/literature/TUTZ2020.pdf",
+      "bytes": 428560
+    },
+    {
       "path": "modeling/literature/review_v3/BTS_FIELDS.html",
       "bytes": 149783
     },
@@ -860,18 +1042,6 @@
       "bytes": 3531
     },
     {
-      "path": "modeling/literature/SOURCE_MANIFEST.json",
-      "bytes": 8529
-    },
-    {
-      "path": "modeling/literature/TUTZ2020.pdf",
-      "bytes": 428560
-    },
-    {
-      "path": "modeling/README_编程手先读.md",
-      "bytes": 9809
-    },
-    {
       "path": "modeling/requirements.lock.txt",
       "bytes": 434
     },
@@ -884,8 +1054,12 @@
       "bytes": 399
     },
     {
-      "path": "modeling/results/followup_20261127/diagnostic_inputs.json",
-      "bytes": 1891
+      "path": "modeling/results/TEST_REPORT.txt",
+      "bytes": 16067
+    },
+    {
+      "path": "modeling/results/TEST_STATUS.json",
+      "bytes": 158
     },
     {
       "path": "modeling/results/followup_20261127/FINDINGS.md",
@@ -894,6 +1068,10 @@
     {
       "path": "modeling/results/followup_20261127/TEST_ATTEMPT_1_UTF8_FAILURE.txt",
       "bytes": 7615
+    },
+    {
+      "path": "modeling/results/followup_20261127/diagnostic_inputs.json",
+      "bytes": 1891
     },
     {
       "path": "modeling/results/followup_20261127/threshold_coherence.csv",
@@ -906,6 +1084,10 @@
     {
       "path": "modeling/results/followup_20261127/threshold_coherence_status.json",
       "bytes": 442
+    },
+    {
+      "path": "modeling/results/implementation_v6/DELIVERY_RESULTS.md",
+      "bytes": 1905
     },
     {
       "path": "modeling/results/implementation_v6/audit_by_month.csv",
@@ -958,10 +1140,6 @@
     {
       "path": "modeling/results/implementation_v6/data_snapshot.json",
       "bytes": 60375
-    },
-    {
-      "path": "modeling/results/implementation_v6/DELIVERY_RESULTS.md",
-      "bytes": 1905
     },
     {
       "path": "modeling/results/implementation_v6/delivery_status.json",
@@ -1172,6 +1350,10 @@
       "bytes": 1449
     },
     {
+      "path": "modeling/results/implementation_v6/traveler_card/TRAVELER_CARD.md",
+      "bytes": 2491
+    },
+    {
       "path": "modeling/results/implementation_v6/traveler_card/card_status.json",
       "bytes": 1235
     },
@@ -1192,10 +1374,6 @@
       "bytes": 774
     },
     {
-      "path": "modeling/results/implementation_v6/traveler_card/TRAVELER_CARD.md",
-      "bytes": 2491
-    },
-    {
       "path": "modeling/results/implementation_v6/unknown_records.csv",
       "bytes": 139
     },
@@ -1206,6 +1384,10 @@
     {
       "path": "modeling/results/implementation_v6/verification_summary.json",
       "bytes": 415
+    },
+    {
+      "path": "modeling/results/review_v3/CURRENT_FINDINGS_V3.md",
+      "bytes": 8496
     },
     {
       "path": "modeling/results/review_v3/common_support_coverage_2023.png",
@@ -1440,26 +1622,6 @@
       "bytes": 64199
     },
     {
-      "path": "modeling/results/review_v3/CURRENT_FINDINGS_V3.md",
-      "bytes": 8496
-    },
-    {
-      "path": "modeling/results/review_v3/descriptive/airport_selection_distance_bin_2023.csv",
-      "bytes": 1475
-    },
-    {
-      "path": "modeling/results/review_v3/descriptive/airport_selection_evidence_2023.csv",
-      "bytes": 1357
-    },
-    {
-      "path": "modeling/results/review_v3/descriptive/airport_selection_season_2023.csv",
-      "bytes": 1544
-    },
-    {
-      "path": "modeling/results/review_v3/descriptive/airport_selection_time_bin_2023.csv",
-      "bytes": 1339
-    },
-    {
       "path": "modeling/results/review_v3/descriptive/EWR_LGA_to_DEN_2023/case_status.json",
       "bytes": 791
     },
@@ -1498,6 +1660,22 @@
     {
       "path": "modeling/results/review_v3/descriptive/EWR_LGA_to_DEN_later_observed/support_coverage.csv",
       "bytes": 100
+    },
+    {
+      "path": "modeling/results/review_v3/descriptive/airport_selection_distance_bin_2023.csv",
+      "bytes": 1475
+    },
+    {
+      "path": "modeling/results/review_v3/descriptive/airport_selection_evidence_2023.csv",
+      "bytes": 1357
+    },
+    {
+      "path": "modeling/results/review_v3/descriptive/airport_selection_season_2023.csv",
+      "bytes": 1544
+    },
+    {
+      "path": "modeling/results/review_v3/descriptive/airport_selection_time_bin_2023.csv",
+      "bytes": 1339
     },
     {
       "path": "modeling/results/review_v3/descriptive/metrics_2023_airports.csv",
@@ -1816,12 +1994,16 @@
       "bytes": 2125
     },
     {
-      "path": "modeling/results/review_v4/diagnostic_inputs.json",
-      "bytes": 963
-    },
-    {
       "path": "modeling/results/review_v4/FINDINGS_V4.md",
       "bytes": 5283
+    },
+    {
+      "path": "modeling/results/review_v4/WORKLOG_V4.json",
+      "bytes": 1428
+    },
+    {
+      "path": "modeling/results/review_v4/diagnostic_inputs.json",
+      "bytes": 963
     },
     {
       "path": "modeling/results/review_v4/input_contract_recheck.json",
@@ -1864,10 +2046,6 @@
       "bytes": 4719
     },
     {
-      "path": "modeling/results/review_v4/WORKLOG_V4.json",
-      "bytes": 1428
-    },
-    {
       "path": "modeling/results/review_v6_20261127/ASSET_VERIFICATION.json",
       "bytes": 365
     },
@@ -1876,16 +2054,36 @@
       "bytes": 45108
     },
     {
+      "path": "modeling/results/review_v6_20261127/FINDINGS.md",
+      "bytes": 5481
+    },
+    {
+      "path": "modeling/results/review_v6_20261127/LOCAL_ENVIRONMENT.json",
+      "bytes": 117
+    },
+    {
+      "path": "modeling/results/review_v6_20261127/RELEASE_VS_COMMIT.json",
+      "bytes": 3290
+    },
+    {
+      "path": "modeling/results/review_v6_20261127/REPLAY_CONSOLE_RAW_UTF16.log",
+      "bytes": 10530
+    },
+    {
+      "path": "modeling/results/review_v6_20261127/REPLAY_LOG.txt",
+      "bytes": 5276
+    },
+    {
+      "path": "modeling/results/review_v6_20261127/REPLAY_LOG_ENCODING.json",
+      "bytes": 608
+    },
+    {
       "path": "modeling/results/review_v6_20261127/final_tests/TEST_REPORT.txt",
       "bytes": 11574
     },
     {
       "path": "modeling/results/review_v6_20261127/final_tests/TEST_STATUS.json",
       "bytes": 157
-    },
-    {
-      "path": "modeling/results/review_v6_20261127/FINDINGS.md",
-      "bytes": 5481
     },
     {
       "path": "modeling/results/review_v6_20261127/independent_replay_all_csv_review.json",
@@ -1902,14 +2100,6 @@
     {
       "path": "modeling/results/review_v6_20261127/legacy_root_test_reports_at_80b953e/TEST_STATUS.json",
       "bytes": 159
-    },
-    {
-      "path": "modeling/results/review_v6_20261127/LOCAL_ENVIRONMENT.json",
-      "bytes": 117
-    },
-    {
-      "path": "modeling/results/review_v6_20261127/RELEASE_VS_COMMIT.json",
-      "bytes": 3290
     },
     {
       "path": "modeling/results/review_v6_20261127/release_zip_tests/TEST_REPORT.txt",
@@ -2172,6 +2362,10 @@
       "bytes": 1449
     },
     {
+      "path": "modeling/results/review_v6_20261127/replay/traveler_card/TRAVELER_CARD.md",
+      "bytes": 2491
+    },
+    {
       "path": "modeling/results/review_v6_20261127/replay/traveler_card/card_status.json",
       "bytes": 1235
     },
@@ -2192,28 +2386,12 @@
       "bytes": 774
     },
     {
-      "path": "modeling/results/review_v6_20261127/replay/traveler_card/TRAVELER_CARD.md",
-      "bytes": 2491
-    },
-    {
       "path": "modeling/results/review_v6_20261127/replay/unknown_records.csv",
       "bytes": 139
     },
     {
       "path": "modeling/results/review_v6_20261127/replay/validation_status.json",
       "bytes": 3363
-    },
-    {
-      "path": "modeling/results/review_v6_20261127/REPLAY_CONSOLE_RAW_UTF16.log",
-      "bytes": 10530
-    },
-    {
-      "path": "modeling/results/review_v6_20261127/REPLAY_LOG.txt",
-      "bytes": 5276
-    },
-    {
-      "path": "modeling/results/review_v6_20261127/REPLAY_LOG_ENCODING.json",
-      "bytes": 608
     },
     {
       "path": "modeling/results/review_v6_20261127/saved_evidence_review.json",
@@ -2225,14 +2403,6 @@
     },
     {
       "path": "modeling/results/review_v6_20261127/upstream_79_tests/TEST_STATUS.json",
-      "bytes": 157
-    },
-    {
-      "path": "modeling/results/TEST_REPORT.txt",
-      "bytes": 12826
-    },
-    {
-      "path": "modeling/results/TEST_STATUS.json",
       "bytes": 157
     },
     {
@@ -2416,6 +2586,246 @@
       "bytes": 139
     },
     {
+      "path": "modeling/results/v7_review_20261128/AIRPORT_CSV_COMPARISON.json",
+      "bytes": 1229
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/FIGURE_FILE_REVIEW.json",
+      "bytes": 3044
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/IEM_PARSER_SOURCE.json",
+      "bytes": 447
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/PARSER_TEXT_DIAGNOSTIC.json",
+      "bytes": 346
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/RELEASE_ASSET_REVIEW.json",
+      "bytes": 7176
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/REPLAY_CSV_COMPARISON.json",
+      "bytes": 8612
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/REPRODUCTION_ENTRYPOINTS.json",
+      "bytes": 1135
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/REVIEW_STATUS.json",
+      "bytes": 2084
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/SAVED_EVIDENCE.json",
+      "bytes": 1517
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/WEB_SOURCE_RETRIEVAL.json",
+      "bytes": 1927
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/airport_groups/airport_subgroups.csv",
+      "bytes": 497303
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/airport_groups/stricter_support_by_airport.csv",
+      "bytes": 2103
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/airport_groups/stricter_support_pooled.csv",
+      "bytes": 250
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/airport_groups/subgroup_status.json",
+      "bytes": 6291
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/replay/audit_by_month.csv",
+      "bytes": 2819
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/replay/data_snapshot.json",
+      "bytes": 42435
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/replay/followup_calibration.csv",
+      "bytes": 33084
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/replay/followup_daily_losses.csv",
+      "bytes": 114347
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/replay/followup_date_blocks.csv",
+      "bytes": 3397
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/replay/followup_direct_tree_date_blocks.csv",
+      "bytes": 1229
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/replay/followup_identity.csv",
+      "bytes": 1155
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/replay/followup_monthly.csv",
+      "bytes": 20257
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/replay/followup_pooled.csv",
+      "bytes": 2204
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/replay/reporting_carrier_coverage.csv",
+      "bytes": 10970
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/replay/study_status.json",
+      "bytes": 2119
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/replay/taf_calibration.csv",
+      "bytes": 21304
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/replay/taf_coverage.csv",
+      "bytes": 555
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/replay/taf_coverage_by_airport.csv",
+      "bytes": 6161
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/replay/taf_daily_losses.csv",
+      "bytes": 49303
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/replay/taf_date_blocks.csv",
+      "bytes": 1306
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/replay/taf_monthly.csv",
+      "bytes": 10409
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/replay/taf_pooled.csv",
+      "bytes": 1195
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/replay/taf_stress_daily_residuals.csv",
+      "bytes": 333450
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/replay/taf_stress_date_blocks.csv",
+      "bytes": 10325
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/replay/taf_stress_monthly.csv",
+      "bytes": 31824
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/replay/taf_stress_pooled.csv",
+      "bytes": 5769
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/replay/unknown_records.csv",
+      "bytes": 139
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/taf_text_audit/TAF_TEXT_AUDIT_STATUS.json",
+      "bytes": 495
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/taf_text_audit/audit_by_month.csv",
+      "bytes": 2819
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/taf_text_audit/data_snapshot.json",
+      "bytes": 42435
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/taf_text_audit/reporting_carrier_coverage.csv",
+      "bytes": 10970
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/taf_text_audit/taf_text_flag_exposure.csv",
+      "bytes": 1040
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/taf_text_audit/taf_text_flagged_segments.csv",
+      "bytes": 7960
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/taf_text_audit/unknown_records.csv",
+      "bytes": 139
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/tests/TEST_REPORT.txt",
+      "bytes": 16067
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/tests/TEST_STATUS.json",
+      "bytes": 158
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/tests_baseline/TEST_REPORT.txt",
+      "bytes": 13707
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/tests_baseline/TEST_STATUS.json",
+      "bytes": 158
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/weather_audit/WEATHER_AUDIT_STATUS.json",
+      "bytes": 2924
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/weather_audit/audit_by_month.csv",
+      "bytes": 2819
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/weather_audit/data_snapshot.json",
+      "bytes": 42435
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/weather_audit/forecast_missingness.csv",
+      "bytes": 1434
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/weather_audit/match_outcome_composition.csv",
+      "bytes": 27877
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/weather_audit/reconstructed_weather_scores.csv",
+      "bytes": 10409
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/weather_audit/reporting_carrier_coverage.csv",
+      "bytes": 10970
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/weather_audit/unknown_records.csv",
+      "bytes": 139
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/weather_audit/weather_threshold_inversions.csv",
+      "bytes": 91
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/weather_audit/weather_threshold_monthly.csv",
+      "bytes": 3988
+    },
+    {
+      "path": "modeling/results/v7_review_20261128/weather_audit/weather_threshold_pooled.csv",
+      "bytes": 368
+    },
+    {
+      "path": "modeling/results/validation_v5/FINDINGS_V5.md",
+      "bytes": 3622
+    },
+    {
       "path": "modeling/results/validation_v5/audit_by_month.csv",
       "bytes": 3697
     },
@@ -2466,10 +2876,6 @@
     {
       "path": "modeling/results/validation_v5/data_snapshot.json",
       "bytes": 60375
-    },
-    {
-      "path": "modeling/results/validation_v5/FINDINGS_V5.md",
-      "bytes": 3622
     },
     {
       "path": "modeling/results/validation_v5/historical_airport_scorecard.csv",
@@ -2628,6 +3034,14 @@
       "bytes": 7140
     },
     {
+      "path": "modeling/src/audit_taf_text_v7.py",
+      "bytes": 4601
+    },
+    {
+      "path": "modeling/src/audit_weather_thresholds_v7.py",
+      "bytes": 10288
+    },
+    {
       "path": "modeling/src/calibration_diagnostics.py",
       "bytes": 10079
     },
@@ -2710,6 +3124,10 @@
     {
       "path": "modeling/src/review_v6_evidence.py",
       "bytes": 18949
+    },
+    {
+      "path": "modeling/src/review_v7_evidence.py",
+      "bytes": 8461
     },
     {
       "path": "modeling/src/run.py",
@@ -2804,6 +3222,14 @@
       "bytes": 5608
     },
     {
+      "path": "modeling/tests/test_v7_evidence_source_review.py",
+      "bytes": 3272
+    },
+    {
+      "path": "modeling/tests/test_weather_threshold_review_v7.py",
+      "bytes": 4531
+    },
+    {
       "path": "problem/2027_MCM_C_Mock_On_Time_On_Paper(1).pdf",
       "bytes": 34876
     },
@@ -2818,105 +3244,6 @@
     {
       "path": "problem/requirements_extracted.txt",
       "bytes": 53672
-    },
-    {
-      "path": "PUBLICATION_NOTES.md",
-      "bytes": 4090
-    },
-    {
-      "path": "README.md",
-      "bytes": 14957
-    },
-    {
-      "path": "V5_复算说明.md",
-      "bytes": 2078
-    },
-    {
-      "path": "V6_复算与交接.md",
-      "bytes": 3267
-    },
-    {
-      "path": "V6_建模复核交接.md",
-      "bytes": 2694
-    },
-    {
-      "path": "V6_核验完善说明.md",
-      "bytes": 1653
-    },
-    {
-      "path": "V6_核验补丁独立验收_20261128.md",
-      "bytes": 4011
-    },
-    {
-      "path": "V7_验证与图表交接.md",
-      "bytes": 4583
     }
-  ],
-  "test_status": {
-    "tests_run": 94,
-    "failures": 0,
-    "errors": 0,
-    "successful": true,
-    "evidence_level": "numeric/integration checks, NOT empirical validation"
-  },
-  "upstream_test_rerun": 79,
-  "release_zip_test_rerun": 79,
-  "all_csv_tables_compared": 56,
-  "max_observed_csv_numeric_difference": 1.8474111129762605e-13,
-  "core_rows": 6112183,
-  "core_months": 36,
-  "all_months": 37,
-  "late_months": [
-    "2026-09"
-  ],
-  "holdout_months": 19,
-  "holdout_known_rows": 3287437,
-  "environment": {
-    "python": "3.12.16",
-    "numpy": "2.5.5",
-    "pandas": "3.1.1",
-    "scipy": "1.18.1",
-    "sklearn": "1.9.1"
-  },
-  "upstream_original_release_asset": {
-    "release_tag": "v6-20261127",
-    "name": "C2701-v6-code-handoff-20261127.zip",
-    "bytes": 128128225,
-    "sha256": "a52e383f492dec41bb8b36697dbbac786dec610d9325b579add3f8c18cf4f10c"
-  },
-  "original_release_vs_commit": "modeling/results/review_v6_20261127/RELEASE_VS_COMMIT.json",
-  "source_audit_complete": false,
-  "new_unseen_validation": false,
-  "live_2027_forecast_authorized": false,
-  "scope_note": "Engineering replay + post-implementation source/derivation review, not newly unseen evaluation. Original frozen results preserved. ZIP hash and exact published commit are external to avoid circular self-reference.",
-  "integrity_patch_parent": "8a3b15bb6861a71c788024712a4e0ba10861c7a6",
-  "integrity_guide": "V6_核验完善说明.md",
-  "integrity_results": "modeling/results/v6_integrity_20261128",
-  "integrity_tests": {
-    "tests_run": 94,
-    "failures": 0,
-    "errors": 0,
-    "successful": true,
-    "evidence_level": "numeric/integration checks, NOT empirical validation"
-  },
-  "integrity_acceptance_results": "modeling/results/v6_integrity_acceptance_20261128",
-  "previous_87_tests": "modeling/results/review_v6_20261127/final_tests/TEST_STATUS.json",
-  "integrity_acceptance_environment": {
-    "python": "3.12.16",
-    "numpy": "2.5.5",
-    "pandas": "3.1.1",
-    "scipy": "1.18.1",
-    "sklearn": "1.9.1"
-  },
-  "integrity_training_refit_this_turn": false,
-  "integrity_acceptance_scope": "94 tests and existing frozen/replay tables rechecked. No model algorithm, parameters, formula or prediction changes. Existing 37-month refit was performed on 2026-11-27.",
-  "v7_tests": {
-    "tests_run": 100,
-    "failures": 0,
-    "errors": 0,
-    "successful": true,
-    "evidence_level": "numeric/integration checks, NOT empirical validation"
-  },
-  "v7_handoff": "V7_验证与图表交接.md",
-  "v7_figures": "modeling/figures/v7"
+  ]
 }

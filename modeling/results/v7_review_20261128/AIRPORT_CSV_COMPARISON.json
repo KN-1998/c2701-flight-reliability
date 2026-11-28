@@ -1,0 +1,50 @@
+{
+  "status": "ALL_CSV_COMPARISON_PASSED",
+  "tables_compared": 3,
+  "absolute_tolerance": 1e-10,
+  "scope": "engineering reproducibility, not forecast uncertainty",
+  "maximum_observed_abs_difference": 0.0,
+  "tables": [
+    {
+      "path": "airport_subgroups.csv",
+      "rows": 4138,
+      "max_abs_numeric_difference": 0.0,
+      "numeric_columns": {
+        "year": 0.0,
+        "n": 0.0,
+        "known": 0.0,
+        "unknown": 0.0,
+        "cancelled": 0.0,
+        "diverted": 0.0,
+        "on_time15": 0.0,
+        "bad60": 0.0,
+        "strict15_lower": 0.0,
+        "strict15_upper": 0.0,
+        "bad60_lower": 0.0,
+        "bad60_upper": 0.0
+      }
+    },
+    {
+      "path": "stricter_support_by_airport.csv",
+      "rows": 30,
+      "max_abs_numeric_difference": 0.0,
+      "numeric_columns": {
+        "common_cells": 0.0,
+        "n": 0.0,
+        "n_supported": 0.0,
+        "coverage": 0.0
+      }
+    },
+    {
+      "path": "stricter_support_pooled.csv",
+      "rows": 3,
+      "max_abs_numeric_difference": 0.0,
+      "numeric_columns": {
+        "common_cells": 0.0,
+        "n": 0.0,
+        "n_supported": 0.0,
+        "coverage": 0.0
+      }
+    }
+  ]
+}

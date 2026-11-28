@@ -1,0 +1,19 @@
+{
+  "status": "V7_SAVED_ARITHMETIC_AND_PAIRING_PASS",
+  "engineering_absolute_tolerance": 1e-10,
+  "checked_files": {
+    "followup/followup_monthly.csv": "79e60f56b35e7015c8cfffa8475c3315172c626d18324a3a6568af11f3310296",
+    "followup/followup_pooled.csv": "1122a8a3a185ffc874c994c5056c0efb9303e3fd060a361fd416386af27a8dd6",
+    "followup/followup_calibration.csv": "0b3b7a72cc502dce5ec4ec113fb65fcd135864b571bffd9dac122cc3c935b8ad",
+    "followup/followup_daily_losses.csv": "63acd3fb34fbd25fd3036fb2f448d7cbe7f547a021ea6d1c3e5fb63717fbeb8c",
+    "weather/taf_monthly.csv": "53f0ba87731a292b3e9591474d49de1ff093979415160899024f8cea60200294",
+    "weather/taf_pooled.csv": "16a3112ec230572f16b386515659e7ccf5363768040594d25f07fcc54be2eb47",
+    "weather/taf_calibration.csv": "bffff2ea380623e14fad8652ac4b079bb4aeff7c9d3b901fba7ecd71391bfdd5",
+    "weather/taf_daily_losses.csv": "a03669e2189e88598a9395cdedfdd71b931e9c1abedaf8158bcdf5687df3bda5",
+    "weather/taf_coverage.csv": "a1940992a2ee616642f825778514766eb60f836a368ae8de8f50ca110f608fb9",
+    "weather/taf_coverage_by_airport.csv": "3291684ed9e26cdb0f9163fac7ee2ded29e3c9a943b69c736d9ba575a67587ae",
+    "weather/taf_stress_monthly.csv": "b2e4898419d62b6583844a0fb1628cf6b86fcbca7fe8162798d40224622a3131",
+    "weather/taf_stress_pooled.csv": "581d28945c652ea532cb32c2b0e5237e3e415ca281539bfa388e1901891123b7"
+  },
+  "scope": "Saved arithmetic, matching counts and identities only; no blind-test chronology or live availability proof"
+}

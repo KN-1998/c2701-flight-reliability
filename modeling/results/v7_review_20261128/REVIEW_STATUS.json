@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-28 Asia/Shanghai",
+  "compiled_at": "2026-11-28T14:57:17.371437+08:00",
+  "base_commit": "29b495907a087c7931ce624fdf99cdeaa956d587",
+  "status": "NUMERICAL_REPLAY_PASSED_SOURCE_SEMANTICS_PENDING",
+  "review_scope": "Post-v7 replay and descriptive source review of already inspected results, NOT a new unseen test",
+  "tests": {
+    "tests_run": 114,
+    "failures": 0,
+    "errors": 0,
+    "successful": true,
+    "evidence_level": "numeric/integration checks, NOT empirical validation"
+  },
+  "original_tests": 100,
+  "new_regression_tests": 14,
+  "replay_tables": 21,
+  "replay_maximum_abs_difference": 7.673861546209082e-13,
+  "airport_comparison": "AIRPORT_CSV_COMPARISON.json",
+  "saved_arithmetic_review": "SAVED_EVIDENCE.json",
+  "weather_threshold_review": "weather_audit/WEATHER_AUDIT_STATUS.json",
+  "taf_source_review": "taf_text_audit/TAF_TEXT_AUDIT_STATUS.json",
+  "taf_semantics_fully_verified": false,
+  "newly_unseen_validation_this_review": false,
+  "joint_weather_card_authorized": false,
+  "live_2027_forecast_authorized": false,
+  "models_or_frozen_inputs_changed": false,
+  "frozen_paths_confirmed_unchanged": [
+    "modeling/data",
+    "modeling/results/v7_20261128",
+    "modeling/results/implementation_v6",
+    "modeling/results/validation_v5",
+    "modeling/results/review_v6_20261127",
+    "modeling/results/v6_integrity_20261128",
+    "modeling/results/v6_integrity_acceptance_20261128"
+  ],
+  "model_refit_for_replay_performed": true,
+  "matlab_rerun_performed": false,
+  "environment": {
+    "python": "3.12.16",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "scipy": "1.18.1",
+    "sklearn": "1.9.1"
+  },
+  "raw_probability_files": "External workspace files; SHA-256 inventory and reproducible entrypoint in weather_audit/WEATHER_AUDIT_STATUS.json. Not included in the public archive.",
+  "review_guide": "V7_独立复核与来源待办交接.md",
+  "external_receipts": "Exact published commit and ZIP digest are recorded outside this archive to avoid circular self-reference."
+}

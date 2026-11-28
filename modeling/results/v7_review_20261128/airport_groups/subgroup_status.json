@@ -1,0 +1,187 @@
+{
+  "source_months": [
+    {
+      "period": "2023-01",
+      "sha256_filtered": "c5f7c3080fcbf62e82b7d9b59edb14f57a902ea2e2e117f69d203b7eb8c5b0fc",
+      "retained_rows": 155293
+    },
+    {
+      "period": "2023-02",
+      "sha256_filtered": "6acab62231d0a1dd2329d6c5897e1e2614a93104b123a4ec8a401cb3eb73ca95",
+      "retained_rows": 145926
+    },
+    {
+      "period": "2023-03",
+      "sha256_filtered": "10fea9ea1f0ba5fa0aebcd07a2c327ecce31bf176837cfd2529d11c04d3e8f15",
+      "retained_rows": 167708
+    },
+    {
+      "period": "2023-04",
+      "sha256_filtered": "f720bf336501203d2a899bdc1ca477f727e37f21991fa901aa9dd7b95bf223d7",
+      "retained_rows": 162988
+    },
+    {
+      "period": "2023-05",
+      "sha256_filtered": "74b379ac49e40921a3e3fa22b9dcc45f3616d0c1771d55cfb916a2403cad6fa0",
+      "retained_rows": 170270
+    },
+    {
+      "period": "2023-06",
+      "sha256_filtered": "5a44f32ad8d13cdbe8fa2ba430c410197be565a0637f9a4e82ea0863a93633db",
+      "retained_rows": 169675
+    },
+    {
+      "period": "2023-07",
+      "sha256_filtered": "29cde04530a37f23ad9d16504c6f7453747d1b5df6184c6f3bdd296ed508df44",
+      "retained_rows": 176493
+    },
+    {
+      "period": "2023-08",
+      "sha256_filtered": "f9eca871d9fab35d8d8af0e80d305db37ad1e82b3ade4a3e8c4097200f3c971c",
+      "retained_rows": 177987
+    },
+    {
+      "period": "2023-09",
+      "sha256_filtered": "89a64e399e09537447a88d9764c37b4800f46df76fd8d5f2a5e8c437bee9ad06",
+      "retained_rows": 168611
+    },
+    {
+      "period": "2023-10",
+      "sha256_filtered": "7ca99f256bee47b10887b401eeddd458182ebeb494d85c5443a86dce23b3f24d",
+      "retained_rows": 174356
+    },
+    {
+      "period": "2023-11",
+      "sha256_filtered": "08a2b94fbd8aa21b7d3cd105577196aa10c9f35cd282d812d97e2eaf5fe22f58",
+      "retained_rows": 163601
+    },
+    {
+      "period": "2023-12",
+      "sha256_filtered": "b1962b3a41fb2ab0cc63d9050598052f8520209d2e7f9609ac385b08912cdd79",
+      "retained_rows": 164609
+    },
+    {
+      "period": "2024-01",
+      "sha256_filtered": "111f58ade9171de2f0a0b08dac3636edf95bf22255eafb1917de841d6add7c1d",
+      "retained_rows": 157792
+    },
+    {
+      "period": "2024-02",
+      "sha256_filtered": "2b6eef102678d9de7644bf65494cc4397e328aee4f01ce881258cd0d18c35291",
+      "retained_rows": 150438
+    },
+    {
+      "period": "2024-03",
+      "sha256_filtered": "0aa16a1c594f989056b0ae65c0d9dc3517fd69e98a5e884f54b5dbad25b4a533",
+      "retained_rows": 169788
+    },
+    {
+      "period": "2024-04",
+      "sha256_filtered": "c4095b7526b08f6df2d3f98af9d74601979f95eb9cadc60e5757cc1afe5a0a54",
+      "retained_rows": 168705
+    },
+    {
+      "period": "2024-05",
+      "sha256_filtered": "602360192561a50078ba9c523712666299d264d04e9177d4b1de11c2b10623f1",
+      "retained_rows": 178026
+    },
+    {
+      "period": "2024-06",
+      "sha256_filtered": "9ee91c22e121e49c45eeb5da0bae8cb3afcb8181e112e4383d56c371f88b202b",
+      "retained_rows": 177004
+    },
+    {
+      "period": "2024-07",
+      "sha256_filtered": "c14c83e7c4bf50b29cf9cfa92c49dcb3dc55fc90da8db032bd35f8d069e8c36f",
+      "retained_rows": 184390
+    },
+    {
+      "period": "2024-08",
+      "sha256_filtered": "be006a4a06d903417db57f0ee9ca46d55c35caaaac6c5f293ebdba96fa896cd0",
+      "retained_rows": 180674
+    },
+    {
+      "period": "2024-09",
+      "sha256_filtered": "49080f1b091b95550e375af18df1c5b3027de4024d77073030feeddaf3dfadcf",
+      "retained_rows": 171740
+    },
+    {
+      "period": "2024-10",
+      "sha256_filtered": "fb24e1d8a36b1b4e357847b3f978b4f5532602aef45ae30635b9169a1618b65b",
+      "retained_rows": 178852
+    },
+    {
+      "period": "2024-11",
+      "sha256_filtered": "14aa40d14cb7c7889cb3d0e39a4989dfe44e4de9daa8509d2bf0e183f6823266",
+      "retained_rows": 167133
+    },
+    {
+      "period": "2024-12",
+      "sha256_filtered": "5f357f5f047738a918b1ae76bfca2c0d76b29b054b9f315077d8bd44429b925a",
+      "retained_rows": 170861
+    },
+    {
+      "period": "2025-01",
+      "sha256_filtered": "39b2196a179a78ed270c6a45f69ca5001f489d1e03abf9099ecb4efade30ab2e",
+      "retained_rows": 157372
+    },
+    {
+      "period": "2025-02",
+      "sha256_filtered": "4041a2849050a708d50faf6339661816597736076184ee8f6d5ac410529ff669",
+      "retained_rows": 145657
+    },
+    {
+      "period": "2025-03",
+      "sha256_filtered": "dd73627567f090866ed7060f614b89dd0bc4255628328e8613dd13ce54716b56",
+      "retained_rows": 171586
+    },
+    {
+      "period": "2025-04",
+      "sha256_filtered": "db49dddd09ee22f93f1ea0a9a92cfe032efc291a5717729a9736a2db4b78988d",
+      "retained_rows": 167375
+    },
+    {
+      "period": "2025-05",
+      "sha256_filtered": "ea20c194c9f6ea304b181742a01941562285412e1529192c04ed7a9c4d521eb7",
+      "retained_rows": 175793
+    },
+    {
+      "period": "2025-06",
+      "sha256_filtered": "268a17ccd39387344bb829c039ec8d8a9179a75f2c8a5e929e05a4cb90d1b053",
+      "retained_rows": 180594
+    },
+    {
+      "period": "2025-07",
+      "sha256_filtered": "0dc306dd0b6a0911f2ca83cd7fa45b67b097cfd1e8d235499d16cff797f7a806",
+      "retained_rows": 187910
+    },
+    {
+      "period": "2025-08",
+      "sha256_filtered": "f047c5def35131617e409d206c5870b6e6a0e34c455212f8eb334db994eb5e57",
+      "retained_rows": 180841
+    },
+    {
+      "period": "2025-09",
+      "sha256_filtered": "079dd66bd690729128614a99b7de436597c6885907279b96583be706a3a0671a",
+      "retained_rows": 170346
+    },
+    {
+      "period": "2025-10",
+      "sha256_filtered": "cdc9544456f79baa15142bab3e69f76a11121a71e4839f3792e7d3169a540946",
+      "retained_rows": 180737
+    },
+    {
+      "period": "2025-11",
+      "sha256_filtered": "704face2188e61a40f422c73e2c23f5b5d832e0df609f60206b51f0912f92c05",
+      "retained_rows": 169350
+    },
+    {
+      "period": "2025-12",
+      "sha256_filtered": "9e4d0989e5102865a86b3207d5d2f797f1426c4b62d6cf9dab439e07e2276328",
+      "retained_rows": 171702
+    }
+  ],
+  "scope": "Ten BTS origins, 2023\u20132025, reported operating-carrier dataset",
+  "minimum_known_per_airport_cell": 30,
+  "publication": "Historical subgroup frequencies and coverage, not causal rankings"
+}

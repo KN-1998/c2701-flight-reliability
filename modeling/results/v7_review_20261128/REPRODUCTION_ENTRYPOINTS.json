@@ -1,0 +1,20 @@
+{
+  "working_directory": "repository root",
+  "outputs": "Use NEW unused paths. These are the entrypoints executed for this review; exact output paths are recorded alongside results.",
+  "commands": [
+    "python -B modeling/src/run_study_v7.py --stage all --taf modeling/data/taf_v7/taf_prevailing_normalized.csv.gz --taf-products modeling/data/taf_v7/taf_products_normalized.csv.gz --out NEW_REPLAY",
+    "python -B modeling/src/review_v7_evidence.py --results modeling/results/v7_20261128 --out NEW_EVIDENCE.json",
+    "python -B modeling/src/audit_weather_thresholds_v7.py --out NEW_WEATHER_AUDIT --predictions-dir NEW_RAW_PROBABILITIES",
+    "python -B modeling/src/audit_taf_text_v7.py --out NEW_TAF_TEXT_AUDIT",
+    "python -B modeling/src/airport_segments_v7.py --out NEW_AIRPORT_GROUPS",
+    "python -B modeling/src/check_all.py --out NEW_TESTS"
+  ],
+  "local_environment": {
+    "python": "3.12.16",
+    "numpy": "2.5.5",
+    "pandas": "3.1.1",
+    "scipy": "1.18.1",
+    "sklearn": "1.9.1"
+  },
+  "environment_note": "Different from producer environment. No claim that the producer lockfile was used."
+}

@@ -1,0 +1,91 @@
+{
+  "status": "DESCRIPTIVE_POST_V7_AUDIT_COMPLETE",
+  "completed_utc": "2026-11-28T06:26:05.378401+00:00",
+  "maximum_reference_score_abs_difference": 1.1102230246251565e-16,
+  "summary": [
+    {
+      "scope": "frozen_followup",
+      "method": "schedule_plus_origin_taf",
+      "n": 1373557,
+      "violations": 0,
+      "violation_rate": 0.0,
+      "max_upper_minus_lower": -0.01066271410393789
+    },
+    {
+      "scope": "frozen_followup",
+      "method": "schedule_proxy_only",
+      "n": 1373557,
+      "violations": 0,
+      "violation_rate": 0.0,
+      "max_upper_minus_lower": -0.01934343016315819
+    },
+    {
+      "scope": "previously_reviewed",
+      "method": "schedule_plus_origin_taf",
+      "n": 170657,
+      "violations": 0,
+      "violation_rate": 0.0,
+      "max_upper_minus_lower": -0.0283448841054754
+    },
+    {
+      "scope": "previously_reviewed",
+      "method": "schedule_proxy_only",
+      "n": 170657,
+      "violations": 0,
+      "violation_rate": 0.0,
+      "max_upper_minus_lower": -0.044100968947505405
+    }
+  ],
+  "inversion_records": 0,
+  "strict_gap_tolerance": 1e-12,
+  "joint_weather_card_authorized": false,
+  "live_2027_forecast_authorized": false,
+  "role": "Previously inspected 2026 outcomes; no new blind validation and no model repair",
+  "raw_paired_prediction_inventory": [
+    {
+      "file": "weather_paired_2026-01.csv.gz",
+      "bytes": 5983948,
+      "sha256": "13cd1d6559efc31725b89da877e5f7842614816eb39433dc313986d59e9225b5"
+    },
+    {
+      "file": "weather_paired_2026-02.csv.gz",
+      "bytes": 5639427,
+      "sha256": "0e7e7314cf788c51d68d6d7ac25cb842715fb74f29fe02d0ce3d0b4a8cb3a93a"
+    },
+    {
+      "file": "weather_paired_2026-03.csv.gz",
+      "bytes": 6609804,
+      "sha256": "5baaff8360b4b3db96c9517d9b76b067d741806019258d53f2b502671e7b611e"
+    },
+    {
+      "file": "weather_paired_2026-04.csv.gz",
+      "bytes": 6626052,
+      "sha256": "476ba1d106d25736dbe69adf981326ba4908a3c4f30c3f094df25f5a1c3860fe"
+    },
+    {
+      "file": "weather_paired_2026-05.csv.gz",
+      "bytes": 6970116,
+      "sha256": "9b4784bb1d22bacef7fb834ece512664c97f0e86a105519c422962e172a48995"
+    },
+    {
+      "file": "weather_paired_2026-06.csv.gz",
+      "bytes": 6755104,
+      "sha256": "203f24519f570a57afa4b8dfb4be0071df520475ba288363954a1eb5c975c7e4"
+    },
+    {
+      "file": "weather_paired_2026-07.csv.gz",
+      "bytes": 6911603,
+      "sha256": "1f14b78d3607cf39d8f2a78dc9ff9c561d0de88d8d23881eafd68403da8395a0"
+    },
+    {
+      "file": "weather_paired_2026-08.csv.gz",
+      "bytes": 6741472,
+      "sha256": "a5bba39f2010e2895f99966138a0e01e5308dc80f5527e79d7042566ebcfbba7"
+    },
+    {
+      "file": "weather_paired_2026-09.csv.gz",
+      "bytes": 6374324,
+      "sha256": "1a8cf96650a9608c34dd3b2978b851682a8217e9145db296f6a52cf52783b1ae"
+    }
+  ]
+}

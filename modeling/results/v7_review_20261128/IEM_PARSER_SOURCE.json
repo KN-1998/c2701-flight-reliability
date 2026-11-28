@@ -1,0 +1,8 @@
+{
+  "status": "primary_parser_retrieved_via_github_contents_api",
+  "github_blob_sha": "6354576bfb86ec685d7d47ee7c53567db72ec16a",
+  "url": "https://github.com/akrherz/pyIEM/blob/main/src/pyiem/nws/products/taf.py",
+  "sha256": "bebbf3b6902860ffca6dda08a8ab49c702f0f772e16439f60bb3c3e5b58d5242",
+  "bytes": 11436,
+  "role": "Post-v7 source code reading only; mutable main retrieved once; does not prove archive values or prior no-peeking"
+}

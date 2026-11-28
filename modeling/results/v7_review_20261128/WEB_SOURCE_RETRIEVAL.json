@@ -1,0 +1,42 @@
+{
+  "retrieved_utc": "2026-11-28T06:29:35.478209+00:00",
+  "role": "Post-v7 documentation cross-check, not pre-registration or new full-paper reading",
+  "records": [
+    {
+      "source_id": "AWC_TAF",
+      "url": "https://aviationweather.gov/help/data/",
+      "status": "retrieval_failed",
+      "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>"
+    },
+    {
+      "source_id": "IEM_TAF",
+      "url": "https://mesonet.agron.iastate.edu/request/taf.php",
+      "status": "retrieval_failed",
+      "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>"
+    },
+    {
+      "source_id": "IEM_API",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?help=",
+      "status": "retrieval_failed",
+      "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>"
+    },
+    {
+      "source_id": "OPM_2026",
+      "url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+      "status": "retrieval_failed",
+      "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>"
+    },
+    {
+      "source_id": "BTS_RELEASE",
+      "url": "https://www.transtats.bts.gov/ReleaseInfo.asp",
+      "status": "retrieval_failed",
+      "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>"
+    },
+    {
+      "source_id": "IEM_PARSER",
+      "url": "https://raw.githubusercontent.com/akrherz/pyIEM/main/src/pyiem/nws/products/taf.py",
+      "status": "retrieval_failed",
+      "error": "URLError: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1011)>"
+    }
+  ]
+}

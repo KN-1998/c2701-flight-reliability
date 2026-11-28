@@ -1,0 +1,7 @@
+{
+  "status": "POST_V7_SOURCE_TEXT_DIAGNOSTIC_ONLY",
+  "segments": 362285,
+  "parsed_adverse_without_raw_adverse_token": 4,
+  "ceiling_discrepancies_against_visible_raw_cloud_tokens": 27,
+  "caution": "Simple token consistency check, not independent raw-product reparse, not proof of historical archive corrections or all parser behavior"
+}

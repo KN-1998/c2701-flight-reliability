@@ -1,0 +1,11 @@
+{
+  "status": "SOURCE_TEXT_DISCREPANCIES_REQUIRE_RAW_PRODUCT_REVIEW",
+  "segments_checked": 362285,
+  "flagged_segments": 27,
+  "flagged_products": 20,
+  "ceiling_discrepancies": 27,
+  "adverse_codes_absent_in_visible_text": 4,
+  "correction_applied": false,
+  "new_holdout": false,
+  "interpretation": "Candidate source discrepancies, not all adjudicated errors. Original NWS bulletin and historic parser/version review pending. No performance improvement or live use authorized."
+}

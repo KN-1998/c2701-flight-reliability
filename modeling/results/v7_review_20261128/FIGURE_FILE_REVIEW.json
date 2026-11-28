@@ -1,0 +1,157 @@
+{
+  "role": "File structure and rendered visual audit; MATLAB was not rerun in this review",
+  "figures": [
+    {
+      "pdf": "fig01_reliability_definitions.pdf",
+      "pages": 1,
+      "vector_paths": 132,
+      "embedded_raster_images": 0,
+      "text_characters": 616,
+      "page_points": [
+        789.0,
+        371.0
+      ],
+      "png_pixels": [
+        3513,
+        1646
+      ],
+      "png_dpi": [
+        319.9892,
+        319.9892
+      ]
+    },
+    {
+      "pdf": "fig02_airport_composition.pdf",
+      "pages": 1,
+      "vector_paths": 93,
+      "embedded_raster_images": 0,
+      "text_characters": 425,
+      "page_points": [
+        788.0,
+        350.0
+      ],
+      "png_pixels": [
+        3506,
+        1562
+      ],
+      "png_dpi": [
+        319.9892,
+        319.9892
+      ]
+    },
+    {
+      "pdf": "fig03_traveler_scorecard.pdf",
+      "pages": 1,
+      "vector_paths": 95,
+      "embedded_raster_images": 0,
+      "text_characters": 418,
+      "page_points": [
+        803.0,
+        327.0
+      ],
+      "png_pixels": [
+        3592,
+        1459
+      ],
+      "png_dpi": [
+        319.9892,
+        319.9892
+      ]
+    },
+    {
+      "pdf": "fig07_frozen_followup.pdf",
+      "pages": 1,
+      "vector_paths": 231,
+      "embedded_raster_images": 0,
+      "text_characters": 474,
+      "page_points": [
+        469.0,
+        353.0
+      ],
+      "png_pixels": [
+        3893,
+        2909
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ]
+    },
+    {
+      "pdf": "fig08_predeparture_taf.pdf",
+      "pages": 1,
+      "vector_paths": 67,
+      "embedded_raster_images": 0,
+      "text_characters": 238,
+      "page_points": [
+        467.0,
+        243.0
+      ],
+      "png_pixels": [
+        3878,
+        1989
+      ],
+      "png_dpi": [
+        599.9988,
+        599.9988
+      ]
+    },
+    {
+      "pdf": "q3_model_brier.pdf",
+      "pages": 1,
+      "vector_paths": 67,
+      "embedded_raster_images": 0,
+      "text_characters": 618,
+      "page_points": [
+        522.0,
+        238.0
+      ],
+      "png_pixels": [
+        2175,
+        990
+      ],
+      "png_dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "pdf": "q3_september_calibration.pdf",
+      "pages": 1,
+      "vector_paths": 61,
+      "embedded_raster_images": 0,
+      "text_characters": 543,
+      "page_points": [
+        522.0,
+        242.0
+      ],
+      "png_pixels": [
+        2175,
+        1005
+      ],
+      "png_dpi": [
+        299.9994,
+        299.9994
+      ]
+    },
+    {
+      "pdf": "q4_external_event_stress.pdf",
+      "pages": 1,
+      "vector_paths": 47,
+      "embedded_raster_images": 0,
+      "text_characters": 647,
+      "page_points": [
+        522.0,
+        263.0
+      ],
+      "png_pixels": [
+        2175,
+        1095
+      ],
+      "png_dpi": [
+        299.9994,
+        299.9994
+      ]
+    }
+  ]
+}
