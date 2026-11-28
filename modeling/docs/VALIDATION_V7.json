@@ -1,0 +1,76 @@
+{
+  "label": "C2701_V7_FIXED_FOLLOWUP",
+  "parent_commit": "d060ce4ebe371c3bb1b2285f3b02545391e32e70",
+  "frozen_client_date": "2026-11-28 Asia/Shanghai",
+  "holdout_months": [
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08"
+  ],
+  "previously_inspected_months": [
+    "2026-09"
+  ],
+  "future_extension_pending": [
+    "2026-10"
+  ],
+  "headline_threshold_minutes": 60,
+  "secondary_threshold_minutes": 15,
+  "original_comparators": [
+    "historical_baseline",
+    "conditional_tree",
+    "direct_joint",
+    "shared_five_leaf"
+  ],
+  "frozen_reference_selection": {
+    "15": "direct_joint",
+    "60": "conditional_tree"
+  },
+  "fit_scope": {
+    "from": "2023-01-01",
+    "through": "2024-03-31",
+    "calibration_months": [
+      "2024-04",
+      "2024-05",
+      "2024-06"
+    ],
+    "random_seed": 2701,
+    "fit_cap": 50000,
+    "C": 0.1,
+    "history_strength": 20
+  },
+  "evaluation": {
+    "primary": "flight-weighted Brier",
+    "support": "identical known outcomes and stable BTS identities between models",
+    "diagnostics": [
+      "log loss",
+      "monthly probability bias",
+      "10-bin calibration",
+      "paired date-block sensitivity with 1/7/14 day blocks"
+    ],
+    "selection": "All original and candidate outcomes reported; no changes to C, predictors, calibrators or approved model based on this evaluation."
+  },
+  "information_experiment": {
+    "source": "Archived NWS terminal aerodrome forecast issue time as preserved by Iowa Environmental Mesonet",
+    "comparison": "same stable BTS schedule proxies and eligible flights, static model versus static plus origin TAF",
+    "decision_lead_minutes": 120,
+    "issuance_safety_lag_minutes": 30,
+    "scheduled_time": "BTS FlightDate and CRSDepTime localized to origin; 2400 and ambiguous or nonexistent clock values excluded from the TAF comparison",
+    "features": "Origin prevailing forecast visibility, ceiling, winds and weather indicators including missingness; exact feature definitions fixed from archive schema before matching outcomes",
+    "evaluation_role": "predeparture proxy experiment, neither observed future weather nor actual booking-time schedules"
+  },
+  "stress": {
+    "groups": [
+      "forecast-defined adverse windows given by prevailing visibility under 3 SM or ceiling under 1000 ft, thunderstorm or freezing rain",
+      "fixed US federal holiday travel dates (holiday plus and minus one day), a calendar proxy for demand rather than realized passenger volume"
+    ],
+    "selected_after_outcomes": false
+  },
+  "chronology": "No 2026-01 through 2026-08 flight data have been examined during the v7 validation design. These months precede already scored 2026-09; a new period later than September requires an available official BTS release.",
+  "publication": "Historical-reference and archived forecast information-time comparison; live 2027 forecasting requires actual schedule snapshots and availability evidence.",
+  "frozen_at_utc": "2026-11-28 05:28:34 UTC"
+}

@@ -1,0 +1,16 @@
+{
+  "matlab_version": "25.1.0.2943329 (R2025a)",
+  "release": "2025a",
+  "inputs": [
+    "primary_t15/joint_pooled_v5.csv",
+    "primary_t60/joint_pooled_v5.csv",
+    "primary_t15/joint_monthly_v5.csv",
+    "primary_t60/joint_monthly_v5.csv",
+    "joint_candidate/candidate_joint_pooled.csv",
+    "joint_candidate/candidate_comparison.csv",
+    "primary_t60/external_event_scores.csv"
+  ],
+  "source_scope": "Accepted v6 retrospective results; no extra selection or fitting.",
+  "brier_months": 15,
+  "flights_in_brier_comparison": 2.592299E+6
+}

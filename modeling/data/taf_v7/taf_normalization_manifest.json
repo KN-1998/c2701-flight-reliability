@@ -1,0 +1,58 @@
+{
+  "generated_utc": "2026-11-28T05:46:17.955036+00:00",
+  "partial": false,
+  "raw_products": 80679,
+  "prevailing_segments": 362285,
+  "product_status_counts": {
+    "usable": 79026,
+    "invalid_or_missing_product_validity": 1416,
+    "ambiguous_same_availability_minute": 222,
+    "initial_group_missing": 3,
+    "absent_or_nonunique_prevailing_group": 12
+  },
+  "stations_products": {
+    "KATL": 10486,
+    "KDEN": 9095,
+    "KDFW": 7752,
+    "KEWR": 7817,
+    "KLGA": 7822,
+    "KMCO": 7795,
+    "KORD": 7686,
+    "KSEA": 7594,
+    "KSFO": 7660,
+    "PHNL": 6972
+  },
+  "stations_segments": {
+    "KATL": 45959,
+    "KDEN": 54278,
+    "KDFW": 25774,
+    "KEWR": 40535,
+    "KLGA": 41123,
+    "KMCO": 33470,
+    "KORD": 29559,
+    "KSEA": 34972,
+    "KSFO": 33617,
+    "PHNL": 22998
+  },
+  "group_type_counts": {
+    "Forecast": 289065,
+    "Observation": 80688,
+    "Temporary": 27355,
+    "Probability 30": 11990
+  },
+  "source_group_only_products": 0,
+  "source_group_only_by_station": {},
+  "source_group_only_top_15_sample": [],
+  "diagnostics": {
+    "initial_group_start_differs_from_product_valid_start": 76565,
+    "segment_at_or_after_expiry_or_empty": 28,
+    "same_minute_version_barrier_products": 222
+  },
+  "normalized_sha256": {
+    "taf_products_normalized.csv.gz": "45e620772a766be477ad4c019f2e4320f42e06c8e50c396c0a82572d40db3b57",
+    "taf_prevailing_normalized.csv.gz": "a39fd8434590b1c7241f325ff50bfbe82d2f5d041dd87320a7753e469608f73d"
+  },
+  "availability_assumption": "available_utc is the later of stored product issue, WMO header minute and parsed issuance metadata; a user-chosen availability lag is additional.",
+  "join_rule": "Choose the newest product issued/available by cutoff, with any required additional lag; if unusable, expired or has no valid prevailing segment, forecast is missing. Do not fall back to superseded product. Segment interval is [valid_from_utc,valid_to_utc).",
+  "forecast_scope": "Origin terminal NWS TAF, initial prevailing + FM. TEMPO/PROB not substituted for prevailing; BECMG products marked unavailable."
+}

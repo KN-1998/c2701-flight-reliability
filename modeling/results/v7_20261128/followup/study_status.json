@@ -1,0 +1,29 @@
+{
+  "status": "completed",
+  "stage": "primary",
+  "protocol_sha256": "ebc6f9318aa2c16eb056d6de231af3ff9faa5dbaf5c0b19e99a9545f16293e0b",
+  "scored_after_rule_freeze": [
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08"
+  ],
+  "previously_reviewed": [
+    "2026-09"
+  ],
+  "training_n": 2475534,
+  "calibration_n": 523735,
+  "archived_2027_live_forecast_authorized": false,
+  "environment": {
+    "python": "3.13.7",
+    "numpy": "2.5.0",
+    "pandas": "3.0.2",
+    "scipy": "1.17.1",
+    "sklearn": "1.8.0"
+  },
+  "completed_utc": "2026-11-28T05:40:35.937478+00:00"
+}

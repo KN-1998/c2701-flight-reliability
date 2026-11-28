@@ -1,0 +1,1518 @@
+{
+  "stations": [
+    "KATL",
+    "KDEN",
+    "KDFW",
+    "KEWR",
+    "PHNL",
+    "KLGA",
+    "KMCO",
+    "KORD",
+    "KSEA",
+    "KSFO"
+  ],
+  "planned": 59,
+  "successes": [
+    {
+      "file": "product_KATL_2022-12-30_2023-12-29.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KATL&sts=2022-12-30&ets=2023-12-29",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "2080980"
+      },
+      "fetched_utc": "2026-11-28T05:31:25.974470+00:00",
+      "bytes": 2080980,
+      "reused_local": false,
+      "sha256": "084ce7f4433b8a23f1408cf6718372b55c6fe02ca820a89c8b1b28ba6976cac6",
+      "rows": 4624,
+      "stations": [
+        "KATL"
+      ],
+      "first_issued_utc": "2022-12-30T01:31:00Z",
+      "last_issued_utc": "2023-12-28T23:39:00Z"
+    },
+    {
+      "file": "product_KATL_2023-12-29_2024-07-03.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KATL&sts=2023-12-29&ets=2024-07-03",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "1066359"
+      },
+      "fetched_utc": "2026-11-28T05:33:51.140280+00:00",
+      "bytes": 1066359,
+      "reused_local": false,
+      "sha256": "4ebe37d45053e8fc59c1400665992121ffcfd6a3d6a6c5668b2fc274be155dfa",
+      "rows": 2371,
+      "stations": [
+        "KATL"
+      ],
+      "first_issued_utc": "2023-12-29T01:48:00Z",
+      "last_issued_utc": "2024-07-02T23:33:00Z"
+    },
+    {
+      "file": "product_KATL_2025-12-30_2026-10-03.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KATL&sts=2025-12-30&ets=2026-10-03",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "1570319"
+      },
+      "fetched_utc": "2026-11-28T05:35:43.826818+00:00",
+      "bytes": 1570319,
+      "reused_local": false,
+      "sha256": "ef011469542898ce556b8642cd9006ab6ca87daf7066143620b8cbb78d68c30e",
+      "rows": 3491,
+      "stations": [
+        "KATL"
+      ],
+      "first_issued_utc": "2025-12-30T01:36:00Z",
+      "last_issued_utc": "2026-10-02T23:47:00Z"
+    },
+    {
+      "file": "product_KDEN_2022-12-30_2023-12-29.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KDEN&sts=2022-12-30&ets=2023-12-29",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "1834114"
+      },
+      "fetched_utc": "2026-11-28T05:31:44.087482+00:00",
+      "bytes": 1834114,
+      "reused_local": false,
+      "sha256": "7dd22e783fbfafeac343ef8b80a2ae8f9b37ca0147dd6ed37bd543752ec72f5f",
+      "rows": 4068,
+      "stations": [
+        "KDEN"
+      ],
+      "first_issued_utc": "2022-12-30T03:01:00Z",
+      "last_issued_utc": "2023-12-28T23:32:00Z"
+    },
+    {
+      "file": "product_KDEN_2023-12-29_2024-07-03.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KDEN&sts=2023-12-29&ets=2024-07-03",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "921740"
+      },
+      "fetched_utc": "2026-11-28T05:34:02.248215+00:00",
+      "bytes": 921740,
+      "reused_local": false,
+      "sha256": "71597acaedd0e20f889a5b7de260921e76377f1bbefa13a704ab5138cfe90886",
+      "rows": 2046,
+      "stations": [
+        "KDEN"
+      ],
+      "first_issued_utc": "2023-12-29T02:26:00Z",
+      "last_issued_utc": "2024-07-02T23:23:00Z"
+    },
+    {
+      "file": "product_KDEN_2025-12-30_2026-10-03.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KDEN&sts=2025-12-30&ets=2026-10-03",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "1343613"
+      },
+      "fetched_utc": "2026-11-28T05:35:56.181401+00:00",
+      "bytes": 1343613,
+      "reused_local": false,
+      "sha256": "45515764197c17fa04766d1d571867e577ee0df4558cb2bde7bfeb8eef0cc6f0",
+      "rows": 2981,
+      "stations": [
+        "KDEN"
+      ],
+      "first_issued_utc": "2025-12-30T02:11:00Z",
+      "last_issued_utc": "2026-10-02T23:29:00Z"
+    },
+    {
+      "file": "product_KDFW_2022-12-30_2023-12-29.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KDFW&sts=2022-12-30&ets=2023-12-29",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "1523889"
+      },
+      "fetched_utc": "2026-11-28T05:32:08.580018+00:00",
+      "bytes": 1523889,
+      "reused_local": false,
+      "sha256": "e0ea81aae7932b634d7f636dcbcc1488fb1d4bfcff9ea0b3e593fac4868efe2b",
+      "rows": 3399,
+      "stations": [
+        "KDFW"
+      ],
+      "first_issued_utc": "2022-12-30T02:50:00Z",
+      "last_issued_utc": "2023-12-28T23:20:00Z"
+    },
+    {
+      "file": "product_KDFW_2023-12-29_2024-07-03.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KDFW&sts=2023-12-29&ets=2024-07-03",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "816754"
+      },
+      "fetched_utc": "2026-11-28T05:34:12.102119+00:00",
+      "bytes": 816754,
+      "reused_local": false,
+      "sha256": "2f397f7b10ed169331f8977496c115ada0f70a764e211aca5b11bd13202e0bc7",
+      "rows": 1823,
+      "stations": [
+        "KDFW"
+      ],
+      "first_issued_utc": "2023-12-29T02:59:00Z",
+      "last_issued_utc": "2024-07-02T23:20:00Z"
+    },
+    {
+      "file": "product_KDFW_2025-12-30_2026-10-03.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KDFW&sts=2025-12-30&ets=2026-10-03",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "1136976"
+      },
+      "fetched_utc": "2026-11-28T05:36:08.231775+00:00",
+      "bytes": 1136976,
+      "reused_local": false,
+      "sha256": "2e67789616fb8ce68aa6c440812df045dd9df8467dc0005b461ca9d542a2b17d",
+      "rows": 2537,
+      "stations": [
+        "KDFW"
+      ],
+      "first_issued_utc": "2025-12-30T03:05:00Z",
+      "last_issued_utc": "2026-10-02T23:20:00Z"
+    },
+    {
+      "file": "product_KEWR_2022-12-30_2023-12-29.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KEWR&sts=2022-12-30&ets=2023-12-29",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "1538346"
+      },
+      "fetched_utc": "2026-11-28T05:32:20.870165+00:00",
+      "bytes": 1538346,
+      "reused_local": false,
+      "sha256": "11b645e6f823bd59f4a4cfd014c53fe3f3e95a1e366e8ae540654a9cf7783ae1",
+      "rows": 3456,
+      "stations": [
+        "KEWR"
+      ],
+      "first_issued_utc": "2022-12-30T02:27:00Z",
+      "last_issued_utc": "2023-12-28T23:26:00Z"
+    },
+    {
+      "file": "product_KEWR_2023-12-29_2024-07-03.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KEWR&sts=2023-12-29&ets=2024-07-03",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "787634"
+      },
+      "fetched_utc": "2026-11-28T05:34:29.253154+00:00",
+      "bytes": 787634,
+      "reused_local": false,
+      "sha256": "e01d7c7d3fffb089ded39f84060fc4c0aa3f3b96577e550d5d495361261c7c16",
+      "rows": 1771,
+      "stations": [
+        "KEWR"
+      ],
+      "first_issued_utc": "2023-12-29T02:33:00Z",
+      "last_issued_utc": "2024-07-02T23:23:00Z"
+    },
+    {
+      "file": "product_KEWR_2025-12-30_2026-10-03.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KEWR&sts=2025-12-30&ets=2026-10-03",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "1152324"
+      },
+      "fetched_utc": "2026-11-28T05:36:19.197329+00:00",
+      "bytes": 1152324,
+      "reused_local": false,
+      "sha256": "11ae325ed6852a1bf01b8c7ea7bde9715dee1618df9df8e7a94fdc8bf6bd8f20",
+      "rows": 2590,
+      "stations": [
+        "KEWR"
+      ],
+      "first_issued_utc": "2025-12-30T02:32:00Z",
+      "last_issued_utc": "2026-10-02T23:29:00Z"
+    },
+    {
+      "file": "product_KLGA_2022-12-30_2023-12-29.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KLGA&sts=2022-12-30&ets=2023-12-29",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "1573798"
+      },
+      "fetched_utc": "2026-11-28T05:32:44.951950+00:00",
+      "bytes": 1573798,
+      "reused_local": false,
+      "sha256": "7caa3688419c90d986ee2ae59f2a24f4daba2b4a1e3a2636f9fedad64e7dbc59",
+      "rows": 3473,
+      "stations": [
+        "KLGA"
+      ],
+      "first_issued_utc": "2022-12-30T02:27:00Z",
+      "last_issued_utc": "2023-12-28T23:26:00Z"
+    },
+    {
+      "file": "product_KLGA_2023-12-29_2024-07-03.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KLGA&sts=2023-12-29&ets=2024-07-03",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "806823"
+      },
+      "fetched_utc": "2026-11-28T05:34:51.462277+00:00",
+      "bytes": 806823,
+      "reused_local": false,
+      "sha256": "e4623d968cd45ab7969c3905cce3579598f86f3feb566a01fce549f328bfd9b7",
+      "rows": 1782,
+      "stations": [
+        "KLGA"
+      ],
+      "first_issued_utc": "2023-12-29T02:33:00Z",
+      "last_issued_utc": "2024-07-02T23:23:00Z"
+    },
+    {
+      "file": "product_KLGA_2025-12-30_2026-10-03.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KLGA&sts=2025-12-30&ets=2026-10-03",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "1162553"
+      },
+      "fetched_utc": "2026-11-28T05:36:46.337097+00:00",
+      "bytes": 1162553,
+      "reused_local": false,
+      "sha256": "c409ff3668594c6808917a2251c9d4681e73a1d5634ed16446429707c071d411",
+      "rows": 2567,
+      "stations": [
+        "KLGA"
+      ],
+      "first_issued_utc": "2025-12-30T02:32:00Z",
+      "last_issued_utc": "2026-10-02T23:29:00Z"
+    },
+    {
+      "file": "product_KMCO_2022-12-30_2023-12-29.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KMCO&sts=2022-12-30&ets=2023-12-29",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "1554580"
+      },
+      "fetched_utc": "2026-11-28T05:32:55.200697+00:00",
+      "bytes": 1554580,
+      "reused_local": false,
+      "sha256": "72fc1bc3cd46d0550ab67e931284788d19e5081069d2dbb1da393709bcbbccac",
+      "rows": 3415,
+      "stations": [
+        "KMCO"
+      ],
+      "first_issued_utc": "2022-12-30T03:00:00Z",
+      "last_issued_utc": "2023-12-28T23:20:00Z"
+    },
+    {
+      "file": "product_KMCO_2023-12-29_2024-07-03.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KMCO&sts=2023-12-29&ets=2024-07-03",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "789665"
+      },
+      "fetched_utc": "2026-11-28T05:35:01.584941+00:00",
+      "bytes": 789665,
+      "reused_local": false,
+      "sha256": "3be4054b59899dafed5529f793a7f71ca1e6f44173d8bb00192bec625a760a35",
+      "rows": 1736,
+      "stations": [
+        "KMCO"
+      ],
+      "first_issued_utc": "2023-12-29T02:59:00Z",
+      "last_issued_utc": "2024-07-02T23:20:00Z"
+    },
+    {
+      "file": "product_KMCO_2025-12-30_2026-10-03.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KMCO&sts=2025-12-30&ets=2026-10-03",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "1203818"
+      },
+      "fetched_utc": "2026-11-28T05:36:58.261787+00:00",
+      "bytes": 1203818,
+      "reused_local": false,
+      "sha256": "609afcca2a967c8eb52ef37cd65c1c6477f47b10eceee9814c341186d4e2b755",
+      "rows": 2645,
+      "stations": [
+        "KMCO"
+      ],
+      "first_issued_utc": "2025-12-30T03:05:00Z",
+      "last_issued_utc": "2026-10-02T23:20:00Z"
+    },
+    {
+      "file": "product_KORD_2022-12-30_2023-12-29.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KORD&sts=2022-12-30&ets=2023-12-29",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "1466652"
+      },
+      "fetched_utc": "2026-11-28T05:33:17.187897+00:00",
+      "bytes": 1466652,
+      "reused_local": false,
+      "sha256": "25fbe14f049c6406afeb8a465bddda1b3ff864aba1ba5655d2def492fe0ffde6",
+      "rows": 3296,
+      "stations": [
+        "KORD"
+      ],
+      "first_issued_utc": "2022-12-30T02:49:00Z",
+      "last_issued_utc": "2023-12-28T23:20:00Z"
+    },
+    {
+      "file": "product_KORD_2023-12-29_2024-07-03.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KORD&sts=2023-12-29&ets=2024-07-03",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "773641"
+      },
+      "fetched_utc": "2026-11-28T05:35:13.247978+00:00",
+      "bytes": 773641,
+      "reused_local": false,
+      "sha256": "2df435f9d21a7c857eb3db62f9a5fe038e12cbe683be585a018ff99c5aba5cca",
+      "rows": 1740,
+      "stations": [
+        "KORD"
+      ],
+      "first_issued_utc": "2023-12-29T03:00:00Z",
+      "last_issued_utc": "2024-07-02T23:30:00Z"
+    },
+    {
+      "file": "product_KORD_2025-12-30_2026-10-03.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KORD&sts=2025-12-30&ets=2026-10-03",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "1180511"
+      },
+      "fetched_utc": "2026-11-28T05:37:12.388877+00:00",
+      "bytes": 1180511,
+      "reused_local": false,
+      "sha256": "655a7ebde45ec5d6e0acc9b1862f6088d271cd5ac6e3568fd9b4220b32ceacba",
+      "rows": 2653,
+      "stations": [
+        "KORD"
+      ],
+      "first_issued_utc": "2025-12-30T03:00:00Z",
+      "last_issued_utc": "2026-10-02T23:20:00Z"
+    },
+    {
+      "file": "product_KSEA_2022-12-30_2023-12-29.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KSEA&sts=2022-12-30&ets=2023-12-29",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "1507837"
+      },
+      "fetched_utc": "2026-11-28T05:33:28.820193+00:00",
+      "bytes": 1507837,
+      "reused_local": false,
+      "sha256": "277771d86e017b8a318d51a694038c68ee0c18408baf8c643a89b706d04daff0",
+      "rows": 3320,
+      "stations": [
+        "KSEA"
+      ],
+      "first_issued_utc": "2022-12-30T02:51:00Z",
+      "last_issued_utc": "2023-12-28T23:20:00Z"
+    },
+    {
+      "file": "product_KSEA_2023-12-29_2024-07-03.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KSEA&sts=2023-12-29&ets=2024-07-03",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "775117"
+      },
+      "fetched_utc": "2026-11-28T05:35:26.048597+00:00",
+      "bytes": 775117,
+      "reused_local": false,
+      "sha256": "edc277b88027458ecbd2ad726808ae5d10de3242ce7a3af15054018bdf44e971",
+      "rows": 1708,
+      "stations": [
+        "KSEA"
+      ],
+      "first_issued_utc": "2023-12-29T03:01:00Z",
+      "last_issued_utc": "2024-07-02T23:20:00Z"
+    },
+    {
+      "file": "product_KSEA_2025-12-30_2026-10-03.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KSEA&sts=2025-12-30&ets=2026-10-03",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "1165224"
+      },
+      "fetched_utc": "2026-11-28T05:37:27.811379+00:00",
+      "bytes": 1165224,
+      "reused_local": false,
+      "sha256": "baaa596184efcd82da092a9cb50a89071eeff14e3d0b2a9c188e36baeb32c8f9",
+      "rows": 2566,
+      "stations": [
+        "KSEA"
+      ],
+      "first_issued_utc": "2025-12-30T02:57:00Z",
+      "last_issued_utc": "2026-10-02T23:20:00Z"
+    },
+    {
+      "file": "product_KSFO_2022-12-30_2023-12-29.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KSFO&sts=2022-12-30&ets=2023-12-29",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "1571898"
+      },
+      "fetched_utc": "2026-11-28T05:33:39.609773+00:00",
+      "bytes": 1571898,
+      "reused_local": false,
+      "sha256": "57520f7031550e38f26da8a081a83b46389c10dea75aac324d274d0ba7d1b310",
+      "rows": 3467,
+      "stations": [
+        "KSFO"
+      ],
+      "first_issued_utc": "2022-12-30T03:00:00Z",
+      "last_issued_utc": "2023-12-28T23:20:00Z"
+    },
+    {
+      "file": "product_KSFO_2023-12-29_2024-07-03.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KSFO&sts=2023-12-29&ets=2024-07-03",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "775565"
+      },
+      "fetched_utc": "2026-11-28T05:35:33.699931+00:00",
+      "bytes": 775565,
+      "reused_local": false,
+      "sha256": "8e8df240e1bca05d6fb936ddbc1aecafa1fe3bcfd0e8a4b4880e79bb210decbc",
+      "rows": 1713,
+      "stations": [
+        "KSFO"
+      ],
+      "first_issued_utc": "2023-12-29T02:49:00Z",
+      "last_issued_utc": "2024-07-02T23:20:00Z"
+    },
+    {
+      "file": "product_KSFO_2025-12-30_2026-10-03.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=KSFO&sts=2025-12-30&ets=2026-10-03",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "1123685"
+      },
+      "fetched_utc": "2026-11-28T05:37:41.335291+00:00",
+      "bytes": 1123685,
+      "reused_local": false,
+      "sha256": "508817f530f19448bf44f09a11448be5ade9b2eab175de24cde503b691ef8668",
+      "rows": 2480,
+      "stations": [
+        "KSFO"
+      ],
+      "first_issued_utc": "2025-12-30T03:00:00Z",
+      "last_issued_utc": "2026-10-02T23:38:00Z"
+    },
+    {
+      "file": "product_PHNL_2022-12-30_2023-12-29.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=PHNL&sts=2022-12-30&ets=2023-12-29",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "1349234"
+      },
+      "fetched_utc": "2026-11-28T05:32:32.729214+00:00",
+      "bytes": 1349234,
+      "reused_local": false,
+      "sha256": "3df0a34e456bc03024ceb3670d4062b29a0594b0942505acd676d9c60d752a06",
+      "rows": 3045,
+      "stations": [
+        "PHNL"
+      ],
+      "first_issued_utc": "2022-12-30T02:52:00Z",
+      "last_issued_utc": "2023-12-28T23:40:00Z"
+    },
+    {
+      "file": "product_PHNL_2023-12-29_2024-07-03.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=PHNL&sts=2023-12-29&ets=2024-07-03",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "699821"
+      },
+      "fetched_utc": "2026-11-28T05:34:37.237133+00:00",
+      "bytes": 699821,
+      "reused_local": false,
+      "sha256": "53018a279b2aff9ae453136b2df7676f3579fd24e5cd89e809ae127ecc8401b9",
+      "rows": 1581,
+      "stations": [
+        "PHNL"
+      ],
+      "first_issued_utc": "2023-12-29T03:01:00Z",
+      "last_issued_utc": "2024-07-02T23:20:00Z"
+    },
+    {
+      "file": "product_PHNL_2025-12-30_2026-10-03.json",
+      "url": "https://mesonet.agron.iastate.edu/api/1/nws/taf_overview.json?station=PHNL&sts=2025-12-30&ets=2026-10-03",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/json",
+        "Content-Length": "1039466"
+      },
+      "fetched_utc": "2026-11-28T05:36:35.354153+00:00",
+      "bytes": 1039466,
+      "reused_local": false,
+      "sha256": "a2d65879bcd4b996b6f75b6d4b2a63454580f11cfaa11b10b0875478e7b3f304",
+      "rows": 2347,
+      "stations": [
+        "PHNL"
+      ],
+      "first_issued_utc": "2025-12-30T03:04:00Z",
+      "last_issued_utc": "2026-10-02T23:20:00Z"
+    },
+    {
+      "file": "segment_10station_2022-12-30_2023-02-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2022-12-30T00%3A00Z&ets=2023-02-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:31:29.093496+00:00",
+      "bytes": 2880577,
+      "reused_local": false,
+      "sha256": "2242723410c74faf256f748bef04f81b489b74f2494092d0878296358662ea2a",
+      "rows": 16191,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2022-12-30 01:31",
+      "last_issued_utc": "2023-01-31 23:40"
+    },
+    {
+      "file": "segment_10station_2023-02-01_2023-03-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2023-02-01T00%3A00Z&ets=2023-03-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:31:48.265957+00:00",
+      "bytes": 2456557,
+      "reused_local": false,
+      "sha256": "e156e48747dbf84ba7445fbc0d4abd7c506316879a51878bb65482373b480fe8",
+      "rows": 13859,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2023-02-01 01:21",
+      "last_issued_utc": "2023-02-28 23:40"
+    },
+    {
+      "file": "segment_10station_2023-03-01_2023-04-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2023-03-01T00%3A00Z&ets=2023-04-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:32:08.256130+00:00",
+      "bytes": 2865175,
+      "reused_local": false,
+      "sha256": "df402227c4e37b82728d0845b978ea6b09a4f0e85b9b2d32e1bbc53ee3c0af1a",
+      "rows": 16012,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2023-03-01 00:55",
+      "last_issued_utc": "2023-03-31 23:46"
+    },
+    {
+      "file": "segment_10station_2023-04-01_2023-05-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2023-04-01T00%3A00Z&ets=2023-05-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:32:27.829539+00:00",
+      "bytes": 2658764,
+      "reused_local": false,
+      "sha256": "d9b2df5b474724d45d35f91d1df3c9e1edc38f74720d8a34f7c94c76b191a08c",
+      "rows": 14879,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2023-04-01 01:33",
+      "last_issued_utc": "2023-04-30 23:41"
+    },
+    {
+      "file": "segment_10station_2023-05-01_2023-06-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2023-05-01T00%3A00Z&ets=2023-06-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:32:42.645626+00:00",
+      "bytes": 2711960,
+      "reused_local": false,
+      "sha256": "be927ae5f7162728571f2128a0c6d81fd92a644f792508f88ad2b340101808c2",
+      "rows": 15291,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2023-05-01 00:48",
+      "last_issued_utc": "2023-05-31 23:39"
+    },
+    {
+      "file": "segment_10station_2023-06-01_2023-07-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2023-06-01T00%3A00Z&ets=2023-07-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:33:02.668162+00:00",
+      "bytes": 2853494,
+      "reused_local": false,
+      "sha256": "2fc3008fb5522226309620c007cd24b8d57d40aecb6e2a7877946e7605006351",
+      "rows": 15865,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2023-06-01 01:04",
+      "last_issued_utc": "2023-06-30 23:45"
+    },
+    {
+      "file": "segment_10station_2023-07-01_2023-08-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2023-07-01T00%3A00Z&ets=2023-08-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:33:09.890274+00:00",
+      "bytes": 2883732,
+      "reused_local": false,
+      "sha256": "b6b3efa9a5bcb47fe82c33b4fbf3fe1869b8e5d2863058bb67add06293bb434b",
+      "rows": 16017,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2023-07-01 00:32",
+      "last_issued_utc": "2023-07-31 23:39"
+    },
+    {
+      "file": "segment_10station_2023-08-01_2023-09-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2023-08-01T00%3A00Z&ets=2023-09-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:33:24.230839+00:00",
+      "bytes": 2621472,
+      "reused_local": false,
+      "sha256": "cb3174b32021e0d8a93b85ef026c1e113f361b64531f743271b168287e3b491a",
+      "rows": 14741,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2023-08-01 01:18",
+      "last_issued_utc": "2023-08-31 23:41"
+    },
+    {
+      "file": "segment_10station_2023-09-01_2023-10-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2023-09-01T00%3A00Z&ets=2023-10-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:33:42.373648+00:00",
+      "bytes": 2445660,
+      "reused_local": false,
+      "sha256": "a7f4eca6efd60b2a5a7f9efd7979bf1b716eb5ec0b3cac89a312560e8b581497",
+      "rows": 13864,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2023-09-01 01:19",
+      "last_issued_utc": "2023-09-30 23:39"
+    },
+    {
+      "file": "segment_10station_2023-10-01_2023-11-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2023-10-01T00%3A00Z&ets=2023-11-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:33:53.890965+00:00",
+      "bytes": 2444611,
+      "reused_local": false,
+      "sha256": "2e809c24cf41fd38bc1bb0d626e84c2148fced19358982b3b103777726a9e92d",
+      "rows": 14011,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2023-10-01 00:21",
+      "last_issued_utc": "2023-10-31 23:46"
+    },
+    {
+      "file": "segment_10station_2023-11-01_2023-12-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2023-11-01T00%3A00Z&ets=2023-12-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:34:03.023904+00:00",
+      "bytes": 2282183,
+      "reused_local": false,
+      "sha256": "76f0d85921bd4e52af4663bb666aee37e7ea09ec857c1979c3f8c732547b639a",
+      "rows": 13062,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2023-11-01 00:19",
+      "last_issued_utc": "2023-11-30 23:57"
+    },
+    {
+      "file": "segment_10station_2023-12-01_2024-01-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2023-12-01T00%3A00Z&ets=2024-01-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:34:19.184678+00:00",
+      "bytes": 2523850,
+      "reused_local": false,
+      "sha256": "6e7e5a9cfd762c1dda3fc43e8d4d5363cede96d655185bf952f3190eb27b543a",
+      "rows": 14221,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2023-12-01 00:29",
+      "last_issued_utc": "2023-12-31 23:39"
+    },
+    {
+      "file": "segment_10station_2024-01-01_2024-02-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2024-01-01T00%3A00Z&ets=2024-02-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:34:29.400321+00:00",
+      "bytes": 2766140,
+      "reused_local": false,
+      "sha256": "2170dfabd6bf5d23d6f308411e19a2eb552b11041d74f49652bad51b82868144",
+      "rows": 15558,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2024-01-01 01:50",
+      "last_issued_utc": "2024-01-31 23:35"
+    },
+    {
+      "file": "segment_10station_2024-02-01_2024-03-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2024-02-01T00%3A00Z&ets=2024-03-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:34:43.444218+00:00",
+      "bytes": 2353963,
+      "reused_local": false,
+      "sha256": "25295ba92d45984be141a17858bf5f9b3d0524af67f9fac7f974cfb5a283d40b",
+      "rows": 13368,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2024-02-01 01:40",
+      "last_issued_utc": "2024-02-29 23:40"
+    },
+    {
+      "file": "segment_10station_2024-03-01_2024-04-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2024-03-01T00%3A00Z&ets=2024-04-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:34:53.926515+00:00",
+      "bytes": 2758086,
+      "reused_local": false,
+      "sha256": "dba8c97b72213b45d9b5dee3c6702b2fdd57480c41bd85a51139c939fe3edf82",
+      "rows": 15473,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2024-03-01 00:14",
+      "last_issued_utc": "2024-03-31 23:59"
+    },
+    {
+      "file": "segment_10station_2024-04-01_2024-05-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2024-04-01T00%3A00Z&ets=2024-05-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:35:04.625964+00:00",
+      "bytes": 2746428,
+      "reused_local": false,
+      "sha256": "a9bfc05c0a6e8cecf28fb858ea089b3c65904069b5b91cf3deda14341388711e",
+      "rows": 15483,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2024-04-01 00:44",
+      "last_issued_utc": "2024-04-30 23:41"
+    },
+    {
+      "file": "segment_10station_2024-05-01_2024-06-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2024-05-01T00%3A00Z&ets=2024-06-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:35:17.585695+00:00",
+      "bytes": 2904930,
+      "reused_local": false,
+      "sha256": "53c59391118729464caaf1c45fadfe52486e2cf75faebe06ea8180ce593a708a",
+      "rows": 16280,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2024-05-01 00:11",
+      "last_issued_utc": "2024-05-31 23:41"
+    },
+    {
+      "file": "segment_10station_2024-06-01_2024-07-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2024-06-01T00%3A00Z&ets=2024-07-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:35:25.997909+00:00",
+      "bytes": 2573344,
+      "reused_local": false,
+      "sha256": "4d6ed77315244b951b4a6b66b7bb28367009902de43caa5a398aef69882cb04f",
+      "rows": 14441,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2024-06-01 01:53",
+      "last_issued_utc": "2024-06-30 23:47"
+    },
+    {
+      "file": "segment_10station_2024-07-01_2024-07-03.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2024-07-01T00%3A00Z&ets=2024-07-03T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:35:32.073035+00:00",
+      "bytes": 169162,
+      "reused_local": false,
+      "sha256": "a80705e62818bca462721039bb37c92800da8c12831252ecde36fb6cf3ec4c50",
+      "rows": 950,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2024-07-01 00:09",
+      "last_issued_utc": "2024-07-02 23:33"
+    },
+    {
+      "file": "segment_10station_2025-12-30_2026-02-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2025-12-30T00%3A00Z&ets=2026-02-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:35:46.580380+00:00",
+      "bytes": 2836324,
+      "reused_local": false,
+      "sha256": "90c95ae5c2d2256e069c38412e72eee51c44af6e94f5a1263ee6b99bc147cb6f",
+      "rows": 15939,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2025-12-30 01:36",
+      "last_issued_utc": "2026-01-31 23:47"
+    },
+    {
+      "file": "segment_10station_2026-02-01_2026-03-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2026-02-01T00%3A00Z&ets=2026-03-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:35:59.410921+00:00",
+      "bytes": 2388117,
+      "reused_local": false,
+      "sha256": "eee5c6737575d38d7c25bf9d476a9ed5c1911f5d34357b4000f74cc6b3a6bdbb",
+      "rows": 13376,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2026-02-01 01:50",
+      "last_issued_utc": "2026-02-28 23:41"
+    },
+    {
+      "file": "segment_10station_2026-03-01_2026-04-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2026-03-01T00%3A00Z&ets=2026-04-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:36:10.252733+00:00",
+      "bytes": 2873994,
+      "reused_local": false,
+      "sha256": "c4b20884f42889600bcf211cf89da0d9f1b1918fe68e60b88ddb05c2e1d55ec7",
+      "rows": 16027,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2026-03-01 00:36",
+      "last_issued_utc": "2026-03-31 23:39"
+    },
+    {
+      "file": "segment_10station_2026-04-01_2026-05-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2026-04-01T00%3A00Z&ets=2026-05-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:36:25.428790+00:00",
+      "bytes": 2888691,
+      "reused_local": false,
+      "sha256": "e756d84741992fae20687823754ff9a38af7e76c603ba3e90771afc229f9c10e",
+      "rows": 16125,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2026-04-01 01:04",
+      "last_issued_utc": "2026-04-30 23:43"
+    },
+    {
+      "file": "segment_10station_2026-05-01_2026-06-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2026-05-01T00%3A00Z&ets=2026-06-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:36:33.916879+00:00",
+      "bytes": 2957299,
+      "reused_local": false,
+      "sha256": "1fbc1ec6f3479fd1036ce99d347f1e047b5f333b8b99ff5a10059dab16b28a48",
+      "rows": 16442,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2026-05-01 00:49",
+      "last_issued_utc": "2026-05-31 23:41"
+    },
+    {
+      "file": "segment_10station_2026-06-01_2026-07-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2026-06-01T00%3A00Z&ets=2026-07-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:36:49.522088+00:00",
+      "bytes": 2850853,
+      "reused_local": false,
+      "sha256": "5c1be5f9beda0e1f97ac5e8218ec0e7747918e391d6f00556aefcc33042a0fd8",
+      "rows": 15813,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2026-06-01 01:44",
+      "last_issued_utc": "2026-06-30 23:41"
+    },
+    {
+      "file": "segment_10station_2026-07-01_2026-08-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2026-07-01T00%3A00Z&ets=2026-08-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:37:01.284167+00:00",
+      "bytes": 2712243,
+      "reused_local": false,
+      "sha256": "7acc26a403565ccc771853442b390957564afc28da65086d7f3632cb202296cf",
+      "rows": 15136,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2026-07-01 01:49",
+      "last_issued_utc": "2026-07-31 23:42"
+    },
+    {
+      "file": "segment_10station_2026-08-01_2026-09-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2026-08-01T00%3A00Z&ets=2026-09-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:37:14.046374+00:00",
+      "bytes": 2861521,
+      "reused_local": false,
+      "sha256": "ef0288408b9f6e00379df1247470723dc87bea1b66fb1bc20eda44dc63d2df36",
+      "rows": 15754,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2026-08-01 01:42",
+      "last_issued_utc": "2026-08-31 23:39"
+    },
+    {
+      "file": "segment_10station_2026-09-01_2026-10-01.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2026-09-01T00%3A00Z&ets=2026-10-01T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:37:29.340078+00:00",
+      "bytes": 2516439,
+      "reused_local": false,
+      "sha256": "4df35deae7441e233354743f1441993dec444be9a742fa0f65afeef5c477a413",
+      "rows": 13901,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2026-09-01 01:32",
+      "last_issued_utc": "2026-09-30 23:40"
+    },
+    {
+      "file": "segment_10station_2026-10-01_2026-10-03.csv",
+      "url": "https://mesonet.agron.iastate.edu/cgi-bin/request/taf.py?station=KATL%2CKDEN%2CKDFW%2CKEWR%2CPHNL%2CKLGA%2CKMCO%2CKORD%2CKSEA%2CKSFO&sts=2026-10-01T00%3A00Z&ets=2026-10-03T00%3A00Z&fmt=csv&tz=UTC",
+      "http_status": 200,
+      "response_headers": {
+        "ETag": null,
+        "Last-Modified": null,
+        "Content-Type": "application/octet-stream",
+        "Content-Length": null
+      },
+      "fetched_utc": "2026-11-28T05:37:33.939450+00:00",
+      "bytes": 189107,
+      "reused_local": false,
+      "sha256": "f517435fe07cca6e76079d6e549485cd4288b9363ac661cf9abf29e83af785cd",
+      "rows": 1045,
+      "stations": [
+        "KATL",
+        "KDEN",
+        "KDFW",
+        "KEWR",
+        "KLGA",
+        "KMCO",
+        "KORD",
+        "KSEA",
+        "KSFO",
+        "PHNL"
+      ],
+      "first_issued_utc": "2026-10-01 01:34",
+      "last_issued_utc": "2026-10-02 23:47"
+    }
+  ],
+  "errors": []
+}

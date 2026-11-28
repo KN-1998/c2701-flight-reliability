@@ -1,0 +1,10 @@
+{
+  "heldout_n": 1407837,
+  "taf_matched_n": 1373557,
+  "matched_scope_ratio": 0.9756505902316817,
+  "minimum_taf_lead_minutes": 150.0,
+  "figure_count": 8,
+  "test_count": 100,
+  "sep_reference_reproduced": true,
+  "paired_denominators_checked": true
+}

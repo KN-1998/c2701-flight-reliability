@@ -1,0 +1,21 @@
+{
+  "qc": "PASS",
+  "stations": [
+    "KATL",
+    "KDEN",
+    "KDFW",
+    "KEWR",
+    "KLGA",
+    "KMCO",
+    "KORD",
+    "KSEA",
+    "KSFO",
+    "PHNL"
+  ],
+  "products_total_including_barrier": 80679,
+  "usable_products": 79026,
+  "segments": 362285,
+  "included_target_station_months": 270,
+  "target_station_months_min_usable_products": 233,
+  "chronological_product_barrier_blocks_unpaired_and_ambiguous": true
+}
